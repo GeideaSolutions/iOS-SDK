@@ -70,8 +70,8 @@ Example Objective C:
 Connect iOS framework:
      To connect iOS framework to your iOS application you should:
      
-1.    Drag GeideaPaymentSDK.framework to your Frameworks folder 
-    1. OR    Drag GeideaPaymentSDK.XCFramework to your Frameworks folder (Swift App)
+1.    Drag GeideaPaymentSDK.XCFramework to your Frameworks folder ( Preferred) 
+     1. OR   Drag GeideaPaymentSDK.framework to your Frameworks folder )
 2.    Add it your target: General -> Frameworks, Libraries and and Embedded Content. 
 3.    Choose “Embed & Sign” option on Embed tab 
 4.    If your application is Objective C app perform an additional step: Build settings -> Build Options -> Always Embed Swift Standard Libraries set YES
