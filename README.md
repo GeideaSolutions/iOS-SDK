@@ -593,8 +593,3 @@ SDK Responses from SDK Payment flow:
            }
          ]
        }
-
-
-
-
-
