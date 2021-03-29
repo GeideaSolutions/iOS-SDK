@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Payment Method"; ObjectID = "3sq-qi-qDO"; */
+"3sq-qi-qDO.text" = "Payment Method";
+
+/* Class = "UILabel"; text = "Set Credentials"; ObjectID = "Mdg-vY-MhT"; */
+"Mdg-vY-MhT.text" = "Set Credentials";
+
+/* Class = "UITextField"; placeholder = "Public Key"; ObjectID = "Ncy-Sd-7ra"; */
+"Ncy-Sd-7ra.placeholder" = "Public Key";
+
+/* Class = "UITextField"; placeholder = "Public Key"; ObjectID = "UiJ-xK-0lj"; */
+"UiJ-xK-0lj.placeholder" = "Public Key";
+
+/* Class = "UIButton"; normalTitle = "Pay !!"; ObjectID = "cuy-Eb-rQ3"; */
+"cuy-Eb-rQ3.normalTitle" = "Pay !!";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "uJt-un-R2l"; */
+"uJt-un-R2l.placeholder" = "Password";
