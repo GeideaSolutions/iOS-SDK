@@ -37,8 +37,8 @@
 		E6A5E7F62540C1C50080BF3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6A5E7F42540C1C50080BF3D /* LaunchScreen.storyboard */; };
 		E6A5E7F92540C1C50080BF3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A5E7F82540C1C50080BF3D /* main.m */; };
 		E6ADAAF325405B7A00EC655F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6117AB92538971700959D78 /* Main.storyboard */; };
-		E6E5A6102611CD310060E50C /* GeideaPaymentSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E5A60F2611CD310060E50C /* GeideaPaymentSDK.xcframework */; };
-		E6E5A6112611CD310060E50C /* GeideaPaymentSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6E5A60F2611CD310060E50C /* GeideaPaymentSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6E5A61E2611E35A0060E50C /* GeideaPaymentSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E5A61D2611E35A0060E50C /* GeideaPaymentSDK.xcframework */; };
+		E6E5A61F2611E35A0060E50C /* GeideaPaymentSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E5A61D2611E35A0060E50C /* GeideaPaymentSDK.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,7 +67,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E6E5A6112611CD310060E50C /* GeideaPaymentSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,8 +90,6 @@
 		E6117ABC2538971E00959D78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6117ABF2538971E00959D78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6117AC12538971E00959D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6117B9925396AB800959D78 /* GeideaPaymentSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeideaPaymentSDKTests.swift; sourceTree = "<group>"; };
-		E6117B9B25396AB800959D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6380A4C25541D2A0034E556 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		E6380A52255574880034E556 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E6380A56255575740034E556 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
@@ -121,7 +118,7 @@
 		E6A5E7F52540C1C50080BF3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6A5E7F72540C1C50080BF3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6A5E7F82540C1C50080BF3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E6E5A60F2611CD310060E50C /* GeideaPaymentSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GeideaPaymentSDK.xcframework; path = ../MobileSDK.iOS/GeideaPaymentSDK/build/GeideaPaymentSDK.xcframework; sourceTree = "<group>"; };
+		E6E5A61D2611E35A0060E50C /* GeideaPaymentSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GeideaPaymentSDK.xcframework; path = ../../MobileSDK.iOS/GeideaPaymentSDK/build/GeideaPaymentSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6E5A6102611CD310060E50C /* GeideaPaymentSDK.xcframework in Frameworks */,
+				E6E5A61E2611E35A0060E50C /* GeideaPaymentSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E5A61F2611E35A0060E50C /* GeideaPaymentSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,19 +160,9 @@
 			path = GeideaPaymentSDKSwiftSample;
 			sourceTree = "<group>";
 		};
-		E6117B9825396AB800959D78 /* GeideaPaymentSDKTests */ = {
-			isa = PBXGroup;
-			children = (
-				E6117B9925396AB800959D78 /* GeideaPaymentSDKTests.swift */,
-				E6117B9B25396AB800959D78 /* Info.plist */,
-			);
-			path = GeideaPaymentSDKTests;
-			sourceTree = "<group>";
-		};
 		E6224EA52534DFE80065C23F = {
 			isa = PBXGroup;
 			children = (
-				E6117B9825396AB800959D78 /* GeideaPaymentSDKTests */,
 				E6117AB22538971700959D78 /* GeideaPaymentSDKSwiftSample */,
 				E6A5E7E52540C1C20080BF3D /* GeideaPaymentObjCSample */,
 				E6224EB02534DFE80065C23F /* Products */,
@@ -267,7 +255,7 @@
 		E6A5E80F2540C42D0080BF3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E6E5A60F2611CD310060E50C /* GeideaPaymentSDK.xcframework */,
+				E6E5A61D2611E35A0060E50C /* GeideaPaymentSDK.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
