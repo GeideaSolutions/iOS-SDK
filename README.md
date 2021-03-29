@@ -71,7 +71,7 @@ Connect iOS framework:
      To connect iOS framework to your iOS application you should:
      
 1.    Drag GeideaPaymentSDK.framework to your Frameworks folder 
-    1.1    Drag GeideaPaymentSDK.XCFramework to your Frameworks folder (Swift AppVersion)
+    1. OR    Drag GeideaPaymentSDK.XCFramework to your Frameworks folder (Swift App)
 2.    Add it your target: General -> Frameworks, Libraries and and Embedded Content. 
 3.    Choose “Embed & Sign” option on Embed tab 
 4.    If your application is Objective C app perform an additional step: Build settings -> Build Options -> Always Embed Swift Standard Libraries set YES
@@ -371,16 +371,16 @@ Example Objective C:
 4. Pay with Apple Pay using GeideaPaymentAPI.setupApplePay. This is included in the Geidea form if you provide the details
   
   Parameters:
-    - applePayDetails:GDApplePayDetails
-        merchantIdentifier: String **Required** "merchant identifier from Apple account."
-        hostViewController: your host ViewController (Required if you use your own form, unnecessary for Geidea Form)
-        buttonView: UIView as a placeholder where apple Pay Button will be placed  (Required if you use your own form, unnecessary for Geidea Form)
-        merchantRefId String **Optional**
-        callbackUrl: String **Optional**
-    - amount: GDAmount - SDK GDAmount object  **Required**
-        amount: Double **Required**
-        currency: String **Required**
-     - completion: (GDApplePayResponse?, GDErrorResponse?)  -> Void - The completion handler for customer app returned from SDK **Required**
+- applePayDetails:GDApplePayDetails
+    - merchantIdentifier: String **Required** "merchant identifier from Apple account."
+    - hostViewController: your host ViewController (Required if you use your own form, unnecessary for Geidea Form)
+    - buttonView: UIView as a placeholder where apple Pay Button will be placed  (Required if you use your own form, unnecessary for Geidea Form)
+    -  merchantRefId String **Optional**
+    - callbackUrl: String **Optional**
+- amount: GDAmount - SDK GDAmount object  **Required**
+    -  amount: Double **Required**
+    -  currency: String **Required**
+- completion: (GDApplePayResponse?, GDErrorResponse?)  -> Void - The completion handler for customer app returned from SDK **Required**
 
 Example Swift:
 
@@ -491,37 +491,37 @@ SDK Responses from SDK Payment flow:
      In the completion object you will receive two objects one for Order response and another one for errors. Both objects must be checked for null.
 
 •    GDErrorResponse (Nullable) SDK failure response
-     -    errors: [String: [String]] - is not empty when bad request is returned
-     -    status: Int is not empty when bad request is returned
-     -    title: String can be empty
-     -    traceId: String is not empty when bad request is returned
-     -    type: String is not empty when bad request is returned
-     -     responseCode: String is empty when bad request is returned
-     -    responseMessage: String is empty when bad request is returned
-     -    detailedResponseCode: String can be empty
-     -    detailedResponseMessage: String can be empty
-     -    orderId: String can be empty
+-    errors: [String: [String]] - is not empty when bad request is returned
+-    status: Int is not empty when bad request is returned
+-    title: String can be empty
+-    traceId: String is not empty when bad request is returned
+-    type: String is not empty when bad request is returned
+-    responseCode: String is empty when bad request is returned
+-    responseMessage: String is empty when bad request is returned
+-    detailedResponseCode: String can be empty
+-    detailedResponseMessage: String can be empty
+-    orderId: String can be empty
 
 •    GDOrderResponse fields examples (Nullable) please use to display any relevant information
 
-  "order": {
-         "createdDate": "2020-11-13T14:40:33.050Z",
-         "createdBy": "string",
-         "updatedDate": "2020-11-13T14:40:33.050Z",
-         "updatedBy": "string",
-         "orderId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-         "amount": 0,
-         "currency": "string",
-         "detailedStatus": "Initiated",
-         "status": "InProgress",
-         "threeDSecureId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-         "merchantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-         "merchantPublicKey": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-         "parentOrderId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-         "merchantReferenceId": "string",
-         "callbackUrl": "string",
-         "customerEmail": "string",
-         "billingAddress": {
+    "order": {
+       "createdDate": "2020-11-13T14:40:33.050Z",
+        "createdBy": "string",
+        "updatedDate": "2020-11-13T14:40:33.050Z",
+        "updatedBy": "string",
+        "orderId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "amount": 0,
+        "currency": "string",
+        "detailedStatus": "Initiated",
+        "status": "InProgress",
+        "threeDSecureId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "merchantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "merchantPublicKey": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "parentOrderId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "merchantReferenceId": "string",
+        "callbackUrl": "string",
+        "customerEmail": "string",
+        "billingAddress": {
            "countryCode": "string",
            "street": "string",
            "city": "string",
