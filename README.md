@@ -85,39 +85,39 @@ Initialize Payment flow using GeideaSDKPayment objects:
     The function GeideaPaymentApi.pay should have the following parameters:
 
 -   amount: GDAmount - SDK GDAmount object  **Required**
-        amount: Double **Required**
-        currency: String **Required**
+     - amount: Double **Required**
+     - currency: String **Required**
 - cardDetails: GDCardDetails - SDK GDCardDetails object  **Required**
-        cardholderName: String **Required**
-        cardNumber: String **Required**
-        cvv: String **Required**
-        expiryYear: Int **Required**
-        expiryMonth: Int **Required**
+    - cardholderName: String **Required**
+    - cardNumber: String **Required**
+    -  cvv: String **Required**
+    -   expiryYear: Int **Required**
+    - expiryMonth: Int **Required**
 - tokenizationDetails: GDTokenizationDetails **Optional**
-        cardOnFile: Bool **Optional** true for tokenization
-        initiatedBy: String **Optional** Must be "Internet" if card On file true
-        agreementID: String **Optional** Any value
-        agreementType String **Optional** e.g "Recurring" , "installment" ,"Unscheduled" , etc
+    -  cardOnFile: Bool **Optional** true for tokenization
+    -  initiatedBy: String **Optional** Must be "Internet" if card On file true
+    -  agreementID: String **Optional** Any value
+    -  agreementType String **Optional** e.g "Recurring" , "installment" ,"Unscheduled" , etc
 - eInvoice: String  **Optional** EInvoice id for paying an EInvoice created before
 - customerDetails: GDCustomerDetails - SDK GDCustomerDetails object use for internal customer reference for customer info  . **Optional**
-        customerEmail: String **Optional**
-        callbackUrl: String **Optional**
-        merchantReferenceId: String **Optional**
-        paymentOperation: PaymentOperation **Optional**
+    -  customerEmail: String **Optional**
+    -  callbackUrl: String **Optional**
+    -  merchantReferenceId: String **Optional**
+    -  paymentOperation: PaymentOperation **Optional**
 - shippingAddress: GDAddress **Optional**
-        countryCode: String **Optional**
-        city: String **Optional**
-        street: String **Optional**
-        postCode: String **Optional**
+    -  countryCode: String **Optional**
+    -  city: String **Optional**
+    -  street: String **Optional**
+    -  postCode: String **Optional**
 - billingAddress: GDAddress **Optional**
-        countryCode: String **Optional**
-        city: String **Optional**
-        street: String **Optional**
-        postCode: String **Optional**
+    -  countryCode: String **Optional**
+    -  city: String **Optional**
+    -  street: String **Optional**
+    -  postCode: String **Optional**
 - navController: UIViewController - Used for presenting SDK Payment flow. **Required**
-        two options for starting the SDK:
-        self type of : (UIViewController) the SDK will present modally from customer app UIViewController
-        navigationController type of: UINavigationController  the SDK will be pushed from customer app NavigationCotroller
+    - two options for starting the SDK:
+    -   self type of : (UIViewController) the SDK will present modally from customer app UIViewController
+    -  navigationController type of: UINavigationController  the SDK will be pushed from customer app NavigationCotroller
 - completion: (GDOrderResponse?, GDErrorResponse?)  -> Void - The completion handler for customer app returned from SDK **Required**
 
 Example parameters Swift:     
@@ -191,32 +191,32 @@ Example Objective C:
     
     - Parameters:
     - amount: GDAmount - SDK GDAmount object  **Required**
-        amount: Double **Required**
-        currency: String **Required**
+      - amount: Double **Required**
+      - currency: String **Required**
     - showAddress: Bool  **Required** true or false if you use your own addresses form
     - showEmail: Bool  **Required** true or false if you use your own email form
     - tokenizationDetails: GDTokenizationDetails **Optional**
-        cardOnFile: Bool **Optional** true for tokenization
-       initiatedBy: String **Optional** Must be "Internet" if card On file true
-       agreementID: String **Optional** Any Value
-       agreementType String **Optional** e.g "Recurring" , "installment" ,"Unscheduled" , etc
+        - cardOnFile: Bool **Optional** true for tokenization
+        - initiatedBy: String **Optional** Must be "Internet" if card On file true
+        - agreementID: String **Optional** Any Value
+        - agreementType String **Optional** e.g "Recurring" , "installment" ,"Unscheduled" , etc
     - applePayDetails: GDApplePayDetails - SDK GDApplePayDetails **Optional** necessary if you want to use this feature
     - config: GDConfigResponse - SDK GDConfigResponse **Optional** if you provide your saved config form will use it, otherwise a new network call will be requested inside the Form
     - customerDetails: GDCustomerDetails - SDK GDCustomerDetails object use for internal customer reference for customer info . if you use it with showAddress and showEmail, form will be completed automatically with details provided **Optional**
-            customerEmail: String **Optional**
-            callbackUrl: String **Optional**
-            merchantReferenceId: String **Optional**
-            paymentOperation: PaymentOperation **Optional**
-            - shippingAddress: GDAddress **Optional**
-                countryCode: String **Optional**
-                city: String **Optional**
-                street: String **Optional**
-                postCode: String **Optional**
-            - billingAddress: GDAddress **Optional**
-                countryCode: String **Optional**
-                city: String **Optional**
-                street: String **Optional**
-                postCode: String **Optional**
+        -  customerEmail: String **Optional**
+        -  callbackUrl: String **Optional**
+        -  merchantReferenceId: String **Optional**
+        -  paymentOperation: PaymentOperation **Optional**
+        - shippingAddress: GDAddress **Optional**
+            -   countryCode: String **Optional**
+            -   city: String **Optional**
+            -   street: String **Optional**
+            -  postCode: String **Optional**
+        - billingAddress: GDAddress **Optional**
+            -  countryCode: String **Optional**
+            -  city: String **Optional**
+            -  street: String **Optional**
+            -  postCode: String **Optional**
     - eInvoiceId: String  **Optional** EInvoice id for paying an EInvoice created before
     - navController: UIViewController - Used for presenting SDK Payment flow. **Required**
        self type of : (UIViewController) the SDK will present modally from customer app UIViewController
