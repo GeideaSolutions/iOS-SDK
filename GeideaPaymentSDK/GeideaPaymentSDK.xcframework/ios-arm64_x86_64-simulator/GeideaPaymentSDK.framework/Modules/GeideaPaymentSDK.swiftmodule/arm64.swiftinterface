@@ -319,7 +319,7 @@ public struct SecureStore {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers @objcMembers public class GDOrdersFilter : ObjectiveC.NSObject, Swift.Codable {
+@objc @objcMembers public class GDOrdersFilter : ObjectiveC.NSObject, Swift.Codable {
   @objc public var DetailedStatuses: [Swift.String]?
   @objc public var Status: Swift.String?
   @objc public var UpdatedDate: Swift.String?
@@ -327,9 +327,9 @@ public struct SecureStore {
   @objc public var ToDate: Swift.String?
   @objc public var Skip: Swift.Int
   @objc public var Take: Swift.Int
-  @objc override dynamic public init()
   @objc public init(withStatus status: Swift.String? = nil, andDetailedStatuses detailedStatuses: [Swift.String]? = nil, andUpdatedDate updatedDate: Swift.String? = nil, from fromDate: Swift.String? = nil, to toDate: Swift.String? = nil, skip: Swift.Int = 0, take: Swift.Int = 20)
   @objc deinit
+  @objc override dynamic public init()
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }

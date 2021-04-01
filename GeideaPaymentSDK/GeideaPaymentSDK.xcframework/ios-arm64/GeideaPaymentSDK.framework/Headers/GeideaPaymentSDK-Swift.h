@@ -433,8 +433,9 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK14GDOrdersFilter")
 @property (nonatomic, copy) NSString * _Nullable ToDate;
 @property (nonatomic) NSInteger Skip;
 @property (nonatomic) NSInteger Take;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithStatus:(NSString * _Nullable)status andDetailedStatuses:(NSArray<NSString *> * _Nullable)detailedStatuses andUpdatedDate:(NSString * _Nullable)updatedDate from:(NSString * _Nullable)fromDate to:(NSString * _Nullable)toDate skip:(NSInteger)skip take:(NSInteger)take OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
