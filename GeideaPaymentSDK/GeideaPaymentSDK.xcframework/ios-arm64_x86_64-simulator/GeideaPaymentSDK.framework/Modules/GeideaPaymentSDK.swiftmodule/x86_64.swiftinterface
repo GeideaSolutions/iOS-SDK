@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.1 effective-4.1.50 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-compiler-version: Apple Swift version 5.4.2 effective-4.1.50 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name GeideaPaymentSDK
 import Foundation
 @_exported import GeideaPaymentSDK
@@ -11,8 +11,8 @@ import WebKit
 public struct PaymentMehodParams : Swift.Codable {
   public var month: Swift.Int
   public var year: Swift.Int
-  public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 extension String {
   public var asURL: Foundation.URL? {
@@ -21,15 +21,15 @@ extension String {
 }
 @objc public class GDApplePayDetails : ObjectiveC.NSObject {
   @objc public init(in hostViewController: UIKit.UIViewController? = nil, andButtonIn buttonView: UIKit.UIView? = nil, forMerchantIdentifier merchantIdentifier: Swift.String, withCallbackUrl callBackUrl: Swift.String?, andReferenceId merchantRefId: Swift.String?)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class GDAddress : ObjectiveC.NSObject, Swift.Codable {
   @objc override dynamic public init()
   @objc public init(withCountryCode countryCode: Swift.String?, andCity city: Swift.String?, andStreet street: Swift.String?, andPostCode postCode: Swift.String?)
   @objc deinit
-  required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDOrdersResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public var orders: [GeideaPaymentSDK.GDOrderResponse]?
@@ -39,8 +39,8 @@ extension String {
   @objc public var responseMessage: Swift.String?
   @objc public var responseCode: Swift.String?
   @objc deinit
-  required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class GDOrderResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public var merchantReferenceId: Swift.String?
@@ -72,22 +72,22 @@ extension String {
   @objc public var initiatedBy: Swift.String?
   @objc public var agreementId: Swift.String?
   @objc public var agreementType: Swift.String?
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc public class GDConfigApplePay : ObjectiveC.NSObject, Swift.Codable {
   @objc override dynamic public init()
   @objc deinit
-  required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 public struct ExpiryDateParams : Swift.Codable {
   public var month: Swift.Int
   public var year: Swift.Int
-  public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class GeideaPaymentAPI : ObjectiveC.NSObject {
   @objc public static func isCredentialsAvailable() -> Swift.Bool
@@ -121,10 +121,10 @@ public struct ExpiryDateParams : Swift.Codable {
   @objc public var email: Swift.String?
   @objc public var phone: Swift.String?
   @objc public var name: Swift.String?
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 public struct CountryConstants {
 }
@@ -134,10 +134,10 @@ public struct CountryConstants {
   @objc public var cardholderName: Swift.String?
   @objc public var maskedCardNumber: Swift.String?
   public var expiryDate: GeideaPaymentSDK.ExpiryDateParams?
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 extension URL {
   public var queryItems: [Swift.String : Swift.String] {
@@ -146,8 +146,8 @@ extension URL {
 }
 @objc public class GDTokenizationDetails : ObjectiveC.NSObject {
   @objc public init(withCardOnFile isCardOnFile: Swift.Bool = false, initiatedBy: Swift.String? = nil, agreementId: Swift.String? = nil, agreementType: Swift.String? = nil)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDConfigResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public var hppDefaultTimeout: Swift.Int
@@ -163,9 +163,9 @@ extension URL {
   @objc public var paymentMethods: [Swift.String]?
   @objc public var currencies: [Swift.String]?
   @objc public var allowedInitiatedByValues: [Swift.String]?
-  required public init(from decoder: Swift.Decoder) throws
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @objc public class GDAmount : ObjectiveC.NSObject {
   @objc public init(amount: Swift.Double, currency: Swift.String)
@@ -180,9 +180,9 @@ extension URL {
   public var isSupported: Swift.Bool
   public var numericCode: Swift.Int?
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objcMembers public class GDCodesResponse : Swift.Codable {
   @objc public var acquirerCode: Swift.String?
@@ -192,8 +192,8 @@ extension URL {
   @objc public var detailedResponseCode: Swift.String?
   @objc public var detailedResponseMessage: Swift.String?
   @objc deinit
-  required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc public class GDCustomerDetails : ObjectiveC.NSObject {
   @objc override dynamic public init()
@@ -205,9 +205,9 @@ extension URL {
   public var responseMessage: Swift.String?
   public var detailedResponseMessage: Swift.String?
   public var detailedResponseCode: Swift.String?
-  required public init(from decoder: Swift.Decoder) throws
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 extension JSONSerialization {
   open class func decimalData(withJSONObject obj: Any, options opt: Foundation.JSONSerialization.WritingOptions = []) throws -> Foundation.Data
@@ -215,8 +215,8 @@ extension JSONSerialization {
 }
 @objc public class GDCardDetails : ObjectiveC.NSObject {
   @objc public init(withCardholderName cardholderName: Swift.String, andCardNumber cardNumber: Swift.String, andCVV cvv: Swift.String, andExpiryMonth expiryMonth: Swift.Int, andExpiryYear expiryYear: Swift.Int)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @objc public class GDEInvoiceDetails : ObjectiveC.NSObject {
   @objc public init(withAmount amount: GeideaPaymentSDK.GDAmount, andExpiryDate expiryDate: Foundation.Date? = nil, andName name: Swift.String, andEmail email: Swift.String? = nil, andPhoneNumber phoneNumber: Swift.String? = nil, eInvoiceId: Swift.String? = nil)
@@ -228,8 +228,8 @@ extension JSONSerialization {
   case test
   case preprod
   case prod
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -242,10 +242,10 @@ extension JSONSerialization {
   @objc public var merchantPublicKey: Swift.String?
   @objc public var expiryDate: Swift.String?
   @objc public var status: Swift.String?
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 public struct SecureStore {
   public func setValue(_ value: Swift.String, for userAccount: Swift.String) throws
@@ -259,10 +259,10 @@ public struct SecureStore {
   @objc public var detailedResponseCode: Swift.String
   @objc public var detailedResponseMessage: Swift.String
   @objc public var orderId: Swift.String
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class GDTransactionResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public var authenticationDetails: GeideaPaymentSDK.GDAuthenticationDetailsResponse?
@@ -280,10 +280,10 @@ public struct SecureStore {
   @objc public var rrn: Swift.String?
   @objc public var paymentMethod: GeideaPaymentSDK.GDPaymentMethodResponse?
   public var codes: GeideaPaymentSDK.GDCodesResponse?
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @objc public enum CardType : Swift.Int {
   case Amex, Visa, MasterCard, Mada
@@ -291,8 +291,8 @@ public struct SecureStore {
     get
   }
   public func matchesRegex(regex: Swift.String!, text: Swift.String!) -> Swift.Bool
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -302,19 +302,19 @@ public struct SecureStore {
   case error = 1
   case info = 2
   case debug = 3
+  public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
-  public init?(rawValue: Swift.Int)
 }
 @objc public enum PaymentOperation : Swift.Int, Swift.Codable {
   case pay
   case preAuthorize
   case authorizeCapture
   case NONE
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -328,10 +328,10 @@ public struct SecureStore {
   @objc public var Skip: Swift.Int
   @objc public var Take: Swift.Int
   @objc public init(withStatus status: Swift.String? = nil, andDetailedStatuses detailedStatuses: [Swift.String]? = nil, andUpdatedDate updatedDate: Swift.String? = nil, from fromDate: Swift.String? = nil, to toDate: Swift.String? = nil, skip: Swift.Int = 0, take: Swift.Int = 20)
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class GDAuthenticationDetailsResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public var acsEci: Swift.String?
@@ -341,10 +341,10 @@ public struct SecureStore {
   @objc public var authenticationToken: Swift.String?
   @objc public var xid: Swift.String?
   @objc public var accountAuthenticationValue: Swift.String?
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class GDCancelResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public var orderId: Swift.String?
@@ -353,9 +353,9 @@ public struct SecureStore {
   @objc public var detailedResponseMessage: Swift.String?
   @objc public var detailedResponseCode: Swift.String?
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 public struct SecureStoreErrorConstants {
 }
@@ -393,9 +393,9 @@ public struct SDKErrorConstants {
   @objc public var detailedResponseMessage: Swift.String?
   @objc public var responseCode: Swift.String?
   @objc public var detailedResponseCode: Swift.String?
-  required public init(from decoder: Swift.Decoder) throws
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 extension GeideaPaymentSDK.Environment : Swift.Equatable {}
 extension GeideaPaymentSDK.Environment : Swift.Hashable {}
