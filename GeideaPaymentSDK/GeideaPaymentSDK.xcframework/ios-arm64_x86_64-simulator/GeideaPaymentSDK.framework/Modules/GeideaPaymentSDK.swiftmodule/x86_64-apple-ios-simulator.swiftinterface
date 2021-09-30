@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 effective-4.1.50 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5 effective-4.1.50 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name GeideaPaymentSDK
 import Foundation
 @_exported import GeideaPaymentSDK
@@ -8,20 +8,20 @@ import Security
 import Swift
 import UIKit
 import WebKit
+import _Concurrency
 public struct PaymentMehodParams : Swift.Codable {
   public var month: Swift.Int
   public var year: Swift.Int
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-extension String {
+extension Swift.String {
   public var asURL: Foundation.URL? {
     get
   }
 }
 @objc public class GDApplePayDetails : ObjectiveC.NSObject {
-  @objc public init(in hostViewController: UIKit.UIViewController? = nil, andButtonIn buttonView: UIKit.UIView? = nil, forMerchantIdentifier merchantIdentifier: Swift.String, withCallbackUrl callBackUrl: Swift.String?, andReferenceId merchantRefId: Swift.String?)
-  @objc override dynamic public init()
+  @objc public init(in hostViewController: UIKit.UIViewController? = nil, andButtonIn buttonView: UIKit.UIView? = nil, forMerchantIdentifier merchantIdentifier: Swift.String, andMerchantDisplayName merchantDisplayName: Swift.String, withCallbackUrl callBackUrl: Swift.String?, andReferenceId merchantRefId: Swift.String?)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class GDAddress : ObjectiveC.NSObject, Swift.Codable {
@@ -139,14 +139,13 @@ public struct CountryConstants {
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
-extension URL {
+extension Foundation.URL {
   public var queryItems: [Swift.String : Swift.String] {
     get
   }
 }
 @objc public class GDTokenizationDetails : ObjectiveC.NSObject {
   @objc public init(withCardOnFile isCardOnFile: Swift.Bool = false, initiatedBy: Swift.String? = nil, agreementId: Swift.String? = nil, agreementType: Swift.String? = nil)
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDConfigResponse : ObjectiveC.NSObject, Swift.Codable {
@@ -162,6 +161,7 @@ extension URL {
   @objc public var applePay: GeideaPaymentSDK.GDConfigApplePay?
   @objc public var paymentMethods: [Swift.String]?
   @objc public var currencies: [Swift.String]?
+  @objc public var merchantName: Swift.String?
   @objc public var allowedInitiatedByValues: [Swift.String]?
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
@@ -169,7 +169,6 @@ extension URL {
 }
 @objc public class GDAmount : ObjectiveC.NSObject {
   @objc public init(amount: Swift.Double, currency: Swift.String)
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class ConfigCountriesResponse : ObjectiveC.NSObject, Swift.Codable {
@@ -209,18 +208,16 @@ extension URL {
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
-extension JSONSerialization {
+extension Foundation.JSONSerialization {
   open class func decimalData(withJSONObject obj: Any, options opt: Foundation.JSONSerialization.WritingOptions = []) throws -> Foundation.Data
   open class func writeDecimalJSONObject(_ obj: Any, to stream: Foundation.OutputStream, options opt: Foundation.JSONSerialization.WritingOptions = [], error: Foundation.NSErrorPointer) -> Swift.Int
 }
 @objc public class GDCardDetails : ObjectiveC.NSObject {
   @objc public init(withCardholderName cardholderName: Swift.String, andCardNumber cardNumber: Swift.String, andCVV cvv: Swift.String, andExpiryMonth expiryMonth: Swift.Int, andExpiryYear expiryYear: Swift.Int)
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc public class GDEInvoiceDetails : ObjectiveC.NSObject {
   @objc public init(withAmount amount: GeideaPaymentSDK.GDAmount, andExpiryDate expiryDate: Foundation.Date? = nil, andName name: Swift.String, andEmail email: Swift.String? = nil, andPhoneNumber phoneNumber: Swift.String? = nil, eInvoiceId: Swift.String? = nil)
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc public enum Environment : Swift.Int {
@@ -328,7 +325,6 @@ public struct SecureStore {
   @objc public var Skip: Swift.Int
   @objc public var Take: Swift.Int
   @objc public init(withStatus status: Swift.String? = nil, andDetailedStatuses detailedStatuses: [Swift.String]? = nil, andUpdatedDate updatedDate: Swift.String? = nil, from fromDate: Swift.String? = nil, to toDate: Swift.String? = nil, skip: Swift.Int = 0, take: Swift.Int = 20)
-  @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -364,7 +360,7 @@ public enum SecureStoreError : Swift.Error {
   case data2StringConversionError
   case unhandledError(message: Swift.String)
 }
-extension SecureStoreError : Foundation.LocalizedError {
+extension GeideaPaymentSDK.SecureStoreError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
