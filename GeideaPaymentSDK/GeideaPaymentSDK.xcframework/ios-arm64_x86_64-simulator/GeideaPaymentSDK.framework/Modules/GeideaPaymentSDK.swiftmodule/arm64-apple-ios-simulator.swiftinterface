@@ -21,7 +21,7 @@ extension Swift.String {
   }
 }
 @objc public class GDApplePayDetails : ObjectiveC.NSObject {
-  @objc public init(in hostViewController: UIKit.UIViewController? = nil, andButtonIn buttonView: UIKit.UIView? = nil, forMerchantIdentifier merchantIdentifier: Swift.String, andMerchantDisplayName merchantDisplayName: Swift.String, withCallbackUrl callBackUrl: Swift.String?, andReferenceId merchantRefId: Swift.String?)
+  @objc public init(in hostViewController: UIKit.UIViewController? = nil, andButtonIn buttonView: UIKit.UIView? = nil, forMerchantIdentifier merchantIdentifier: Swift.String, andMerchantDisplayName merchantDisplayName: Swift.String? = nil, withCallbackUrl callBackUrl: Swift.String?, andReferenceId merchantRefId: Swift.String?)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class GDAddress : ObjectiveC.NSObject, Swift.Codable {

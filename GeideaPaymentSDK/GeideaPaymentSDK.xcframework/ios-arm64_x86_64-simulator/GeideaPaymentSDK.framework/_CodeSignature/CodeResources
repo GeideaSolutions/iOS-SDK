@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		KrskPrAlcEOGn5Ic2C5zqUFYOaw=
+		X2cbkwHideSmvb962g51bC5mp1w=
 		</data>
 		<key>CVVAlertViewController.nib</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/GeideaPaymentSDK-Swift.h</key>
 		<data>
-		14ACjIS7L2kLbMHDCO3OzmG8PFU=
+		B3Mn0c0zDL8tvtpjjx1ffoOmzwI=
 		</data>
 		<key>Headers/GeideaPaymentSDK.h</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		2UugryB1m5LWmlDJCWKj5IxfZDk=
+		ymUuUM6qq2sNn8uYt5XYt91IlYo=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		GqW1/I2GR0tTmHOPgNNJpjzE1Ew=
+		kkX8oRn535r0/NYwxpr4WuGtJow=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -66,11 +66,11 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		2UugryB1m5LWmlDJCWKj5IxfZDk=
+		ymUuUM6qq2sNn8uYt5XYt91IlYo=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		GqW1/I2GR0tTmHOPgNNJpjzE1Ew=
+		kkX8oRn535r0/NYwxpr4WuGtJow=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -78,11 +78,11 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		298yGjoNaAW0CVXmwNAkl9pvwy4=
+		taySpTAbkU8CadJKFShcY29ElXQ=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/xhezVWnrEV4lwkblr/8lfd/lXY=
+		QQE2nrAA5kksMXn+f4rlbNJS8hg=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -90,11 +90,11 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		298yGjoNaAW0CVXmwNAkl9pvwy4=
+		taySpTAbkU8CadJKFShcY29ElXQ=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		/xhezVWnrEV4lwkblr/8lfd/lXY=
+		QQE2nrAA5kksMXn+f4rlbNJS8hg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -187,7 +187,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			B7oPSnjgxgv8XhIVYUAfi/1FceIt9R1QceJYnY9kmFc=
+			+7SXZhKr94hlM3HkWiOuVbDMTc6sCU5NHVp0iuVa4k4=
 			</data>
 		</dict>
 		<key>CVVAlertViewController.nib</key>
@@ -236,7 +236,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pEJi6fPkuQEkZrEySyn9VT4oiHd8tx6kp1xQja/CNY8=
+			rh6d8e/hTCGBbLAL618YXTupJYCX7teARKctEi3cKx0=
 			</data>
 		</dict>
 		<key>Headers/GeideaPaymentSDK.h</key>
@@ -257,14 +257,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hhw6psTd9l4swSUsXNj9wgTlw/UDNxBjpgDRwb2LtW4=
+			ZgBIs+nvpyMjMAaEqoBPah6X/6fO8qULJ7OY7EgYAB0=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2OgMVYmqi8csZItGvyFAHkIFZWrEWwISERpVrbRchOM=
+			FQRodZzul6YrtwWvp1DePsSyQ32yARH+ioVKHPNHcWk=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64.swiftdoc</key>
@@ -278,14 +278,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hhw6psTd9l4swSUsXNj9wgTlw/UDNxBjpgDRwb2LtW4=
+			ZgBIs+nvpyMjMAaEqoBPah6X/6fO8qULJ7OY7EgYAB0=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2OgMVYmqi8csZItGvyFAHkIFZWrEWwISERpVrbRchOM=
+			FQRodZzul6YrtwWvp1DePsSyQ32yARH+ioVKHPNHcWk=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -299,14 +299,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qXngtihRNpoJq/OC8F6z2fpwF7hQHbQf1DclSV0dUC4=
+			wtNIzQCRjQEw/Vjf3Rbb1bn6rvs78SY0OvnpcLqHdcc=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			98Xz//eX63f//4jWjnErWEjklkaf3b/9Veqnd5y6m2U=
+			bKhuCStqj3nkSk33dyyCZZiSaoWEmb5gmYcs1Re+y/k=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64.swiftdoc</key>
@@ -320,14 +320,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qXngtihRNpoJq/OC8F6z2fpwF7hQHbQf1DclSV0dUC4=
+			wtNIzQCRjQEw/Vjf3Rbb1bn6rvs78SY0OvnpcLqHdcc=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			98Xz//eX63f//4jWjnErWEjklkaf3b/9Veqnd5y6m2U=
+			bKhuCStqj3nkSk33dyyCZZiSaoWEmb5gmYcs1Re+y/k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

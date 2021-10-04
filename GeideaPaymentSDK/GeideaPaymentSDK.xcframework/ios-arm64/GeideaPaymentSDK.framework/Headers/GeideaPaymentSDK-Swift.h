@@ -249,7 +249,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK8GDAmount")
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK17GDApplePayDetails")
 @interface GDApplePayDetails : NSObject
-- (nonnull instancetype)initIn:(UIViewController * _Nullable)hostViewController andButtonIn:(UIView * _Nullable)buttonView forMerchantIdentifier:(NSString * _Nonnull)merchantIdentifier andMerchantDisplayName:(NSString * _Nonnull)merchantDisplayName withCallbackUrl:(NSString * _Nullable)callBackUrl andReferenceId:(NSString * _Nullable)merchantRefId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initIn:(UIViewController * _Nullable)hostViewController andButtonIn:(UIView * _Nullable)buttonView forMerchantIdentifier:(NSString * _Nonnull)merchantIdentifier andMerchantDisplayName:(NSString * _Nullable)merchantDisplayName withCallbackUrl:(NSString * _Nullable)callBackUrl andReferenceId:(NSString * _Nullable)merchantRefId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
