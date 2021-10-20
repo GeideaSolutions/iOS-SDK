@@ -192,6 +192,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
+@import PassKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -251,7 +252,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK8GDAmount")
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK17GDApplePayDetails")
 @interface GDApplePayDetails : NSObject
-- (nonnull instancetype)initIn:(UIViewController * _Nullable)hostViewController andButtonIn:(UIView * _Nullable)buttonView forMerchantIdentifier:(NSString * _Nonnull)merchantIdentifier andMerchantDisplayName:(NSString * _Nullable)merchantDisplayName withCallbackUrl:(NSString * _Nullable)callBackUrl andReferenceId:(NSString * _Nullable)merchantRefId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initIn:(UIViewController * _Nullable)hostViewController andButtonIn:(UIView * _Nullable)buttonView forMerchantIdentifier:(NSString * _Nonnull)merchantIdentifier andMerchantDisplayName:(NSString * _Nullable)merchantDisplayName requiredBillingContactFields:(NSSet<PKContactField> * _Nullable)requiredBillingContactFields requiredShippingContactFields:(NSSet<PKContactField> * _Nullable)requiredShippingContactFields withCallbackUrl:(NSString * _Nullable)callBackUrl andReferenceId:(NSString * _Nullable)merchantRefId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -854,7 +855,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)payWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount showAddress:(BOOL)showAddress showEmail:(BOOL)showEmail tokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails customerDetails:(GDCustomerDetails * _Nullable)customerDetails applePayDetails:(GDApplePayDetails * _Nullable)applePayDetails config:(GDConfigResponse * _Nullable)config eInvoiceId:(NSString * _Nullable)eInvoiceId viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable, GDApplePayResponse * _Nullable))completion;
++ (void)payWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount showAddress:(BOOL)showAddress showEmail:(BOOL)showEmail tokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails customerDetails:(GDCustomerDetails * _Nullable)customerDetails applePayDetails:(GDApplePayDetails * _Nullable)applePayDetails config:(GDConfigResponse * _Nullable)config eInvoiceId:(NSString * _Nullable)eInvoiceId viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Starting the pay with token flow cardDetails already tokenized from Pay request
 /// <ul>
 ///   <li>
@@ -1207,7 +1208,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)setupApplePayForApplePayDetails:(GDApplePayDetails * _Nonnull)applePayDetails with:(GDAmount * _Nonnull)amount config:(GDConfigResponse * _Nullable)config completion:(void (^ _Nonnull)(GDApplePayResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)setupApplePayForApplePayDetails:(GDApplePayDetails * _Nonnull)applePayDetails with:(GDAmount * _Nonnull)amount config:(GDConfigResponse * _Nullable)config completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Getting card scheme logo
 /// <ul>
 ///   <li>
@@ -1618,6 +1619,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
+@import PassKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -1677,7 +1679,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK8GDAmount")
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK17GDApplePayDetails")
 @interface GDApplePayDetails : NSObject
-- (nonnull instancetype)initIn:(UIViewController * _Nullable)hostViewController andButtonIn:(UIView * _Nullable)buttonView forMerchantIdentifier:(NSString * _Nonnull)merchantIdentifier andMerchantDisplayName:(NSString * _Nullable)merchantDisplayName withCallbackUrl:(NSString * _Nullable)callBackUrl andReferenceId:(NSString * _Nullable)merchantRefId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initIn:(UIViewController * _Nullable)hostViewController andButtonIn:(UIView * _Nullable)buttonView forMerchantIdentifier:(NSString * _Nonnull)merchantIdentifier andMerchantDisplayName:(NSString * _Nullable)merchantDisplayName requiredBillingContactFields:(NSSet<PKContactField> * _Nullable)requiredBillingContactFields requiredShippingContactFields:(NSSet<PKContactField> * _Nullable)requiredShippingContactFields withCallbackUrl:(NSString * _Nullable)callBackUrl andReferenceId:(NSString * _Nullable)merchantRefId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -2280,7 +2282,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)payWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount showAddress:(BOOL)showAddress showEmail:(BOOL)showEmail tokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails customerDetails:(GDCustomerDetails * _Nullable)customerDetails applePayDetails:(GDApplePayDetails * _Nullable)applePayDetails config:(GDConfigResponse * _Nullable)config eInvoiceId:(NSString * _Nullable)eInvoiceId viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable, GDApplePayResponse * _Nullable))completion;
++ (void)payWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount showAddress:(BOOL)showAddress showEmail:(BOOL)showEmail tokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails customerDetails:(GDCustomerDetails * _Nullable)customerDetails applePayDetails:(GDApplePayDetails * _Nullable)applePayDetails config:(GDConfigResponse * _Nullable)config eInvoiceId:(NSString * _Nullable)eInvoiceId viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Starting the pay with token flow cardDetails already tokenized from Pay request
 /// <ul>
 ///   <li>
@@ -2633,7 +2635,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)setupApplePayForApplePayDetails:(GDApplePayDetails * _Nonnull)applePayDetails with:(GDAmount * _Nonnull)amount config:(GDConfigResponse * _Nullable)config completion:(void (^ _Nonnull)(GDApplePayResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)setupApplePayForApplePayDetails:(GDApplePayDetails * _Nonnull)applePayDetails with:(GDAmount * _Nonnull)amount config:(GDConfigResponse * _Nullable)config completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Getting card scheme logo
 /// <ul>
 ///   <li>
