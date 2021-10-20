@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		jfVURX6+NqURtun22iEtTaOSvwk=
+		KWsWslWq/jLErmGtO2p2VlYMxlM=
 		</data>
 		<key>CVVAlertViewController.nib</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/GeideaPaymentSDK-Swift.h</key>
 		<data>
-		Rikgt4AMpL6Mfewxup9r/hMsF8g=
+		1/aW8wYkFQwOsczhnqsIMyeY/Q0=
 		</data>
 		<key>Headers/GeideaPaymentSDK.h</key>
 		<data>
@@ -46,39 +46,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7LGAmQya+6heEF/TTCa3GSPmTDQ=
+		uZRb+LS+8j0B5N8WJptmlonc3Tw=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		ZOCbbfaNSvy5pkMBnnBfVihdqSc=
+		OkKDN54Xf2tCHzkqPAi8/whfoKg=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		ZOCbbfaNSvy5pkMBnnBfVihdqSc=
+		OkKDN54Xf2tCHzkqPAi8/whfoKg=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		7qWydjcIsbkjhlfgp/WuQQjdF14=
+		HctXJoEWDmTg2i8qzl4bliUiN9k=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		5bzRhVp9tkSzGn7T4CcdW2UZ2fo=
+		3tH/G2+/Z7+Ao5eepijNfXj3rns=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		+p2X+Oabur5qlgRAO4rOi7e2F5Q=
+		Zi1CVr7FD+nUQfsLWnuzCOmIkRI=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		7qWydjcIsbkjhlfgp/WuQQjdF14=
+		HctXJoEWDmTg2i8qzl4bliUiN9k=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		5bzRhVp9tkSzGn7T4CcdW2UZ2fo=
+		3tH/G2+/Z7+Ao5eepijNfXj3rns=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		+p2X+Oabur5qlgRAO4rOi7e2F5Q=
+		Zi1CVr7FD+nUQfsLWnuzCOmIkRI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -171,7 +171,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cX/JRbXvMy0Dhc9ir4s2SW0HpK5thvctA6Pp+MvdVSg=
+			U55hqmj57jOepOIQXkjm1UjIZTRSHeq3pHhCZyVh7VY=
 			</data>
 		</dict>
 		<key>CVVAlertViewController.nib</key>
@@ -220,7 +220,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HCXAgqB8sv+xI6HnDCC/5f2AsQpx8+qRmBja2s2DJ/U=
+			285TJrNgDL20U2VbvOqZ/Y3cFFSVj2C3E0s81EGbeXQ=
 			</data>
 		</dict>
 		<key>Headers/GeideaPaymentSDK.h</key>
@@ -234,56 +234,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ykLQUnoc1Ct0VXn7lZDjCHEllQOKQjGfUTPgh2r9YI0=
+			2X9NVEFTLprdWxy5IYi0+HwSx7jJzqntfyEH3kP6VQ8=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ykLQUnoc1Ct0VXn7lZDjCHEllQOKQjGfUTPgh2r9YI0=
+			2X9NVEFTLprdWxy5IYi0+HwSx7jJzqntfyEH3kP6VQ8=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ePNmbriZBFPVzuySanvGeP6JYZgT9qKsiBAZkG7byc8=
+			HD4RN4CjgALolFJRmoX1iG1gAK3SETyXIiH/MnDNMus=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RVWio8QVsPK6KIrU06IyzeqO2eap+ALoysFeIz+LCsE=
+			n29+LTdBQLxnd0bWKvdUVg907yW7M16y8k96lvBLeAo=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZtDh0g5/oCZZWzU/HhN1moN3V4nsy2/LQ1Jb4l/REp4=
+			7WZKyHl35CidDPKjRPN8bRa+umCn0+2Y5lzRIdxgFTk=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ePNmbriZBFPVzuySanvGeP6JYZgT9qKsiBAZkG7byc8=
+			HD4RN4CjgALolFJRmoX1iG1gAK3SETyXIiH/MnDNMus=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RVWio8QVsPK6KIrU06IyzeqO2eap+ALoysFeIz+LCsE=
+			n29+LTdBQLxnd0bWKvdUVg907yW7M16y8k96lvBLeAo=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZtDh0g5/oCZZWzU/HhN1moN3V4nsy2/LQ1Jb4l/REp4=
+			7WZKyHl35CidDPKjRPN8bRa+umCn0+2Y5lzRIdxgFTk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

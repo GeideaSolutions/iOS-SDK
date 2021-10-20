@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.5 effective-4.1.50 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name GeideaPaymentSDK
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name GeideaPaymentSDK
 import Foundation
 @_exported import GeideaPaymentSDK
 import PassKit
@@ -21,7 +21,7 @@ extension Swift.String {
   }
 }
 @objc public class GDApplePayDetails : ObjectiveC.NSObject {
-  @objc public init(in hostViewController: UIKit.UIViewController? = nil, andButtonIn buttonView: UIKit.UIView? = nil, forMerchantIdentifier merchantIdentifier: Swift.String, andMerchantDisplayName merchantDisplayName: Swift.String? = nil, withCallbackUrl callBackUrl: Swift.String?, andReferenceId merchantRefId: Swift.String?)
+  @objc public init(in hostViewController: UIKit.UIViewController? = nil, andButtonIn buttonView: UIKit.UIView? = nil, forMerchantIdentifier merchantIdentifier: Swift.String, andMerchantDisplayName merchantDisplayName: Swift.String? = nil, requiredBillingContactFields: Swift.Set<PassKit.PKContactField>? = nil, requiredShippingContactFields: Swift.Set<PassKit.PKContactField>? = nil, withCallbackUrl callBackUrl: Swift.String?, andReferenceId merchantRefId: Swift.String?)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class GDAddress : ObjectiveC.NSObject, Swift.Codable {
@@ -93,12 +93,12 @@ public struct ExpiryDateParams : Swift.Codable {
   @objc public static func isCredentialsAvailable() -> Swift.Bool
   @objc public static func setCredentials(withMerchantKey merchantKey: Swift.String, andPassword password: Swift.String)
   @objc public static func pay(theAmount amount: GeideaPaymentSDK.GDAmount, withCardDetails cardDetails: GeideaPaymentSDK.GDCardDetails, andTokenizationDetails tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails?, andEInvoice eInvoiceId: Swift.String?, andCustomerDetails customerDetails: GeideaPaymentSDK.GDCustomerDetails?, orderId: Swift.String? = nil, dismissAction: ((GeideaPaymentSDK.GDCancelResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
-  @objc public static func payWithGeideaForm(theAmount amount: GeideaPaymentSDK.GDAmount, showAddress: Swift.Bool, showEmail: Swift.Bool, tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails?, customerDetails: GeideaPaymentSDK.GDCustomerDetails?, applePayDetails: GeideaPaymentSDK.GDApplePayDetails? = nil, config: GeideaPaymentSDK.GDConfigResponse?, eInvoiceId: Swift.String?, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?, GeideaPaymentSDK.GDApplePayResponse?) -> Swift.Void)
+  @objc public static func payWithGeideaForm(theAmount amount: GeideaPaymentSDK.GDAmount, showAddress: Swift.Bool, showEmail: Swift.Bool, tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails?, customerDetails: GeideaPaymentSDK.GDCustomerDetails?, applePayDetails: GeideaPaymentSDK.GDApplePayDetails? = nil, config: GeideaPaymentSDK.GDConfigResponse?, eInvoiceId: Swift.String?, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func payWithToken(theAmount amount: GeideaPaymentSDK.GDAmount, withTokenId token: Swift.String, tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails, andEInvoiceId eInvoiceId: Swift.String?, andCustomerDetails customerDetails: GeideaPaymentSDK.GDCustomerDetails?, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func capture(with orderId: Swift.String, callbackUrl: Swift.String?, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func refund(with orderId: Swift.String, callbackUrl: Swift.String?, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func cancel(with orderId: Swift.String, callbackUrl: Swift.String?, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDCancelResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
-  @objc public static func setupApplePay(forApplePayDetails applePayDetails: GeideaPaymentSDK.GDApplePayDetails, with amount: GeideaPaymentSDK.GDAmount, config: GeideaPaymentSDK.GDConfigResponse?, completion: @escaping (GeideaPaymentSDK.GDApplePayResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func setupApplePay(forApplePayDetails applePayDetails: GeideaPaymentSDK.GDApplePayDetails, with amount: GeideaPaymentSDK.GDAmount, config: GeideaPaymentSDK.GDConfigResponse?, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func getCardSchemeLogo(withCardType cardType: GeideaPaymentSDK.CardType) -> UIKit.UIImage?
   @objc public static func getCardSchemeLogo(withCardNumber cardNumber: Swift.String?) -> UIKit.UIImage?
   @objc public static func createInvoice(with eInvoiceParams: GeideaPaymentSDK.GDEInvoiceDetails, completion: @escaping (GeideaPaymentSDK.GDEInvoiceResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
