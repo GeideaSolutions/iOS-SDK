@@ -495,6 +495,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK21GDTransactionResponse")
 @end
 
 @class UIImage;
+@class PKPayment;
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 @interface GeideaPaymentAPI : NSObject
@@ -1379,6 +1380,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 + (void)removeCredentials;
 + (void)updateCredentialsWithMerchantKey:(NSString * _Nonnull)merchantKey andPassword:(NSString * _Nonnull)password;
 + (void)startEInvoiceWithEInvoiceID:(NSString * _Nullable)eInvoiceId viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDEInvoiceResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)payWithApplePayWithPKPayment:(PKPayment * _Nonnull)pkPayment callbackUrl:(NSString * _Nullable)callbackUrl merchentRefId:(NSString * _Nullable)merchentRefId completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (NSString * _Nullable)getModelStringWithOrder:(GDOrderResponse * _Nonnull)order SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)getConfigStringWithConfig:(GDConfigResponse * _Nonnull)config SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)getEInvoiceStringWithOrder:(GDEInvoiceResponse * _Nonnull)order SWIFT_WARN_UNUSED_RESULT;

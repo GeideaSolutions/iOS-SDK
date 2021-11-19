@@ -112,6 +112,7 @@ public struct ExpiryDateParams : Swift.Codable {
   @objc public static func removeCredentials()
   @objc public static func updateCredentials(withMerchantKey merchantKey: Swift.String, andPassword password: Swift.String)
   @objc public static func startEInvoice(withEInvoiceID eInvoiceId: Swift.String?, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDEInvoiceResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func payWithApplePay(withPKPayment pkPayment: PassKit.PKPayment, callbackUrl: Swift.String? = nil, merchentRefId: Swift.String? = nil, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func getModelString(order: GeideaPaymentSDK.GDOrderResponse) -> Swift.String?
   @objc public static func getConfigString(config: GeideaPaymentSDK.GDConfigResponse) -> Swift.String?
   @objc public static func getEInvoiceString(order: GeideaPaymentSDK.GDEInvoiceResponse) -> Swift.String?
