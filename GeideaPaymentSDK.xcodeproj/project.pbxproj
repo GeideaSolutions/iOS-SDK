@@ -37,8 +37,8 @@
 		E6A5E7F62540C1C50080BF3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6A5E7F42540C1C50080BF3D /* LaunchScreen.storyboard */; };
 		E6A5E7F92540C1C50080BF3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A5E7F82540C1C50080BF3D /* main.m */; };
 		E6ADAAF325405B7A00EC655F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6117AB92538971700959D78 /* Main.storyboard */; };
-		E6F6EFE0261336C100574046 /* GeideaPaymentSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6EFDF261336C100574046 /* GeideaPaymentSDK.xcframework */; };
-		E6F6EFE1261336C100574046 /* GeideaPaymentSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6EFDF261336C100574046 /* GeideaPaymentSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F353D0B9278730AE00D8BB20 /* GeideaPaymentSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6EFDF261336C100574046 /* GeideaPaymentSDK.xcframework */; };
+		F353D0BA278730AE00D8BB20 /* GeideaPaymentSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6EFDF261336C100574046 /* GeideaPaymentSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,13 +61,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6F6EFE2261336C100574046 /* Embed Frameworks */ = {
+		F353D0BB278730AE00D8BB20 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E6F6EFE1261336C100574046 /* GeideaPaymentSDK.xcframework in Embed Frameworks */,
+				F353D0BA278730AE00D8BB20 /* GeideaPaymentSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6F6EFE0261336C100574046 /* GeideaPaymentSDK.xcframework in Frameworks */,
+				F353D0B9278730AE00D8BB20 /* GeideaPaymentSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +270,7 @@
 				E6117AAD2538971700959D78 /* Sources */,
 				E6117AAE2538971700959D78 /* Frameworks */,
 				E6117AAF2538971700959D78 /* Resources */,
-				E6F6EFE2261336C100574046 /* Embed Frameworks */,
+				F353D0BB278730AE00D8BB20 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -448,8 +448,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_ENTITLEMENTS = GeideaPaymentSDKSwiftSample/GeideaPaymentSDKSwiftSampleDebug.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = 4RU97UZLFK;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -467,7 +467,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = net.geidea.GeideaPaymentSDK.VSwift1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Geidea iOS SDK SwiftV1";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,7 +484,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 40;
-				DEVELOPMENT_TEAM = 8GJN68M5RA;
+				DEVELOPMENT_TEAM = 4RU97UZLFK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GeideaPaymentSDK/Frameworks/Simulator",

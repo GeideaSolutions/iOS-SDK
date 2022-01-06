@@ -23,10 +23,13 @@ Example Objective C:
    
   Initialize Object:
 
-   At your application start up (for example in the AppDelegate) or when a client hits Pay button on your app the SDK authentication must be done.
-   1.    Check if the credentials are available on SDK secure storage
-   2.    Authenticate with SDK using setCredentials 
-   3.    Get the merchant Config  and check the flags for available feautures provided in SDK based of your configuration
+ At your application start up (for example in the AppDelegate) or when a client hits Pay button on your app the SDK authentication must be done.
+      1.    Check if the credentials are available on SDK secure storage 
+      2.    Authenticate with SDK using setCredentials 
+      3.    Get merchant configuration from Geidea server  
+      4.    Set your default Language with SDK using setLanguage the SDK will be translated in English or Arabic. The function can be used any time your app switch the language
+      5.   Store the configuration for future use
+
 
    The function GeideaPaymentApi.setCredentials() should have the following parameters:
    •    merchantKey: merchantID assigned to you by Geidea

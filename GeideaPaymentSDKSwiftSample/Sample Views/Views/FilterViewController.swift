@@ -34,6 +34,7 @@ class FilterViewController: UIViewController {
     var action: ((GDOrdersFilter)->())?
     let dateFormatter = DateFormatter()
     
+    
     var filterStatus =  [FilterStatus("Success"), FilterStatus("InProgress"), FilterStatus("Failed")]
     var filterDetailsStatuses = [
         FilterStatus("Initiated"),

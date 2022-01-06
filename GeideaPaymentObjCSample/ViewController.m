@@ -10,7 +10,9 @@
 #import <GeideaPaymentSDK/GeideaPaymentSDK.h>
 #import <PassKit/PassKit.h>
 
-@interface ViewController () <PKPaymentAuthorizationViewControllerDelegate> 
+@interface ViewController () <PKPaymentAuthorizationViewControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UIButton *applePayDirectBTN;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *amountTF;
 @property (weak, nonatomic) IBOutlet UITextField *currencyTF;
@@ -23,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *callbackUrlTF;
 @property (weak, nonatomic) IBOutlet UITextField *publicKeyTF;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *environmentSelection;
 @property (weak, nonatomic) IBOutlet UISwitch *loginSwitch;
 @property (weak, nonatomic) IBOutlet UILabel *loginLabel;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
@@ -74,6 +77,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [_environmentSelection addTarget:self action:@selector(valueChangedEnvironment:) forControlEvents:UIControlEventValueChanged];
+    [_environmentSelection setSelectedSegmentIndex:0];
+    [self valueChangedEnvironment:_environmentSelection];
+    
     [_paymentMethodSelection addTarget:self action:@selector(valueChangedPayment:) forControlEvents:UIControlEventValueChanged];
     [_paymentMethodSelection setSelectedSegmentIndex:1];
     [self valueChangedPayment:_paymentMethodSelection];
@@ -81,7 +88,7 @@
     self.title = @"Payment Sample Objective C";
     
     _scrollView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
-    self.paymentOperation = PaymentOperationNONE;
+    self.paymentOperation = _paymentOperation;
     
 }
 
@@ -94,14 +101,15 @@
     [self.contentView addGestureRecognizer:gestureRecognizer];
 }
 
--(void)setupApplePay {
+-(void)setupApplePay:(UIView *) buttonView {
     _applePayBtnView.hidden = false;
     
     GDAmount *amount = [[GDAmount alloc] initWithAmount: [_amountTF.text doubleValue] currency:_currencyTF.text];
-    GDApplePayDetails *applePayDetails = [[GDApplePayDetails alloc] initIn:self andButtonIn:_applePayBtnView forMerchantIdentifier:@"merchant.geidea.test.applepay" withCallbackUrl:_callbackUrlTF.text andReferenceId:_merchantRefIDTF.text];
+    GDApplePayDetails *applePayDetails = [[GDApplePayDetails alloc] initIn:self andButtonIn:buttonView forMerchantIdentifier:@"merchant.net.geidea.applepayonline.objc" andMerchantDisplayName:@"My Company" requiredBillingContactFields:false requiredShippingContactFields:false paymentMethods:NULL withCallbackUrl:_callbackUrlTF.text andReferenceId:_merchantRefIDTF.text];
     
     
-    [GeideaPaymentAPI setupApplePayForApplePayDetails:applePayDetails with:amount config:nil completion:^(GDApplePayResponse* response, GDErrorResponse* error) {
+    
+    [GeideaPaymentAPI setupApplePayForApplePayDetails:applePayDetails with:amount config:nil completion:^(GDOrderResponse* response, GDErrorResponse* error) {
         if (error != NULL) {
             if (!error.errors || !error.errors.count) {
                 NSString *message;
@@ -121,8 +129,8 @@
             
         } else {
             if (response != NULL) {
-                NSString *messageOutput = [NSString stringWithFormat:@"\n responseCode: %li \n responseMessage: %@ \n detailedResponseCode: %@ detailedResponseMessage: %@",  (long)error.status, error.errors, error.detailedResponseCode, error.detailedResponseMessage];
-                [self displayAlertViewWithTitle: @"APPLE payment succesfully" andMessage: messageOutput];
+                NSString *messageOutput = [NSString stringWithFormat:@"\n responseCode: %f \n responseMessage: %@ \n orderId : %@",  response.amount, response.currency, response.orderId];
+                [self displayAlertViewWithTitle: response.orderId andMessage: messageOutput];
                 
             }
         }
@@ -134,7 +142,7 @@
     _captureLabel.hidden = self.orderId == NULL;
     _captureBtn.hidden = self.orderId == NULL;
     
-    [self setupApplePay];
+    [self setupApplePay:_applePayBtnView];
     
     [_loginSwitch addTarget:self action:@selector(changeSwitch:) forControlEvents:UIControlEventValueChanged];
     
@@ -177,11 +185,14 @@
         
     }];
 }
+- (IBAction)tappedApplePayDirect:(id)sender {
+    [self setupApplePay:NULL];
+}
 
 -(void) showPayWithToken {
     if ([self getTokens] != NULL) {
         for (id token in [self getTokens]){
-            if (token[@"environment"] == 0) {
+            if (token[@"environment"] == [_environmentSelection selectedSegmentIndex]) {
                 _payTokenBtn.hidden = false;
             } else {
                 _payTokenBtn.hidden = true;
@@ -198,7 +209,7 @@
     
     [_loginSwitch setOn:true];
     [self refreshConfig];
-    [self setupApplePay];
+    [self setupApplePay:_applePayBtnView];
 }
 
 - (IBAction)configTapped:(id)sender {
@@ -224,14 +235,16 @@
     GDCardDetails *cardDetails = [[GDCardDetails alloc] initWithCardholderName:_cardHolderNameTF.text andCardNumber:_cardNumberTF.text andCVV:_cvvTF.text andExpiryMonth:[_expiryMonthTF.text integerValue] andExpiryYear:[_expiryYearTF.text integerValue]];
     
     GDTokenizationDetails *tokenizationDetails = [[GDTokenizationDetails alloc] initWithCardOnFile:[_cardOnFileSwitch isOn] initiatedBy:[_initiatedByBtn currentTitle] agreementId:_agreementIdTF.text agreementType:_agreementTypeTF.text];
+
     
-    GDApplePayDetails *applePayDetails = [[GDApplePayDetails alloc] initIn:self andButtonIn:_applePayBtnView forMerchantIdentifier:@"merchant.geidea.test.applepay" withCallbackUrl:_callbackUrlTF.text andReferenceId:_merchantRefIDTF.text];
+    GDApplePayDetails *applePayDetails = [[GDApplePayDetails alloc] initIn:self andButtonIn:_applePayBtnView forMerchantIdentifier:@"merchant.net.geidea.applepayonline.objc" andMerchantDisplayName:@"My Company" requiredBillingContactFields:false requiredShippingContactFields:false paymentMethods:NULL withCallbackUrl:_callbackUrlTF.text andReferenceId:_merchantRefIDTF.text];
     
     GDAddress *shippingAddress = [[GDAddress alloc] initWithCountryCode:_shippingCountryCodeTF.text andCity:_shippingCityTF.text andStreet:_shippingStreetTF.text andPostCode:_shippingPostCodeTF.text];
     
     GDAddress *billingAddress = [[GDAddress alloc] initWithCountryCode:_billingCountryCodeTF.text andCity:_billingCityTF.text andStreet:_billingStreetTF.text andPostCode:_billingPostCodeTF.text];
     
     GDCustomerDetails *customerDetails = [[GDCustomerDetails alloc] initWithEmail:_emailTF.text andCallbackUrl:_callbackUrlTF.text merchantReferenceId:_merchantRefIDTF.text shippingAddress:shippingAddress billingAddress:billingAddress paymentOperation:self.paymentOperation];
+    
     
     if (_paymentMethodSelection.selectedSegmentIndex == 1 ) {
         [self payWithAmount: amount andCardDetails:cardDetails andTokenizationDetails:tokenizationDetails andCustomerDetails:customerDetails];
@@ -244,8 +257,7 @@
 - (void)payWithAmount:(GDAmount *)amount andCardDetails: (GDCardDetails *) cardDetails andTokenizationDetails: (GDTokenizationDetails *) tokenizationDetails  andCustomerDetails: customerDetails {
     UINavigationController *navVC =  (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
     
-    
-    [GeideaPaymentAPI payWithTheAmount:amount withCardDetails:cardDetails andTokenizationDetails:tokenizationDetails andEInvoice: _eInvoiceIdTF.text andCustomerDetails:customerDetails orderId:NULL dismissAction:NULL navController:navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+    [GeideaPaymentAPI payWithTheAmount:amount withCardDetails:cardDetails and3DV2Enabled: true andTokenizationDetails:tokenizationDetails andPaymentIntentId:_eInvoiceIdTF.text andCustomerDetails:customerDetails orderId:NULL paymentMethods:NULL isFromHPP:false dismissAction:NULL navController:navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
         
         if (error != NULL) {
             if (!error.errors || !error.errors.count) {
@@ -294,9 +306,8 @@
 
 - (void)payWithGeideaForm:(GDAmount *)amount showAddress: (bool)addressShown  showEmail: (bool)emailShown andTokenizationDetails: (GDTokenizationDetails *) tokenizationDetails  andCustomerDetails: customerDetails  andApplePayDetails: (GDApplePayDetails *) applePayDetails {
     UINavigationController *navVC =  (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
-    
-    
-    [GeideaPaymentAPI payWithGeideaFormWithTheAmount:amount showAddress:addressShown showEmail:emailShown tokenizationDetails:tokenizationDetails customerDetails:customerDetails applePayDetails:applePayDetails config:NULL eInvoiceId:_eInvoiceIdTF.text  viewController:navVC completion:^(GDOrderResponse* order, GDErrorResponse* error, GDApplePayResponse* applePayResponse) {
+    [GeideaPaymentAPI payWithGeideaFormWithTheAmount:amount showAddress:addressShown showEmail:emailShown showReceipt:true tokenizationDetails:tokenizationDetails customerDetails:customerDetails applePayDetails:applePayDetails config:NULL paymentIntentId:NULL qrDetails:NULL paymentMethods:NULL viewController:self completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
             if (error != NULL) {
@@ -359,51 +370,51 @@
     
     UINavigationController *navVC =  (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
     
-    [GeideaPaymentAPI payWithTokenWithTheAmount:amount withTokenId:@"token" tokenizationDetails:tokenizationDetails andEInvoiceId: _eInvoiceIdTF.text andCustomerDetails:customerDetails navController:navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
-        
-        if (error != NULL) {
-            if (!error.errors || !error.errors.count) {
-                NSString *message;
-                if ( [error.responseCode length] ==0) {
-                    message = [NSString stringWithFormat:@"\n responseMessage: %@", error.responseMessage];
-                } else if ([error.orderId length] != 0) {
-                    message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ \n detailedResponseCode: %@  \n detailedResponseMessage: %@ \n orderId: %@", error.responseCode , error.responseMessage, error.detailedResponseCode, error.detailedResponseMessage, error.orderId];
-                } else {
-                    message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ \n detailedResponseCode: %@  \n detailedResponseMessage: %@", error.responseCode , error.responseMessage, error.detailedResponseCode, error.detailedResponseMessage];
-                }
-                
-                [self displayAlertViewWithTitle: error.title andMessage: message];
-            } else {
-                NSString *messageOutput = [NSString stringWithFormat:@"\n responseCode: %li \n responseMessage: %@ \n detailedResponseCode: %@ detailedResponseMessage: %@",  (long)error.status, error.errors, error.detailedResponseCode, error.detailedResponseMessage];
-                [self displayAlertViewWithTitle: error.title andMessage: messageOutput];
-            }
-            
-        } else {
-            if (order != NULL) {
-                
-                NSString *prettyMessage = [GeideaPaymentAPI getModelStringWithOrder:order];
-                
-                if (prettyMessage != NULL) {
-                    
-                    SuccessViewController *vc = [[SuccessViewController alloc] init];
-                    vc.json = prettyMessage;
-                    [self presentViewController:vc animated:YES completion:nil];
-                }
-                
-                if ([[order detailedStatus] isEqual: @"Authorized"]) {
-                    self.orderId = [order orderId];
-                    self->_captureLabel.text = [order orderId];
-                    [self configureComponents];
-                }
-                
-                if ([order tokenId] != NULL && [[order paymentMethod] maskedCardNumber] != NULL) {
-                    
-                    [self saveTokenId:[order tokenId] andMaskedCardNumber:[[order paymentMethod] maskedCardNumber]];
-                }
-                
-            }
-        }
-    }];
+//    [GeideaPaymentAPI payWithTokenWithTheAmount:amount withTokenId:@"token" tokenizationDetails:tokenizationDetails andCustomerDetails:customerDetails navController:self completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+//
+//        if (error != NULL) {
+//            if (!error.errors || !error.errors.count) {
+//                NSString *message;
+//                if ( [error.responseCode length] ==0) {
+//                    message = [NSString stringWithFormat:@"\n responseMessage: %@", error.responseMessage];
+//                } else if ([error.orderId length] != 0) {
+//                    message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ \n detailedResponseCode: %@  \n detailedResponseMessage: %@ \n orderId: %@", error.responseCode , error.responseMessage, error.detailedResponseCode, error.detailedResponseMessage, error.orderId];
+//                } else {
+//                    message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ \n detailedResponseCode: %@  \n detailedResponseMessage: %@", error.responseCode , error.responseMessage, error.detailedResponseCode, error.detailedResponseMessage];
+//                }
+//
+//                [self displayAlertViewWithTitle: error.title andMessage: message];
+//            } else {
+//                NSString *messageOutput = [NSString stringWithFormat:@"\n responseCode: %li \n responseMessage: %@ \n detailedResponseCode: %@ detailedResponseMessage: %@",  (long)error.status, error.errors, error.detailedResponseCode, error.detailedResponseMessage];
+//                [self displayAlertViewWithTitle: error.title andMessage: messageOutput];
+//            }
+//
+//        } else {
+//            if (order != NULL) {
+//
+//                NSString *prettyMessage = [GeideaPaymentAPI getModelStringWithOrder:order];
+//
+//                if (prettyMessage != NULL) {
+//
+//                    SuccessViewController *vc = [[SuccessViewController alloc] init];
+//                    vc.json = prettyMessage;
+//                    [self presentViewController:vc animated:YES completion:nil];
+//                }
+//
+//                if ([[order detailedStatus] isEqual: @"Authorized"]) {
+//                    self.orderId = [order orderId];
+//                    self->_captureLabel.text = [order orderId];
+//                    [self configureComponents];
+//                }
+//
+//                if ([order tokenId] != NULL && [[order paymentMethod] maskedCardNumber] != NULL) {
+//
+//                    [self saveTokenId:[order tokenId] andMaskedCardNumber:[[order paymentMethod] maskedCardNumber]];
+//                }
+//
+//            }
+//        }
+//    }];
 }
 
 - (IBAction)initiatedBtnTapped:(id)sender {
@@ -453,8 +464,8 @@
 - (IBAction)captureBtnTapped:(id)sender {
     
     UINavigationController *navVC = (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
-    
-    [GeideaPaymentAPI captureWith:self.orderId callbackUrl:_callbackUrlTF.text navController: navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+    [GeideaPaymentAPI captureWith:self.orderId callbackUrl:_callbackUrlTF.text navController:navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+//    [GeideaPaymentAPI captureWith:self.orderId navController: navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
         
         if (error != NULL) {
             if (!error.errors || !error.errors.count) {
@@ -495,39 +506,39 @@
 }
 - (IBAction)generateInvoiceTapped:(id)sender {
     
-    [GeideaPaymentAPI startEInvoiceWithEInvoiceID:_eInvoiceIdTF.text viewController:self completion:^(GDEInvoiceResponse* eInvoiceResponse, GDErrorResponse* error) {
-        if (error != NULL) {
-            if (!error.errors || !error.errors.count) {
-                NSString *message;
-                if ( [error.responseCode length] ==0) {
-                    message = [NSString stringWithFormat:@"\n responseMessage: %@", error.responseMessage];
-                } else if ([error.orderId length] != 0) {
-                    message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ \n detailedResponseCode: %@  \n detailedResponseMessage: %@ \n orderId: %@", error.responseCode , error.responseMessage, error.detailedResponseCode, error.detailedResponseMessage, error.orderId];
-                } else {
-                    message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ \n detailedResponseCode: %@  \n detailedResponseMessage: %@", error.responseCode , error.responseMessage, error.detailedResponseCode, error.detailedResponseMessage];
-                }
-                
-                [self displayAlertViewWithTitle: error.title andMessage: message];
-            } else {
-                NSString *messageOutput = [NSString stringWithFormat:@"\n responseCode: %li \n responseMessage: %@ \n detailedResponseCode: %@ detailedResponseMessage: %@",  (long)error.status, error.errors, error.detailedResponseCode, error.detailedResponseMessage];
-                [self displayAlertViewWithTitle: error.title andMessage: messageOutput];
-            }
-            
-        } else {
-            if (eInvoiceResponse != NULL) {
-                
-                NSString *prettyMessage = [GeideaPaymentAPI getEInvoiceStringWithOrder:eInvoiceResponse];
-                
-                if (prettyMessage != NULL) {
-                    
-                    SuccessViewController *vc = [[SuccessViewController alloc] init];
-                    vc.json = prettyMessage;
-                    [self presentViewController:vc animated:YES completion:nil];
-                }
-                self.eInvoiceIdTF.text = eInvoiceResponse.eInvoice.eInvoiceId;
-            }
-        }
-    }];
+//    [GeideaPaymentAPI startPaymentIntentWithPaymentIntentID:_eInvoiceIdTF.text status:NULL type:@"EInvoice" viewController:self completion:^(GDPaymentIntentResponse* eInvoiceResponse, GDErrorResponse* error) {
+//        if (error != NULL) {
+//            if (!error.errors || !error.errors.count) {
+//                NSString *message;
+//                if ( [error.responseCode length] ==0) {
+//                    message = [NSString stringWithFormat:@"\n responseMessage: %@", error.responseMessage];
+//                } else if ([error.orderId length] != 0) {
+//                    message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ \n detailedResponseCode: %@  \n detailedResponseMessage: %@ \n orderId: %@", error.responseCode , error.responseMessage, error.detailedResponseCode, error.detailedResponseMessage, error.orderId];
+//                } else {
+//                    message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ \n detailedResponseCode: %@  \n detailedResponseMessage: %@", error.responseCode , error.responseMessage, error.detailedResponseCode, error.detailedResponseMessage];
+//                }
+//
+//                [self displayAlertViewWithTitle: error.title andMessage: message];
+//            } else {
+//                NSString *messageOutput = [NSString stringWithFormat:@"\n responseCode: %li \n responseMessage: %@ \n detailedResponseCode: %@ detailedResponseMessage: %@",  (long)error.status, error.errors, error.detailedResponseCode, error.detailedResponseMessage];
+//                [self displayAlertViewWithTitle: error.title andMessage: messageOutput];
+//            }
+//
+//        } else {
+//            if (eInvoiceResponse != NULL) {
+//
+//                NSString *prettyMessage = [GeideaPaymentAPI getPaymentIntentStringWithOrder:eInvoiceResponse];
+//
+//                if (prettyMessage != NULL) {
+//
+//                    SuccessViewController *vc = [[SuccessViewController alloc] init];
+//                    vc.json = prettyMessage;
+//                    [self presentViewController:vc animated:YES completion:nil];
+//                }
+//                self.eInvoiceIdTF.text = eInvoiceResponse.paymentIntent.paymentIntentId;
+//            }
+//        }
+//    }];
 }
 
 - (void)valueChangedEnvironment:(UISegmentedControl *)segmentedControl
@@ -543,7 +554,7 @@
             break;
     }
     [self refreshConfig];
-    [self setupApplePay];
+    [self setupApplePay:_applePayBtnView];
 }
 
 - (IBAction)paymentMethodSelectionTapped:(id)sender {
@@ -565,7 +576,7 @@
             break;
     }
     [self refreshConfig];
-    [self setupApplePay];
+    [self setupApplePay:_applePayBtnView];
 }
 
 - (void)registerForKeyboardNotifications
@@ -612,7 +623,7 @@
         }
     }
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    dict[@"environment"] = 0;
+    dict[@"environment"] = _environmentSelection;
     dict[@"maskedCardNumber"] = maskedCardNumber;
     dict[@"tokenId"] = tokenId;
     

@@ -27,6 +27,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.makeKeyAndVisible()
     }
     
+    func resetViewController() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let rootVC = storyboard.instantiateViewController(identifier: "ViewController") as? ViewController else {
+            print("ViewController not found")
+            return
+        }
+        let rootNC = UINavigationController(rootViewController: rootVC)
+        self.window?.rootViewController = rootNC
+        self.window?.makeKeyAndVisible()
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
@@ -55,6 +67,58 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
     
-    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else {
+            return
+        }
+        // Handle URL
+        guard  let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true),  let host = components.host,let queryItems = components.queryItems else {
+            return
+        }
+        
+        //redirect to to particular viewController
+        switch host {
+        case "hostMethod":
+            //go to host
+            break
+        default:
+            //go to main
+            break
+        }
+        
+//        if let merchantReferenceId = queryItems.filter({$0.name == "merchantReferenceId"}).first {
+//            //Use merchantReferenceId
+//        }
+//        
+//        if let amount = queryItems.filter({$0.name == "amount"}).first {
+//            //Use amount
+//        }
+//        
+//        if let rrn = queryItems.filter({$0.name == "rrn"}).first {
+//            //Use transactionId
+//        }
+//        
+//        
+//        if let authCode = queryItems.filter({$0.name == "authCode"}).first {
+//            //Use authCode
+//        }
+//        
+//        if let transactionResponseTime = queryItems.filter({$0.name == "transactionResponseTime"}).first {
+//            //Use transactionResponseTime
+//        }
+//        
+//        if let transactionResponseTime = queryItems.filter({$0.name == "status"}).first {
+//            //Use transactionResponseTime
+//        }
+//        
+//        // For pay by card there are 2 different fields
+//        if let cardScheme = queryItems.filter({$0.name == "cardScheme"}).first {
+//            //Use cardScheme
+//        }
+//        
+//        if let responseCode = queryItems.filter({$0.name == "responseCode"}).first {
+//            //Use responseCode
+//        }
+    }
 }
 

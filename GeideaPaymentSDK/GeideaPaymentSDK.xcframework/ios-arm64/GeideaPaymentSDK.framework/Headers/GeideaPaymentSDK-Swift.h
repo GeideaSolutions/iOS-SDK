@@ -191,6 +191,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Foundation;
 @import ObjectiveC;
 @import PassKit;
+@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -208,11 +209,13 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+
 typedef SWIFT_ENUM(NSInteger, CardType, open) {
   CardTypeAmex = 0,
   CardTypeVisa = 1,
   CardTypeMasterCard = 2,
   CardTypeMada = 3,
+  CardTypeMeeza = 4,
 };
 
 
@@ -250,7 +253,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK8GDAmount")
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK17GDApplePayDetails")
 @interface GDApplePayDetails : NSObject
-- (nonnull instancetype)initIn:(UIViewController * _Nullable)hostViewController andButtonIn:(UIView * _Nullable)buttonView forMerchantIdentifier:(NSString * _Nonnull)merchantIdentifier andMerchantDisplayName:(NSString * _Nullable)merchantDisplayName requiredBillingContactFields:(NSSet<PKContactField> * _Nullable)requiredBillingContactFields requiredShippingContactFields:(NSSet<PKContactField> * _Nullable)requiredShippingContactFields withCallbackUrl:(NSString * _Nullable)callBackUrl andReferenceId:(NSString * _Nullable)merchantRefId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initIn:(UIViewController * _Nullable)hostViewController andButtonIn:(UIView * _Nullable)buttonView forMerchantIdentifier:(NSString * _Nonnull)merchantIdentifier andMerchantDisplayName:(NSString * _Nullable)merchantDisplayName requiredBillingContactFields:(NSSet<PKContactField> * _Nullable)requiredBillingContactFields requiredShippingContactFields:(NSSet<PKContactField> * _Nullable)requiredShippingContactFields paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods withCallbackUrl:(NSString * _Nullable)callBackUrl andReferenceId:(NSString * _Nullable)merchantRefId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -291,6 +294,18 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GDCancelResponse")
 @end
 
 
+SWIFT_CLASS("_TtC16GeideaPaymentSDK25GDCardBrandAuthentication")
+@interface GDCardBrandAuthentication : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK19GDCardBrandProvider")
+@interface GDCardBrandProvider : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC16GeideaPaymentSDK13GDCardDetails")
 @interface GDCardDetails : NSObject
 - (nonnull instancetype)initWithCardholderName:(NSString * _Nonnull)cardholderName andCardNumber:(NSString * _Nonnull)cardNumber andCVV:(NSString * _Nonnull)cvv andExpiryMonth:(NSInteger)expiryMonth andExpiryYear:(NSInteger)expiryYear OBJC_DESIGNATED_INITIALIZER;
@@ -313,12 +328,17 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GDConfigResponse")
 @property (nonatomic, copy) NSString * _Nullable detailedResponseCode;
 @property (nonatomic, copy) NSString * _Nullable responseMessage;
 @property (nonatomic, copy) NSString * _Nullable responseCode;
+@property (nonatomic, copy) NSString * _Nullable language;
+@property (nonatomic, copy) NSString * _Nullable merchantName;
+@property (nonatomic, copy) NSString * _Nullable merchantNameAr;
+@property (nonatomic, copy) NSString * _Nullable merchantLogoUrl;
+@property (nonatomic, copy) NSString * _Nullable merchantCountryTwoLetterCode;
 @property (nonatomic, copy) NSString * _Nullable name;
 @property (nonatomic, strong) GDConfigApplePay * _Nullable applePay;
 @property (nonatomic, copy) NSArray<NSString *> * _Nullable paymentMethods;
 @property (nonatomic, copy) NSArray<NSString *> * _Nullable currencies;
-@property (nonatomic, copy) NSString * _Nullable merchantName;
 @property (nonatomic, copy) NSArray<NSString *> * _Nullable allowedInitiatedByValues;
+@property (nonatomic, copy) NSArray<GDCardBrandAuthentication *> * _Nullable cardBrandAuthentications;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -331,35 +351,50 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK17GDCustomerDetails")
 - (nonnull instancetype)initWithEmail:(NSString * _Nullable)email andCallbackUrl:(NSString * _Nullable)callbackUrl merchantReferenceId:(NSString * _Nullable)merchantReferenceId shippingAddress:(GDAddress * _Nullable)shippingAddress billingAddress:(GDAddress * _Nullable)billingAddress paymentOperation:(enum PaymentOperation)paymentOperation OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-SWIFT_CLASS("_TtC16GeideaPaymentSDK18GDEInvoiceCustomer")
-@interface GDEInvoiceCustomer : NSObject
-@property (nonatomic, copy) NSString * _Nullable email;
-@property (nonatomic, copy) NSString * _Nullable phone;
-@property (nonatomic, copy) NSString * _Nullable name;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSDate;
+@class GDEInvoiceItem;
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK17GDEInvoiceDetails")
 @interface GDEInvoiceDetails : NSObject
-- (nonnull instancetype)initWithAmount:(GDAmount * _Nonnull)amount andExpiryDate:(NSDate * _Nullable)expiryDate andName:(NSString * _Nonnull)name andEmail:(NSString * _Nullable)email andPhoneNumber:(NSString * _Nullable)phoneNumber eInvoiceId:(NSString * _Nullable)eInvoiceId OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic) BOOL collectCustomersBillingShippingAddress;
+@property (nonatomic) BOOL preAuthorizeAmount;
+@property (nonatomic) double subtotal;
+@property (nonatomic) double grandTotal;
+@property (nonatomic) double extraCharges;
+@property (nonatomic, copy) NSString * _Nullable extraChargesType;
+@property (nonatomic, copy) NSString * _Nullable chargeDescription;
+@property (nonatomic, copy) NSString * _Nullable paymentIntentReference;
+@property (nonatomic) double invoiceDiscount;
+@property (nonatomic, copy) NSString * _Nullable invoiceDiscountType;
+@property (nonatomic, copy) NSArray<GDEInvoiceItem *> * _Nullable eInvoiceItems;
+- (nonnull instancetype)initWithCollectCustomersBillingShippingAddress:(BOOL)collectCustomersBillingShippingAddress preAuthorizeAmount:(BOOL)preAuthorizeAmount subTotal:(double)subTotal grandTotal:(double)grandTotal extraCharges:(double)extraCharges extraChargesType:(NSString * _Nullable)extraChargesType chargeDescription:(NSString * _Nullable)chargeDescription paymentIntentReference:(NSString * _Nullable)paymentIntentReference invoiceDiscount:(double)invoiceDiscount invoiceDiscountType:(NSString * _Nullable)invoiceDiscountType eInvoiceItems:(NSArray<GDEInvoiceItem *> * _Nullable)eInvoiceItems OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
-@class GDInvoiceResponse;
 
-SWIFT_CLASS("_TtC16GeideaPaymentSDK18GDEInvoiceResponse")
-@interface GDEInvoiceResponse : NSObject
-@property (nonatomic, strong) GDInvoiceResponse * _Nullable eInvoice;
-@property (nonatomic, copy) NSString * _Nullable responseMessage;
-@property (nonatomic, copy) NSString * _Nullable detailedResponseMessage;
-@property (nonatomic, copy) NSString * _Nullable responseCode;
-@property (nonatomic, copy) NSString * _Nullable detailedResponseCode;
+SWIFT_CLASS("_TtC16GeideaPaymentSDK14GDEInvoiceItem")
+@interface GDEInvoiceItem : NSObject
+@property (nonatomic) double total;
+@property (nonatomic) double tax;
+@property (nonatomic, copy) NSString * _Nullable taxType;
+@property (nonatomic) double price;
+@property (nonatomic) NSInteger quantity;
+@property (nonatomic) double itemDiscount;
+@property (nonatomic, copy) NSString * _Nullable itemDiscountType;
+@property (nonatomic, copy) NSString * _Nullable eInvoiceDescription;
+@property (nonatomic, copy) NSString * _Nullable sku;
+- (nonnull instancetype)initWithTotal:(double)total tax:(double)tax taxType:(NSString * _Nullable)taxType price:(double)price quantity:(NSInteger)quantity itemDiscount:(double)itemDiscount itemDiscountType:(NSString * _Nullable)itemDiscountType description:(NSString * _Nullable)description sku:(NSString * _Nullable)sku OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK18GDEInvoiceSentLink")
+@interface GDEInvoiceSentLink : NSObject
+@property (nonatomic, copy) NSString * _Nullable sentDate;
+@property (nonatomic, copy) NSString * _Nullable channel;
+@property (nonatomic, copy) NSString * _Nullable recipient;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -374,57 +409,152 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK15GDErrorResponse")
 @property (nonatomic, copy) NSString * _Nonnull responseMessage;
 @property (nonatomic, copy) NSString * _Nonnull detailedResponseCode;
 @property (nonatomic, copy) NSString * _Nonnull detailedResponseMessage;
+@property (nonatomic, copy) NSString * _Nonnull responseDescription;
 @property (nonatomic, copy) NSString * _Nonnull orderId;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
-SWIFT_CLASS("_TtC16GeideaPaymentSDK17GDInvoiceResponse")
-@interface GDInvoiceResponse : NSObject
-@property (nonatomic, copy) NSString * _Nullable eInvoiceId;
+SWIFT_CLASS("_TtC16GeideaPaymentSDK30GDInitiateAuthenticateResponse")
+@interface GDInitiateAuthenticateResponse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK14GDMeezaDetails")
+@interface GDMeezaDetails : NSObject
+@property (nonatomic, copy) NSString * _Nullable transactionId;
+@property (nonatomic, copy) NSString * _Nullable meezaTransactionId;
+@property (nonatomic, copy) NSString * _Nullable type;
+@property (nonatomic, copy) NSString * _Nullable transactionTimeStamp;
+@property (nonatomic, copy) NSString * _Nullable adviceId;
+@property (nonatomic, copy) NSString * _Nullable senderId;
+@property (nonatomic, copy) NSString * _Nullable senderName;
+@property (nonatomic, copy) NSString * _Nullable senderAddress;
+@property (nonatomic, copy) NSString * _Nullable receiverId;
+@property (nonatomic, copy) NSString * _Nullable receiverName;
+@property (nonatomic, copy) NSString * _Nullable receiverAddress;
+@property (nonatomic) double amount;
 @property (nonatomic, copy) NSString * _Nullable currency;
-@property (nonatomic, strong) GDEInvoiceCustomer * _Nullable customer;
-@property (nonatomic, copy) NSString * _Nullable merchantPublicKey;
-@property (nonatomic, copy) NSString * _Nullable expiryDate;
-@property (nonatomic, copy) NSString * _Nullable status;
+@property (nonatomic, copy) NSString * _Nullable responseCode;
+@property (nonatomic, copy) NSString * _Nullable responseDescription;
+@property (nonatomic) double interchange;
+@property (nonatomic, copy) NSString * _Nullable interchangeAction;
+@property (nonatomic, copy) NSString * _Nullable reference1;
+@property (nonatomic, copy) NSString * _Nullable reference2;
+@property (nonatomic) double tips;
+@property (nonatomic) double convenienceFee;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class GDTransactionResponse;
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK24GDMerchantConfigResponse")
+@interface GDMerchantConfigResponse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK22GDMerchantDataResponse")
+@interface GDMerchantDataResponse : NSObject
+@property (nonatomic, copy) NSString * _Nullable merchantDomain;
+@property (nonatomic, copy) NSString * _Nullable merchantLogoUrl;
+@property (nonatomic, copy) NSString * _Nullable applePaymentProcessingCertificateExpiryDateNew;
+@property (nonatomic, copy) NSString * _Nullable applePaymentProcessingCertificate;
+@property (nonatomic, copy) NSString * _Nullable merchantName;
+@property (nonatomic) BOOL isApplePayMobileEnabled;
+@property (nonatomic, copy) NSString * _Nullable merchantNotificationEmail;
+@property (nonatomic, copy) NSString * _Nullable merchantGatewayKey;
+@property (nonatomic, copy) NSString * _Nullable cyberSourceSharedSecretKey;
+@property (nonatomic, copy) NSString * _Nullable gsdkMid;
+@property (nonatomic, copy) NSString * _Nullable applePaymentProcessingCertificateNew;
+@property (nonatomic, copy) NSString * _Nullable applePartnerInternalMerchantIdentifier;
+@property (nonatomic, copy) NSString * _Nullable cyberSourceMerchantId;
+@property (nonatomic, copy) NSString * _Nullable appleDeveloperId;
+@property (nonatomic, copy) NSString * _Nullable applePaymentProcessingCertificateExpiryDate;
+@property (nonatomic, copy) NSString * _Nullable cyberSourceApiIdentifier;
+@property (nonatomic, copy) NSString * _Nullable appleCertificatePrivateKey;
+@property (nonatomic, copy) NSString * _Nullable merchantCountry;
+@property (nonatomic, copy) NSString * _Nullable cyberSourceOrgUnitId;
+@property (nonatomic, copy) NSString * _Nullable mpgsMsoProvider;
+@property (nonatomic, copy) NSString * _Nullable gsdkSecretKey;
+@property (nonatomic, copy) NSString * _Nullable mpgsMerchantId;
+@property (nonatomic, copy) NSString * _Nullable customerNotificationFromEmail;
+@property (nonatomic) BOOL isTokenizationEnabled;
+@property (nonatomic, copy) NSString * _Nullable defaultPaymentOperation;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable allowedInitiatedByValues;
+@property (nonatomic) BOOL isApplePayWebEnabled;
+@property (nonatomic, copy) NSArray<GDCardBrandProvider *> * _Nullable cardBrandProviders;
+@property (nonatomic) BOOL isCallbackEnabled;
+@property (nonatomic) BOOL customerPaymentNotification;
+@property (nonatomic) BOOL isApplePayMobileCertificateAvailable;
+@property (nonatomic, copy) NSString * _Nullable merchantNameAr;
+@property (nonatomic, copy) NSString * _Nullable appleCsr;
+@property (nonatomic, copy) NSString * _Nullable cyberSourceMerchantKeyId;
+@property (nonatomic) BOOL isPaymentMethodSelectionEnabled;
+@property (nonatomic, copy) NSString * _Nullable apiPassword;
+@property (nonatomic, copy) NSString * _Nullable appleCertificatePrivateKeyNew;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable currencies;
+@property (nonatomic, copy) NSString * _Nullable mpgsApiKey;
+@property (nonatomic) BOOL isTransactionReceiptEnabled;
+@property (nonatomic, copy) NSString * _Nullable merchantWebsite;
+@property (nonatomic, copy) NSString * _Nullable gsdkTid;
+@property (nonatomic) BOOL isFederationToGsdkEnabled;
+@property (nonatomic, copy) NSString * _Nullable cyberSourceApiKey;
+@property (nonatomic, copy) NSString * _Nullable callbackUrl;
+@property (nonatomic) BOOL isMeezaDigitalEnabled;
+@property (nonatomic) BOOL useMpgsApiV60;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class GDPaymentMethodResponse;
+@class GDPaymentIntent;
+@class GDPlatform;
+@class GDTransactionResponse;
+@class GDStatementDescriptor;
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK15GDOrderResponse")
 @interface GDOrderResponse : NSObject
-@property (nonatomic, copy) NSString * _Nullable merchantReferenceId;
-@property (nonatomic, copy) NSString * _Nullable orderId;
-@property (nonatomic, copy) NSString * _Nullable threeDSecureId;
-@property (nonatomic, copy) NSString * _Nullable status;
-@property (nonatomic, copy) NSString * _Nullable eInvoiceId;
-@property (nonatomic) double amount;
-@property (nonatomic) double totalRefundedAmount;
-@property (nonatomic, copy) NSString * _Nullable merchantPublicKey;
-@property (nonatomic, copy) NSString * _Nullable currency;
-@property (nonatomic, copy) NSString * _Nullable updatedDate;
-@property (nonatomic) double totalAuthorizedAmount;
-@property (nonatomic, copy) NSString * _Nullable customerEmail;
-@property (nonatomic) double totalCapturedAmount;
-@property (nonatomic, copy) NSString * _Nullable createdBy;
-@property (nonatomic, copy) NSArray<GDTransactionResponse *> * _Nullable transactions;
 @property (nonatomic, copy) NSString * _Nullable createdDate;
-@property (nonatomic, copy) NSString * _Nullable merchantId;
+@property (nonatomic, copy) NSString * _Nullable createdBy;
+@property (nonatomic, copy) NSString * _Nullable updatedDate;
 @property (nonatomic, copy) NSString * _Nullable updatedBy;
-@property (nonatomic, strong) GDAddress * _Nullable shippingAddress;
-@property (nonatomic, strong) GDAddress * _Nullable billingAddress;
-@property (nonatomic, strong) GDPaymentMethodResponse * _Nullable paymentMethod;
-@property (nonatomic, copy) NSString * _Nullable returnUrl;
+@property (nonatomic, copy) NSString * _Nullable orderId;
+@property (nonatomic) double amount;
+@property (nonatomic, copy) NSString * _Nullable currency;
+@property (nonatomic, copy) NSString * _Nullable language;
 @property (nonatomic, copy) NSString * _Nullable detailedStatus;
+@property (nonatomic, copy) NSString * _Nullable status;
+@property (nonatomic, copy) NSString * _Nullable threeDSecureId;
+@property (nonatomic, copy) NSString * _Nullable merchantId;
+@property (nonatomic, copy) NSString * _Nullable merchantPublicKey;
+@property (nonatomic, copy) NSString * _Nullable merchantName;
+@property (nonatomic, copy) NSString * _Nullable parentOrderId;
+@property (nonatomic, copy) NSString * _Nullable merchantReferenceId;
 @property (nonatomic, copy) NSString * _Nullable callbackUrl;
+@property (nonatomic, copy) NSString * _Nullable customerEmail;
+@property (nonatomic, strong) GDAddress * _Nullable billingAddress;
+@property (nonatomic, strong) GDAddress * _Nullable shippingAddress;
+@property (nonatomic, copy) NSString * _Nullable returnUrl;
 @property (nonatomic) BOOL cardOnFile;
 @property (nonatomic, copy) NSString * _Nullable tokenId;
 @property (nonatomic, copy) NSString * _Nullable initiatedBy;
 @property (nonatomic, copy) NSString * _Nullable agreementId;
 @property (nonatomic, copy) NSString * _Nullable agreementType;
+@property (nonatomic, copy) NSString * _Nullable paymentOperation;
+@property (nonatomic, copy) NSString * _Nullable custom;
+@property (nonatomic, strong) GDPaymentMethodResponse * _Nullable paymentMethod;
+@property (nonatomic) double totalAuthorizedAmount;
+@property (nonatomic) double totalCapturedAmount;
+@property (nonatomic) double totalRefundedAmount;
+@property (nonatomic, strong) GDPaymentIntent * _Nullable paymentIntent;
+@property (nonatomic) BOOL isTokenPayment;
+@property (nonatomic) BOOL restrictPaymentMethods;
+@property (nonatomic, strong) GDPlatform * _Nullable platform;
+@property (nonatomic, copy) NSArray<GDTransactionResponse *> * _Nullable transactions;
+@property (nonatomic, strong) GDStatementDescriptor * _Nullable statementDescriptor;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -457,12 +587,231 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GDOrdersResponse")
 @end
 
 
+SWIFT_CLASS("_TtC16GeideaPaymentSDK12GDPICustomer")
+@interface GDPICustomer : NSObject
+- (nonnull instancetype)initWithName:(NSString * _Nullable)name andPhoneNumber:(NSString * _Nullable)phoneNumber andEmail:(NSString * _Nullable)email OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK15GDPaymentIntent")
+@interface GDPaymentIntent : NSObject
+@property (nonatomic, copy) NSString * _Nullable id;
+@property (nonatomic, copy) NSString * _Nullable type;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK23GDPaymentIntentCustomer")
+@interface GDPaymentIntentCustomer : NSObject
+@property (nonatomic, copy) NSString * _Nullable email;
+@property (nonatomic, copy) NSString * _Nullable phone;
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic, copy) NSString * _Nullable customerId;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSDate;
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK22GDPaymentIntentDetails")
+@interface GDPaymentIntentDetails : NSObject
+- (nonnull instancetype)initWithAmount:(GDAmount * _Nonnull)amount andExpiryDate:(NSDate * _Nullable)expiryDate andActivationDate:(NSDate * _Nullable)activationDate andCustomer:(GDPICustomer * _Nonnull)customer andEInvoiceDetails:(GDEInvoiceDetails * _Nullable)eInvoiceDetails paymentIntentId:(NSString * _Nullable)paymentIntentId status:(NSString * _Nullable)status type:(NSString * _Nullable)type OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+@class GDPaymentIntentOrder;
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK30GDPaymentIntentDetailsResponse")
+@interface GDPaymentIntentDetailsResponse : NSObject
+@property (nonatomic, strong) GDPaymentIntentCustomer * _Nullable customer;
+@property (nonatomic, copy) NSString * _Nullable link;
+@property (nonatomic, copy) NSString * _Nullable merchantId;
+@property (nonatomic, copy) NSString * _Nullable createdDate;
+@property (nonatomic, copy) NSString * _Nullable updatedDate;
+@property (nonatomic, copy) NSString * _Nullable type;
+@property (nonatomic, copy) NSString * _Nullable expiryDate;
+@property (nonatomic, copy) NSString * _Nullable activationDate;
+@property (nonatomic, copy) NSString * _Nullable createdBy;
+@property (nonatomic, copy) NSString * _Nullable merchantName;
+@property (nonatomic, copy) NSArray<GDPaymentIntentOrder *> * _Nullable orders;
+@property (nonatomic, strong) GDEInvoiceDetails * _Nullable eInvoiceDetails;
+@property (nonatomic, copy) NSArray<GDEInvoiceSentLink *> * _Nullable eInvoiceSentLinks;
+@property (nonatomic, copy) NSString * _Nullable updatedBy;
+@property (nonatomic, copy) NSString * _Nullable paymentIntentId;
+@property (nonatomic, copy) NSString * _Nullable currency;
+@property (nonatomic, copy) NSString * _Nullable status;
+@property (nonatomic, copy) NSString * _Nullable merchantPublicKey;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK21GDPaymentIntentFilter")
+@interface GDPaymentIntentFilter : NSObject
+@property (nonatomic, copy) NSString * _Nullable fromDate;
+@property (nonatomic, copy) NSString * _Nullable toDate;
+@property (nonatomic) NSInteger take;
+- (nonnull instancetype)initFrom:(NSString * _Nullable)fromDate to:(NSString * _Nullable)toDate take:(NSInteger)take OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK20GDPaymentIntentOrder")
+@interface GDPaymentIntentOrder : NSObject
+@property (nonatomic, copy) NSString * _Nullable paymentIntentId;
+@property (nonatomic, copy) NSString * _Nullable createdDate;
+@property (nonatomic, copy) NSString * _Nullable orderId;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK23GDPaymentIntentResponse")
+@interface GDPaymentIntentResponse : NSObject
+@property (nonatomic, strong) GDPaymentIntentDetailsResponse * _Nullable paymentIntent;
+@property (nonatomic, copy) NSString * _Nullable responseMessage;
+@property (nonatomic, copy) NSString * _Nullable detailedResponseMessage;
+@property (nonatomic, copy) NSString * _Nullable responseCode;
+@property (nonatomic, copy) NSString * _Nullable detailedResponseCode;
+@property (nonatomic, copy) NSString * _Nullable language;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK24GDPaymentIntentsResponse")
+@interface GDPaymentIntentsResponse : NSObject
+@property (nonatomic, copy) NSArray<GDPaymentIntentDetailsResponse *> * _Nullable paymentIntents;
+@property (nonatomic, copy) NSString * _Nullable responseMessage;
+@property (nonatomic, copy) NSString * _Nullable detailedResponseMessage;
+@property (nonatomic, copy) NSString * _Nullable responseCode;
+@property (nonatomic, copy) NSString * _Nullable detailedResponseCode;
+@property (nonatomic, copy) NSString * _Nullable language;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC16GeideaPaymentSDK23GDPaymentMethodResponse")
 @interface GDPaymentMethodResponse : NSObject
 @property (nonatomic, copy) NSString * _Nullable type;
 @property (nonatomic, copy) NSString * _Nullable brand;
 @property (nonatomic, copy) NSString * _Nullable cardholderName;
 @property (nonatomic, copy) NSString * _Nullable maskedCardNumber;
+@property (nonatomic, copy) NSString * _Nullable wallet;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK10GDPlatform")
+@interface GDPlatform : NSObject
+@property (nonatomic, copy) NSString * _Nullable integrationType;
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic, copy) NSString * _Nullable version;
+@property (nonatomic, copy) NSString * _Nullable pluginVersion;
+@property (nonatomic, copy) NSString * _Nullable partnerId;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK18GDPostilionDetails")
+@interface GDPostilionDetails : NSObject
+@property (nonatomic) NSInteger stan;
+@property (nonatomic, copy) NSString * _Nullable switchKey;
+@property (nonatomic, copy) NSString * _Nullable originalKey;
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK16GDProductMConfig")
+@interface GDProductMConfig : NSObject
+- (nonnull instancetype)initWithMerchantId:(NSString * _Nullable)merchantId andStoreId:(NSString * _Nullable)storeId isTest:(BOOL)isTest OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK11GDQRDetails")
+@interface GDQRDetails : NSObject
+- (nonnull instancetype)initWithCustomerDetails:(GDPICustomer * _Nullable)qrCustomerDetails expiryDate:(NSString * _Nullable)expiryDate OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK12GDQRResponse")
+@interface GDQRResponse : NSObject
+@property (nonatomic, copy) NSString * _Nullable paymentIntentId;
+@property (nonatomic, copy) NSString * _Nullable message;
+@property (nonatomic, copy) NSString * _Nullable image;
+@property (nonatomic, copy) NSString * _Nullable type;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK15GDRTPQRResponse")
+@interface GDRTPQRResponse : NSObject
+@property (nonatomic, copy) NSString * _Nullable responseDescription;
+@property (nonatomic, copy) NSString * _Nullable receiverName;
+@property (nonatomic, copy) NSString * _Nullable receiverAddress;
+@property (nonatomic, copy) NSString * _Nullable responseCode;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK19GDSDKMerchantConfig")
+@interface GDSDKMerchantConfig : NSObject
+- (nonnull instancetype)initWithToken:(NSString * _Nullable)token andCountryHeader:(NSString * _Nullable)countryHeader params:(GDProductMConfig * _Nullable)params OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK27GDSDKMerchantConfigResponse")
+@interface GDSDKMerchantConfigResponse : NSObject
+@property (nonatomic, copy) NSString * _Nullable merchantId;
+@property (nonatomic, copy) NSString * _Nullable storeId;
+@property (nonatomic, strong) GDMerchantDataResponse * _Nullable data;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK25GDSendLinkMultipleDetails")
+@interface GDSendLinkMultipleDetails : NSObject
+- (nonnull instancetype)initWithPaymentIntentId:(NSArray<NSString *> * _Nullable)paymentIntentIds sendingChannels:(NSArray<NSString *> * _Nullable)sendingChannels OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK21GDStatementDescriptor")
+@interface GDStatementDescriptor : NSObject
+@property (nonatomic) NSInteger name;
+@property (nonatomic, copy) NSString * _Nullable phone;
+@end
+
+
+SWIFT_CLASS("_TtC16GeideaPaymentSDK17GDTerminalDetails")
+@interface GDTerminalDetails : NSObject
+@property (nonatomic, copy) NSString * _Nullable tid;
+@property (nonatomic, copy) NSString * _Nullable mid;
+@property (nonatomic, copy) NSString * _Nullable transactionNumber;
+@property (nonatomic, copy) NSString * _Nullable transactionCreateDateTime;
+@property (nonatomic, copy) NSString * _Nullable merchantReferenceId;
+@property (nonatomic, copy) NSString * _Nullable transactionType;
+@property (nonatomic, copy) NSString * _Nullable transactionOutcome;
+@property (nonatomic, copy) NSString * _Nullable providerGateId;
+@property (nonatomic, copy) NSString * _Nullable paymentWay;
+@property (nonatomic, copy) NSString * _Nullable reconciliationKey;
+@property (nonatomic, copy) NSString * _Nullable transactionReceiveDateTime;
+@property (nonatomic, copy) NSString * _Nullable transactionSentDateTime;
+@property (nonatomic, copy) NSString * _Nullable status;
+@property (nonatomic, copy) NSString * _Nullable message;
+@property (nonatomic, copy) NSString * _Nullable approvalCode;
+@property (nonatomic, copy) NSString * _Nullable responseCode;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -491,10 +840,16 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK21GDTransactionResponse")
 @property (nonatomic, copy) NSString * _Nullable authorizationCode;
 @property (nonatomic, copy) NSString * _Nullable rrn;
 @property (nonatomic, strong) GDPaymentMethodResponse * _Nullable paymentMethod;
+@property (nonatomic, strong) GDPostilionDetails * _Nullable postilionDetails;
+@property (nonatomic, strong) GDTerminalDetails * _Nullable terminalDetails;
+@property (nonatomic, strong) GDMeezaDetails * _Nullable meezaDetails;
+@property (nonatomic, copy) NSString * _Nullable correlationId;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSTimer;
 @class UIImage;
+enum Language : NSInteger;
 @class PKPayment;
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
@@ -577,7 +932,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 ///     agreementType String <em>Optional</em> e.g “Recurring” , “installment” ,“Unscheduled” , etc
 ///   </li>
 ///   <li>
-///     eInvoice: String  <em>Optional</em> EInvoice id for paying an EInvoice created before
+///     paymentIntentId: String  <em>Optional</em> PaymentIntent id for paying a PaymentIntent created before
 ///   </li>
 ///   <li>
 ///     customerDetails: GDCustomerDetails - SDK GDCustomerDetails object use for internal customer reference for customer info  . <em>Optional</em>
@@ -624,20 +979,20 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// return
 /// }
 ///
-/// GeideaPaymentAPI.pay(theAmount: amount, withCardDetails: cardDetails, andTokenizationDetails: tokenizationDetails, andEInvoice: eInvoiceId,andCustomerDetails: customerDetails, navController: **navVC** or **self**, completion:{ response, error in
+/// GeideaPaymentAPI.pay(theAmount: amount, withCardDetails: cardDetails, andTokenizationDetails: tokenizationDetails, andPaymentIntentId: paymentIntentId,andCustomerDetails: customerDetails, navController: **navVC** or **self**, completion:{ response, error in
 /// DispatchQueue.main.async {
 ///
 /// if let err = error {
-///    if err.errors.isEmpty {
-///        var message = ""
-///        if err.responseCode.isEmpty {
-///        message = "\n responseMessage: \(err.responseMessage)"
-///    } else {
-///        message = "\n responseCode: \(err.responseCode)  \n responseMessage: \(err.responseMessage)"
-///    }
-///    //TODO: display relevant fields from GDErrorResponse
+/// if err.errors.isEmpty {
+/// var message = ""
+/// if err.responseCode.isEmpty {
+/// message = "\n responseMessage: \(err.responseMessage)"
 /// } else {
-///    //TODO: display relevant fields from GDErrorResponse
+/// message = "\n responseCode: \(err.responseCode)  \n responseMessage: \(err.responseMessage)"
+/// }
+/// //TODO: display relevant fields from GDErrorResponse
+/// } else {
+/// //TODO: display relevant fields from GDErrorResponse
 /// }
 ///
 /// } else {
@@ -671,7 +1026,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 ///
 /// GDCustomerDetails *customerDetails = [[GDCustomerDetails alloc] initWithEmail:_emailTF.text andCallbackUrl:_callbackUrlTF.text merchantReferenceId:_merchantRefIDTF.text shippingAddress:shippingAddress billingAddress:billingAddress paymentOperation: PaymentOperationPay];
 ///
-/// [GeideaPaymentAPI payWithTheAmount:amount withCardDetails:cardDetails  andTokenizationDetails: tokenizationDetails andEInvoice: eInvoiceId andCustomerDetails:customerDetails dismissAction:NULL navController: **navVC** or **self** completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+/// [GeideaPaymentAPI payWithTheAmount:amount withCardDetails:cardDetails  andTokenizationDetails: tokenizationDetails andPaymentIntentId: paymentIntentId andCustomerDetails:customerDetails dismissAction:NULL navController: **navVC** or **self** completion:^(GDOrderResponse* order, GDErrorResponse* error) {
 ///
 /// if (error != NULL) {
 /// if (!error.errors || !error.errors.count) {
@@ -706,10 +1061,37 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// since:
 /// 1.0
 /// version:
-/// 1.0
-+ (void)payWithTheAmount:(GDAmount * _Nonnull)amount withCardDetails:(GDCardDetails * _Nonnull)cardDetails andTokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails andEInvoice:(NSString * _Nullable)eInvoiceId andCustomerDetails:(GDCustomerDetails * _Nullable)customerDetails orderId:(NSString * _Nullable)orderId dismissAction:(void (^ _Nullable)(GDCancelResponse * _Nullable, GDErrorResponse * _Nullable))dismissAction navController:(UIViewController * _Nonnull)navController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
-/// Starting the payment flow using Geidea Form
+/// 1.0`
++ (void)payWithTheAmount:(GDAmount * _Nonnull)amount withCardDetails:(GDCardDetails * _Nonnull)cardDetails and3DV2Enabled:(BOOL)threeDSV2Enabled andTokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails andPaymentIntentId:(NSString * _Nullable)paymentIntentId andCustomerDetails:(GDCustomerDetails * _Nullable)customerDetails orderId:(NSString * _Nullable)orderId paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods isFromHPP:(BOOL)isFromHPP dismissAction:(void (^ _Nullable)(GDCancelResponse * _Nullable, GDErrorResponse * _Nullable))dismissAction navController:(UIViewController * _Nonnull)navController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)initiateAuthenticateWithTheAmount:(GDAmount * _Nonnull)amount withCardNumber:(NSString * _Nullable)cardNumber andTokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails andPaymentIntentId:(NSString * _Nullable)paymentIntentId andCustomerDetails:(GDCustomerDetails * _Nullable)customerDetails orderId:(NSString * _Nullable)orderId paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods dismissAction:(void (^ _Nullable)(GDCancelResponse * _Nullable, GDErrorResponse * _Nullable))dismissAction navController:(UIViewController * _Nonnull)navController completion:(void (^ _Nonnull)(GDInitiateAuthenticateResponse * _Nullable, GDErrorResponse * _Nullable))completion;
+/// Starting the payment flow using Geidea Form including the Payment selection screen with available methods
+/// This available methods can be restricted by using the parameter paymentMethods
 /// <ul>
+///   <li>
+///     paymentMethods: [String]  <em>Optional</em> if null the Form will be configured from your  merchant config GDConfigResponse
+///     For example by using paymentMethods: [“visa”] the card payment will be restricted only on visa, other payment types will be restricted by the system
+///     Availble keywords: qrCode, visa, mastercard, mada, meeza
+///   </li>
+///   <li>
+///     Card payment see - Parameters section
+///   </li>
+///   <li>
+///     ApplePay payment  <em>Optional</em>
+///     You will need to add an extra paramater:
+///   </li>
+///   <li>
+///     applePayDetails: GDApplePayDetails <em>Optional</em> to use this feature
+///   </li>
+///   <li>
+///     QR payment  <em>Optional</em> Available in Egypt
+///     You will need to add some extra paramaters if you want to use this payment type
+///   </li>
+///   <li>
+///     qrCustomerDetails:  GDPICustomer  <em>Required</em>
+///   </li>
+///   <li>
+///     qrExpiryDate: String <em>Required</em> yyyy-MM-dd
+///   </li>
 ///   <li>
 ///     Parameters:
 ///   </li>
@@ -725,8 +1107,11 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 ///     showEmail: Bool  <em>Required</em> true or false if you use your own email form
 ///   </li>
 ///   <li>
+///     showReceipt: Bool  <em>Required</em> true or false.  set to true if you want a Receipt UI for Success or Failure. False if you want to made a branded Success /Failure scren
+///   </li>
+///   <li>
 ///     tokenizationDetails: GDTokenizationDetails <em>Optional</em>
-///     cardOnFile: Bool <em>Optional</em> true for tokenization
+///     cardOnFile: Bool <em>≈</em> true for tokenization
 ///     initiatedBy: String <em>Optional</em> Must be “Internet” if card On file true
 ///     agreementID: String <em>Optional</em> mercha
 ///     agreementType String <em>Optional</em> e.g “Recurring” , “installment” ,“Unscheduled” , etc
@@ -759,7 +1144,16 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 ///     postCode: String <em>Optional</em>
 ///   </li>
 ///   <li>
-///     eInvoiceId: String  <em>Optional</em> EInvoice id for paying an EInvoice created before
+///     paymentIntentId: String  <em>Optional</em> paymentIntentId id for paying a paymentIntent created before
+///   </li>
+///   <li>
+///     qrCustomerDetails: GDPICustomer <em>Optional</em> QRCustomerDetails if you want to integrate meeza
+///   </li>
+///   <li>
+///     qrExpiryDate: String <em>Optional</em> QRCustomerDetails if you want to integrate meeza with a custom expiryDate, default is on month
+///   </li>
+///   <li>
+///     paymentMethods:  [String] <em>Optional</em> You can restrict paymentMethods with the values QR, visa, mastercard meeza
 ///   </li>
 ///   <li>
 ///     navController: UIViewController - Used for presenting SDK Payment flow. <em>Required</em>
@@ -774,9 +1168,9 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// \code
 /// let amount = GDAmount(amount: Double, currency: String)
 /// let tokenizationDetails = GDTokenizationDetails(withCardOnFile:Bool (true if the card will be tokenized), initiatedBy:  "Internet" (can be null if cardOnFile false otherwise mandatory), agreementId: String, agreementType: String)
-/// let applePayDetails = GDApplePayDetails(in: self, andButtonIn: applePayBtnView, forMerchantIdentifier: "merchant.company. etc.", withCallbackUrl: String, andReferenceId: String)
+/// let applePayDetails = GDApplePayDetails(in: self, andButtonIn: applePayBtnView or null if use payment selection list, forMerchantIdentifier: "merchant.company. etc.", withCallbackUrl: String, andReferenceId: String)
 ///
-/// GeideaPaymentAPI.payWithGeideaForm(theAmount: amount, showAddress: Bool, showEmail: Bool, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails, applePayDetails: applePayDetails, config: self.merchantConfig, eInvoiceId: eInvoiceId, navController: self, completion:{ response, error in
+/// GeideaPaymentAPI.payWithGeideaForm(theAmount: amount, showAddress: Bool, showEmail: Bool, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails, applePayDetails: applePayDetails, config: self.merchantConfig, paymentIntentIdId: paymentIntentIdId, navController: self, completion:{ response, error in
 /// DispatchQueue.main.async {
 ///
 /// if let err = error {
@@ -818,7 +1212,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// GDApplePayDetails *applePayDetails = [[GDApplePayDetails alloc] initIn:self andButtonIn:_applePayBtnView forMerchantIdentifier:@"merchant.etc" withCallbackUrl:String andReferenceId:String];
 ///
 ///
-/// [GeideaPaymentAPI payWithGeideaFormWithTheAmount:amount showAddress:Bool showEmail:Bool tokenizationDetails:tokenizationDetails customerDetails:NULL applePayDetails:applePayDetails config:self.config eInvoiceId: eInvoiceId navController: **self** completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+/// [GeideaPaymentAPI payWithGeideaFormWithTheAmount:amount showAddress:Bool showEmail:Bool tokenizationDetails:tokenizationDetails customerDetails:NULL applePayDetails:applePayDetails config:self.config paymentIntentIdId: paymentIntentIdId navController: **self** completion:^(GDOrderResponse* order, GDErrorResponse* error) {
 ///
 /// if (error != NULL) {
 /// if (!error.errors || !error.errors.count) {
@@ -854,7 +1248,231 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)payWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount showAddress:(BOOL)showAddress showEmail:(BOOL)showEmail tokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails customerDetails:(GDCustomerDetails * _Nullable)customerDetails applePayDetails:(GDApplePayDetails * _Nullable)applePayDetails config:(GDConfigResponse * _Nullable)config eInvoiceId:(NSString * _Nullable)eInvoiceId viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)payWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount showAddress:(BOOL)showAddress showEmail:(BOOL)showEmail showReceipt:(BOOL)showReceipt tokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails customerDetails:(GDCustomerDetails * _Nullable)customerDetails applePayDetails:(GDApplePayDetails * _Nullable)applePayDetails config:(GDConfigResponse * _Nullable)config paymentIntentId:(NSString * _Nullable)paymentIntentId qrDetails:(GDQRDetails * _Nullable)qrDetails paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
+/// Starting paying QR flow using Geidea Form
+/// <ul>
+///   <li>
+///     Parameters:
+///   </li>
+///   <li>
+///     amount: GDAmount - SDK GDAmount object  <em>Required</em>
+///     amount: Double <em>Required</em>
+///     currency: String <em>Required</em>
+///   </li>
+///   <li>
+///     customer: GDPaymentIntentCustomer  <em>Required</em>
+///   </li>
+///   <li>
+///     expiryDate: Date <em>Required</em>
+///   </li>
+///   <li>
+///     merchantPublicKey: String <em>Required</em>
+///   </li>
+///   <li>
+///     showReceipt: Bool <em>Optional</em> true if you want to show Geidea receipt screen
+///   </li>
+///   <li>
+///     navController: UIViewController - Used for presenting SDK Payment flow. <em>Required</em>
+///     self type of : (UIViewController) the SDK will present modally from customer app UIViewController
+///   </li>
+///   <li>
+///     completion: (GDOrderResponse?, GDErrorResponse?)  -> Void - The completion handler for customer app returned from SDK <em>Required</em>
+///   </li>
+/// </ul>
+/// <h1>Examples</h1>
+/// Starting the pay QR with Geidea form
+/// \code
+/// let amount = GDAmount(amount: Double, currency: String)
+///
+///
+/// GeideaPaymentAPI.payQRWithGeideaForm(theAmount: amount, customer: GDPaymentIntentCustomer, expiryDate: Date, merchantPublicKey: String, showReceipt: Bool, navController: self, completion:{ response, error in
+/// DispatchQueue.main.async {
+///
+/// if let err = error {
+/// if err.errors.isEmpty {
+/// var message = ""
+/// if err.responseCode.isEmpty {
+/// message = "\n responseMessage: \(err.responseMessage)"
+/// } else {
+/// message = "\n responseCode: \(err.responseCode)  \n responseMessage: \(err.responseMessage)"
+/// }
+/// //TODO: display relevant fields from GDErrorResponse
+/// } else {
+/// //TODO: display relevant fields from GDErrorResponse
+/// }
+///
+/// } else {
+/// guard let orderResponse = response else {
+/// return
+/// }
+///
+/// //TODO: display relevant fields from GDOrderResponse
+/// //TODO: if cardOnFile is true save tokenId from GDOrderResponse in persistence and also agreementId and agreementType for subscriptions
+/// //TODO: if paymentOperation is PaymentOperation.preAuthorize:
+/// // Save order id in persistence for capturing the payment with // GeideaPaymentApi.capture
+/// // if orderResponse.detailedStatus == "Authorized" {
+/// // TODO: save order.orderId
+/// // }
+/// }
+/// }
+/// })
+///
+/// \endcode\code
+/// UINavigationController *navVC =  (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
+///
+/// GDAmount *amount = [[GDAmount alloc] initWithAmount: [amount doubleValue] currency: NSString *curency];
+///
+///
+///
+/// [GeideaPaymentAPI payQRWithGeideaFormWithTheAmount:amount customer:GDPaymentIntentCustomer expiryDate:Date merchantPublicKey:String showReceipt:true navController: **self** completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+///
+/// if (error != NULL) {
+/// if (!error.errors || !error.errors.count) {
+/// NSString *message;
+/// if ( [error.responseCode length] == 0) {
+/// message = [NSString stringWithFormat:@"\n responseMessage: %@", error.responseMessage];
+/// } else {
+/// message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ ", error.responseCode , error.responseMessage];
+/// }
+///
+/// //TODO: display relevant fields from GDErrorResponse
+/// } else {
+/// //TODO: display relevant fields from GDErrorResponse
+/// }
+///
+/// } else {
+/// if (order != NULL) {
+/// //TODO: display relevant fields from GDOrderResponse
+/// //TODO: if cardOnFile is true save tokenId from GDOrderResponse in persistence and also agreementId and agreementType for subscriptions (InitistedBy = "Merchant")
+/// // TODO: check  [order tokenId] != NULL
+/// //TODO: if paymentOperation is PaymentOperation.preAuthorize:
+/// Save order id in persistence for capturing the payment with // GeideaPaymentApi.capture
+/// if ([[order detailedStatus] isEqual: @"Authorized"]) {
+/// TODO: save order.orderId
+/// }
+/// }
+/// }
+/// }];
+///
+/// \endcodeseealso:
+/// GDAmount, GDApplePayDetails, GDTokenizationDetails,GDConfigResponse,  GDCustomerDetails, GDAddress, GDOrderResponse, GDErrorResponse, GDApplePayResponse
+/// since:
+/// 1.0
+/// version:
+/// 1.0
++ (void)payQRWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nonnull)qrDetails showReceipt:(BOOL)showReceipt viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
+/// Starting paying QR flow
+/// <ul>
+///   <li>
+///     Parameters:
+///   </li>
+///   <li>
+///     amount: GDAmount - SDK GDAmount object  <em>Required</em>
+///     amount: Double <em>Required</em>
+///     currency: String <em>Required</em>
+///   </li>
+///   <li>
+///     customer: GDPaymentIntentCustomer  <em>Required</em>
+///   </li>
+///   <li>
+///     expiryDate: Date <em>Required</em>
+///   </li>
+///   <li>
+///     merchantPublicKey: String <em>Required</em>
+///   </li>
+///   <li>
+///     showReceipt: Bool <em>Optional</em> true if you want to show Geidea receipt screen
+///   </li>
+///   <li>
+///     navController: UIViewController - Used for presenting SDK Payment flow. <em>Required</em>
+///     self type of : (UIViewController) the SDK will present modally from customer app UIViewController
+///   </li>
+///   <li>
+///     completion: (GDOrderResponse?, GDErrorResponse?)  -> Void - The completion handler for customer app returned from SDK <em>Required</em>
+///   </li>
+/// </ul>
+/// <h1>Examples</h1>
+/// Starting the pay QR with Geidea form
+/// \code
+/// let amount = GDAmount(amount: Double, currency: String)
+///
+///
+/// GeideaPaymentAPI.payQR(theAmount: amount, customer: GDPaymentIntentCustomer, expiryDate: Date, showReceipt: Bool, merchantName: String, navController: self, completion:{ response, error in
+/// DispatchQueue.main.async {
+///
+/// if let err = error {
+/// if err.errors.isEmpty {
+/// var message = ""
+/// if err.responseCode.isEmpty {
+/// message = "\n responseMessage: \(err.responseMessage)"
+/// } else {
+/// message = "\n responseCode: \(err.responseCode)  \n responseMessage: \(err.responseMessage)"
+/// }
+/// //TODO: display relevant fields from GDErrorResponse
+/// } else {
+/// //TODO: display relevant fields from GDErrorResponse
+/// }
+///
+/// } else {
+/// guard let orderResponse = response else {
+/// return
+/// }
+///
+/// //TODO: display relevant fields from GDOrderResponse
+/// //TODO: if cardOnFile is true save tokenId from GDOrderResponse in persistence and also agreementId and agreementType for subscriptions
+/// //TODO: if paymentOperation is PaymentOperation.preAuthorize:
+/// // Save order id in persistence for capturing the payment with // GeideaPaymentApi.capture
+/// // if orderResponse.detailedStatus == "Authorized" {
+/// // TODO: save order.orderId
+/// // }
+/// }
+/// }
+/// })
+///
+/// \endcode\code
+/// UINavigationController *navVC =  (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
+///
+/// GDAmount *amount = [[GDAmount alloc] initWithAmount: [amount doubleValue] currency: NSString *curency];
+///
+///
+///
+/// [GeideaPaymentAPI payQRWithGeideaFormWithTheAmount:amount customer:GDPaymentIntentCustomer expiryDate:Date, showReceipt:true merchantName:String navController: **self** completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+///
+/// if (error != NULL) {
+/// if (!error.errors || !error.errors.count) {
+/// NSString *message;
+/// if ( [error.responseCode length] == 0) {
+/// message = [NSString stringWithFormat:@"\n responseMessage: %@", error.responseMessage];
+/// } else {
+/// message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ ", error.responseCode , error.responseMessage];
+/// }
+///
+/// //TODO: display relevant fields from GDErrorResponse
+/// } else {
+/// //TODO: display relevant fields from GDErrorResponse
+/// }
+///
+/// } else {
+/// if (order != NULL) {
+/// //TODO: display relevant fields from GDOrderResponse
+/// //TODO: if cardOnFile is true save tokenId from GDOrderResponse in persistence and also agreementId and agreementType for subscriptions (InitistedBy = "Merchant")
+/// // TODO: check  [order tokenId] != NULL
+/// //TODO: if paymentOperation is PaymentOperation.preAuthorize:
+/// Save order id in persistence for capturing the payment with // GeideaPaymentApi.capture
+/// if ([[order detailedStatus] isEqual: @"Authorized"]) {
+/// TODO: save order.orderId
+/// }
+/// }
+/// }
+/// }];
+///
+/// \endcodeseealso:
+/// GDAmount, GDApplePayDetails, GDTokenizationDetails,GDConfigResponse,  GDCustomerDetails, GDAddress, GDOrderResponse, GDErrorResponse, GDApplePayResponse
+/// since:
+/// 1.0
+/// version:
+/// 1.0
++ (void)payQRWithTheAmount:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nullable)qrDetails showReceipt:(BOOL)showReceipt merchantName:(NSString * _Nullable)merchantName viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Starting the pay with token flow cardDetails already tokenized from Pay request
 /// <ul>
 ///   <li>
@@ -875,7 +1493,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 ///     agreementType String <em>Optional</em> e.g “Installment”, “Recurring”, etc
 ///   </li>
 ///   <li>
-///     eInvoice: String  <em>Optional</em> EInvoice id for paying an EInvoice created before
+///     paymentIntentId: String  <em>Optional</em> paymentIntentId id for paying an paymentIntentId created before
 ///   </li>
 ///   <li>
 ///     customerDetails: GDCustomerDetails - SDK GDCustomerDetails object use for internal customer reference for customer info  . <em>Optional</em>
@@ -932,7 +1550,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// return
 /// }
 ///
-/// GeideaPaymentAPI.payWithToken(theAmount: amount, withTokenId: tokenId, tokenizationDetails: tokenizationDetails, andEInvoiceId: EInvoiceId or null, andCustomerDetails: customerDetails, navController: self, completion:{ response, error in
+/// GeideaPaymentAPI.payWithToken(theAmount: amount, withTokenId: tokenId, tokenizationDetails: tokenizationDetails, andpaymentIntentIdId: paymentIntentIdId or null, andCustomerDetails: customerDetails, navController: self, completion:{ response, error in
 /// DispatchQueue.main.async {
 ///
 /// if let err = error {
@@ -976,7 +1594,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 ///
 /// GDCustomerDetails *customerDetails = [[GDCustomerDetails alloc] initWithEmail:_emailTF.text andCallbackUrl:_callbackUrlTF.text merchantReferenceId:_merchantRefIDTF.text shippingAddress:shippingAddress billingAddress:billingAddress paymentOperation: PaymentOperationPay];
 ///
-/// [GeideaPaymentAPI payWithTokenWithTheAmount:amount withTokenId:@"token id from from pay API call response" tokenizationDetails:tokenizationDetails andEInvoiceId: (EInvoiceId or null) andCustomerDetails:customerDetails navController: navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+/// [GeideaPaymentAPI payWithTokenWithTheAmount:amount withTokenId:@"token id from from pay API call response" tokenizationDetails:tokenizationDetails andpaymentIntentIdId: (paymentIntentIdId or null) andCustomerDetails:customerDetails navController: navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
 ///
 /// if (error != NULL) {
 /// if (!error.errors || !error.errors.count) {
@@ -1010,7 +1628,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)payWithTokenWithTheAmount:(GDAmount * _Nonnull)amount withTokenId:(NSString * _Nonnull)token tokenizationDetails:(GDTokenizationDetails * _Nonnull)tokenizationDetails andEInvoiceId:(NSString * _Nullable)eInvoiceId andCustomerDetails:(GDCustomerDetails * _Nullable)customerDetails navController:(UIViewController * _Nonnull)navController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)payWithTokenWithTheAmount:(GDAmount * _Nonnull)amount withTokenId:(NSString * _Nonnull)token tokenizationDetails:(GDTokenizationDetails * _Nonnull)tokenizationDetails andPaymentIntentId:(NSString * _Nullable)paymentIntentId andCustomerDetails:(GDCustomerDetails * _Nullable)customerDetails navController:(UIViewController * _Nonnull)navController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Capture  flow
 /// <ul>
 ///   <li>
@@ -1103,7 +1721,212 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// version:
 /// 1.0
 + (void)captureWith:(NSString * _Nonnull)orderId callbackUrl:(NSString * _Nullable)callbackUrl navController:(UIViewController * _Nonnull)navController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
+/// Refund  flow
+/// <ul>
+///   <li>
+///     Parameters:
+///   </li>
+///   <li>
+///     orderId: String from GDOrderResponse  (response from GeideaPaymentAPI.pay or  GeideaPaymentAPI.payWithToken)orGeideaPaymentAPI.setupApplePay  <em>Required</em>
+///   </li>
+///   <li>
+///     navController: UIViewController - Used for presenting SDK Payment flow. <em>Required</em>
+///   </li>
+///   <li>
+///     two options for starting the SDK:
+///   </li>
+///   <li>
+///     self type of : (UIViewController) the SDK will present modally from customer app UIViewController
+///   </li>
+///   <li>
+///     navigationController type of: UINavigationController  the SDK will be pushed from customer app NavigationCotroller
+///   </li>
+///   <li>
+///     completion: (GDOrderResponse?, GDErrorResponse?)  -> Void - The completion handler for customer app returned from SDK <em>Required</em>
+///   </li>
+/// </ul>
+/// <h1>Examples</h1>
+/// Starting the refund flow
+/// \code
+/// guard let navVC = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController  else {
+/// return
+/// }
+///
+/// GeideaPaymentAPI.refund(with: orderId, navController: **navVC** or **self**, completion:{ response, error in
+/// DispatchQueue.main.async {
+///
+/// if let err = error {
+/// if err.errors.isEmpty {
+/// var message = ""
+/// if err.responseCode.isEmpty {
+/// message = "\n responseMessage: \(err.responseMessage)"
+/// } else {
+/// message = "\n responseCode: \(err.responseCode)  \n responseMessage: \(err.responseMessage)"
+/// }
+/// //TODO: display relevant fields from GDErrorResponse
+/// } else {
+/// //TODO: display relevant fields from GDErrorResponse
+/// }
+/// } else {
+///    guard let orderResponse = response else {
+///    return
+/// }
+///
+/// //TODO: display relevant fields from GDOrderResponse
+/// //TODO: remove OrderId and Refund button from UI
+/// }
+/// }
+/// })
+///
+/// \endcode\code
+/// UINavigationController *navVC =  (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
+///
+/// [GeideaPaymentAPI refundWith:self.orderId navController: navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+///
+/// if (error != NULL) {
+/// if (!error.errors || !error.errors.count) {
+/// NSString *message;
+/// if ( [error.responseCode length] == 0) {
+/// message = [NSString stringWithFormat:@"\n responseMessage: %@", error.responseMessage];
+/// } else {
+/// message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ ", error.responseCode , error.responseMessage];
+/// }
+///
+/// //TODO: display relevant fields from GDErrorResponse
+/// } else {
+/// //TODO: display relevant fields from GDErrorResponse
+/// }
+///
+/// } else {
+/// if (order != NULL) {
+/// //TODO: display relevant fields from GDOrderResponse
+/// //TODO: remove OrderId and Refund button from UI
+/// }
+/// }
+/// }
+/// }];
+///
+/// \endcodeseealso:
+/// GDOrderResponse, GDErrorResponse
+/// since:
+/// 1.0
+/// version:
+/// 10
 + (void)refundWith:(NSString * _Nonnull)orderId callbackUrl:(NSString * _Nullable)callbackUrl navController:(UIViewController * _Nonnull)navController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
+/// Starting getQRImage  flow
+/// <ul>
+///   <li>
+///     Parameters:
+///   </li>
+///   <li>
+///     amount: GDAmount - SDK GDAmount object  <em>Required</em>
+///     amount: Double <em>Required</em>
+///     currency: String <em>Required</em>
+///   </li>
+///   <li>
+///     customer: GDPaymentIntentCustomer  <em>Required</em>
+///   </li>
+///   <li>
+///     expiryDate: Date <em>Required</em>
+///   </li>
+///   <li>
+///     merchantPublicKey: String <em>Required</em>
+///   </li>
+///   <li>
+///     showReceipt: Bool <em>Optional</em> true if you want to show Geidea receipt screen
+///   </li>
+///   <li>
+///     navController: UIViewController - Used for presenting SDK Payment flow. <em>Required</em>
+///     self type of : (UIViewController) the SDK will present modally from customer app UIViewController
+///   </li>
+///   <li>
+///     completion: (GDOrderResponse?, GDErrorResponse?)  -> Void - The completion handler for customer app returned from SDK <em>Required</em>
+///   </li>
+/// </ul>
+/// <h1>Examples</h1>
+/// Starting the pay QR with Geidea form
+/// \code
+/// let amount = GDAmount(amount: Double, currency: String)
+///
+///
+/// GeideaPaymentAPI.getQRImage(theAmount: amount, customer: GDPaymentIntentCustomer, expiryDate: Date, showReceipt: Bool, merchantName: String, navController: self, completion:{ response, error in
+/// DispatchQueue.main.async {
+///
+/// if let err = error {
+/// if err.errors.isEmpty {
+/// var message = ""
+/// if err.responseCode.isEmpty {
+/// message = "\n responseMessage: \(err.responseMessage)"
+/// } else {
+/// message = "\n responseCode: \(err.responseCode)  \n responseMessage: \(err.responseMessage)"
+/// }
+/// //TODO: display relevant fields from GDErrorResponse
+/// } else {
+/// //TODO: display relevant fields from GDErrorResponse
+/// }
+///
+/// } else {
+/// guard let orderResponse = response else {
+/// return
+/// }
+///
+/// //TODO: display relevant fields from GDOrderResponse
+/// //TODO: if cardOnFile is true save tokenId from GDOrderResponse in persistence and also agreementId and agreementType for subscriptions
+/// //TODO: if paymentOperation is PaymentOperation.preAuthorize:
+/// // Save order id in persistence for capturing the payment with // GeideaPaymentApi.capture
+/// // if orderResponse.detailedStatus == "Authorized" {
+/// // TODO: save order.orderId
+/// // }
+/// }
+/// }
+/// })
+///
+/// \endcode\code
+/// UINavigationController *navVC =  (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
+///
+/// GDAmount *amount = [[GDAmount alloc] initWithAmount: [amount doubleValue] currency: NSString *curency];
+///
+///
+///
+/// [GeideaPaymentAPI getQRImage:amount customer:GDPaymentIntentCustomer expiryDate:Date, showReceipt:true merchantName:String navController: **self** completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+///
+/// if (error != NULL) {
+/// if (!error.errors || !error.errors.count) {
+/// NSString *message;
+/// if ( [error.responseCode length] == 0) {
+/// message = [NSString stringWithFormat:@"\n responseMessage: %@", error.responseMessage];
+/// } else {
+/// message = [NSString stringWithFormat:@"\n responseCode: %@ \n responseMessage: %@ ", error.responseCode , error.responseMessage];
+/// }
+///
+/// //TODO: display relevant fields from GDErrorResponse
+/// } else {
+/// //TODO: display relevant fields from GDErrorResponse
+/// }
+///
+/// } else {
+/// if (order != NULL) {
+/// //TODO: display relevant fields from GDOrderResponse
+/// //TODO: if cardOnFile is true save tokenId from GDOrderResponse in persistence and also agreementId and agreementType for subscriptions (InitistedBy = "Merchant")
+/// // TODO: check  [order tokenId] != NULL
+/// //TODO: if paymentOperation is PaymentOperation.preAuthorize:
+/// Save order id in persistence for capturing the payment with // GeideaPaymentApi.capture
+/// if ([[order detailedStatus] isEqual: @"Authorized"]) {
+/// TODO: save order.orderId
+/// }
+/// }
+/// }
+/// }];
+///
+/// \endcodeseealso:
+/// GDAmount, GDApplePayDetails, GDTokenizationDetails,GDConfigResponse,  GDCustomerDetails, GDAddress, GDOrderResponse, GDErrorResponse, GDApplePayResponse
+/// since:
+/// 1.0
+/// version:
+/// 1.0
++ (void)getQRImageWith:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nonnull)qrDetails merchantName:(NSString * _Nonnull)merchantName completion:(void (^ _Nonnull)(GDQRResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)requestToPayWithQRCodeMessage:(NSString * _Nonnull)message phoneNumber:(NSString * _Nonnull)phoneNumber completion:(void (^ _Nonnull)(GDRTPQRResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (NSTimer * _Nonnull)checkPaymentIntentStatusWith:(NSString * _Nonnull)paymentIntentId atEverySeconds:(NSInteger)seconds forMinutes:(NSInteger)minutes completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
 + (void)cancelWith:(NSString * _Nonnull)orderId callbackUrl:(NSString * _Nullable)callbackUrl navController:(UIViewController * _Nonnull)navController completion:(void (^ _Nonnull)(GDCancelResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Starting the apple pay with flow
 /// <ul>
@@ -1120,7 +1943,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 ///     merchantIdentifier: String <em>Required</em> “merchant identifier from Apple account.”
 ///   </li>
 ///   <li>
-///     buttonView: UIView as a placeholder where apple Pay Button will be placed
+///     buttonView: UIView as a placeholder where apple Pay Button will be placed <em>Optional</em>
 ///   </li>
 ///   <li>
 ///     merchantRefId String <em>Optional</em>
@@ -1240,123 +2063,156 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 + (UIImage * _Nullable)getCardSchemeLogoWithCardType:(enum CardType)cardType SWIFT_WARN_UNUSED_RESULT;
 + (UIImage * _Nullable)getCardSchemeLogoWithCardNumber:(NSString * _Nullable)cardNumber SWIFT_WARN_UNUSED_RESULT;
-/// Create EInvoice
+/// Create PaymentIntent
 /// <ul>
 ///   <li>
 ///     Parameters:
 ///   </li>
 ///   <li>
-///     eInvoiceParams: GDEInvoiceDetails  <em>Required</em>
+///     paymentIntentParams: GDPaymentIntentDetails  <em>Required</em>
 ///   </li>
 /// </ul>
 /// <h1>Examples</h1>
-/// creating the EInvoice
+/// creating the PaymentIntent
 /// \code
-/// GeideaPaymentAPI.createInvoice(with: invoiceDetails, completion:{ response, error in
-///     if let invoice = response?.eInvoice {
-///       // save EInvoiceId for future payment
-///     }
+/// GeideaPaymentAPI.createPaymentIntent(with: paymentIntentParams, completion:{ response, error in
+/// if let paymentIntent = response?.paymentIntentId {
+/// // save paymentIntentId for future payment
+/// }
 ///
 /// })
 ///
 /// \endcode\code
-/// [GeideaPaymentAPI createInvoiceWith:invoiceDetails completion:^(GDEInvoiceResponse* order, GDErrorResponse* error) {
-///    //Use response
-/// }];
-///
-/// \endcodeseealso:
-/// GDAmount, GDEInvoiceDetails
-/// since:
-/// 1.0
-/// version:
-/// 1.0
-+ (void)createInvoiceWith:(GDEInvoiceDetails * _Nonnull)eInvoiceParams completion:(void (^ _Nonnull)(GDEInvoiceResponse * _Nullable, GDErrorResponse * _Nullable))completion;
-/// Update EInvoice
-/// <ul>
-///   <li>
-///     Parameters:
-///   </li>
-///   <li>
-///     eInvoiceParams: GDEInvoiceDetails  <em>Required</em>
-///   </li>
-/// </ul>
-/// <h1>Examples</h1>
-/// updating  EInvoice
-/// \code
-///    GeideaPaymentAPI.updateInvoice(with: invoiceDetails, completion:{ response, error in
-///        //Use response
-///    })
-/// })
-///
-/// \endcode\code
-/// [GeideaPaymentAPI updateInvoiceWith:invoiceDetails completion:^(GDEInvoiceResponse* order, GDErrorResponse* error) {
+/// [GeideaPaymentAPI createPaymentIntentWith:paymentIntentParams completion:^(GDPaymentIntentResponse* order, GDErrorResponse* error) {
 /// //Use response
 /// }];
 ///
 /// \endcodeseealso:
-/// GDAmount, GDEInvoiceDetails
+/// GDAmount, GDPaymentIntentDetails
 /// since:
 /// 1.0
 /// version:
 /// 1.0
-+ (void)updateInvoiceWith:(GDEInvoiceDetails * _Nonnull)eInvoiceParams completion:(void (^ _Nonnull)(GDEInvoiceResponse * _Nullable, GDErrorResponse * _Nullable))completion;
-/// Get EInvoice
++ (void)createPaymentIntentWith:(GDPaymentIntentDetails * _Nonnull)paymentIntentParams completion:(void (^ _Nonnull)(GDPaymentIntentResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)sendLinkBySMSWith:(NSString * _Nonnull)paymentIntentId completion:(void (^ _Nonnull)(GDPaymentIntentResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)sendLinkByEmailWith:(NSString * _Nonnull)paymentIntentId completion:(void (^ _Nonnull)(GDPaymentIntentResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)sendLinkByMultipleWith:(GDSendLinkMultipleDetails * _Nonnull)sendLinkMultipleDetails completion:(void (^ _Nonnull)(GDPaymentIntentResponse * _Nullable, GDErrorResponse * _Nullable))completion;
+/// Update PaymentIntent
 /// <ul>
 ///   <li>
 ///     Parameters:
 ///   </li>
 ///   <li>
-///     eInvoiceId: String  <em>Required</em>
+///     paymentIntentParams: GDPaymentIntentDetails  <em>Required</em>
 ///   </li>
 /// </ul>
 /// <h1>Examples</h1>
-/// getting  EInvoice
+/// updating  updatePaymentIntent
 /// \code
-///    GeideaPaymentAPI.getInvoice(with: eInvoice, completion:{ response, error in
-///        //Use response
-///    })
+/// GeideaPaymentAPI.updatePaymentWith(with: paymentIntentParams, completion:{ response, error in
+/// //Use response
+/// })
 /// })
 ///
 /// \endcode\code
-///    [GeideaPaymentAPI getInvoiceWith:eInvoiceId completion:^(GDEInvoiceResponse* response, GDErrorResponse* error) {
-///        //Use response
-///    }];
+/// [GeideaPaymentAPI updatePaymentWith:paymentIntentParams completion:^(GDPaymentIntentResponse* order, GDErrorResponse* error) {
+/// //Use response
+/// }];
 ///
-/// \endcodesince:
+/// \endcodeseealso:
+/// GDAmount, GDPaymentIntentDetails
+/// since:
 /// 1.0
 /// version:
 /// 1.0
-+ (void)getInvoiceWith:(NSString * _Nonnull)eInvoiceId completion:(void (^ _Nonnull)(GDEInvoiceResponse * _Nullable, GDErrorResponse * _Nullable))completion;
-/// Delete EInvoice
++ (void)updatePaymentIntentWith:(GDPaymentIntentDetails * _Nonnull)paymentIntentParams completion:(void (^ _Nonnull)(GDPaymentIntentResponse * _Nullable, GDErrorResponse * _Nullable))completion;
+/// Get getPaymentIntents
 /// <ul>
 ///   <li>
 ///     Parameters:
 ///   </li>
 ///   <li>
-///     eInvoiceId: String  <em>Required</em>
+///     paymentIntentsParams: String  <em>Required</em>
 ///   </li>
 /// </ul>
 /// <h1>Examples</h1>
-/// deleting  EInvoice
+/// getting  getPaymentIntents
 /// \code
-///    GeideaPaymentAPI.deleteInvoice(with: eInvoice, completion:{ response, error in
-///        //Use response
-///    })
+/// GeideaPaymentAPI.getPaymentIntents(with: paymentIntentsParams, completion:{ response, error in
+/// //Use response
+/// })
 /// })
 ///
 /// \endcode\code
-/// [GeideaPaymentAPI deleteInvoiceWith:eInvoiceId completion:^(GDEInvoiceResponse*   response, GDErrorResponse* error) {
-///    //Use response
+/// [GeideaPaymentAPI getPaymentIntentsWith:paymentIntentsParams completion:^(GDPaymentIntentResponse* response, GDErrorResponse* error) {
+/// //Use response
+/// }];
+///
+/// \endcodeseealso:
+/// GDAmount, GDPaymentIntentFilter
+/// since:
+/// 1.0
+/// version:
+/// 1.0
++ (void)getPaymentIntentsWith:(GDPaymentIntentFilter * _Nonnull)paymentIntentsParams completion:(void (^ _Nonnull)(GDPaymentIntentsResponse * _Nullable, GDErrorResponse * _Nullable))completion;
+/// Get GetPaymentIntent
+/// <ul>
+///   <li>
+///     Parameters:
+///   </li>
+///   <li>
+///     paymentIntentId: String  <em>Required</em>
+///   </li>
+/// </ul>
+/// <h1>Examples</h1>
+/// getting  PaymentIntent
+/// \code
+/// GeideaPaymentAPI.getPaymentIntent(with: paymentIntentId, completion:{ response, error in
+/// //Use response
+/// })
+/// })
+///
+/// \endcode\code
+/// [GeideaPaymentAPI getPaymentIntentWith:paymentIntentId completion:^(GDPaymentIntentResponse* response, GDErrorResponse* error) {
+/// //Use response
 /// }];
 ///
 /// \endcodesince:
 /// 1.0
 /// version:
 /// 1.0
-+ (void)deleteInvoiceWith:(NSString * _Nonnull)eInvoiceId completion:(void (^ _Nonnull)(GDEInvoiceResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)getPaymentIntentWith:(NSString * _Nonnull)paymentIntentId completion:(void (^ _Nonnull)(GDPaymentIntentResponse * _Nullable, GDErrorResponse * _Nullable))completion;
+/// Delete PaymentIntent
+/// <ul>
+///   <li>
+///     Parameters:
+///   </li>
+///   <li>
+///     paymentIntentIdId: String  <em>Required</em>
+///   </li>
+/// </ul>
+/// <h1>Examples</h1>
+/// deleting  PaymentIntent
+/// \code
+/// GeideaPaymentAPI.deletePaymentIntent(with: paymentIntentId, completion:{ response, error in
+/// //Use response
+/// })
+/// })
+///
+/// \endcode\code
+/// [GeideaPaymentAPI deletePaymentIntenteWith:paymentIntentId completion:^(GDPaymentIntentResponse*   response, GDErrorResponse* error) {
+/// //Use response
+/// }];
+///
+/// \endcodesince:
+/// 1.0
+/// version:
+/// 1.0
++ (void)deletePaymentIntentWith:(NSString * _Nonnull)paymentIntentId completion:(void (^ _Nonnull)(GDPaymentIntentResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (void)getOrdersWith:(GDOrdersFilter * _Nullable)orderParams completion:(void (^ _Nonnull)(GDOrdersResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (void)getOrderWith:(NSString * _Nonnull)orderId completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (void)getMerchantConfigWithCompletion:(void (^ _Nonnull)(GDConfigResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)getMerchantConfigWith:(GDSDKMerchantConfig * _Nullable)productConfig completion:(void (^ _Nonnull)(NSArray<GDSDKMerchantConfigResponse *> * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Switch networking environment for testing purposes
 /// <h1>Examples</h1>
 /// Add this to check if credentials are already stored in the SDK Secure storage
@@ -1377,15 +2233,38 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// version:
 /// 1.0
 + (void)setEnvironmentWithEnvironment:(enum Environment)environment;
+/// Set language
+/// <h1>Examples</h1>
+/// Add this to check if credentials are already stored in the SDK Secure storage
+/// \code
+/// GeideaPaymentAPI.setlanguage(language: Language.english)
+/// GeideaPaymentAPI.setlanguage(language: Language.arabic)
+///
+/// \endcode\code
+/// [GeideaPaymentAPI setLanguageWithLanguageLanguageEnglish];
+/// [GeideaPaymentAPI setLanguageWithLanguageLanguageArabic];
+///
+/// \endcodesince:
+/// 1.0
+/// version:
+/// 1.0
++ (void)setlanguageWithLanguage:(enum Language)language;
 + (void)removeCredentials;
 + (void)updateCredentialsWithMerchantKey:(NSString * _Nonnull)merchantKey andPassword:(NSString * _Nonnull)password;
-+ (void)startEInvoiceWithEInvoiceID:(NSString * _Nullable)eInvoiceId viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDEInvoiceResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)startPaymentIntentWithPaymentIntentID:(NSString * _Nullable)paymentIntentId status:(NSString * _Nullable)status type:(NSString * _Nonnull)type viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDPaymentIntentResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (void)payWithApplePayWithPKPayment:(PKPayment * _Nonnull)pkPayment callbackUrl:(NSString * _Nullable)callbackUrl merchentRefId:(NSString * _Nullable)merchentRefId completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (NSString * _Nullable)getModelStringWithOrder:(GDOrderResponse * _Nonnull)order SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getQRPaymentStringWithOrder:(GDRTPQRResponse * _Nonnull)order SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)getConfigStringWithConfig:(GDConfigResponse * _Nonnull)config SWIFT_WARN_UNUSED_RESULT;
-+ (NSString * _Nullable)getEInvoiceStringWithOrder:(GDEInvoiceResponse * _Nonnull)order SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getMMSConfigWithOrder:(GDPaymentIntentResponse * _Nonnull)order SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getPaymentIntentStringWithOrder:(GDPaymentIntentResponse * _Nonnull)order SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+typedef SWIFT_ENUM(NSInteger, Language, open) {
+  LanguageEnglish = 0,
+  LanguageArabic = 1,
+};
 
 typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
 /// No log will be shown. Recommended for production environments.
@@ -1413,9 +2292,20 @@ typedef SWIFT_ENUM(NSInteger, PaymentOperation, open) {
   PaymentOperationNONE = 3,
 };
 
+typedef SWIFT_ENUM(NSInteger, PaymentType, open) {
+  PaymentTypeCard = 0,
+  PaymentTypeQR = 1,
+};
 
 
 
+
+
+
+
+@interface UITextField (SWIFT_EXTENSION(GeideaPaymentSDK))
+- (void)awakeFromNib;
+@end
 
 
 

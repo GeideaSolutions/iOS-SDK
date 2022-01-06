@@ -12,6 +12,7 @@ import PassKit
 class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var environmentSelection: UISegmentedControl!
     @IBOutlet weak var amountTF: UITextField!
     @IBOutlet weak var currencyTF: UITextField!
     @IBOutlet weak var cardHolderNameTF: UITextField!
@@ -52,21 +53,29 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var agreementTypeTF: UITextField!
     @IBOutlet weak var agreementType: UILabel!
     @IBOutlet weak var payTokenBtn: UIButton!
+    @IBOutlet weak var payQRBtn: UIButton!
     @IBOutlet weak var configBtn: UIButton!
     @IBOutlet weak var initiatedByViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var customerDetailsTopConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var eInvoiceTF: UITextField!
+    @IBOutlet weak var paymentMethodsTF: UITextField!
+    
+    @IBOutlet weak var showReceiptSwitch: UISwitch!
+    @IBOutlet weak var paymentIntentTF: UITextField!
     @IBOutlet weak var showAddressSwitch: UISwitch!
     @IBOutlet weak var showAddressView: UIView!
     @IBOutlet weak var showEmailSwitch: UISwitch!
     @IBOutlet weak var cardSchemeLogoIV: UIImageView!
     @IBOutlet weak var generateInvoice: UIButton!
     
+    @IBOutlet weak var geideaGoBtn: UIButton!
+    @IBOutlet weak var languageSelectionControl: UISegmentedControl!
     
     private var inputs: [UITextField]!
     var paymentOperation: PaymentOperation = .NONE
     var orderId: String?
+    var status: String?
+    var type: String?
     var customerDetailsTopConstraintConstant: CGFloat = 0
     var initiatedByViewHeight: CGFloat = 0
     var paymentMethodViewHeight: CGFloat = 345
@@ -75,8 +84,24 @@ class ViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        paymentMethodSelection.selectedSegmentIndex = 1
+        #if DEBUG
+        environmentSelection.selectedSegmentIndex = 0
+        #else
+        environmentSelection.isHidden = true
+        environmentSelection.selectedSegmentIndex = 3
+        #endif
+        if let savedLanguageIndex = UserDefaults.standard.object(forKey: "language") {
+            
+            languageSelectionControl.selectedSegmentIndex = savedLanguageIndex as! Int
+        }
+        languageSelectionControl.sendActions(for: UIControl.Event.valueChanged)
+        
+        environmentSelection.sendActions(for: UIControl.Event.valueChanged)
+        
+        
+        paymentMethodSelection.selectedSegmentIndex = 0
         paymentMethodSelection.sendActions(for: UIControl.Event.valueChanged)
+        
         
         self.title = "Payment Sample Swift"
         scrollView.keyboardDismissMode = .onDrag
@@ -84,25 +109,78 @@ class ViewController: UIViewController, UITextFieldDelegate{
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         self.contentView.addGestureRecognizer(tap)
         
-        refreshConfig()
         setupAppplePay()
-        
         initiatedByViewHeight = initiatedByView.bounds.height
         customerDetailsTopConstraintConstant =  customerDetailsTopConstraint.constant
         self.customerDetailsTopConstraint.constant = self.customerDetailsTopConstraintConstant - 20
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Orders", style: .plain, target: self, action: #selector(addTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Features", style: .plain, target: self, action: #selector(addTapped))
         
     }
     
     @objc func addTapped() {
+        
+        
+        showFeaturesAS()
+        
+    }
+    
+    func showFeaturesAS() {
+        
         guard let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController  else {
             return
         }
         
-        let vc = OrdersViewController()
-        navigationController.pushViewController(vc, animated: true)
-    
+        let alert = UIAlertController(title: "Choose feature", message: "Please Select what feature you need", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Orders", style: .default , handler:{ (UIAlertAction)in
+            
+            let vc = OrdersViewController()
+            navigationController.pushViewController(vc, animated: true)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Payment Intent / EInvoice", style: .default , handler:{ (UIAlertAction)in
+            GeideaPaymentAPI.startPaymentIntent(withPaymentIntentID: self.paymentIntentTF.text, status: self.status, type: self.type ?? "EInvoice", viewController: self, completion: { response, error in
+                
+                
+                if let err = error {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        if err.errors.isEmpty {
+                            var message = ""
+                            if err.responseCode.isEmpty {
+                                message = "\n responseMessage: \(err.responseMessage)"
+                                
+                            } else if !err.orderId.isEmpty {
+                                message = "\n responseCode: \(err.responseCode)  \n responseMessage: \(err.responseMessage) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage) \n orderId: \(err.orderId)"
+                            } else {
+                                message = "\n responseCode: \(err.responseCode)  \n responseMessage: \(err.responseMessage) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage)"
+                            }
+                            self.displayAlert(title: err.title,  message: message)
+                            
+                        } else {
+                            self.displayAlert(title: err.title,  message:  "responseCode:  \(err.status) \n responseMessage: \(err.errors) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage)")
+                        }
+                    }
+                } else {
+                    guard let paymentIntent = response?.paymentIntent else {
+                        return
+                    }
+                    
+                    if let safeResponse = response,  let orderString = GeideaPaymentAPI.getPaymentIntentString(order: safeResponse) {
+                        let vc = SuccessViewController()
+                        vc.json = orderString
+                        self.present(vc, animated: true, completion: nil)
+                    }
+                    
+                    self.paymentIntentTF.text = paymentIntent.paymentIntentId
+                    self.status = paymentIntent.status
+                    self.type = paymentIntent.type
+                    
+                }
+            })
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -122,12 +200,22 @@ class ViewController: UIViewController, UITextFieldDelegate{
             self.configBtn.isHidden = false
             self.merchantConfig = config
             self.configureComponents()
+            
         })
     }
     
     func configureComponents() {
         captureBtn.isHidden = orderId == nil
         captureLabel.isHidden = orderId == nil
+        
+        if let config = merchantConfig {
+            payQRBtn.isHidden = !(config.isMeezaQrEnabled ?? false)
+        }
+        
+        if let config = merchantConfig {
+            currencyTF.text = config.currencies?.first
+        }
+        
         
         inputs = [amountTF, currencyTF, cardHolderNameTF, cardNumberTF, cvvTF, expiryMonthTF, expiryYearTF, emailTF, callbackTF, publicKeyTF, passwordTF, billingCountryCodeTF, billingCityTF, billingStreetTF, billingPostalCodeTF, shippingCountryCodeTF, shippingCityTF, shippingStreetTF, shippingPostalCodeTF, agreementIdTF, agreementTypeTF]
         
@@ -172,10 +260,37 @@ class ViewController: UIViewController, UITextFieldDelegate{
         
     }
     
+    private func showPayQRAlert() {
+        
+        let customerDetails = GDPICustomer(withName: "test", andPhoneNumber: nil, andEmail: nil)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale =  Locale(identifier: "en_us")
+//        let expiryDate = dateFormatter.string(from: Date().adding(days: 90))
+        
+        
+        let vc = QRPaymentDetailsViewController()
+        vc.amount = Double(amountTF.text ?? "") ?? 0
+        vc.currency = currencyTF.text ?? "EGP"
+        vc.name = customerDetails.name
+        vc.email = customerDetails.email
+        vc.phoneNumber = customerDetails.phoneNumber
+        vc.expiryDate = nil
+        vc.showReceipt = showReceiptSwitch.isOn
+        vc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        vc.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        guard let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController  else {
+            return
+        }
+        
+        navigationController.pushViewController(vc, animated: true)
+        
+    }
+    
     private func showPayWithToken() {
         if let tokens = getTokens() {
             for token in tokens {
-                if token["environment"] as! Int == 0{
+                if token["environment"] as! Int == environmentSelection.selectedSegmentIndex {
                     payTokenBtn.isHidden = false
                 } else {
                     payTokenBtn.isHidden = true
@@ -213,9 +328,37 @@ class ViewController: UIViewController, UITextFieldDelegate{
         unfocusFields()
     }
     
+    @IBAction func mConfigTapped(_ sender: Any) {
+        let params = GDProductMConfig(withMerchantId: nil, andStoreId: nil, isTest: true)
+        let configParams = GDSDKMerchantConfig(withToken: "bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0LTMzREp2TTNFaGF0MUxDQTJwRGdVRmYxa0xUU1JBM2ZRU2lJOXUwNVlZIn0.eyJleHAiOjE2MzUzNDE3MjAsImlhdCI6MTYzNTM0MTQyMCwianRpIjoiMmEyNzIwYzgtMjljZi00NmY1LTk0NDQtNjYzZGIwZWNjNDBmIiwiaXNzIjoiaHR0cHM6Ly9hcGkuZ2QtcHByb2QtaW5mcmEubmV0L2F1dGgvcmVhbG1zL3ByZXByb2QiLCJhdWQiOlsiZ3Nkay1iYWNrZW5kIiwiZ3Nkay1iYWNrZW5kLWVneXB0IiwiYWNjb3VudCJdLCJzdWIiOiI0ZDJlMWRkOS1mZWIzLTRiM2ItOTE1Yy0xZTZjM2JlMGI0MWYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwiLCJzZXNzaW9uX3N0YXRlIjoiOGNmNDE4ODYtYTQzMy00Y2E1LWJkZDMtZDEwYTdkZTY3NjI1IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL2FwaS5nZC1wcHJvZC1pbmZyYS5uZXQiLCJodHRwczovL3d3dy5nZC1wcHJvZC1pbmZyYS5uZXQiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJnc2RrLWJhY2tlbmQiOnsicm9sZXMiOlsibWVyY2hhbnQiXX0sImdzZGstYmFja2VuZC1lZ3lwdCI6eyJyb2xlcyI6WyJtZXJjaGFudCJdfSwicG9ydGFsIjp7InJvbGVzIjpbIm1lcmNoYW50LWdlbmVyYWwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSBncm91cHMiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJBbm5hIFRlc3RpbmciLCJncm91cHMiOlsibWVyY2hhbnQiXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiMjA5NTg3NDU4OTYyIiwiZ2l2ZW5fbmFtZSI6IkFubmEiLCJmYW1pbHlfbmFtZSI6IlRlc3RpbmciLCJlbWFpbCI6ImFubmEudGVzdGluZ0BlbmRhdmEuYmcifQ.ZUZGwSAENq76_QdvKfBzSAun7dLoG2vP9mYohvZoNKONUCnCTP7vqqKDNeyQtiEubkU1HFhSuz_dMuGhKrg1PkevATlSjJoMopmmEy_e_BJ3570DrkhgnKdrC_hUh34kXpsKXC9EOFZIc3tfkJuVVeXYngIxRc_yBEQwaa39D-N7WM4fskzN7IlPh9GndFeNNLa10DxpjDmioLG3YQBavepMAh2rtPiEiuxVZrdH-OEst020bMou17lmsm4RwcTRDdeU_4_-SEYvh-T1v-nE0aMraVpcLsiQkyNDe0FNzSHcG_-v-5bh2P8Pk4ZxrymMw2UMjSZVW5OH4t_aoeeoLw", andCountryHeader: "GEIDEA_EGYPT", params: params)
+        GeideaPaymentAPI.getMerchantConfig(with: configParams, completion: { config, error in
+            if let safeConfig = config?.first {
+                print(safeConfig.data?.merchantGatewayKey)
+            } else {
+                print(error?.responseMessage)
+            }
+        })
+    }
+    
+    @IBAction func geideaGoTapped(_ sender: Any) {
+        
+        let application = UIApplication.shared
+        if let appUrl = URL(string: "geideago://PaymentMethods?total=23.35&govTax=15&currency=SAR&callbackLink=geideagocbk://hostMethod?merchantReferenceId=idRef123") {
+            if application.canOpenURL(appUrl) {
+                application.open(appUrl, options: [:], completionHandler: nil)
+            } else {
+                if let url = URL(string: "itms://apps.apple.com/us/app/geidea/id1519264188") {
+                    if application.canOpenURL(url) {
+                        application.open(url, options: [:], completionHandler: nil)
+                    }
+                }
+            }
+        }
+    }
+    
     @IBAction func generateInvoiceTapped(_ sender: Any) {
         
-        GeideaPaymentAPI.startEInvoice(withEInvoiceID: eInvoiceTF.text, viewController: self, completion: { response, error in
+        GeideaPaymentAPI.startPaymentIntent(withPaymentIntentID: paymentIntentTF.text, status: self.status, type: self.type ?? "EInvoice", viewController: self, completion: { response, error in
             
             
             if let err = error {
@@ -237,17 +380,17 @@ class ViewController: UIViewController, UITextFieldDelegate{
                     }
                 }
             } else {
-                guard let eInvoice = response?.eInvoice else {
+                guard let paymentIntent = response?.paymentIntent else {
                     return
                 }
                 
-                if let safeResponse = response,  let orderString = GeideaPaymentAPI.getEInvoiceString(order: safeResponse) {
+                if let safeResponse = response,  let orderString = GeideaPaymentAPI.getPaymentIntentString(order: safeResponse) {
                     let vc = SuccessViewController()
                     vc.json = orderString
                     self.present(vc, animated: true, completion: nil)
                 }
                 
-                self.eInvoiceTF.text = eInvoice.eInvoiceId
+                self.paymentIntentTF.text = paymentIntent.paymentIntentId
                 
                 
             }
@@ -259,6 +402,35 @@ class ViewController: UIViewController, UITextFieldDelegate{
         configureComponents()
     }
     
+    @IBAction func languageSelection(_ sender: Any) {
+        
+        switch languageSelectionControl.selectedSegmentIndex {
+        case 0:
+            GeideaPaymentAPI.setlanguage(language: Language.english)
+            UserDefaults.standard.set(Language.english.rawValue, forKey: "language")
+            
+            break
+        case 1:
+            GeideaPaymentAPI.setlanguage(language: Language.arabic)
+            
+            UserDefaults.standard.set(Language.arabic.rawValue, forKey: "language")
+            
+            break
+        default:
+            break
+        }
+        
+        
+        
+        if #available(iOS 13.0, *) {
+            if let mySceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                mySceneDelegate.resetViewController()
+            }
+        } else {
+            ( UIApplication.shared.delegate as! AppDelegate?)?.resetViewController()
+        }
+        
+    }
     @IBAction func paymentMethodSelected(_ sender: Any) {
         switch paymentMethodSelection.selectedSegmentIndex {
         case 0:
@@ -316,10 +488,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
             return
         }
         
+        
+        
         if captureBtn.title(for: .normal) == "Refund" {
             refund(with: id)
         } else {
-           capture(with: id)
+            capture(with: id)
         }
     }
     
@@ -361,6 +535,25 @@ class ViewController: UIViewController, UITextFieldDelegate{
         setupAppplePay()
     }
     
+    @IBAction func envSelectionTapped(_ sender: Any) {
+        switch environmentSelection.selectedSegmentIndex {
+        case 0: GeideaPaymentAPI.setEnvironment(environment: Environment.dev)
+            break
+        case 1: GeideaPaymentAPI.setEnvironment(environment: Environment.test)
+            break
+        case 2: GeideaPaymentAPI.setEnvironment(environment: Environment.preprod)
+            break
+        case 3: GeideaPaymentAPI.setEnvironment(environment: Environment.prod)
+            break
+        default:
+            break
+        }
+        
+        self.paymentIntentTF.text = ""
+        refreshConfig()
+        showPayWithToken()
+        setupAppplePay()
+    }
     
     @IBAction func payTokenTapped(_ sender: Any) {
         if !GeideaPaymentAPI.isCredentialsAvailable() {
@@ -371,7 +564,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         
         if let myTokens = getTokens() {
             for token in myTokens {
-                if token["environment"] as! Int == 0 {
+                if token["environment"] as! Int == environmentSelection.selectedSegmentIndex {
                     
                     alert.addAction(UIAlertAction(title: " \((token["maskedCardNumber"] as! String).suffix(4) ): \(token["tokenId"] ?? "")", style: .default , handler:{ (UIAlertAction)in
                         self.payWithToken(tokenId: token["tokenId"] as! String)
@@ -397,15 +590,18 @@ class ViewController: UIViewController, UITextFieldDelegate{
             return
         }
         let amount = GDAmount(amount: safeAmount, currency: currencyTF.text ?? "")
-        
+
         let shippingAddress = GDAddress(withCountryCode: shippingCountryCodeTF.text, andCity: shippingCityTF.text, andStreet: shippingStreetTF.text, andPostCode: shippingPostalCodeTF.text)
         let billingAddress = GDAddress(withCountryCode: billingCountryCodeTF.text, andCity: billingCityTF.text, andStreet: billingStreetTF.text, andPostCode: billingPostalCodeTF.text)
         let customerDetails = GDCustomerDetails(withEmail: emailTF.text, andCallbackUrl: callbackTF.text, merchantReferenceId: merchentRefidTF.text, shippingAddress: shippingAddress, billingAddress: billingAddress, paymentOperation: paymentOperation)
         
-        var eInvoiceidString: String? = nil
-        if let eInvoiceid = eInvoiceTF.text, !eInvoiceid.isEmpty {
-            eInvoiceidString = eInvoiceTF.text
+        
+        var paymentIntentIdString: String? = nil
+        if let paymentIntentId = paymentIntentTF.text, !paymentIntentId.isEmpty {
+            
+            paymentIntentIdString = paymentIntentTF.text
         }
+        
         
         if paymentMethodSelection.selectedSegmentIndex == 1 {
             guard let safeExpiryMonth = Int(expiryMonthTF.text ?? "") else {
@@ -423,10 +619,19 @@ class ViewController: UIViewController, UITextFieldDelegate{
                     nil
             }
             let tokenizationDetails = GDTokenizationDetails(withCardOnFile:  cardOnFileSwitch.isOn, initiatedBy: initiatedByString, agreementId: agreementIdTF.text, agreementType: agreementTypeTF.text)
-            pay(amount: amount, cardDetails: cardDetails, tokenizationDetails: tokenizationDetails, eInvoice: eInvoiceidString, customerDetails: customerDetails)
+            pay(amount: amount, cardDetails: cardDetails, tokenizationDetails: tokenizationDetails, paymentIntentId: paymentIntentIdString, customerDetails: customerDetails)
         } else {
-            payWithGeideaForm(amount: amount, customerDetails: customerDetails, eInvoiceId: eInvoiceidString)
+            payWithGeideaForm(amount: amount, customerDetails: customerDetails, paymentIntentId: paymentIntentIdString)
         }
+        
+    }
+    
+    @IBAction func payQRTapped(_ sender: Any) {
+        if !GeideaPaymentAPI.isCredentialsAvailable() {
+            GeideaPaymentAPI.setCredentials(withMerchantKey:  publicKeyTF.text ?? "", andPassword: passwordTF.text ?? "")
+        }
+        
+        showPayQRAlert()
         
     }
     
@@ -492,7 +697,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
                     vc.json = orderString
                     self.present(vc, animated: true, completion: nil)
                 }
-//                self.orderId = nil
+                //                self.orderId = nil
                 self.captureBtn.setTitle("Refund", for: .normal)
                 self.configureComponents()
                 
@@ -505,17 +710,18 @@ class ViewController: UIViewController, UITextFieldDelegate{
             return
         }
         
-        var eInvoiceIdString: String? = nil
-        if let eInvoiceid = eInvoiceTF.text, !eInvoiceid.isEmpty {
-            eInvoiceIdString = eInvoiceTF.text
-        }
         let amount = GDAmount(amount: safeAmount, currency: currencyTF.text ?? "")
         let tokenizationDetails = GDTokenizationDetails(withCardOnFile: cardOnFileSwitch.isOn, initiatedBy: initiatedByButton.currentTitle, agreementId: agreementIdTF.text, agreementType: agreementTypeTF.text)
         let shippingAddress = GDAddress(withCountryCode: shippingCountryCodeTF.text, andCity: shippingCityTF.text, andStreet: shippingStreetTF.text, andPostCode: shippingPostalCodeTF.text)
         let billingAddress = GDAddress(withCountryCode: billingCountryCodeTF.text, andCity: billingCityTF.text, andStreet: billingStreetTF.text, andPostCode: billingPostalCodeTF.text)
         let customerDetails = GDCustomerDetails(withEmail: emailTF.text, andCallbackUrl: callbackTF.text, merchantReferenceId: merchentRefidTF.text, shippingAddress: shippingAddress, billingAddress: billingAddress, paymentOperation: paymentOperation)
         
-        GeideaPaymentAPI.payWithToken(theAmount: amount, withTokenId: tokenId, tokenizationDetails: tokenizationDetails, andEInvoiceId: eInvoiceIdString, andCustomerDetails: customerDetails, navController: self, completion:{ response, error in
+        var paymentIntentIdString: String? = nil
+        if let paymentIntentId = paymentIntentTF.text, !paymentIntentId.isEmpty {
+            paymentIntentIdString = paymentIntentId
+        }
+        
+        GeideaPaymentAPI.payWithToken(theAmount: amount, withTokenId: tokenId, tokenizationDetails: tokenizationDetails, andPaymentIntentId: paymentIntentIdString, andCustomerDetails: customerDetails, navController: self, completion:{ response, error in
             DispatchQueue.main.async {
                 
                 if let err = error {
@@ -529,10 +735,10 @@ class ViewController: UIViewController, UITextFieldDelegate{
                         } else {
                             message = "\n responseCode: \(err.responseCode)  \n responseMessage: \(err.responseMessage) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage)"
                         }
-                        self.displayAlert(title: err.title,  message: message , amount: amount, cardDetails: nil, eInvoice: self.eInvoiceTF.text, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
+                        self.displayAlert(title: err.title,  message: message , amount: amount, cardDetails: nil, paymentIntentId: paymentIntentIdString, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
                         
                     } else {
-                        self.displayAlert(title: err.title,  message:  "responseCode:  \(err.status) \n responseMessage: \(err.errors) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage)" , amount: amount, cardDetails: nil, eInvoice: self.eInvoiceTF.text, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
+                        self.displayAlert(title: err.title,  message:  "responseCode:  \(err.status) \n responseMessage: \(err.errors) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage)" , amount: amount, cardDetails: nil, paymentIntentId: paymentIntentIdString, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
                     }
                 } else {
                     guard let orderResponse = response else {
@@ -555,12 +761,18 @@ class ViewController: UIViewController, UITextFieldDelegate{
         })
     }
     
-    func pay(amount: GDAmount, cardDetails: GDCardDetails, tokenizationDetails: GDTokenizationDetails?, eInvoice: String?, customerDetails: GDCustomerDetails?) {
+    func pay(amount: GDAmount, cardDetails: GDCardDetails, tokenizationDetails: GDTokenizationDetails?, paymentIntentId
+                : String?, customerDetails: GDCustomerDetails?) {
         guard let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController  else {
             return
         }
         
-        GeideaPaymentAPI.pay(theAmount: amount, withCardDetails: cardDetails, andTokenizationDetails: tokenizationDetails, andEInvoice: eInvoice,andCustomerDetails: customerDetails, navController: self, completion:{ response, error in
+        var paymentMethods = paymentMethodsTF.text?.trimmingCharacters(in: .whitespaces).components(separatedBy: " ")
+        if let  pmTF = paymentMethodsTF.text, pmTF.isEmpty {
+            paymentMethods = nil
+        }
+        
+        GeideaPaymentAPI.pay(theAmount: amount, withCardDetails: cardDetails, and3DV2Enabled: merchantConfig?.useMpgsApiV60 ?? false, andTokenizationDetails: tokenizationDetails, andPaymentIntentId: paymentIntentId,andCustomerDetails: customerDetails, paymentMethods: paymentMethods, navController: self, completion:{ response, error in
             DispatchQueue.main.async {
                 
                 if let err = error {
@@ -574,10 +786,10 @@ class ViewController: UIViewController, UITextFieldDelegate{
                         } else {
                             message = "\n responseCode: \(err.responseCode)  \n responseMessage: \(err.responseMessage) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage)"
                         }
-                        self.displayAlert(title: err.title,  message: message , amount: amount, cardDetails: cardDetails, eInvoice: self.eInvoiceTF.text, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
+                        self.displayAlert(title: err.title,  message: message , amount: amount, cardDetails: cardDetails, paymentIntentId: paymentIntentId, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
                         
                     } else {
-                        self.displayAlert(title: err.title,  message:  "responseCode:  \(err.status) \n responseMessage: \(err.errors) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage)" , amount: amount, cardDetails: cardDetails, eInvoice: self.eInvoiceTF.text, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
+                        self.displayAlert(title: err.title,  message:  "responseCode:  \(err.status) \n responseMessage: \(err.errors) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage)" , amount: amount, cardDetails: cardDetails, paymentIntentId: paymentIntentId, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
                     }
                 } else {
                     guard let orderResponse = response else {
@@ -611,12 +823,31 @@ class ViewController: UIViewController, UITextFieldDelegate{
         })
     }
     
-    func payWithGeideaForm(amount: GDAmount, customerDetails: GDCustomerDetails?, eInvoiceId: String?) {
+    func payWithGeideaForm(amount: GDAmount, customerDetails: GDCustomerDetails?, paymentIntentId: String?) {
         
-        let applePayDetails = GDApplePayDetails(forMerchantIdentifier: "merchant.geidea.test.applepay", withCallbackUrl: callbackTF.text, andReferenceId:  merchentRefidTF.text)
+        var paymentMethods = paymentMethodsTF.text?.trimmingCharacters(in: .whitespaces).components(separatedBy: " ")
+        if let  pmTF = paymentMethodsTF.text, pmTF.isEmpty {
+            paymentMethods = nil
+        }
+        let applePayDetails = GDApplePayDetails(forMerchantIdentifier: "merchant.geidea.test.applepay", paymentMethods: paymentMethods, withCallbackUrl: callbackTF.text, andReferenceId:  merchentRefidTF.text)
         let tokenizationDetails = GDTokenizationDetails(withCardOnFile: cardOnFileSwitch.isOn, initiatedBy: initiatedByButton.currentTitle, agreementId: agreementIdTF.text, agreementType: agreementTypeTF.text)
         
-        GeideaPaymentAPI.payWithGeideaForm(theAmount: amount, showAddress: showAddressSwitch.isOn, showEmail: showEmailSwitch.isOn, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails, applePayDetails: applePayDetails, config: self.merchantConfig, eInvoiceId: eInvoiceId, viewController: self, completion:{ response, error, applePayResponse  in
+        var merchantName = merchantConfig?.merchantName
+        if languageSelectionControl.selectedSegmentIndex == 1{
+            merchantName = merchantConfig?.merchantNameAr
+        }
+        
+        let piCustomerDetails = GDPICustomer(withName: merchantName, andPhoneNumber: "01114040240", andEmail: emailTF.text ?? "me@test.com")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = Locale(identifier: "en_us")
+        let expiryDate = dateFormatter.string(from: Date().adding(days: 90))
+        
+        let qrDetails = GDQRDetails(withCustomerDetails: piCustomerDetails, expiryDate: expiryDate)
+     
+        
+        
+        GeideaPaymentAPI.payWithGeideaForm(theAmount: amount, showAddress: showAddressSwitch.isOn, showEmail: showEmailSwitch.isOn, showReceipt: showReceiptSwitch.isOn, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails, applePayDetails: applePayDetails, config: self.merchantConfig, paymentIntentId: paymentIntentId, qrDetails: qrDetails, paymentMethods: paymentMethods, viewController: self, completion:{ response, error in
             DispatchQueue.main.async {
                 
                 if let err = error {
@@ -630,38 +861,33 @@ class ViewController: UIViewController, UITextFieldDelegate{
                         } else {
                             message = "\n responseCode: \(err.responseCode)  \n responseMessage: \(err.responseMessage) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage)"
                         }
-                        self.displayAlert(title: err.title,  message: message , amount: amount, cardDetails: nil, eInvoice: self.eInvoiceTF.text, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
+                        self.displayAlert(title: err.title,  message: message , amount: amount, cardDetails: nil, paymentIntentId: paymentIntentId, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
                         
                     } else {
-                        self.displayAlert(title: err.title,  message:  "responseCode:  \(err.status) \n responseMessage: \(err.errors) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage)" , amount: amount, cardDetails: nil, eInvoice: self.eInvoiceTF.text, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
+                        self.displayAlert(title: err.title,  message:  "responseCode:  \(err.status) \n responseMessage: \(err.errors) \n detailedResponseCode: \(err.detailedResponseCode)  \n detailedResponseMessage: \(err.detailedResponseMessage)" , amount: amount, cardDetails: nil, paymentIntentId: paymentIntentId, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails)
                     }
                 } else {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        if let response = applePayResponse {
-                            let message = "\n responseCode: \(response.responseCode)  \n responseMessage: \(response.responseMessage) \n detailedResponseCode: \(response.detailedResponseCode)  \n detailedResponseMessage: \(response.detailedResponseMessage) \n orderId: \(response.orderId)"
-                            self.displayAlert(title: "APPLE PAY payment was successful", message: message)
+                        guard let orderResponse = response else {
+                            return
                         }
-                    }
-                    
-                    guard let orderResponse = response else {
-                        return
-                    }
-                    
-                    if let orderString = GeideaPaymentAPI.getModelString(order: orderResponse) {
-                        let vc = SuccessViewController()
-                        vc.json = orderString
-                        self.present(vc, animated: true, completion: nil)
-                    }
-                    
-                    if orderResponse.detailedStatus == "Authorized" {
-                        self.orderId = orderResponse.orderId
-                        self.captureLabel.text = self.orderId
-                        self.configureComponents()
-                    }
-                    
-                    if let tokenId = orderResponse.tokenId, let cardNumber = orderResponse.paymentMethod?.maskedCardNumber {
                         
-                        self.saveTokenId(tokenId: tokenId, maskedCardNumber: cardNumber)
+                        if let orderString = GeideaPaymentAPI.getModelString(order: orderResponse) {
+                            let vc = SuccessViewController()
+                            vc.json = orderString
+                            self.present(vc, animated: true, completion: nil)
+                        }
+                        
+                        if orderResponse.detailedStatus == "Authorized" {
+                            self.orderId = orderResponse.orderId
+                            self.captureLabel.text = self.orderId
+                            self.configureComponents()
+                        }
+                        
+                        if let tokenId = orderResponse.tokenId, let cardNumber = orderResponse.paymentMethod?.maskedCardNumber {
+                            
+                            self.saveTokenId(tokenId: tokenId, maskedCardNumber: cardNumber)
+                        }
                     }
                 }
             }
@@ -673,39 +899,42 @@ class ViewController: UIViewController, UITextFieldDelegate{
         cardSchemeLogoIV.image = nil
         let cardNumber = cardNumberTF.text?.replacingOccurrences(of: " ", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
         
-            cardSchemeLogoIV.image = GeideaPaymentAPI.getCardSchemeLogo(withCardNumber: cardNumber)
+        cardSchemeLogoIV.image = GeideaPaymentAPI.getCardSchemeLogo(withCardNumber: cardNumber)
         
     }
     
-    func displayAlert(title: String, message: String, amount: GDAmount, cardDetails: GDCardDetails?, eInvoice: String?, tokenizationDetails: GDTokenizationDetails?, customerDetails: GDCustomerDetails? ) {
+    func displayAlert(title: String, message: String, amount: GDAmount, cardDetails: GDCardDetails?, paymentIntentId: String?, tokenizationDetails: GDTokenizationDetails?, customerDetails: GDCustomerDetails? ) {
         
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "RETRY", style: .default, handler: {_ in
-            DispatchQueue.main.async { [weak self] in
-                if let safeCardDetails = cardDetails {
-                    self?.pay(amount: amount, cardDetails: safeCardDetails, tokenizationDetails: tokenizationDetails, eInvoice: eInvoice ?? "", customerDetails: customerDetails)
-                } else {
-                    self?.payWithGeideaForm(amount: amount, customerDetails: customerDetails, eInvoiceId: eInvoice)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "RETRY", style: .default, handler: {_ in
+                DispatchQueue.main.async { [weak self] in
+                    if let safeCardDetails = cardDetails {
+                        self?.pay(amount: amount, cardDetails: safeCardDetails, tokenizationDetails: tokenizationDetails, paymentIntentId: paymentIntentId, customerDetails: customerDetails)
+                    } else {
+                        self?.payWithGeideaForm(amount: amount, customerDetails: customerDetails, paymentIntentId: paymentIntentId)
+                    }
+                    
                 }
-                
-            }
-        }))
-        
-        alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
+        }
+       
         
     }
     
     func displayAlert(title: String, message: String) {
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true)
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
+        }
     }
     
     func registerForKeyboardNotifications() {
@@ -750,9 +979,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
         guard let safeAmount = Double(amountTF.text ?? "") else {
             return
         }
-        
+        var paymentMethods = paymentMethodsTF.text?.trimmingCharacters(in: .whitespaces).components(separatedBy: " ")
+        if let  pmTF = paymentMethodsTF.text, pmTF.isEmpty {
+            paymentMethods = nil
+        }
         let amount = GDAmount(amount: safeAmount, currency: currencyTF.text ?? "")
-        let applePayDetails = GDApplePayDetails(in: self, andButtonIn: applePayBtnView, forMerchantIdentifier: "merchant.geidea.test.applepay", withCallbackUrl: callbackTF.text, andReferenceId:  merchentRefidTF.text)
+        let applePayDetails = GDApplePayDetails(in: self, andButtonIn: applePayBtnView, forMerchantIdentifier: "merchant.geidea.test.applepay", paymentMethods: paymentMethods, withCallbackUrl: callbackTF.text, andReferenceId:  merchentRefidTF.text)
         GeideaPaymentAPI.setupApplePay(forApplePayDetails: applePayDetails, with: amount, config: merchantConfig, completion: { response, error in
             if let err = error {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -767,8 +999,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
                         return
                     }
                     
-                    let message = "\n responseCode: \(response.responseCode)  \n responseMessage: \(response.responseMessage) \n detailedResponseCode: \(response.detailedResponseCode)  \n detailedResponseMessage: \(response.detailedResponseMessage) \n orderId: \(response.orderId)"
-                    self.displayAlert(title: "APPLE PAY payment succesfully", message: message)
+                    if let orderString = GeideaPaymentAPI.getModelString(order: response) {
+                        let vc = SuccessViewController()
+                        vc.json = orderString
+                        self.present(vc, animated: true, completion: nil)
+                    }
                 }
             }
         })
@@ -788,7 +1023,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
                 index += 1
             }
         }
-        tokens.append(["environment": 0, "maskedCardNumber": maskedCardNumber, "tokenId": tokenId])
+        tokens.append(["environment": environmentSelection.selectedSegmentIndex, "maskedCardNumber": maskedCardNumber, "tokenId": tokenId])
         UserDefaults.standard.set(tokens, forKey: "myTokens")
     }
     
