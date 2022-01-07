@@ -1,0 +1,45 @@
+"CAPTURE_SCREEN_TITLE" = "..erutpac tnemyap gnissecorP";
+"REFUND_SCREEN_TITLE" = "..dnufer tnemyap gnissecorP";
+"PAYMENT_SCREEN_TITLE" = "..tnemyap gnissecorP";
+"WEBVIEW_SCREEN_TITLE" = "ERUCES D3";
+"EInvoice_SCREEN_TITLE" = "elpmas eciovnIE";
+"CARD_DETAILS_TITLE" = "sliated draC";
+"PAY_CARD_TITLE" = "drac tiderc htiw yaP";
+"CARD_NAME_INVALID" = "drac no eman retne esaelP  ⃰ ";
+"CARD_NUMBER_INVALID" = "rebmun drac gnorW  ⃰";
+"CARD_NUMBER_INVALID_LENGTH" = "htgnel rebmun drac gnorW  ⃰";
+"CARD_NUMBER_UNSUPPORTED" = "dnarb drac detroppusnU  ⃰";
+"DATE_EXPIRED" = "deripxe sah drac ehT  ⃰ ";
+"DATE_INVALID" = "etad yripxe gnorW  ⃰ ";
+"EMAIL_INVALID" = "liame gnorW  ⃰";
+"CVV_INVALID" = "htgnel VVC gnorW  ⃰";
+"STREET_INVALID_LENGTH" = "htgnel rebmun dna eman teerts gnorW  ⃰";
+"CITY_INVALID_LENGTH" = "htgnel ytic gnorW  ⃰";
+"POSTCODE_INVALID_LENGTH" = "htgnel edoctsop gnorW  ⃰";
+
+"CVV_HINT" = "edoC ytiruceS draC / rebmun VVC ruoy si edoc-3 sihT .xob erutangis eht ta kool dna revo drac ruoy nruT";
+"OK_BUTTON" = "KO";
+"CANCEL_BUTTON" = "LECNAC";
+"CANCEL_PAYMENT" = "?tnemyap lecnaC";
+"PAY_BUTTON" = "@% @% yaP";
+"CARD_NUMBER_TITLE" = "rebmuN draC";
+"CARD_NAME_TITLE" = "drac no emaN";
+"EXPIRY_DATE_TITLE" = "etad yripxE";
+"CVV_TITLE" = "VVC";
+"DONE_BUTTON" = "enoD";
+"NEXT_BUTTON" = "txeN";
+"PAYMENT_TIMEOUT" = "tuo demit sah tnemyap ruoY";
+"PAYMENT_UNSUCCESSFUL" = "lufsseccus ton saw tnemyap ruoY";
+"OR_PAY_CC" = "drac tiderc htiw yap rO";
+
+"EMAIL" = "liamE";
+"COUNTRY" = "yrtnuoC";
+"CITY" = "ytiC";
+"STREET_NAME" = "rebmun dna eman teertS";
+"POSTCODE" = "edoctsoP";
+
+"BILLING_ADDRESS" = "sserddA gnilliB";
+"SHIPPING_ADDRESS" = "sserddA gnippihS";
+
+"SAME_BILLING_SHIPPING" = "sserdda gnilliB sa emas si sserdda gnippihS";
+

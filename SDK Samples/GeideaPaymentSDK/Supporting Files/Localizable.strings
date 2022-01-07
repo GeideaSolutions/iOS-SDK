@@ -1,0 +1,67 @@
+/*
+  Localizable.strings
+  GeideaPaymentSDK
+
+  Created by euvid on 29/10/2020.
+  
+*/
+
+"CAPTURE_SCREEN_TITLE" = "Processing payment capture..";
+"REFUND_SCREEN_TITLE" = "Processing payment refund..";
+"PAYMENT_SCREEN_TITLE" = "Processing payment..";
+"WEBVIEW_SCREEN_TITLE" = "3D SECURE";
+"EInvoice_SCREEN_TITLE" = "EInvoice sample";
+"CARD_DETAILS_TITLE" = "Card details";
+"PAY_CARD_TITLE" = "Pay with credit card";
+"CARD_NAME_INVALID" = " ⃰ Please enter name on card";
+"CARD_NUMBER_INVALID" = " ⃰ Wrong card number";
+"CARD_NUMBER_INVALID_LENGTH" = " ⃰ Wrong card number length";
+"CARD_NUMBER_UNSUPPORTED" = " ⃰ Unsupported card brand";
+"DATE_EXPIRED" = " ⃰ The card has expired";
+"DATE_INVALID" = " ⃰ Wrong expiry date";
+"EMAIL_INVALID" = " ⃰ Wrong email";
+"CVV_INVALID" = " ⃰ Wrong CVV length";
+"STREET_INVALID_LENGTH" = " ⃰ Wrong street name and number length";
+"CITY_INVALID_LENGTH" = " ⃰ Wrong city length";
+"POSTCODE_INVALID_LENGTH" = " ⃰ Wrong postcode length";
+
+"CVV_HINT" = "Turn your card over and look at the signature box. This 3-code is your CVV number / Card Security Code";
+"OK_BUTTON" = "OK";
+"CANCEL_BUTTON" = "CANCEL";
+"CANCEL_PAYMENT" = "Cancel payment?";
+"PAY_BUTTON" = "Pay %@ %@";
+"CARD_NUMBER_TITLE" = "Card Number";
+"CARD_NAME_TITLE" = "Name on card";
+"EXPIRY_DATE_TITLE" = "Expiry date";
+"CVV_TITLE" = "CVV";
+"DONE_BUTTON" = "Done";
+"NEXT_BUTTON" = "Next";
+"PAYMENT_TIMEOUT" = "Your payment has timed out";
+"PAYMENT_UNSUCCESSFUL" = "Your payment was not successful";
+"OR_PAY_CC" = "Or pay with credit card";
+
+"EMAIL" = "Email";
+"COUNTRY" = "Country";
+"CITY" = "City";
+"STREET_NAME" = "Street name and number";
+"POSTCODE" = "Postcode";
+
+"BILLING_ADDRESS" = "Billing Address";
+"SHIPPING_ADDRESS" = "Shipping Address";
+
+"SAME_BILLING_SHIPPING" = "Shipping address is same as Billing address";
+
+
+/*
+  QR Functionality
+*/
+
+"QR_EXPIRY_DATE_TITLE" = "Expiry date";
+"QR_SCAN_PAY_TITLE" = "Scan and Pay";
+"QR_MERCHANT_NAME_TITLE" = "Merchant name";
+"QR_REQUEST_PAY_TITLE" = "Can't scan QR code?";
+"QR_REQUEST_PAY_DESCRIPTION" = "Send payment request to customer's mobile number";
+"QR_PAYMENT_BUTTON" = "Request payment";
+"RQ_REQUEST_ALERT_TITLE" = "Enter MeezaDigital ID / Mobile number";
+"QR_REQUEST_TEXT_PLACEHOLDER" = "MeezaDigital ID / Mobile number";
+"QR_REQUEST_PAYMENT_BUTTON" = "Send";
