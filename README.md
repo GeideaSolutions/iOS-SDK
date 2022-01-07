@@ -11,7 +11,8 @@ Major Changelog from version 1.0
 # iOS-SDK 
 Geidea online gateway iOS mobile SDK solution
 
-# Check Payment Gateway IOS SDK 2.0 Integration guide for all features and paramters
+# Check Payment Gateway IOS SDK 2.0 Integration guide for all features
+# Check Sample Apps for getting started
 
 # Introduction 
 The purpose of the iOS Software Development Kit (iOS SDK) Integration guide is to serve as a technical documentation for merchants that want to integrate with Geidea and want to use the Payment Gateway services with their systems. 
