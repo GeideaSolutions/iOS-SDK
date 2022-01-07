@@ -1,3 +1,13 @@
+# iOS-SDK version 2.0
+Major Changelog from version 1.0
+ - Localization added Arabic, English is Default
+ - 3DSV2 included for Payments
+ - Geidea Receipt provided as optional for GeideaForm Payments
+ - Apple Pay improvements by required customer fields being optional. Customer can customise these settings
+ - Meeza Digital payment for Egypt customers
+ - Pay By EInvoice included 
+
+
 # iOS-SDK
 Geidea online gateway iOS mobile SDK solution
 
