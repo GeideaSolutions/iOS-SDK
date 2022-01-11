@@ -5,7 +5,7 @@ Major Changelog from version 1.0
  - Geidea Receipt provided as optional for GeideaForm Payments
  - Apple Pay improvements by required customer fields being optional. Customer can customise these settings
  - Meeza Digital payment for Egypt customers
- - Pay By EInvoice included 
+ - EInvoice creation
 
 
 # iOS-SDK 
