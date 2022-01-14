@@ -1,5 +1,18 @@
-# iOS-SDK
+# iOS-SDK version 2.0
+Major Changelog from version 1.0
+ - Localization added Arabic, English is Default
+ - 3DSV2 included for Payments
+ - Geidea Receipt provided as optional for GeideaForm Payments
+ - Apple Pay improvements by required customer fields being optional. Customer can customise these settings
+ - Meeza Digital payment for Egypt customers
+ - EInvoice creation
+
+
+# iOS-SDK 
 Geidea online gateway iOS mobile SDK solution
+
+# Check Payment Gateway IOS SDK 2.0 Integration guide for all features
+# Check SDK Samples for getting started
 
 # Introduction 
 The purpose of the iOS Software Development Kit (iOS SDK) Integration guide is to serve as a technical documentation for merchants that want to integrate with Geidea and want to use the Payment Gateway services with their systems. 
