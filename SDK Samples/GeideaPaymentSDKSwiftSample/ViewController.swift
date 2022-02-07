@@ -84,21 +84,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        #if DEBUG
-//        environmentSelection.selectedSegmentIndex = 0
-//        #else
-//        environmentSelection.isHidden = true
-//        environmentSelection.selectedSegmentIndex = 3
-//        #endif
         GeideaPaymentAPI.setEnvironment(environment: Environment.prod)
         if let savedLanguageIndex = UserDefaults.standard.object(forKey: "language") {
             
             languageSelectionControl.selectedSegmentIndex = savedLanguageIndex as! Int
         }
         languageSelectionControl.sendActions(for: UIControl.Event.valueChanged)
-        
-        environmentSelection.sendActions(for: UIControl.Event.valueChanged)
-        
         
         paymentMethodSelection.selectedSegmentIndex = 0
         paymentMethodSelection.sendActions(for: UIControl.Event.valueChanged)
@@ -140,8 +131,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
             navigationController.pushViewController(vc, animated: true)
         }))
         
-        alert.addAction(UIAlertAction(title: "Payment Intent / EInvoice", style: .default , handler:{ (UIAlertAction)in
-            GeideaPaymentAPI.startPaymentIntent(withPaymentIntentID: self.paymentIntentTF.text, status: self.status, type: self.type ?? "EInvoice", viewController: self, completion: { response, error in
+        alert.addAction(UIAlertAction(title: "Payment Intent / EInvoice", style: .default , handler:{ [self] (UIAlertAction)in
+            GeideaPaymentAPI.startPaymentIntent(withPaymentIntentID: self.paymentIntentTF.text, status: self.status, type: self.type ?? "EInvoice", currency: currencyTF.text, viewController: self, completion: { response, error in
                 
                 
                 if let err = error {
@@ -359,7 +350,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func generateInvoiceTapped(_ sender: Any) {
         
-        GeideaPaymentAPI.startPaymentIntent(withPaymentIntentID: paymentIntentTF.text, status: self.status, type: self.type ?? "EInvoice", viewController: self, completion: { response, error in
+        GeideaPaymentAPI.startPaymentIntent(withPaymentIntentID: paymentIntentTF.text, status: self.status, type: self.type ?? "EInvoice", currency: currencyTF.text, viewController: self, completion: { response, error in
             
             
             if let err = error {
@@ -530,7 +521,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
             return
         }
         
-        GeideaPaymentAPI.updateCredentials(withMerchantKey: publicKeyTF.text ?? "", andPassword: passwordTF.text ?? "")
+        GeideaPaymentAPI.setCredentials(withMerchantKey: publicKeyTF.text ?? "", andPassword: passwordTF.text ?? "")
         loginSwitch.setOn(true, animated: true)
         refreshConfig()
         setupAppplePay()

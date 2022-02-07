@@ -308,7 +308,7 @@
 
 - (void)payWithGeideaForm:(GDAmount *)amount showAddress: (bool)addressShown  showEmail: (bool)emailShown andTokenizationDetails: (GDTokenizationDetails *) tokenizationDetails  andCustomerDetails: customerDetails  andApplePayDetails: (GDApplePayDetails *) applePayDetails {
     UINavigationController *navVC =  (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
-    [GeideaPaymentAPI payWithGeideaFormWithTheAmount:amount showAddress:addressShown showEmail:emailShown showReceipt:true tokenizationDetails:tokenizationDetails customerDetails:customerDetails applePayDetails:applePayDetails config:NULL paymentIntentId:NULL qrDetails:NULL paymentMethods:NULL viewController:self completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+    [GeideaPaymentAPI payWithGeideaFormWithTheAmount:amount showAddress:addressShown showEmail:emailShown showReceipt:true tokenizationDetails:tokenizationDetails customerDetails:customerDetails applePayDetails:applePayDetails config:_merchantConfig paymentIntentId:NULL qrDetails:NULL paymentMethods:NULL viewController:self completion:^(GDOrderResponse* order, GDErrorResponse* error) {
 
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             

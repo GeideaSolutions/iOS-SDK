@@ -40,10 +40,10 @@
 		E6DE951B26A58974008E9DC7 /* QRPaymentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE951926A58974008E9DC7 /* QRPaymentDetailsViewController.swift */; };
 		E6DE951C26A58974008E9DC7 /* QRPaymentDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6DE951A26A58974008E9DC7 /* QRPaymentDetailsViewController.xib */; };
 		E6DE951E26A59B6C008E9DC7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE951D26A59B6C008E9DC7 /* Date+Extensions.swift */; };
-		F3BD486827885C590080FB2B /* GeideaPaymentSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3BD486627885C550080FB2B /* GeideaPaymentSDK.xcframework */; };
-		F3BD486927885C590080FB2B /* GeideaPaymentSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3BD486627885C550080FB2B /* GeideaPaymentSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F3BD486A2788603A0080FB2B /* GeideaPaymentSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3BD486627885C550080FB2B /* GeideaPaymentSDK.xcframework */; };
-		F3BD486B2788603A0080FB2B /* GeideaPaymentSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3BD486627885C550080FB2B /* GeideaPaymentSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3AE8B8627B1116200D84322 /* GeideaPaymentSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AE8B8427B1115000D84322 /* GeideaPaymentSDK.xcframework */; };
+		F3AE8B8727B1116200D84322 /* GeideaPaymentSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3AE8B8427B1115000D84322 /* GeideaPaymentSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3AE8B8827B1116F00D84322 /* GeideaPaymentSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AE8B8427B1115000D84322 /* GeideaPaymentSDK.xcframework */; };
+		F3AE8B8927B1116F00D84322 /* GeideaPaymentSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3AE8B8427B1115000D84322 /* GeideaPaymentSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,7 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F3BD486927885C590080FB2B /* GeideaPaymentSDK.xcframework in Embed Frameworks */,
+				F3AE8B8727B1116200D84322 /* GeideaPaymentSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +64,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F3BD486B2788603A0080FB2B /* GeideaPaymentSDK.xcframework in Embed Frameworks */,
+				F3AE8B8927B1116F00D84322 /* GeideaPaymentSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,7 +119,7 @@
 		E6DE951926A58974008E9DC7 /* QRPaymentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRPaymentDetailsViewController.swift; sourceTree = "<group>"; };
 		E6DE951A26A58974008E9DC7 /* QRPaymentDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRPaymentDetailsViewController.xib; sourceTree = "<group>"; };
 		E6DE951D26A59B6C008E9DC7 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		F3BD486627885C550080FB2B /* GeideaPaymentSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GeideaPaymentSDK.xcframework; sourceTree = "<group>"; };
+		F3AE8B8427B1115000D84322 /* GeideaPaymentSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GeideaPaymentSDK.xcframework; path = ../GeideaPaymentSDK/GeideaPaymentSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3BD486827885C590080FB2B /* GeideaPaymentSDK.xcframework in Frameworks */,
+				F3AE8B8627B1116200D84322 /* GeideaPaymentSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3BD486A2788603A0080FB2B /* GeideaPaymentSDK.xcframework in Frameworks */,
+				F3AE8B8827B1116F00D84322 /* GeideaPaymentSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +258,7 @@
 		E6A5E80F2540C42D0080BF3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3BD486627885C550080FB2B /* GeideaPaymentSDK.xcframework */,
+				F3AE8B8427B1115000D84322 /* GeideaPaymentSDK.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

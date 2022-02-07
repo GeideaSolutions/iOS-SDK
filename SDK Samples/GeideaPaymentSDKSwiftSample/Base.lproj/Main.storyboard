@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yan-1W-es6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yan-1W-es6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSv-Qf-iD5">
-                                <rect key="frame" x="0.0" y="149" width="414" height="623"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="664"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RG-gj-3eG" userLabel="contentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="2459.5"/>
@@ -536,7 +536,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V3Y-OH-8Qd">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V3Y-OH-8Qd">
                                                 <rect key="frame" x="345" y="75" width="51" height="31"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merchant Ref ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLL-My-spS" userLabel="MerchentRefId">
@@ -887,32 +887,17 @@
                                     <constraint firstItem="g7e-kd-fxR" firstAttribute="top" secondItem="cMH-cT-jZV" secondAttribute="top" id="ueT-Lq-LmE"/>
                                 </constraints>
                             </stackView>
-                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="E0h-bs-CEC">
-                                <rect key="frame" x="20" y="108" width="374" height="32"/>
-                                <segments>
-                                    <segment title="DEV"/>
-                                    <segment title="TEST"/>
-                                    <segment title="PPD"/>
-                                    <segment title="PROD"/>
-                                </segments>
-                                <connections>
-                                    <action selector="envSelectionTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="4oL-bG-JmL"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cMH-cT-jZV" firstAttribute="top" secondItem="YSv-Qf-iD5" secondAttribute="bottom" constant="20" id="1gc-kO-jFN"/>
-                            <constraint firstItem="YSv-Qf-iD5" firstAttribute="top" secondItem="E0h-bs-CEC" secondAttribute="bottom" constant="10" id="HC9-za-0LL"/>
                             <constraint firstItem="cMH-cT-jZV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IIf-ap-0Ak"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cMH-cT-jZV" secondAttribute="bottom" constant="20" id="Qg2-6r-vbT"/>
-                            <constraint firstItem="E0h-bs-CEC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iBm-BE-J1s"/>
-                            <constraint firstItem="E0h-bs-CEC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lWe-Ac-q96"/>
+                            <constraint firstItem="YSv-Qf-iD5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Snj-es-ueK"/>
                             <constraint firstItem="YSv-Qf-iD5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ot6-1D-Kjq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cMH-cT-jZV" secondAttribute="trailing" constant="20" id="qcY-ED-cHL"/>
                             <constraint firstAttribute="trailing" secondItem="YSv-Qf-iD5" secondAttribute="trailing" id="sEW-Zi-kDz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E0h-bs-CEC" secondAttribute="trailing" constant="20" id="xbd-Zs-CUJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GiP-9l-kHb"/>
@@ -942,7 +927,6 @@
                         <outlet property="customerDetailsTopConstraint" destination="WTg-ff-wpm" id="4uV-Mk-Lkh"/>
                         <outlet property="cvvTF" destination="YXw-12-lJT" id="z9A-le-rdj"/>
                         <outlet property="emailTF" destination="tTD-jn-R4V" id="jgA-ST-LgI"/>
-                        <outlet property="environmentSelection" destination="E0h-bs-CEC" id="Zrt-3P-qoi"/>
                         <outlet property="expiryMonthTF" destination="Qio-zo-qL7" id="OKj-jp-7eG"/>
                         <outlet property="expiryYearTF" destination="NCc-Cv-xLg" id="YD8-5V-vOl"/>
                         <outlet property="geideaGoBtn" destination="NWX-mW-SP3" id="na3-GS-kzk"/>
