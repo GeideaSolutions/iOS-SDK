@@ -381,7 +381,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK14GDEInvoiceItem")
 @property (nonatomic) NSInteger quantity;
 @property (nonatomic) double itemDiscount;
 @property (nonatomic, copy) NSString * _Nullable itemDiscountType;
-@property (nonatomic, copy) NSString * _Nullable itemDescription;
+@property (nonatomic, copy) NSString * _Nullable eInvoiceDescription;
 @property (nonatomic, copy) NSString * _Nullable sku;
 - (nonnull instancetype)initWithTotal:(double)total tax:(double)tax taxType:(NSString * _Nullable)taxType price:(double)price quantity:(NSInteger)quantity itemDiscount:(double)itemDiscount itemDiscountType:(NSString * _Nullable)itemDiscountType description:(NSString * _Nullable)description sku:(NSString * _Nullable)sku OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -636,7 +636,6 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK30GDPaymentIntentDetailsResponse")
 @property (nonatomic, copy) NSString * _Nullable createdBy;
 @property (nonatomic, copy) NSString * _Nullable merchantName;
 @property (nonatomic, copy) NSArray<GDPaymentIntentOrder *> * _Nullable orders;
-@property (nonatomic) BOOL isPending;
 @property (nonatomic, strong) GDEInvoiceDetails * _Nullable eInvoiceDetails;
 @property (nonatomic, copy) NSArray<GDEInvoiceSentLink *> * _Nullable eInvoiceSentLinks;
 @property (nonatomic, copy) NSString * _Nullable updatedBy;
@@ -644,6 +643,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK30GDPaymentIntentDetailsResponse")
 @property (nonatomic, copy) NSString * _Nullable currency;
 @property (nonatomic, copy) NSString * _Nullable status;
 @property (nonatomic, copy) NSString * _Nullable merchantPublicKey;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -663,7 +663,6 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK20GDPaymentIntentOrder")
 @property (nonatomic, copy) NSString * _Nullable paymentIntentId;
 @property (nonatomic, copy) NSString * _Nullable createdDate;
 @property (nonatomic, copy) NSString * _Nullable orderId;
-@property (nonatomic, copy) NSString * _Nullable orderStatus;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2252,7 +2251,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 + (void)setlanguageWithLanguage:(enum Language)language;
 + (void)removeCredentials;
 + (void)updateCredentialsWithMerchantKey:(NSString * _Nonnull)merchantKey andPassword:(NSString * _Nonnull)password;
-+ (void)startPaymentIntentWithPaymentIntentID:(NSString * _Nullable)paymentIntentId status:(NSString * _Nullable)status type:(NSString * _Nonnull)type currency:(NSString * _Nullable)currency viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDPaymentIntentResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)startPaymentIntentWithPaymentIntentID:(NSString * _Nullable)paymentIntentId status:(NSString * _Nullable)status type:(NSString * _Nonnull)type viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDPaymentIntentResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (void)payWithApplePayWithPKPayment:(PKPayment * _Nonnull)pkPayment callbackUrl:(NSString * _Nullable)callbackUrl merchentRefId:(NSString * _Nullable)merchentRefId completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (NSString * _Nullable)getModelStringWithOrder:(GDOrderResponse * _Nonnull)order SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)getQRPaymentStringWithOrder:(GDRTPQRResponse * _Nonnull)order SWIFT_WARN_UNUSED_RESULT;

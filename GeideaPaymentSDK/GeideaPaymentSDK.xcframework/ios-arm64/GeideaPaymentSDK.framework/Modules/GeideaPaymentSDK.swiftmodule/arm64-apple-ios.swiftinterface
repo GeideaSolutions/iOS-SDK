@@ -125,7 +125,6 @@ extension Swift.String {
   @objc public var paymentIntentId: Swift.String?
   @objc public var createdDate: Swift.String?
   @objc public var orderId: Swift.String?
-  @objc public var orderStatus: Swift.String?
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
@@ -171,7 +170,7 @@ public struct ExpiryDateParams : Swift.Codable {
   @objc public static func setlanguage(language: GeideaPaymentSDK.Language)
   @objc public static func removeCredentials()
   @objc public static func updateCredentials(withMerchantKey merchantKey: Swift.String, andPassword password: Swift.String)
-  @objc public static func startPaymentIntent(withPaymentIntentID paymentIntentId: Swift.String?, status: Swift.String?, type: Swift.String, currency: Swift.String?, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDPaymentIntentResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func startPaymentIntent(withPaymentIntentID paymentIntentId: Swift.String?, status: Swift.String?, type: Swift.String, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDPaymentIntentResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func payWithApplePay(withPKPayment pkPayment: PassKit.PKPayment, callbackUrl: Swift.String? = nil, merchentRefId: Swift.String? = nil, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func getModelString(order: GeideaPaymentSDK.GDOrderResponse) -> Swift.String?
   @objc public static func getQRPaymentString(order: GeideaPaymentSDK.GDRTPQRResponse) -> Swift.String?
@@ -303,7 +302,7 @@ extension Foundation.URL {
   @objc public var quantity: Swift.Int
   @objc public var itemDiscount: Swift.Double
   @objc public var itemDiscountType: Swift.String?
-  @objc public var itemDescription: Swift.String?
+  @objc public var eInvoiceDescription: Swift.String?
   @objc public var sku: Swift.String?
   @objc public init(total: Swift.Double, tax: Swift.Double, taxType: Swift.String?, price: Swift.Double, quantity: Swift.Int, itemDiscount: Swift.Double, itemDiscountType: Swift.String?, description: Swift.String?, sku: Swift.String?)
   @objc deinit
@@ -418,7 +417,7 @@ extension Foundation.JSONSerialization {
     get
   }
 }
-@objc @objcMembers public class GDPaymentIntentDetailsResponse : ObjectiveC.NSObject, Swift.Codable {
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDPaymentIntentDetailsResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public var customer: GeideaPaymentSDK.GDPaymentIntentCustomer?
   @objc public var link: Swift.String?
   @objc public var merchantId: Swift.String?
@@ -431,7 +430,6 @@ extension Foundation.JSONSerialization {
   @objc public var createdBy: Swift.String?
   @objc public var merchantName: Swift.String?
   @objc public var orders: [GeideaPaymentSDK.GDPaymentIntentOrder]?
-  @objc public var isPending: Swift.Bool
   @objc public var eInvoiceDetails: GeideaPaymentSDK.GDEInvoiceDetails?
   @objc public var eInvoiceSentLinks: [GeideaPaymentSDK.GDEInvoiceSentLink]?
   @objc public var updatedBy: Swift.String?
@@ -439,6 +437,7 @@ extension Foundation.JSONSerialization {
   @objc public var currency: Swift.String?
   @objc public var status: Swift.String?
   @objc public var merchantPublicKey: Swift.String?
+  @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -574,7 +573,6 @@ public struct SecureStore {
   required public init(from decoder: Swift.Decoder) throws
 }
 @objc public class GDPICustomer : ObjectiveC.NSObject, Swift.Codable {
-  public var customerId: Swift.String?
   public var name: Swift.String?
   public var email: Swift.String?
   public var phoneNumber: Swift.String?
