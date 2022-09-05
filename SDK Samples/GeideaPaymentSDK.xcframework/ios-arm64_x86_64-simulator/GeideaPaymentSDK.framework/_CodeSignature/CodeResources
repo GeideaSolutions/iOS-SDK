@@ -30,43 +30,43 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		Icgle6sWybDQqxgE3mlij3k0eZo=
+		BHn+tfT4ZMzDyzfpcE7GI5jMYCQ=
 		</data>
 		<key>CVVAlertViewController.nib</key>
 		<data>
-		vIKh/y/a19/hy+1CkwCfY/3dL8U=
+		mLgGG24VzDFltveMD6m1umdXuEA=
 		</data>
 		<key>CardDetailsFormViewController.nib/objects-14.0+.nib</key>
 		<data>
-		GheAMeaTpYaSDqQJyJJpaWHZ2+A=
+		M++goJ4fAV35VJkSbatDmqc0ApE=
 		</data>
 		<key>CardDetailsFormViewController.nib/runtime.nib</key>
 		<data>
-		iUq1qhTAtED06+aQGifX+TLDCRU=
+		eoQsRGIotb99BJGgBuumEl4vho0=
 		</data>
 		<key>CountrySelectionViewController.nib</key>
 		<data>
-		dhPqp+vfiFh6oXSNXjhAsapa9Is=
+		NFzD5dC+40UBK9jRDpYpthmeoks=
 		</data>
 		<key>CountryTableViewCell.nib</key>
 		<data>
-		5i3S/KlXSpTK8IDrzB+ooWfjnt0=
+		XjPyjRwNBcMWL7VuSwsDQVEMas8=
 		</data>
 		<key>EInvoiceDetailsViewController.nib</key>
 		<data>
-		PQZoDu+tLIT1CR+6loNmj4WtmtU=
+		O39n6p8kmhrUBH61rLlVZRvtTXQ=
 		</data>
 		<key>EInvoiceItemTableViewCell.nib</key>
 		<data>
-		OgzQ7AqO2hvJ6J7kz2EPQl133b4=
+		2l6mgzT+NJSzkOdsPGD/giu4Df8=
 		</data>
 		<key>EInvoiceItemViewController.nib</key>
 		<data>
-		iKm+P/cDf45PcFjSBD5ZbB6Ib3k=
+		c67prY+VlQlNPPwxGxPSng+CxBw=
 		</data>
 		<key>Headers/GeideaPaymentSDK-Swift.h</key>
 		<data>
-		LsHIOVMYJZypnJwrSH8UP5p4zUU=
+		o1/tb9Xr/OhS6s1zDHcMgRoIzfU=
 		</data>
 		<key>Headers/GeideaPaymentSDK.h</key>
 		<data>
@@ -74,31 +74,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IbWqjtOPXWhkHBJwVzCGmW0yI6A=
+		ugB9NLivYlfC/mNE+KfuMzoPMxo=
+		</data>
+		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		1Y9vdImCyEBOGBeviFKXas3NFoM=
+		</data>
+		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		+1XZRhfsNPyqW4tjjcHDShvsEw4=
+		</data>
+		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		f2taPkUXYK2iD/SVV5b+PTAzSsI=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		fBOrBy/zpn7rE5pFXNclHG1dt4s=
+		X+hLr+Lt1XS3c1k6hv0SBlH82KU=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		SekpNN5cyZhN/mHjovLQq9wvcX0=
+		h8yg0sK4QP+pQ3ieVkVnauBZcN4=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2roUGAvBFqX5M5HC3BIypgoopNI=
-		</data>
-		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		fBOrBy/zpn7rE5pFXNclHG1dt4s=
-		</data>
-		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		SekpNN5cyZhN/mHjovLQq9wvcX0=
-		</data>
-		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		2roUGAvBFqX5M5HC3BIypgoopNI=
+		KOrEkdd/lpO0LFoe9nblEt7ptjU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -202,47 +202,47 @@
 		</data>
 		<key>PaymentIntentTableViewCell.nib</key>
 		<data>
-		O/HJiwFMhK2drPvxo8IU+MkD9EU=
+		ONMXlDNKUsfUFSHfYRHGIohWNzM=
 		</data>
 		<key>PaymentIntentViewController.nib</key>
 		<data>
-		GAZMM6EA8fWwXKC27l1U+hHlW9Q=
+		uizaNzI2o/NOzhpPcksgx6V1z8o=
 		</data>
 		<key>PaymentIntentsViewController.nib</key>
 		<data>
-		d83Y8u8T16iEPJCBwumerpAdsCI=
+		kZ/dXNKBCxb20qh9bNZzhXtTXNQ=
 		</data>
 		<key>PaymentMethodTableViewCell.nib</key>
 		<data>
-		dR/IZiS5Ms9WaGi6xr8ZJ+SbQC8=
+		wgf9xIdjj4jpOYiMIpAwrVpJEZ4=
 		</data>
 		<key>PaymentViewController.nib</key>
 		<data>
-		ULl1Cz1fSbjsn+mZzftgoM9jXfA=
+		/fNYdCuhkMB2RHduCAp3PJzZYg4=
 		</data>
 		<key>QRPaymentFormViewController.nib</key>
 		<data>
-		fYUezN6xYXhA96Z/YtitYTi26is=
+		/fgbWWIY+HK/qep7RNTAazoeXKs=
 		</data>
 		<key>ReceiptTableViewCell.nib</key>
 		<data>
-		XvdvcgVn+bsQfbmyGI0d2pdYsfQ=
+		yHvW/WNvxXa50W7EVyrCSiQEKX0=
 		</data>
 		<key>ReceiptViewController.nib</key>
 		<data>
-		ms4SODnuL2cnwz4JnuQc1sqao+o=
+		meJhsFeFRhu37r1fBx/V5HIteE0=
 		</data>
 		<key>RequestToPayViewController.nib</key>
 		<data>
-		+jclvQATC1WCx4cE/9LrvlDjgI4=
+		p6SVXRl7KsaxfQnlmUHYa8+oWxA=
 		</data>
 		<key>SearchView.nib</key>
 		<data>
-		HfbAKIwSbP3jXwvgTRJ0CmQt9bo=
+		t/VNoLOKCQWDlnGA4+azWXuWz4o=
 		</data>
 		<key>SelectPaymentMethodViewController.nib</key>
 		<data>
-		QJ33HZhYCv8WCNDhpZhqxzvhnzU=
+		U8F1MPqngbiUsdbN6JPApEYiQ14=
 		</data>
 		<key>WebviewViewController.nib</key>
 		<data>
@@ -367,70 +367,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xcErfplGyRchm2WVoFiFG1vJmN6IHuRPsXNvZ+9aET0=
+			ODi0Jc21+DcuQHDiJEIu/RCpdRjR7xWvCfIzEzGbULI=
 			</data>
 		</dict>
 		<key>CVVAlertViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7uF5AeToBuiV9GFsJrszyE3uTR4iIS6pV3D8B2ToYu4=
+			M2VZ8bA5LcLgRcVhwCWSRG/hYmw697w2xTRC2zofwAw=
 			</data>
 		</dict>
 		<key>CardDetailsFormViewController.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7GAe7ovsbrSOqK2/2wIDV1kZoq4F14WZrLBAhoHIGNc=
+			WmJJTCSVhKdqTWwOYFQ3L62Gz4W60dtolKwGxR+jGY4=
 			</data>
 		</dict>
 		<key>CardDetailsFormViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0uJdQP8E2r+qhcws+TT1zj1vH891e0bVuye/0lGwU+k=
+			ke9ljH6iaEI+Gvhs+obLGZXzvk4g3LvzXvlQIXeJo4o=
 			</data>
 		</dict>
 		<key>CountrySelectionViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vhDIpMcL+9cItgaKMfKO2MySTWwITR81klLJo6c1DyM=
+			/zQ8+/2jy9dh46kWVRkQj6b3/8wz6WpfhNCpNUXe5TY=
 			</data>
 		</dict>
 		<key>CountryTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QghEH55+4bd8uZ9O/niXZqnzoaGnTB3avjs3Jv9/zT0=
+			K2erIyKkaxTgfGpuLLR86/aGtDMReLb2tahXfvrxIvA=
 			</data>
 		</dict>
 		<key>EInvoiceDetailsViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FHNv+tAyWqysADZ5Tc9CH0gXQBwFIoXwuC07O89eUS4=
+			fcIj0Ws54vIgYs50Ft/isEcPa/t8NbCuTGLtokoXvbA=
 			</data>
 		</dict>
 		<key>EInvoiceItemTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+iZltI8etcxaMCUESKKtK38qKiVVjE0ff1ZQ+d5Ab08=
+			+BB/hjSKmmi5ZD39h5G6cgrqrSQkcd+EeXH5CowBbV0=
 			</data>
 		</dict>
 		<key>EInvoiceItemViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P6/h3OqiLhZea4SrHTAqsbEvWpyJViMMBj2yaKs9sxs=
+			69ujzTXhiOrQ8WeIMefAdqN+rfbFS7MZpvHIO0udET0=
 			</data>
 		</dict>
 		<key>Headers/GeideaPaymentSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			E7e1M0dLR/dKYXnuTUWX0XMXTQBiDQpeJPw6F7/IpBs=
+			6PBayYdIlWOKtlaS508VHtZ0B/Mx9A/q4PxXxEEko3E=
 			</data>
 		</dict>
 		<key>Headers/GeideaPaymentSDK.h</key>
@@ -440,46 +440,46 @@
 			y4hBfWj8p23DerqosHDLmQAQH+9EJDDBNBD+xpA5dXw=
 			</data>
 		</dict>
+		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+/cn6zWo0DvXnQCroNR+hZVM+qSfLzy/ih4jTUSmP7I=
+			</data>
+		</dict>
+		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			01Yy5F6X4wGpNjAwoyJOtbP0ZbXRfiTczEJb00uGtp8=
+			</data>
+		</dict>
+		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7xuty21X7w7vjG6VxE/Py64mOBAFD5Bgw5Cv/7ng4Rc=
+			</data>
+		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hYEI9GOb0Ul3TJZJ64kXzAiHctkodIXr/KKf4bumMWY=
+			C2+dVd/aGEbJ/J41zLQt4Vr5fok89XcXJ7Ax7YS2F8Q=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zidmmJEpa64Tsvz6ArP5Arb9N6XFRp8W3E7Le7ZeEqg=
+			DN+CO8xRh6yhGZfOptkHZEFYGsMEs3/7XQSOR8j5Ds4=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8P2uUTGhj8HudcWgBCBxzPwGXkbNgPj1Nidr1JmDTR0=
-			</data>
-		</dict>
-		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hYEI9GOb0Ul3TJZJ64kXzAiHctkodIXr/KKf4bumMWY=
-			</data>
-		</dict>
-		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zidmmJEpa64Tsvz6ArP5Arb9N6XFRp8W3E7Le7ZeEqg=
-			</data>
-		</dict>
-		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			8P2uUTGhj8HudcWgBCBxzPwGXkbNgPj1Nidr1JmDTR0=
+			XXCyL42SXfIPI89RrTOjOKHLQiME2xr5M6dfok5QBBM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -661,77 +661,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X/48OfA17KUUVV6EHXXiyGZZol3tk9cX1WVgPG5q00E=
+			B/uQS2Ah6dRPFa2moOIgl/v6HreVdtf7RkljHOhVS1U=
 			</data>
 		</dict>
 		<key>PaymentIntentViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ntCyR2IQwfjH7jKGm4HNnxS5joXbpN8m2ZBHbH788rk=
+			UNoQdaHvqRm8Jq0murVlLGn9ziBxwqEMMV8Slt9eLXw=
 			</data>
 		</dict>
 		<key>PaymentIntentsViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			21HEoqOCDCBsLoecIDbzdEPNM7V+W8uOyCSWLbOTyNg=
+			q9RehYWZu6ZiItFKHthTP7xMHYfvqDJtG2ANHgkocW8=
 			</data>
 		</dict>
 		<key>PaymentMethodTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1/8y69BSRDQPC34560KxYEyqBhAiWfoCf8J+p47Iqb8=
+			Fgqfbk1Hntz4Ar/orbOTGkmMu7kEYWTFsPggQjztKps=
 			</data>
 		</dict>
 		<key>PaymentViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iLkRlQHybFdu5qUtm0DQKK91af7Iz3s62KjCtCbyWOs=
+			euSLKCBwRQIJv/xaeD7Q1uWkdXDDqsKDUUF+UOezvYM=
 			</data>
 		</dict>
 		<key>QRPaymentFormViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4oRLvId21o0lfLVoljkuD5XLUr+IG1z6xYSHpw7vKKQ=
+			oPRLnGXAjqNOEjdKErcaEHxMFLkNWO5952ygTeQBZi4=
 			</data>
 		</dict>
 		<key>ReceiptTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qjtc5yvazHzmbX8XMNN/VEctePESv1D1eXOshkhqyRM=
+			ixlIaUuSu0xMSd9R0dcatffRAGUwrol2gQs95fLD3JQ=
 			</data>
 		</dict>
 		<key>ReceiptViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vw95zsafEMZmnLzQ5KiGo3HlxH+Z+xYPpgM2LKiKtHU=
+			j9KDmKSKjlgclPjpmGdAVWWQnna9+fUyeVxNW+caJwQ=
 			</data>
 		</dict>
 		<key>RequestToPayViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y+EOY982GWNyvBgldxNTlUE4MKE98p6sqID2HwtV+Ig=
+			fuGbPYUrzldABh0nkdRKVQTE7YKFrNAEjIsylU96yic=
 			</data>
 		</dict>
 		<key>SearchView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fDtFOJ8kXLbV1VqsOzY41GG2n8wIO+RQO2O6J07CAsY=
+			kctzU3lSDQNlXUdvFKsh3mDuQx24MFT6qPq8x3PUWaw=
 			</data>
 		</dict>
 		<key>SelectPaymentMethodViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y1a/2r4K8FEFB9d3gnFVsdKiow9GlpR+cDCAkhTu1Gw=
+			ZcvGEWiKzJQwn3ox20upWm31/ZIkMlL1LZI/jqe0iXw=
 			</data>
 		</dict>
 		<key>WebviewViewController.nib</key>

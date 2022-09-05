@@ -457,7 +457,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "471"
                   endingLineNumber = "471"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "56">
                </Location>
                <Location
                   uuid = "0D083BB8-687E-4D14-B660-734C9B05D72E - bf09101abe16f526"
@@ -472,25 +472,9 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "471"
                   endingLineNumber = "471"
-                  offsetFromSymbolStart = "100">
+                  offsetFromSymbolStart = "108">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A8A5CFA5-A5FD-4F90-8572-97114612C9FB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GeideaPaymentSDKSwiftSample/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
-            landmarkName = "configureComponents()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

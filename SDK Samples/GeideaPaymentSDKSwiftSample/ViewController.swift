@@ -132,7 +132,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         }))
         
         alert.addAction(UIAlertAction(title: "Payment Intent / EInvoice", style: .default , handler:{ [self] (UIAlertAction)in
-            GeideaPaymentAPI.startPaymentIntent(withPaymentIntentID: self.paymentIntentTF.text, status: self.status, type: self.type ?? "EInvoice", currency: currencyTF.text, viewController: self, completion: { response, error in
+            GeideaPaymentAPI.startPaymentIntent(withPaymentIntentID: self.paymentIntentTF.text, status: self.status, type: self.type ?? "EInvoice", viewController: self, completion: { response, error in
                 
                 
                 if let err = error {
@@ -350,7 +350,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func generateInvoiceTapped(_ sender: Any) {
         
-        GeideaPaymentAPI.startPaymentIntent(withPaymentIntentID: paymentIntentTF.text, status: self.status, type: self.type ?? "EInvoice", currency: currencyTF.text, viewController: self, completion: { response, error in
+        GeideaPaymentAPI.startPaymentIntent(withPaymentIntentID: paymentIntentTF.text, status: self.status, type: self.type ?? "EInvoice", viewController: self, completion: { response, error in
             
             
             if let err = error {

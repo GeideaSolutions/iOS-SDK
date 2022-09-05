@@ -72,6 +72,7 @@ class OrdersViewController: UIViewController {
                 self.totalOrders = safeResponse.totalCount
                 self.tableView.reloadData()
             }
+   
             
         })
     }
