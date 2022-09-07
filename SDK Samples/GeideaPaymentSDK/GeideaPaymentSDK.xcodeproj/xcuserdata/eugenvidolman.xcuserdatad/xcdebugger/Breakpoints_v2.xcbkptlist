@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "15F8FA63-7503-466A-BF58-0D17DEA1C386"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E25F64B-5D04-4A8B-84DB-8293AC0AE517"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDK/Source/Views/ReceiptScreen/TableViewCell/BlankTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9E25F64B-5D04-4A8B-84DB-8293AC0AE517 - 186935100df71de2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeideaPaymentSDK.BlankTableViewCell.awakeFromNib() -&gt; ()"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugenvidolman/Dev/Geidea/Mobile%20SDK%20reload/MobileSDK.iOS/GeideaPaymentSDK/GeideaPaymentSDK/Source/Views/ReceiptScreen/TableViewCell/BlankTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "9E25F64B-5D04-4A8B-84DB-8293AC0AE517 - 299191640c4eca05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "___lldb_unnamed_symbol14060$$GeideaPaymentSDK"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugenvidolman/Dev/Geidea/Mobile%20SDK%20reload/MobileSDK.iOS/GeideaPaymentSDK/GeideaPaymentSDK/Source/Views/ReceiptScreen/TableViewCell/BlankTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4296EBCE-F2D9-427F-BBAA-29AC01A001E6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDK/Source/Utils/Extensions/Strings+Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "isNumeric"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4296EBCE-F2D9-427F-BBAA-29AC01A001E6 - 1b36ecc3b72df012"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.isNumeric.getter : Swift.Bool"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugenvidolman/Dev/Geidea/Mobile%20SDK%20reload/MobileSDK.iOS/GeideaPaymentSDK/GeideaPaymentSDK/Source/Utils/Extensions/Strings+Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "4296EBCE-F2D9-427F-BBAA-29AC01A001E6 - 67fed0332152afae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "___lldb_unnamed_symbol859$$GeideaPaymentSDK"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugenvidolman/Dev/Geidea/Mobile%20SDK%20reload/MobileSDK.iOS/GeideaPaymentSDK/GeideaPaymentSDK/Source/Utils/Extensions/Strings+Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22D590ED-8281-483F-BAC5-467ECD5C5445"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDK/Public/PublicModels/BNPL/GDBNPLReceiptResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "parse(json:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "22D590ED-8281-483F-BAC5-467ECD5C5445 - d9560fcba9793a73"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeideaPaymentSDK.GDBNPLReceiptResponse.parse(json: Foundation.Data) -&gt; Swift.Optional&lt;GeideaPaymentSDK.GDBNPLReceiptResponse&gt;"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugenvidolman/Dev/Geidea/Mobile%20SDK%20reload/MobileSDK.iOS/GeideaPaymentSDK/GeideaPaymentSDK/Public/PublicModels/BNPL/GDBNPLReceiptResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "420">
+               </Location>
+               <Location
+                  uuid = "22D590ED-8281-483F-BAC5-467ECD5C5445 - 199805d6f1b50411"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "___lldb_unnamed_symbol1088$$GeideaPaymentSDK"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugenvidolman/Dev/Geidea/Mobile%20SDK%20reload/MobileSDK.iOS/GeideaPaymentSDK/GeideaPaymentSDK/Public/PublicModels/BNPL/GDBNPLReceiptResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAE37ADB-B77D-484A-B838-B4E4982C1738"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDK/Public/PublicModels/BNPL/GDBNPLReceiptResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "parse(json:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BAE37ADB-B77D-484A-B838-B4E4982C1738 - d9560fcba9793a9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeideaPaymentSDK.GDBNPLReceiptResponse.parse(json: Foundation.Data) -&gt; Swift.Optional&lt;GeideaPaymentSDK.GDBNPLReceiptResponse&gt;"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugenvidolman/Dev/Geidea/Mobile%20SDK%20reload/MobileSDK.iOS/GeideaPaymentSDK/GeideaPaymentSDK/Public/PublicModels/BNPL/GDBNPLReceiptResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1404">
+               </Location>
+               <Location
+                  uuid = "BAE37ADB-B77D-484A-B838-B4E4982C1738 - 199805d6f1b504fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "___lldb_unnamed_symbol1088$$GeideaPaymentSDK"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugenvidolman/Dev/Geidea/Mobile%20SDK%20reload/MobileSDK.iOS/GeideaPaymentSDK/GeideaPaymentSDK/Public/PublicModels/BNPL/GDBNPLReceiptResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1084">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E1F8EDA-DC21-4686-8983-8540DFDD8617"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDK/Source/Network/Service/NetworkParams/BNPL/SouHoola/SouhoolaIPSelectedParams.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "init(publicSouhoola:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53CD79BD-42A1-4D17-A67A-EAF25692A85A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDK/Source/Views/Payment/PaymentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "PaymentViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "166D550E-4B2B-47E0-9C79-86F7D8195015"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDK/Source/Views/WebView/WebviewViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167">
+            <Locations>
+               <Location
+                  uuid = "166D550E-4B2B-47E0-9C79-86F7D8195015 - 5088e345e40884c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeideaPaymentSDK.WebviewViewController.webView(_: __C.WKWebView, didFailProvisionalNavigation: Swift.Optional&lt;__C.WKNavigation&gt;, withError: Swift.Error) -&gt; ()"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugenvidolman/Dev/Geidea/Mobile%20SDK%20reload/MobileSDK.iOS/GeideaPaymentSDK/GeideaPaymentSDK/Source/Views/WebView/WebviewViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "166D550E-4B2B-47E0-9C79-86F7D8195015 - 5088e345e40884c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeideaPaymentSDK.WebviewViewController.webView(_: __C.WKWebView, didFailProvisionalNavigation: Swift.Optional&lt;__C.WKNavigation&gt;, withError: Swift.Error) -&gt; ()"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugenvidolman/Dev/Geidea/Mobile%20SDK%20reload/MobileSDK.iOS/GeideaPaymentSDK/GeideaPaymentSDK/Source/Views/WebView/WebviewViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
