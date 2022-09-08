@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrdersViewController" customModule="GeideaPaymentSDKSwiftSample" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingView" destination="dID-M6-GNM" id="DnW-8p-1mT"/>
+                <outlet property="tableView" destination="6wo-wx-wFn" id="dzB-0l-HIs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6wo-wx-wFn">
+                    <rect key="frame" x="20" y="64" width="374" height="728"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKo-i1-IiB">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <subviews>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="dID-M6-GNM">
+                            <rect key="frame" x="197" y="15" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5nz-0y-Cld"/>
+                        <constraint firstItem="dID-M6-GNM" firstAttribute="centerX" secondItem="BKo-i1-IiB" secondAttribute="centerX" id="6wH-zI-eAh"/>
+                        <constraint firstItem="dID-M6-GNM" firstAttribute="centerY" secondItem="BKo-i1-IiB" secondAttribute="centerY" id="A5i-yq-hfm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BKo-i1-IiB" secondAttribute="bottom" id="5Eh-pJ-t0R"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6wo-wx-wFn" secondAttribute="trailing" constant="20" id="DaT-Hk-MTJ"/>
+                <constraint firstItem="BKo-i1-IiB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jn2-n4-en9"/>
+                <constraint firstItem="6wo-wx-wFn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="MAo-k5-zph"/>
+                <constraint firstItem="6wo-wx-wFn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="O7W-S1-Z8A"/>
+                <constraint firstItem="BKo-i1-IiB" firstAttribute="top" secondItem="6wo-wx-wFn" secondAttribute="bottom" constant="20" id="Yhn-J3-bqa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BKo-i1-IiB" secondAttribute="trailing" id="emy-gQ-qdv"/>
+            </constraints>
+            <point key="canvasLocation" x="117" y="79"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
