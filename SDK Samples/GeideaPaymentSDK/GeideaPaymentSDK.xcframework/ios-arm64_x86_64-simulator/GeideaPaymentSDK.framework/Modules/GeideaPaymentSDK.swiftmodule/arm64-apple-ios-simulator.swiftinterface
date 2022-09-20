@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 effective-4.1.50 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.7 effective-4.1.50 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name GeideaPaymentSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import Contacts
 import Foundation
 @_exported import GeideaPaymentSDK
@@ -11,6 +12,7 @@ import Swift
 import UIKit
 import WebKit
 import _Concurrency
+import _StringProcessing
 @objc @_inheritsConvenienceInitializers @objcMembers public class GDPaymentIntent : ObjectiveC.NSObject, Swift.Codable {
   @objc public var id: Swift.String?
   @objc public var type: Swift.String?
@@ -238,11 +240,11 @@ extension Swift.String {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var gradientRotateSpeed: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var gradientRotateSpeed: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var glowAmount: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var glowAmount: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
@@ -250,11 +252,11 @@ extension Swift.String {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var progressThickness: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var progressThickness: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var trackThickness: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var trackThickness: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
@@ -270,13 +272,13 @@ extension Swift.String {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) convenience public init(frame: CoreGraphics.CGRect, colors: UIKit.UIColor...)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) convenience public init(frame: CoreFoundation.CGRect, colors: UIKit.UIColor...)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public func refresh()
-  @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public class var layerClass: Swift.AnyClass {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @_Concurrency.MainActor(unsafe) public func set(colors: UIKit.UIColor...)
@@ -289,7 +291,7 @@ extension Swift.String {
   @_Concurrency.MainActor(unsafe) @objc public func animationDidStop(_ anim: QuartzCore.CAAnimation, finished flag: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToWindow()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func willMove(toSuperview newSuperview: UIKit.UIView?)
-  @objc override dynamic public func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func prepareForInterfaceBuilder()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDSDKMerchantConfigResponse : ObjectiveC.NSObject, Swift.Codable {
@@ -347,7 +349,7 @@ public struct ExpiryDateParams : Swift.Codable {
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class GeideaPaymentAPI : ObjectiveC.NSObject {
   @objc public static func isCredentialsAvailable() -> Swift.Bool
   @objc public static func setCredentials(withMerchantKey merchantKey: Swift.String, andPassword password: Swift.String)
-  @objc public static func pay(theAmount amount: GeideaPaymentSDK.GDAmount, withCardDetails cardDetails: GeideaPaymentSDK.GDCardDetails, config: GeideaPaymentSDK.GDConfigResponse?, showReceipt: Swift.Bool, andTokenizationDetails tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails?, andPaymentIntentId paymentIntentId: Swift.String? = nil, andCustomerDetails customerDetails: GeideaPaymentSDK.GDCustomerDetails?, orderId: Swift.String? = nil, paymentMethods: [Swift.String]? = nil, dismissAction: ((GeideaPaymentSDK.GDCancelResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func pay(theAmount amount: GeideaPaymentSDK.GDAmount, withCardDetails cardDetails: GeideaPaymentSDK.GDCardDetails, initializeResponse: GeideaPaymentSDK.GDInitiateAuthenticateResponse? = nil, config: GeideaPaymentSDK.GDConfigResponse?, showReceipt: Swift.Bool, andTokenizationDetails tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails?, andPaymentIntentId paymentIntentId: Swift.String? = nil, andCustomerDetails customerDetails: GeideaPaymentSDK.GDCustomerDetails?, orderId: Swift.String? = nil, paymentMethods: [Swift.String]? = nil, dismissAction: ((GeideaPaymentSDK.GDCancelResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func initiateAuthenticate(theAmount amount: GeideaPaymentSDK.GDAmount, withCardNumber cardNumber: Swift.String?, andTokenizationDetails tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails?, andPaymentIntentId paymentIntentId: Swift.String? = nil, andCustomerDetails customerDetails: GeideaPaymentSDK.GDCustomerDetails?, orderId: Swift.String? = nil, paymentMethods: [Swift.String]? = nil, dismissAction: ((GeideaPaymentSDK.GDCancelResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDInitiateAuthenticateResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func payWithGeideaForm(theAmount amount: GeideaPaymentSDK.GDAmount, showAddress: Swift.Bool, showEmail: Swift.Bool, showReceipt: Swift.Bool, tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails? = nil, customerDetails: GeideaPaymentSDK.GDCustomerDetails?, applePayDetails: GeideaPaymentSDK.GDApplePayDetails? = nil, config: GeideaPaymentSDK.GDConfigResponse?, paymentIntentId: Swift.String? = nil, qrDetails: GeideaPaymentSDK.GDQRDetails? = nil, bnplItems: [GeideaPaymentSDK.GDBNPLItem]? = nil, paymentMethods: [Swift.String]? = nil, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func payQRWithGeideaForm(theAmount amount: GeideaPaymentSDK.GDAmount, qrDetails: GeideaPaymentSDK.GDQRDetails, config: GeideaPaymentSDK.GDConfigResponse?, showReceipt: Swift.Bool, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
@@ -1159,6 +1161,14 @@ public struct SecureStore {
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
+@objc public class GDInitializeReponseObject : ObjectiveC.NSObject, Swift.Codable {
+  public var gatewayDecision: Swift.String?
+  public var threedSecureId: Swift.String?
+  @objc public init(withGatewayDecision gatewayDecision: Swift.String, threedSecureId: Swift.String)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
 @objc public enum PaymentOperation : Swift.Int, Swift.Codable {
   case pay
   case preAuthorize
@@ -1367,7 +1377,7 @@ public struct SDKErrorConstants {
   required public init(from decoder: Swift.Decoder) throws
 }
 extension UIKit.UITextField {
-  @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class GDMerchantDataResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public var merchantDomain: Swift.String?

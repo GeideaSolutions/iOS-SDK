@@ -6,6 +6,6 @@ framework module GeideaPaymentSDK {
 }
 
 module GeideaPaymentSDK.Swift {
-    header "GeideaPaymentSDK-Swift.h"
-    requires objc
+  header "GeideaPaymentSDK-Swift.h"
+  requires objc
 }
