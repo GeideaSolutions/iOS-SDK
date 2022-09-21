@@ -1,0 +1,11 @@
+framework module GeideaPaymentSDK {
+  umbrella header "GeideaPaymentSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module GeideaPaymentSDK.Swift {
+  header "GeideaPaymentSDK-Swift.h"
+  requires objc
+}

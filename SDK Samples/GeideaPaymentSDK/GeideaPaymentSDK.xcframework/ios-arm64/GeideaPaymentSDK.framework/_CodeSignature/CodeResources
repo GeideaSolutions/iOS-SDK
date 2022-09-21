@@ -122,7 +122,7 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		kO//uCkQvmqUkCQiAUaQm8m3JEQ=
+		jYhom/CAOIf65w9GUQcOonatLIg=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -138,7 +138,7 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		JjRr42jVb8oUz/LcTgK552/2TQE=
+		RpvxqFiGatuG8C8/74oFpJ+dSnU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -278,7 +278,7 @@
 		</data>
 		<key>QRPaymentFormViewController.nib</key>
 		<data>
-		583t0OhoKrfh6tEVEXix5TgImLc=
+		jMq7BuxGrFiJyCHZm7ZUGP52ImI=
 		</data>
 		<key>ReceiptTableViewCell.nib</key>
 		<data>
@@ -609,7 +609,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JmHqcWvAiiehXLt+zVL7NjKw8C7s4Eq0zY7gLTyG1ts=
+			qg3X4A7Ih5PF975MqWmncDUoB/dZY3uW06/fZklv/Zw=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -637,7 +637,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			D/6dr18dle4usMj8vS/MILwGSZEguDMRusx/tUOrB8Q=
+			kCEFBZJdeaaKjYMzJaFpPwoouEpepoj00WhDb6YP6yI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -882,7 +882,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			E0GuP3qMaNjLvfXY1jxX6CzPo5u2TXDkzCRyoP2oomI=
+			YgzT2au6t4nGc2RExragngIOHVt0gnOwQWUE+7a+550=
 			</data>
 		</dict>
 		<key>ReceiptTableViewCell.nib</key>

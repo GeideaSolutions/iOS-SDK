@@ -122,7 +122,7 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		kO//uCkQvmqUkCQiAUaQm8m3JEQ=
+		jYhom/CAOIf65w9GUQcOonatLIg=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		TQj/6LlVPyo/cBujO0X9hFqt2V0=
+		GlAu4JSGpC7bemCfRvD12bvR9iQ=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		kO//uCkQvmqUkCQiAUaQm8m3JEQ=
+		jYhom/CAOIf65w9GUQcOonatLIg=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -158,7 +158,7 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MpcDG1Rq6jB0fR3XKSD29jy+1HQ=
+		U0781ut7ipYWG5T8MJGM3P5sSnY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -298,7 +298,7 @@
 		</data>
 		<key>QRPaymentFormViewController.nib</key>
 		<data>
-		583t0OhoKrfh6tEVEXix5TgImLc=
+		jMq7BuxGrFiJyCHZm7ZUGP52ImI=
 		</data>
 		<key>ReceiptTableViewCell.nib</key>
 		<data>
@@ -629,7 +629,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JmHqcWvAiiehXLt+zVL7NjKw8C7s4Eq0zY7gLTyG1ts=
+			qg3X4A7Ih5PF975MqWmncDUoB/dZY3uW06/fZklv/Zw=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -657,14 +657,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wRre+wetEmiTKQ/+K2kFjtnfGJ94RYLcieC/hpmbE18=
+			0FM3pvYyS41jNRV2O61ujgQ2Muwrz4DdwdIfqM6furc=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JmHqcWvAiiehXLt+zVL7NjKw8C7s4Eq0zY7gLTyG1ts=
+			qg3X4A7Ih5PF975MqWmncDUoB/dZY3uW06/fZklv/Zw=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -692,7 +692,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+6Se+FUs1/b3LFOmNdiyj0zyarDuYh1HU2Mfsb8+rsM=
+			AtVBw/bwzYBaRV9lf0wJFn/8DR99ZjFpQQme0L7Zjg0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -937,7 +937,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			E0GuP3qMaNjLvfXY1jxX6CzPo5u2TXDkzCRyoP2oomI=
+			YgzT2au6t4nGc2RExragngIOHVt0gnOwQWUE+7a+550=
 			</data>
 		</dict>
 		<key>ReceiptTableViewCell.nib</key>
