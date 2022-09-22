@@ -98,7 +98,7 @@
 		</data>
 		<key>Headers/GeideaPaymentSDK-Swift.h</key>
 		<data>
-		f20lTD1oqShiMsyizEscbQOuZMY=
+		vZcDzpOHEkJChMtMJFq5WzoKgsI=
 		</data>
 		<key>Headers/GeideaPaymentSDK.h</key>
 		<data>
@@ -122,11 +122,11 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		jYhom/CAOIf65w9GUQcOonatLIg=
+		Y61O+YIfxPh38plAHwd0kph4AZk=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		SWHtzZMWxEUVoVxtArcyuZECXgE=
+		NMxSLdTM3xoETKl+GxdhL77C0NA=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -134,19 +134,19 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		SWHtzZMWxEUVoVxtArcyuZECXgE=
+		NMxSLdTM3xoETKl+GxdhL77C0NA=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		GlAu4JSGpC7bemCfRvD12bvR9iQ=
+		AQWxLhClzwLvxfG4LOcplgTGbg8=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		jYhom/CAOIf65w9GUQcOonatLIg=
+		Y61O+YIfxPh38plAHwd0kph4AZk=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Py12DR9AFxzKv5ASFSXztoW6pJ4=
+		1k19m8EcpK+NSKVK8VZVi1aO6YY=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -154,11 +154,11 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Py12DR9AFxzKv5ASFSXztoW6pJ4=
+		1k19m8EcpK+NSKVK8VZVi1aO6YY=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		U0781ut7ipYWG5T8MJGM3P5sSnY=
+		ThTfrGjQAFHdiQLg6oiHR66FkYQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -298,7 +298,7 @@
 		</data>
 		<key>QRPaymentFormViewController.nib</key>
 		<data>
-		jMq7BuxGrFiJyCHZm7ZUGP52ImI=
+		1Ij9kxUF1Z32JkyaPk3bqrajssg=
 		</data>
 		<key>ReceiptTableViewCell.nib</key>
 		<data>
@@ -594,7 +594,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zM+VvrYb5faEsbb4+f6RrqNSF17ycSAZv7pzThNXwqg=
+			G8ZiPGRg0+eL/qsOB8fVCcSh53089qVd1XzsF08qXPE=
 			</data>
 		</dict>
 		<key>Headers/GeideaPaymentSDK.h</key>
@@ -629,14 +629,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qg3X4A7Ih5PF975MqWmncDUoB/dZY3uW06/fZklv/Zw=
+			1s/ix3qTO8ESTXmy1O3ZiIsq8bVi51QnLet1b4uY5Yw=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dnx0uLjLNMWuKfU4TTE4hhciXf73rAqE8tcu4z4T3mk=
+			oJrrIm6XGGzhk5aNlhMqZJftk1/nI+bdxPGDqoRsVLU=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -650,28 +650,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dnx0uLjLNMWuKfU4TTE4hhciXf73rAqE8tcu4z4T3mk=
+			oJrrIm6XGGzhk5aNlhMqZJftk1/nI+bdxPGDqoRsVLU=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0FM3pvYyS41jNRV2O61ujgQ2Muwrz4DdwdIfqM6furc=
+			ve1dJw80oFDayUZl1/RFM6vHEWN3hXcLowkZtmdnm8M=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qg3X4A7Ih5PF975MqWmncDUoB/dZY3uW06/fZklv/Zw=
+			1s/ix3qTO8ESTXmy1O3ZiIsq8bVi51QnLet1b4uY5Yw=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6JWSZiykm8ri3mpyI9Qf7dX4cbyngAcWvIIjNVZZlQU=
+			QDoSbP2sSED//W+IJyQJBod6srEZfQWiGyKpx7GwVeU=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -685,14 +685,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6JWSZiykm8ri3mpyI9Qf7dX4cbyngAcWvIIjNVZZlQU=
+			QDoSbP2sSED//W+IJyQJBod6srEZfQWiGyKpx7GwVeU=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AtVBw/bwzYBaRV9lf0wJFn/8DR99ZjFpQQme0L7Zjg0=
+			CPiT6ystUcJayDY6/KzANoCi3G/vbJyE3NkQYv9BqgI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -937,7 +937,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YgzT2au6t4nGc2RExragngIOHVt0gnOwQWUE+7a+550=
+			B9PP2DqNtagmNvVKvDXiUorsVvkJelpAZMGxkNKJ9xI=
 			</data>
 		</dict>
 		<key>ReceiptTableViewCell.nib</key>

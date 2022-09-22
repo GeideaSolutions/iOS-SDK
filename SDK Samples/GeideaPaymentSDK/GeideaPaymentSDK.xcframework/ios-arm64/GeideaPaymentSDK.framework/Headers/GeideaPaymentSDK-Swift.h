@@ -593,6 +593,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK15GDErrorResponse")
 @property (nonatomic, copy) NSString * _Nonnull detailedResponseMessage;
 @property (nonatomic, copy) NSString * _Nonnull responseDescription;
 @property (nonatomic, copy) NSString * _Nonnull orderId;
+@property (nonatomic, copy) NSString * _Nonnull correlationId;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end

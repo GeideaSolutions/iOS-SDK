@@ -1329,6 +1329,7 @@ public struct SDKErrorConstants {
   @objc public var detailedResponseMessage: Swift.String
   @objc public var responseDescription: Swift.String
   @objc public var orderId: Swift.String
+  @objc public var correlationId: Swift.String
   @objc deinit
 }
 @objc public class GDBNPLPurchaseDetails : ObjectiveC.NSObject, Swift.Codable {
