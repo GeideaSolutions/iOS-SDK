@@ -30,7 +30,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		KGWA9ZBhdqj0PS7osG9zCEZyIGM=
+		HF2pyg+U82wb3ePwJRZ1bHoNGuU=
 		</data>
 		<key>BNPL.storyboardc/BNPLViewController.nib</key>
 		<data>
@@ -64,13 +64,17 @@
 		<data>
 		7XLqkWcjkWUKykSvxlxIAeQwkN8=
 		</data>
+		<key>CancelAlertViewController.nib</key>
+		<data>
+		xpIVdxbFkYNh++5iA//+k/SFDqA=
+		</data>
 		<key>CardDetailsFormViewController.nib/objects-14.0+.nib</key>
 		<data>
-		bptsMTHfFQe+O2BevQRidlo1AGU=
+		tQGMmhMP70SozAwrwWy13w0r5pA=
 		</data>
 		<key>CardDetailsFormViewController.nib/runtime.nib</key>
 		<data>
-		KMM4+k85e9ESkk7uqPhTmctylLI=
+		7fnwJb2Brx1DtKedCimQStBbLjM=
 		</data>
 		<key>CountrySelectionViewController.nib</key>
 		<data>
@@ -79,10 +83,6 @@
 		<key>CountryTableViewCell.nib</key>
 		<data>
 		vW8Kr7ngueJwh8pZpu0jgl1/Yu8=
-		</data>
-		<key>DownPaymentViewController.nib</key>
-		<data>
-		WwpSEzL02RCNu0RPm5hu1s6dvxo=
 		</data>
 		<key>EInvoiceDetailsViewController.nib</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Headers/GeideaPaymentSDK-Swift.h</key>
 		<data>
-		juj0yYnxFsEnOBDPvx/eMVAp4oI=
+		X0hNvzbz+oFmfUN1zc+YD99srpk=
 		</data>
 		<key>Headers/GeideaPaymentSDK.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9O/f4HyAac0qnPvIyYG0YiTve9I=
+		e2bgv/okyIODC+hMXEeJd9vyhco=
 		</data>
 		<key>InstallmentViewController.nib</key>
 		<data>
@@ -122,23 +122,23 @@
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		yt7qQgx2MwROYYb/zPtTrhW3VD0=
+		wKBxh63t5Jyr6T+6KwpwhdvZVfw=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Sq7k8TG5H7pmdY9PI0qAZudOMYQ=
+		eL057gZaE7aEP+ihrq1HmC2/Ooc=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		zmU8gUJcEAUSykVAwuzrRjrw4yc=
+		j/bQwPFche2TMvgadkk6HaVSEb8=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Sq7k8TG5H7pmdY9PI0qAZudOMYQ=
+		eL057gZaE7aEP+ihrq1HmC2/Ooc=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		DKoJ5YUKwjkZetS8Pm1vcgjnrxo=
+		Ci6vwIqOlougbT16atiog10nQaw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -286,7 +286,7 @@
 		</data>
 		<key>ReceiptViewController.nib</key>
 		<data>
-		RIykPHA8fc2rk+PUo1Y1NQWSafA=
+		WWH1BL5il1N8qGmU3n2NWlTYMjQ=
 		</data>
 		<key>RequestToPayViewController.nib</key>
 		<data>
@@ -344,7 +344,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/jHas13pwO9wq1ll0Ob+YUcAZNM=
+			E3RgURHIaffi0g/Da9XJXLhzNyI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -369,7 +369,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tt/CvCRj33Ug7Vw93LyTpZoo1t0=
+			GwWfEH0Xws/3K0BbF87hlIKy6nI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -455,7 +455,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			E2wPSjyORcTaCb5M5iLU/odfEmtEIdo3MCTVIzh9LzQ=
+			4oQGgf/2tIvSmAKO/itkq9duIasS1tJQQ+4uPaO0qJ0=
 			</data>
 		</dict>
 		<key>BNPL.storyboardc/BNPLViewController.nib</key>
@@ -514,18 +514,25 @@
 			iNKdxl1g9nr2Sn0VC423U8yuqiMCJw+tMyKqUbcj2JY=
 			</data>
 		</dict>
+		<key>CancelAlertViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VhqoqZMeSmELhGPkL9/QaaPhvHMFMFWTzD8pNsjIeyk=
+			</data>
+		</dict>
 		<key>CardDetailsFormViewController.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5xHXE6MUUo90oLtMWDYCF8r5VUVA+EJWvrPNd/OMqK8=
+			B0g42REwP5R2PCnl0vIu3WECUIakC/wrJG1RMSpMB64=
 			</data>
 		</dict>
 		<key>CardDetailsFormViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aJCZC69jewnGYBVrD9Dy1N8eN94LXrTuo2agAscBsRk=
+			nFBkswvngSpKdyyhQ59/431t/5xbNvuV6LiSKdPgcEE=
 			</data>
 		</dict>
 		<key>CountrySelectionViewController.nib</key>
@@ -540,13 +547,6 @@
 			<key>hash2</key>
 			<data>
 			YNm92jXVuU78x2Pskbo38dQNF8wL0jIdkQTrdu/Ky4A=
-			</data>
-		</dict>
-		<key>DownPaymentViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			HetGM9jUvTQwX0nY5lpgKpxrZmSXycthrkQGqNVor9s=
 			</data>
 		</dict>
 		<key>EInvoiceDetailsViewController.nib</key>
@@ -574,7 +574,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8jz4JY3wxp/CAUm1NT4wt6WhS9vw4Ft+0tqBl/kv+J4=
+			p0umrYWk8CmAXS/U82Xu9Mv0216/P0ALIgj2UEj1tUo=
 			</data>
 		</dict>
 		<key>Headers/GeideaPaymentSDK.h</key>
@@ -609,35 +609,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MDz7ZDdmzVBCXQzeWAHiKgaa/xtBCwBBalmis86TiXA=
+			wx/SC7dTZgRsYvefUpsk/2gNqLYclTp7siZYlnHKhiQ=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zxnmGQw0IjA0QtBZOa9Ivb+UpjZV0eAFP4qiy3hOSPM=
+			yMYAd4uyRLFedrS+Sd1n3oUmOVCRIVYaqqEmsjlXT0Y=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			//PZu0TFmWuyV5XcJSHoCa1sCu1yPk8hf31mBvtuqMU=
+			aoPqKlG4aM5SaPjigVB0KRnXPXS6aZKs+ucogEvZwIQ=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zxnmGQw0IjA0QtBZOa9Ivb+UpjZV0eAFP4qiy3hOSPM=
+			yMYAd4uyRLFedrS+Sd1n3oUmOVCRIVYaqqEmsjlXT0Y=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s2gnW7e6iAETwwjKLtHj9P3/oH35jl2X2noSVfv1lUg=
+			92O20F+2h/ZJ3pHqbBdIgbnQc/W1QZsaUn+8tSD2gZk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -896,7 +896,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2SVtgG53y8k8lylRZDQwB4PjDHTwsnE1IHdHrPhGVHs=
+			uRc0kPDBCYaRkM5H7/UppnzpZ+0oucXYSfzoMsVaa4g=
 			</data>
 		</dict>
 		<key>RequestToPayViewController.nib</key>
@@ -994,7 +994,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qLUZInFLvxQjep/8pjy6Vtr5S/TpoTO5HQeeD2F7OtA=
+			WI3wCxtSF+t8588DTHFTnnm5BcOOMCN5tjGvWQmTlck=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1031,7 +1031,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uwosLvCfsy5XI9blVom+2r97mBTLrJW8uhRKr1BRX2w=
+			lubs/b+Fjg7MiqVHBfvCRgnqYK2QSRVMJsncRl2k5N0=
 			</data>
 			<key>optional</key>
 			<true/>
