@@ -1,8 +1,10 @@
-# iOS-SDK version 3.0
-Major Changelog from version 1.0
+# iOS-SDK version 3.1
+Major Changelog from version 2.0
  - Branding added based on your merchant config colors
  - 3DSV2 included for Token payments
  - BNPL installments providers included for Egypt merchants (vAlU, Shahry, Souhoola)
+ - updated HPP form  
+ 
  
 
 
