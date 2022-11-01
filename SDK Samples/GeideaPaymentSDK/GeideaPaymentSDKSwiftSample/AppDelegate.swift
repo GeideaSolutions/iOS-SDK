@@ -11,7 +11,6 @@ import GeideaPaymentSDK
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
     var window: UIWindow?
     var language: String = "en"
     
@@ -40,40 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //go to main
             break
         }
-        
-//        if let merchantReferenceId = queryItems.filter({$0.name == "merchantReferenceId"}).first {
-//            //Use merchantReferenceId
-//        }
-//        
-//        if let amount = queryItems.filter({$0.name == "amount"}).first {
-//            //Use amount
-//        }
-//        
-//        if let rrn = queryItems.filter({$0.name == "rrn"}).first {
-//            //Use transactionId
-//        }
-//        
-//        
-//        if let authCode = queryItems.filter({$0.name == "authCode"}).first {
-//            //Use authCode
-//        }
-//        
-//        if let transactionResponseTime = queryItems.filter({$0.name == "transactionResponseTime"}).first {
-//            //Use transactionResponseTime
-//        }
-//        
-//        if let transactionResponseTime = queryItems.filter({$0.name == "status"}).first {
-//            //Use transactionResponseTime
-//        }
-//        
-//        // For pay by card there are 2 different fields
-//        if let cardScheme = queryItems.filter({$0.name == "cardScheme"}).first {
-//            //Use cardScheme
-//        }
-//        
-//        if let responseCode = queryItems.filter({$0.name == "responseCode"}).first {
-//            //Use responseCode
-//        }
         
         return true
     }

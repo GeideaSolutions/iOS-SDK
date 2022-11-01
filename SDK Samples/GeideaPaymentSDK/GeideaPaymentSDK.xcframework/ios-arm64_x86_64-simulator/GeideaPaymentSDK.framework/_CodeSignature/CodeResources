@@ -24,13 +24,17 @@
 		<data>
 		NWI8JpFM2UX/h9JQQRGh4ThJGsk=
 		</data>
+		<key>AlternativePMView.nib</key>
+		<data>
+		L7PAwdfqhnligP7TuDaQ7jbiJGY=
+		</data>
 		<key>ApplePayViewController.nib</key>
 		<data>
 		1Y1mDzn6ziK/NLXmOp1z/wFlvqI=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		HF2pyg+U82wb3ePwJRZ1bHoNGuU=
+		jQnvlg/CGZx8JGL2bllOQAELVpE=
 		</data>
 		<key>BNPL.storyboardc/BNPLViewController.nib</key>
 		<data>
@@ -42,7 +46,7 @@
 		</data>
 		<key>BNPL.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		SwhNFp54Nqh+ebhoDPrkIXCA0ZI=
+		RDqV3eAyZPwxXyJHyI+sF0tJ3y0=
 		</data>
 		<key>BNPLFooter.nib</key>
 		<data>
@@ -58,7 +62,7 @@
 		</data>
 		<key>CVVAlertViewController.nib</key>
 		<data>
-		0ZxhnrICbSysTBSNeRl36buH1sY=
+		B5jk2Wo41t6CJXRSW39YJTJ1juE=
 		</data>
 		<key>CVVViewController.nib</key>
 		<data>
@@ -70,11 +74,11 @@
 		</data>
 		<key>CardDetailsFormViewController.nib/objects-14.0+.nib</key>
 		<data>
-		tQGMmhMP70SozAwrwWy13w0r5pA=
+		tQ23DTH8azk9Y4J9EGfzAvjD2VA=
 		</data>
 		<key>CardDetailsFormViewController.nib/runtime.nib</key>
 		<data>
-		7fnwJb2Brx1DtKedCimQStBbLjM=
+		UeX26gJv0lur6brw15mNSmltI2M=
 		</data>
 		<key>CountrySelectionViewController.nib</key>
 		<data>
@@ -96,9 +100,17 @@
 		<data>
 		wKgRpNb/zz0ijMsi9mSchUkbn0Y=
 		</data>
+		<key>GroupedBNPLView.nib/objects-13.0+.nib</key>
+		<data>
+		XH1gQmm9hS38I00gKlSEx7GRmy0=
+		</data>
+		<key>GroupedBNPLView.nib/runtime.nib</key>
+		<data>
+		XH1gQmm9hS38I00gKlSEx7GRmy0=
+		</data>
 		<key>Headers/GeideaPaymentSDK-Swift.h</key>
 		<data>
-		8+zGCeXJYYz+8T5eJRej00pF2Mk=
+		YjnhWHQNl3Krq3NL+u9qsznZvfI=
 		</data>
 		<key>Headers/GeideaPaymentSDK.h</key>
 		<data>
@@ -106,59 +118,59 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		K6/T1pJ25uNC8JcqrgQtr5V/ht4=
+		pceHyxAaZrqaI8Pw9SagPwnnFDk=
 		</data>
 		<key>InstallmentViewController.nib</key>
 		<data>
-		uKBsUKsBQTTbldBsDUufC/NcA4A=
+		Tg4R6vd7HWwemJ629phaG/igVfk=
 		</data>
 		<key>InstallmentsCollectionViewCell.nib/objects-12.3+.nib</key>
 		<data>
-		WBP7e5adKCRkvNjfydrZkiwflVU=
+		QfCVTr+ZMsqat7hr1MgROeYBEoI=
 		</data>
 		<key>InstallmentsCollectionViewCell.nib/runtime.nib</key>
 		<data>
-		IazqMG0oDX1BJOzoahhDIf3W5hY=
+		IGvLwiHMigMBNEuRuWyRLfisDBQ=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		wKBxh63t5Jyr6T+6KwpwhdvZVfw=
+		EaAb8UVycidEqNocbXoeBbjcOjM=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		FTVGSN5kqvI/eCXV9BcQaMH7KT4=
+		8c2b7FAKJl9bjsxOySgwIarDlxw=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		tGIDYaTYU85yK2TtrptMyz8QIzM=
+		B1eKc5YPWLmkTNRLXLqtygZz9HY=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		FTVGSN5kqvI/eCXV9BcQaMH7KT4=
+		8c2b7FAKJl9bjsxOySgwIarDlxw=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Q18fgqzhJD+puJwrOcxNxbXoQyY=
+		usPudd3EUMR9MW0wJxv3XEKWa7k=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		wKBxh63t5Jyr6T+6KwpwhdvZVfw=
+		EaAb8UVycidEqNocbXoeBbjcOjM=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ux9jnAexZgPJdms5Fe2qvFAmprc=
+		/zcttui7LkEIz7eW5LcvQ5T6vgY=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		IQCXAfmH8Vm0IT3o5JCRtJzmcTI=
+		P4b87RtBzYKZHxPTH4B97S5WJp4=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ux9jnAexZgPJdms5Fe2qvFAmprc=
+		/zcttui7LkEIz7eW5LcvQ5T6vgY=
 		</data>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		sG+wtXHCw3k+eeiQFBKX27deQhA=
+		kXLwcZR/OELdpcOcYYlN4ycj8ro=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -270,19 +282,11 @@
 		</data>
 		<key>PaymentIntentViewController.nib</key>
 		<data>
-		H/p8PRwKfRgIt8QcIbi71ORXmzQ=
+		S1+ri4JElfkgUiUXGnPfeYzE/Sw=
 		</data>
 		<key>PaymentIntentsViewController.nib</key>
 		<data>
 		6XAvm1kBgj28jVZBf1V+F3wDCv8=
-		</data>
-		<key>PaymentMethodTableViewCell.nib/objects-13.0+.nib</key>
-		<data>
-		D+25jP71M/6o0zLnUHPlgSrFJIA=
-		</data>
-		<key>PaymentMethodTableViewCell.nib/runtime.nib</key>
-		<data>
-		D+25jP71M/6o0zLnUHPlgSrFJIA=
 		</data>
 		<key>PaymentViewController.nib</key>
 		<data>
@@ -290,7 +294,7 @@
 		</data>
 		<key>PhoneNumberViewController.nib</key>
 		<data>
-		CbXvPJZlYsNWjYL0HMq9VDMO98Q=
+		iKlwj2Vr3G4DR8KHaO/FjQHHTZw=
 		</data>
 		<key>ProgressView.nib</key>
 		<data>
@@ -298,7 +302,7 @@
 		</data>
 		<key>QRPaymentFormViewController.nib</key>
 		<data>
-		1Ij9kxUF1Z32JkyaPk3bqrajssg=
+		LY3ynZ6ymcIUmcfPUfu/NfAD0DY=
 		</data>
 		<key>ReceiptTableViewCell.nib</key>
 		<data>
@@ -314,31 +318,47 @@
 		</data>
 		<key>ReviewTransactionViewController.nib/objects-13.0+.nib</key>
 		<data>
-		lW4tRfPzLb/PMAOHxQY8SekFMws=
+		8ehcf+a6w0Qi2W/fIckAFdDG9u4=
 		</data>
 		<key>ReviewTransactionViewController.nib/runtime.nib</key>
 		<data>
-		lW4tRfPzLb/PMAOHxQY8SekFMws=
+		8ehcf+a6w0Qi2W/fIckAFdDG9u4=
 		</data>
 		<key>SearchView.nib</key>
 		<data>
 		t/VNoLOKCQWDlnGA4+azWXuWz4o=
 		</data>
+		<key>SelectGroupedView.nib</key>
+		<data>
+		BgI9Hwi7DJTdvDSSigSYQPkrFuk=
+		</data>
+		<key>SelectMeezaDigitalView.nib/objects-13.0+.nib</key>
+		<data>
+		Yvyek7SG4BP9lPjIMPiTvWK5q9k=
+		</data>
+		<key>SelectMeezaDigitalView.nib/runtime.nib</key>
+		<data>
+		Yvyek7SG4BP9lPjIMPiTvWK5q9k=
+		</data>
+		<key>SelectPaymentMethodView.nib/objects-13.0+.nib</key>
+		<data>
+		gSuX9jja8fKfcyhQfZm53lA+K90=
+		</data>
+		<key>SelectPaymentMethodView.nib/runtime.nib</key>
+		<data>
+		gSuX9jja8fKfcyhQfZm53lA+K90=
+		</data>
 		<key>SelectPaymentMethodViewController.nib</key>
 		<data>
-		OdBlDZxSqCWYt24pKxCs5OjcahA=
+		wHZhqxr/Iv9ebzEnhAaW4CnaaGM=
 		</data>
 		<key>SeparatorTableViewCell.nib</key>
 		<data>
 		kTA96gLVf4juEUfUYTSi7r0HaOE=
 		</data>
-		<key>Shahry logo 1.png</key>
-		<data>
-		tuyEQ2Dth9DJShA/1E7jGji8wHs=
-		</data>
 		<key>ShahryConfirmViewController.nib</key>
 		<data>
-		KeS0mbn1X95A5WWVitxi7WfKP/E=
+		qjR7jwWp1DPRTT+R4Srn+SRMjxU=
 		</data>
 		<key>ShahryPurchaseViewController.nib</key>
 		<data>
@@ -356,76 +376,24 @@
 		<data>
 		EyeNaR4Z2CDE1ECr9fj2ipdLp6Y=
 		</data>
-		<key>amexLogo.pdf</key>
-		<data>
-		cBNNvkPhA6nVcaQO3GyQ/KFpfyg=
-		</data>
 		<key>ar.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			E3RgURHIaffi0g/Da9XJXLhzNyI=
+			lzmQnalMg4sih184yIct9hbtxPU=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>chevron.down.pdf</key>
-		<data>
-		X0EcHVLRxGXgOri0KSneJ79HNmE=
-		</data>
-		<key>cvvAlert.pdf</key>
-		<data>
-		akojl5U2TUrPahL0lvdodGbn6yw=
-		</data>
-		<key>cvvIcon.pdf</key>
-		<data>
-		kxk+ZkK7hAffFwelxiXQYtqITaM=
-		</data>
-		<key>dropDownIcon.pdf</key>
-		<data>
-		Ex80rwkGZF57+7Y3f4F0JNHcMfo=
-		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GwWfEH0Xws/3K0BbF87hlIKy6nI=
+			R9FVM1WegGb+OYtUHL6OO/dDeeg=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>errorìcon.pdf</key>
-		<data>
-		jy3szfEJv7XntqDSuu2K9jDLWD0=
-		</data>
-		<key>geideaLogo.pdf</key>
-		<data>
-		oT8MPuSgVj6GwXlK7YbcvemZddM=
-		</data>
-		<key>header.pdf</key>
-		<data>
-		NCjEscsnsDODzpVEmOoSe8VrPHU=
-		</data>
-		<key>headerImg.pdf</key>
-		<data>
-		61Y/XuZ4tC1f4E+ZnA7YkxnVpKY=
-		</data>
-		<key>mastercardLogo.pdf</key>
-		<data>
-		e4iMELohDRvLM/tN3IdpHFzpoyc=
-		</data>
-		<key>selectedIcon.pdf</key>
-		<data>
-		xbmWxyDOOzgFo8kyJFoBPqcQhb8=
-		</data>
-		<key>unselectedIcon.pdf</key>
-		<data>
-		g/WunZ0eKQwVFV5Cq3EDUosAQ4w=
-		</data>
-		<key>visaLogo.pdf</key>
-		<data>
-		F4FHIutI3TPZZOflNs3QUtN19QQ=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -464,6 +432,13 @@
 			2y6QoSG1TlXBe9umlCiJa3Fou1KdbxQ75+fW1s7YKkA=
 			</data>
 		</dict>
+		<key>AlternativePMView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			m+fPGi4zaz7LyPhDTvc5mCvRGK1QznHLBMrTK1Wl9oo=
+			</data>
+		</dict>
 		<key>ApplePayViewController.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -475,7 +450,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4oQGgf/2tIvSmAKO/itkq9duIasS1tJQQ+4uPaO0qJ0=
+			HH8L6+/zD2H0hSjNymfsCxa3w/ZDKP6/DVHUgE7r0qo=
 			</data>
 		</dict>
 		<key>BNPL.storyboardc/BNPLViewController.nib</key>
@@ -496,7 +471,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vb7ppGrmg7mdStb1CJ/BExutY3nQhNOpORiszGFGuKA=
+			mFwIBH27EEy8/g723mog6Zo9FqVHFjOjCHpUV+tQhFI=
 			</data>
 		</dict>
 		<key>BNPLFooter.nib</key>
@@ -524,7 +499,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+WCH3ZMobcPE7ZUNkF6/dflxEHrin2B1njSkzB4pPaM=
+			iNpVpv8R02dWQMDws/Tf2ynG4dkbZ3eZKEed1RmdbOQ=
 			</data>
 		</dict>
 		<key>CVVViewController.nib</key>
@@ -545,14 +520,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			B0g42REwP5R2PCnl0vIu3WECUIakC/wrJG1RMSpMB64=
+			ROG69vIvgPxKhDdyRNEDTfoeB/7C7Sp5yYdtfeTrpGc=
 			</data>
 		</dict>
 		<key>CardDetailsFormViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nFBkswvngSpKdyyhQ59/431t/5xbNvuV6LiSKdPgcEE=
+			6UUTg6OCAdT15+DgS2AJZ2YGNPRO+FUZewR7iQMiVxI=
 			</data>
 		</dict>
 		<key>CountrySelectionViewController.nib</key>
@@ -590,11 +565,25 @@
 			oIB9GhBBCwS53/cky/8bB5GXU82y+VPylAgUG0akOg4=
 			</data>
 		</dict>
+		<key>GroupedBNPLView.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			F706TQHh1DolS5RHz7AbhxrmgZ5Q7oc/QbU2wlWRfus=
+			</data>
+		</dict>
+		<key>GroupedBNPLView.nib/runtime.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			F706TQHh1DolS5RHz7AbhxrmgZ5Q7oc/QbU2wlWRfus=
+			</data>
+		</dict>
 		<key>Headers/GeideaPaymentSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			96IX2frydSVHIPbOh7p8mrSj/Z0UeaOpLXnqhW40BKs=
+			Sy1UVfANpVrp5G4kdD7YPkw3YSMCId7UPG0EKqR+BcQ=
 			</data>
 		</dict>
 		<key>Headers/GeideaPaymentSDK.h</key>
@@ -608,91 +597,91 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			her9wO5Rf93PgTDTRjaXKl7njoULq11vIejzQhqijxw=
+			BFv4u9u0GYTZGbN32wK7WDuT+fp+A0EpLTKJJPWIZzk=
 			</data>
 		</dict>
 		<key>InstallmentsCollectionViewCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1sCK0zdBTA446ULYc+Ar+tIw9K4YJ7VCsf/Lq2gvwsc=
+			nE8AU9HnCDehKN/F98U84zZ3W0AGry6UdOckzcEWdPg=
 			</data>
 		</dict>
 		<key>InstallmentsCollectionViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6w3WV8PcHEJT8uAGFXdOR5h2h7RHT2Zs4JFOLuHYlKQ=
+			8vtZhp5NpSRl3I8gFT//9FJd2SRR1AVZMT7yx5ZWmDo=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wx/SC7dTZgRsYvefUpsk/2gNqLYclTp7siZYlnHKhiQ=
+			ZlUhcZJ2ogAsWH6nL48psF2E8YdHegVGylxnLvHmtvw=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			se5qG5IEU+GDP5L+DFw61gwuJDwXybVuj7JAcmObA8U=
+			QfLtAqrV1mLvko3TgE/KAJ8Cfuoua5F8CxV72PJKmp4=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MwfkOD9LSih836tUAuMhNn6vlXOniiF4I4Zy+Vq4Yk0=
+			huINggNpxk6tkjuqIcNoB0C3GJnX5IcLVguwazCJ59g=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			se5qG5IEU+GDP5L+DFw61gwuJDwXybVuj7JAcmObA8U=
+			QfLtAqrV1mLvko3TgE/KAJ8Cfuoua5F8CxV72PJKmp4=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+3Cp9Lb2Kd1gb9wsukWdJFxyrpOD3hAjz/ljvOOwIV4=
+			DWi9MyanqYSIp1r27SuCmEjTe3UCJ0CBDd59XS1zqoY=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wx/SC7dTZgRsYvefUpsk/2gNqLYclTp7siZYlnHKhiQ=
+			ZlUhcZJ2ogAsWH6nL48psF2E8YdHegVGylxnLvHmtvw=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tz9gtWwTEUlzvFXMvNjcjTexarRlbIFOs/5aqTzSXZk=
+			E/Bm9Yc7+EFrONMlTUy6par8pQIlNCVYqT8Lv+EoNLU=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gAiznETjFoP324l6b/lJG0fQnnJI9dTaTLRhW0Mizco=
+			lNn3Z1OP+nSmjW7DPTec6lX9CxUtfRh1Klb4WXLiTLs=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tz9gtWwTEUlzvFXMvNjcjTexarRlbIFOs/5aqTzSXZk=
+			E/Bm9Yc7+EFrONMlTUy6par8pQIlNCVYqT8Lv+EoNLU=
 			</data>
 		</dict>
 		<key>Modules/GeideaPaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hE1RoclOin15U0Gx5LJTuv1ym49zZZrC/RAsOvTPLv4=
+			vUcy0mtxbkEbPOZCecrVIPK4Z43jWTZjlCrvRyE0pig=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -888,7 +877,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nLAtAFMfLPBG85h2u2l8qYPom7gnmeqklfauxWrGloA=
+			kPHsgzGdAIJXGrvsjXqMBXUQm1Iv04Te36naYfyFxZk=
 			</data>
 		</dict>
 		<key>PaymentIntentsViewController.nib</key>
@@ -896,20 +885,6 @@
 			<key>hash2</key>
 			<data>
 			SIMuMjZI5EzxBqUgl9OenXOYDLYU5xKiDWLsyotha6c=
-			</data>
-		</dict>
-		<key>PaymentMethodTableViewCell.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Il8ofs5ojsZfeJwXpbuwHHAdSHYtPba98nd/u4vPcXM=
-			</data>
-		</dict>
-		<key>PaymentMethodTableViewCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Il8ofs5ojsZfeJwXpbuwHHAdSHYtPba98nd/u4vPcXM=
 			</data>
 		</dict>
 		<key>PaymentViewController.nib</key>
@@ -923,7 +898,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2UJVfrgbvkc6oQOxIPtao63GxR1MnIwXUBgIj03LbC8=
+			7ed186XIaIXIqfJjjas6YBpgZYbPPG0wrGIWzGQnx2c=
 			</data>
 		</dict>
 		<key>ProgressView.nib</key>
@@ -937,7 +912,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			B9PP2DqNtagmNvVKvDXiUorsVvkJelpAZMGxkNKJ9xI=
+			Ce9fO0cDjKPOBfNbJRwlBkj7gXJncs5foADB/BuUmz8=
 			</data>
 		</dict>
 		<key>ReceiptTableViewCell.nib</key>
@@ -965,14 +940,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O2IOsDQjowVEW3D6wQUUz9P3LT7uQqwHb3cxVQ0+7Xg=
+			sezJYSvw5zyLy+vwGk+ndqkauPQa5b7Aoct3lqBzLvU=
 			</data>
 		</dict>
 		<key>ReviewTransactionViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O2IOsDQjowVEW3D6wQUUz9P3LT7uQqwHb3cxVQ0+7Xg=
+			sezJYSvw5zyLy+vwGk+ndqkauPQa5b7Aoct3lqBzLvU=
 			</data>
 		</dict>
 		<key>SearchView.nib</key>
@@ -982,11 +957,46 @@
 			kctzU3lSDQNlXUdvFKsh3mDuQx24MFT6qPq8x3PUWaw=
 			</data>
 		</dict>
+		<key>SelectGroupedView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RKCq3OxXZmGfR3uwM87FdRpL3qgXUw4CiSwrn22XVPo=
+			</data>
+		</dict>
+		<key>SelectMeezaDigitalView.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MnbfMOfDt+kSe1khiu+CDU1yjAGKo2tm4SEeYYfu1xM=
+			</data>
+		</dict>
+		<key>SelectMeezaDigitalView.nib/runtime.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MnbfMOfDt+kSe1khiu+CDU1yjAGKo2tm4SEeYYfu1xM=
+			</data>
+		</dict>
+		<key>SelectPaymentMethodView.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pyWzq7JRNhgYR6qE4AncBoyefbnkgv++EsWlfi5YSR0=
+			</data>
+		</dict>
+		<key>SelectPaymentMethodView.nib/runtime.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pyWzq7JRNhgYR6qE4AncBoyefbnkgv++EsWlfi5YSR0=
+			</data>
+		</dict>
 		<key>SelectPaymentMethodViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZmFHAMovtFJChDNN9gYkUyFB+njUCZ4dgxWF6qyHHqY=
+			jhbvwaiSX4r16CgnBGEbmGd/WwAExzU0SrIpFt6nAtE=
 			</data>
 		</dict>
 		<key>SeparatorTableViewCell.nib</key>
@@ -996,18 +1006,11 @@
 			afmz4L0SaGEzMHG6w+LOYejlxRD7A2eT2MbtW+IAiyo=
 			</data>
 		</dict>
-		<key>Shahry logo 1.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			BPi0aYfphcMQ54JvL0Z4VQxvMATrWiyLT/VoW/cpXso=
-			</data>
-		</dict>
 		<key>ShahryConfirmViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kUTS++GDieUR5UIAFlhagncAe2NPHNEMAgWd9c0J59Q=
+			Fb3QAZonKrEGKvVozFNaYSHSISp+fKvTPrxyUC5MqSU=
 			</data>
 		</dict>
 		<key>ShahryPurchaseViewController.nib</key>
@@ -1038,114 +1041,23 @@
 			1nyoXeo3XPIAe5hoUgGSdnYQt70qwNEyU3BG5gLaITY=
 			</data>
 		</dict>
-		<key>amexLogo.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			lhoDfcoxuqhHD/Eli4B8mM5M70BkXEtJb1CDR6flLFw=
-			</data>
-		</dict>
 		<key>ar.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WI3wCxtSF+t8588DTHFTnnm5BcOOMCN5tjGvWQmTlck=
+			CWDrSIlm32sRyht+utDIKcaUCxsUOzkY+az1SYvO+8Y=
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>chevron.down.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			8fjM9GM4i7D53tiZ+kDNU3HXutfrudBbVXAEYg3LD+M=
-			</data>
-		</dict>
-		<key>cvvAlert.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			3kWw1iAHMGSTmjCl/PBnLSJAU22rGKBeMcLMBudlneo=
-			</data>
-		</dict>
-		<key>cvvIcon.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iHTTNhIWYqubxwFHsNoulW5nJ5xvQ8zpzAgh+WZmo/s=
-			</data>
-		</dict>
-		<key>dropDownIcon.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ir6RK4sPkkK5zRKY3KcXqOdd0C2t4NFJ2rrzyZObkBI=
-			</data>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lubs/b+Fjg7MiqVHBfvCRgnqYK2QSRVMJsncRl2k5N0=
+			K3/PgFnen642FjgmyBPXGb+amS0ngpF8XUsiQSEOKIM=
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>errorìcon.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			INfxnuBHGv5crvcbf1zBiVQi74Ch1qg2uN+Oy/0PNAg=
-			</data>
-		</dict>
-		<key>geideaLogo.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			S8A+A3KA80sGqUjBIwPcwNYXa2A629irTxBU9SyQR9Y=
-			</data>
-		</dict>
-		<key>header.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cpJkPiCyDJRgmvlLUZ/vpDmCiGSmim7nQdx1oPSkMGs=
-			</data>
-		</dict>
-		<key>headerImg.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			XT89/0rpp/IwOIAMIRQ8I+PAKnbcQxE/qzEVC/w95BU=
-			</data>
-		</dict>
-		<key>mastercardLogo.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			aTiEt+NDYSVwwQha2ju184NYWWfijX0sWV0S6n88EyI=
-			</data>
-		</dict>
-		<key>selectedIcon.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			TZKLDuMjJ/9A28am07uyWDc3NhGoKTLJcciGpIA8n6Y=
-			</data>
-		</dict>
-		<key>unselectedIcon.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6f5hQ23ohcp70ArnZQETuIfcHWfayTU9kdtkMC9I9Eo=
-			</data>
-		</dict>
-		<key>visaLogo.pdf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zo8mhqnbiOBRcEwIe3AdF/hXkCUIeHhXLpcgfBGQAGA=
-			</data>
 		</dict>
 	</dict>
 	<key>rules</key>

@@ -84,7 +84,7 @@
 "RWw-fd-XeW.text" = "Payment Operation :";
 
 /* Class = "UILabel"; text = "Currency  (only supports SAR)"; ObjectID = "RX6-vH-yUS"; */
-"RX6-vH-yUS.text" = "Currency";
+"RX6-vH-yUS.text" = "Currency  (only supports SAR)";
 
 /* Class = "UIButton"; normalTitle = "NONE"; ObjectID = "Rb3-E3-q0q"; */
 "Rb3-E3-q0q.normalTitle" = "NONE";
@@ -111,7 +111,7 @@
 "ZfO-Dx-tPV.text" = "https://webhook.site/9f09a7f7-b07a-4cd2-b85f-4b153454";
 
 /* Class = "UITextField"; text = "TEST_1234567890"; ObjectID = "a7b-HH-5mw"; */
-"a7b-HH-5mw.text" = "";
+"a7b-HH-5mw.text" = "TEST_1234567890";
 
 /* Class = "UIButton"; normalTitle = "Pay QR"; ObjectID = "aG0-yS-cSj"; */
 "aG0-yS-cSj.normalTitle" = "Pay QR";
@@ -183,7 +183,7 @@
 "rNq-YG-rtE.text" = "Postal code";
 
 /* Class = "UITextField"; text = "7c2fd10f-dbf7-4566-b116-33bf3593c496\n"; ObjectID = "sd8-4B-czb"; */
-"sd8-4B-czb.text" = "";
+"sd8-4B-czb.text" = "7c2fd10f-dbf7-4566-b116-33bf3593c496\n";
 
 /* Class = "UILabel"; text = "Show Address"; ObjectID = "tQP-dj-NOp"; */
 "tQP-dj-NOp.text" = "Show Address";

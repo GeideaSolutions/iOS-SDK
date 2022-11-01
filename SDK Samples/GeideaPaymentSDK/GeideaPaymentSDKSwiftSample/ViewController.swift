@@ -75,6 +75,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var isCVVReqSwitch: UISwitch!
     
     
+    @IBOutlet weak var paymentMethodsSV: UIStackView!
     private var inputs: [UITextField]!
     var paymentOperation: PaymentOperation = .NONE
     var orderId: String?
@@ -84,29 +85,32 @@ class ViewController: UIViewController, UITextFieldDelegate{
     var initiatedByViewHeight: CGFloat = 0
     var paymentMethodViewHeight: CGFloat = 345
     var merchantConfig: GDConfigResponse?
+    var paymentMethodsViews: [PMView] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        environmentSelection.isHidden = true
-        GeideaPaymentAPI.setEnvironment(environment: Environment.prod)
 //        #if DEBUG
 //        environmentSelection.selectedSegmentIndex = 1
 //        #else
 //        environmentSelection.isHidden = true
 //        environmentSelection.selectedSegmentIndex = 3
 //        #endif
-        if let savedLanguageIndex = UserDefaults.standard.object(forKey: "language") {
-            
-            languageSelectionControl.selectedSegmentIndex = savedLanguageIndex as! Int
-        }
-        languageSelectionControl.sendActions(for: UIControl.Event.valueChanged)
+//        if let savedLanguageIndex = UserDefaults.standard.object(forKey: "language") {
+//
+//            languageSelectionControl.selectedSegmentIndex = savedLanguageIndex as! Int
+//        }
+//        languageSelectionControl.sendActions(for: UIControl.Event.valueChanged)
+//
+//        environmentSelection.sendActions(for: UIControl.Event.valueChanged)
+//
+//
+//        paymentMethodSelection.selectedSegmentIndex = 0
+//        paymentMethodSelection.sendActions(for: UIControl.Event.valueChanged)
         
-        environmentSelection.sendActions(for: UIControl.Event.valueChanged)
-        
-        
-        paymentMethodSelection.selectedSegmentIndex = 0
-        paymentMethodSelection.sendActions(for: UIControl.Event.valueChanged)
+        environmentSelection.isHidden = true
+        GeideaPaymentAPI.setEnvironment(environment: Environment.prod)
         
         
         self.title = "Payment Sample Swift"
@@ -122,6 +126,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Features", style: .plain, target: self, action: #selector(addTapped))
         
+    }
+    
+    @IBAction func addPaymentOptionTapped(_ sender: Any) {
+        let pmView = PMView()
+        paymentMethodsSV.addArrangedSubview(pmView)
+        paymentMethodsViews.append(pmView)
     }
     
     @objc func addTapped() {
@@ -274,7 +284,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     private func showPayQRAlert() {
         
-        let customerDetails = GDPICustomer(withName: "test", andPhoneNumber: nil, andEmail: nil)
+        let customerDetails = GDPICustomer(phoneNumber: nil, andPhoneCountryCode: nil,andEmail: nil, name: nil)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         dateFormatter.locale =  Locale(identifier: "en_us")
@@ -287,6 +297,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         vc.name = customerDetails.name
         vc.email = customerDetails.email
         vc.phoneNumber = customerDetails.phoneNumber
+        vc.callbackUrl = callbackTF.text
         vc.expiryDate = nil
         vc.showReceipt = showReceiptSwitch.isOn
         vc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
@@ -787,6 +798,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
 //        }
         
         var paymentMethods = paymentMethodsTF.text?.trimmingCharacters(in: .whitespaces).components(separatedBy: " ")
+        
         if let  pmTF = paymentMethodsTF.text, pmTF.isEmpty {
             paymentMethods = nil
         }
@@ -842,9 +854,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         })
     }
     
-    
     func payWithGeideaForm(amount: GDAmount, tokenizationDetails: GDTokenizationDetails? = nil, customerDetails: GDCustomerDetails?, paymentIntentId: String? = nil) {
-        
         
         
         var paymentMethods = paymentMethodsTF.text?.trimmingCharacters(in: .whitespaces).components(separatedBy: " ")
@@ -859,24 +869,28 @@ class ViewController: UIViewController, UITextFieldDelegate{
             merchantName = merchantConfig?.merchantNameAr
         }
         
-        let piCustomerDetails = GDPICustomer(withName: merchantName, andEmail: emailTF.text ?? "me@test.com")
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         dateFormatter.locale = Locale(identifier: "en_us")
         let expiryDate = dateFormatter.string(from: Date().adding(days: 90))
         
-        let qrDetails = GDQRDetails(withCustomerDetails: piCustomerDetails, expiryDate: expiryDate)
-     
+        let qrDetails = GDQRDetails(phoneNumber: nil)
         
-        GeideaPaymentAPI.getMerchantConfig(completion:{ response, error in
-            guard let config = response else {
-                return
+        var pmBuilder:[GDPaymentSelectionMetods] = []
+        for pmView in paymentMethodsViews {
+            if let pm  = pmView.paymentOptions.text, !pm.isEmpty {
+                let options = pmView.paymentOptions.text?.trimmingCharacters(in: .whitespaces).components(separatedBy: ",") ?? []
+                let selection = GDPaymentSelectionMetods(label: pmView.label.text ?? "", paymentMethods: options)
+                pmBuilder.append(selection)
             }
            
-        })
+        }
+        
+        let paymentSelectionMethods:[GDPaymentSelectionMetods]? = pmBuilder.isEmpty ? nil : pmBuilder
         
         if !(merchantConfig?.isShahryCpBnplEnabled ??  false || merchantConfig?.isShahryCnpBnplEnabled ??  false || merchantConfig?.isSouhoolaCnpBnplEnabled ??  false) {
-            GeideaPaymentAPI.payWithGeideaForm(theAmount: amount, showAddress: showAddressSwitch.isOn, showEmail: showEmailSwitch.isOn, showReceipt: showReceiptSwitch.isOn, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails, applePayDetails: applePayDetails, config: merchantConfig, paymentIntentId: paymentIntentTF.text, qrDetails: qrDetails, viewController: self, completion:{ response, error in
+            GeideaPaymentAPI.payWithGeideaForm(theAmount: amount, showAddress: showAddressSwitch.isOn, showEmail: showEmailSwitch.isOn, showReceipt: showReceiptSwitch.isOn, tokenizationDetails: tokenizationDetails, customerDetails: customerDetails, applePayDetails: applePayDetails, config: merchantConfig, paymentIntentId: paymentIntentTF.text, qrDetails: qrDetails, cardPaymentMethods: nil, paymentSelectionMethods: paymentSelectionMethods, viewController: self, completion:{ response, error in
                 DispatchQueue.main.async {
                     
                     if let err = error {
@@ -923,7 +937,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
             })
         } else {
             let vc = BNPLItemsViewController()
-            vc.viewModel =  BNPLItemViewModel(amount: amount, showAddress: showAddressSwitch.isOn, showEmail: showEmailSwitch.isOn, showReceipt: showReceiptSwitch.isOn, customerDetails: customerDetails, tokenizationDetails: tokenizationDetails, applePayDetails: applePayDetails, config: merchantConfig, paymentIntent: paymentIntentTF.text, qrCustomerDetails: qrDetails, paymentMethods: paymentMethods, isNavController: false, completion:{ response, error in
+            vc.viewModel =  BNPLItemViewModel(amount: amount, showAddress: showAddressSwitch.isOn, showEmail: showEmailSwitch.isOn, showReceipt: showReceiptSwitch.isOn, customerDetails: customerDetails, tokenizationDetails: tokenizationDetails, applePayDetails: applePayDetails, config: merchantConfig, paymentIntent: paymentIntentTF.text, qrCustomerDetails: qrDetails, paymentMethods: paymentMethods, paymentSelectionMethods: paymentSelectionMethods, isNavController: false, completion:{ response, error in
                 DispatchQueue.main.async {
                     
                     if let err = error {

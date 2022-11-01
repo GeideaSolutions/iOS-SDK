@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,32 +48,28 @@
 		F30A53C62806FE1300FCF78B /* BNPLItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A53C52806FE1300FCF78B /* BNPLItemViewModel.swift */; };
 		F33CF2B22806AAEE0065778A /* BNPLItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CF2B02806AAEE0065778A /* BNPLItemsViewController.swift */; };
 		F33CF2B32806AAEE0065778A /* ShahryItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33CF2B12806AAEE0065778A /* ShahryItemsViewController.xib */; };
-		F3919C7028C8B99B002C21CB /* GeideaPaymentSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3919C5F28C76AB1002C21CB /* GeideaPaymentSDK.xcframework */; };
-		F3919C7128C8B99B002C21CB /* GeideaPaymentSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3919C5F28C76AB1002C21CB /* GeideaPaymentSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F3919C7328C8BA06002C21CB /* GeideaPaymentSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3919C5F28C76AB1002C21CB /* GeideaPaymentSDK.xcframework */; };
-		F3919C7428C8BA06002C21CB /* GeideaPaymentSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3919C5F28C76AB1002C21CB /* GeideaPaymentSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F3A594C228620457001B09DF /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A594C128620457001B09DF /* UITextField+Extensions.swift */; };
+		F3D5CCD7290675210035243E /* PMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D5CCD6290675210035243E /* PMView.swift */; };
+		F3D5CCD92906752F0035243E /* PMView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3D5CCD82906752F0035243E /* PMView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F3919C7228C8B99B002C21CB /* Embed Frameworks */ = {
+		F3A03BEB29112A2400F6121C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F3919C7128C8B99B002C21CB /* GeideaPaymentSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3919C7528C8BA06002C21CB /* Embed Frameworks */ = {
+		F3A03BF22911445C00F6121C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F3919C7428C8BA06002C21CB /* GeideaPaymentSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +132,9 @@
 		F30A53C52806FE1300FCF78B /* BNPLItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNPLItemViewModel.swift; sourceTree = "<group>"; };
 		F33CF2B02806AAEE0065778A /* BNPLItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNPLItemsViewController.swift; sourceTree = "<group>"; };
 		F33CF2B12806AAEE0065778A /* ShahryItemsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShahryItemsViewController.xib; sourceTree = "<group>"; };
-		F3919C5F28C76AB1002C21CB /* GeideaPaymentSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GeideaPaymentSDK.xcframework; path = "../../../../Mobile SDK reload/MobileSDK.iOS/GeideaPaymentSDK/build/GeideaPaymentSDK.xcframework"; sourceTree = "<group>"; };
 		F3A594C128620457001B09DF /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		F3D5CCD6290675210035243E /* PMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMView.swift; sourceTree = "<group>"; };
+		F3D5CCD82906752F0035243E /* PMView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PMView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3919C7028C8B99B002C21CB /* GeideaPaymentSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +149,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3919C7328C8BA06002C21CB /* GeideaPaymentSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +247,8 @@
 			children = (
 				E63E45D525EF8F3B0077251F /* FilterViewController.swift */,
 				E63E45D125EF8F230077251F /* FilterViewController.xib */,
+				F3D5CCD6290675210035243E /* PMView.swift */,
+				F3D5CCD82906752F0035243E /* PMView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,7 +279,6 @@
 		E6A5E80F2540C42D0080BF3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3919C5F28C76AB1002C21CB /* GeideaPaymentSDK.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -317,7 +313,7 @@
 				E6117AAD2538971700959D78 /* Sources */,
 				E6117AAE2538971700959D78 /* Frameworks */,
 				E6117AAF2538971700959D78 /* Resources */,
-				F3919C7228C8B99B002C21CB /* Embed Frameworks */,
+				F3A03BEB29112A2400F6121C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,7 +331,7 @@
 				E6A5E7E02540C1C20080BF3D /* Sources */,
 				E6A5E7E12540C1C20080BF3D /* Frameworks */,
 				E6A5E7E22540C1C20080BF3D /* Resources */,
-				F3919C7528C8BA06002C21CB /* Embed Frameworks */,
+				F3A03BF22911445C00F6121C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -390,6 +386,7 @@
 			files = (
 				E6ADAAF325405B7A00EC655F /* Main.storyboard in Resources */,
 				E63E461B25EFA85D0077251F /* FilterTableViewCell.xib in Resources */,
+				F3D5CCD92906752F0035243E /* PMView.xib in Resources */,
 				F33CF2B32806AAEE0065778A /* ShahryItemsViewController.xib in Resources */,
 				E67E40A7256FD68100FAB817 /* GoogleService-Info_endavaUK.plist in Resources */,
 				E6117AC02538971E00959D78 /* LaunchScreen.storyboard in Resources */,
@@ -438,6 +435,7 @@
 				E6DE951E26A59B6C008E9DC7 /* Date+Extensions.swift in Sources */,
 				E6456D6A2582AE9400E6C4C2 /* UiView+Extensions.swift in Sources */,
 				E63E461A25EFA85D0077251F /* FilterTableViewCell.swift in Sources */,
+				F3D5CCD7290675210035243E /* PMView.swift in Sources */,
 				E63E45CE25EF79ED0077251F /* OrderDetailsViewController.swift in Sources */,
 				F3A594C228620457001B09DF /* UITextField+Extensions.swift in Sources */,
 				F30A53C62806FE1300FCF78B /* BNPLItemViewModel.swift in Sources */,
@@ -509,7 +507,7 @@
 				CODE_SIGN_ENTITLEMENTS = GeideaPaymentSDKSwiftSample/GeideaPaymentSDKSwiftSampleDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 100;
+				CURRENT_PROJECT_VERSION = 130;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4RU97UZLFK;
 				ENABLE_BITCODE = NO;
@@ -524,7 +522,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.geidea.GeideaPaymentSDK.VSwift1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -544,7 +542,7 @@
 				CODE_SIGN_ENTITLEMENTS = GeideaPaymentSDKSwiftSample/GeideaPaymentSDKSwiftSample.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 100;
+				CURRENT_PROJECT_VERSION = 130;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4RU97UZLFK;
 				ENABLE_BITCODE = NO;
@@ -554,7 +552,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.geidea.GeideaPaymentSDK.VSwift1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
