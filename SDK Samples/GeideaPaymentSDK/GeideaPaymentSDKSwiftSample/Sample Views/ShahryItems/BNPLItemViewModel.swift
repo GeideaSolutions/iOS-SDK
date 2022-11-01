@@ -28,9 +28,10 @@ class BNPLItemViewModel {
     public var showShahry: Bool = true
     public var showApplePay: Bool = false
     public var showCard: Bool = false
+    public var paymentSelectionMethods: [GDPaymentSelectionMetods]?
     public var completion: FormCompletionHandler
     
-    init(amount: GDAmount, showAddress: Bool, showEmail: Bool, showReceipt: Bool,customerDetails: GDCustomerDetails?, tokenizationDetails: GDTokenizationDetails?, applePayDetails: GDApplePayDetails?, config: GDConfigResponse?, paymentIntent: String?,  qrCustomerDetails: GDQRDetails?, paymentMethods: [String]?, isNavController: Bool, completion: @escaping FormCompletionHandler) {
+    init(amount: GDAmount, showAddress: Bool, showEmail: Bool, showReceipt: Bool,customerDetails: GDCustomerDetails?, tokenizationDetails: GDTokenizationDetails?, applePayDetails: GDApplePayDetails?, config: GDConfigResponse?, paymentIntent: String?,  qrCustomerDetails: GDQRDetails?, paymentMethods: [String]?, paymentSelectionMethods: [GDPaymentSelectionMetods]?, isNavController: Bool, completion: @escaping FormCompletionHandler) {
         self.amount = amount
         self.applePay = applePayDetails
         self.customerDetails = customerDetails
@@ -42,6 +43,7 @@ class BNPLItemViewModel {
         self.paymentIntentId = paymentIntent
         self.qrCustomerDetails = qrCustomerDetails
         self.paymentMethods = paymentMethods
+        self.paymentSelectionMethods = paymentSelectionMethods
         self.completion = completion
         
     }

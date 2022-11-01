@@ -1,10 +1,8 @@
-# iOS-SDK version 3.1
-Major Changelog from version 2.0
- - Branding added based on your merchant config colors
- - 3DSV2 included for Token payments
- - BNPL installments providers included for Egypt merchants (vAlU, Shahry, Souhoola)
- - updated HPP form  
- 
+# iOS-SDK version 4.0
+Major Changelog from version 3.0
+ - Select payment screen redesign
+ - Meeza Digital Wallet redone to Request To Pay to be first
+ - Grouped BNPL expandable 
  
 
 
@@ -50,15 +48,18 @@ Example Objective C:
 
    Example Swift:
    
-    if !GeideaPaymentApi.isCredentialsAvailable() {
-        GeideaPaymentAPI.setCredentials(withMerchantKey: “merchantKey” andPassword: “password”)
-    }
+    GeideaPaymentAPI.setCredentials(withMerchantKey: “merchantKey” andPassword: “password”)
+    
+    if your credentials are not changed you can wrap it as below to not store credentials in Keychain every time
+    if !GeideaPaymentApi.isCredentialsAvailable() {}
 
    Example Objective C:
     
-    if (![GeideaPaymentAPI isCredentialsAvailable]) {
-        [GeideaPaymentAPI setCredentialsWithMerchantKey: @"merchantKey" andPassword: @"password"];
-    }
+    
+   [GeideaPaymentAPI setCredentialsWithMerchantKey: @"merchantKey" andPassword: @"password"];
+    
+    if your credentials are not changed you can wrap it as below to not store credentials in Keychain every time
+            if (![GeideaPaymentAPI isCredentialsAvailable]) {}
     
 The function GeideaPaymentApi.getMerchantConfig:
 

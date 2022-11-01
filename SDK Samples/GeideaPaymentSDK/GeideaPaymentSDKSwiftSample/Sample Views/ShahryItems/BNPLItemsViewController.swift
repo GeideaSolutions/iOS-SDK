@@ -42,6 +42,8 @@ class BNPLItemsViewController: UIViewController {
     
     func setupViews() {
         
+        total = viewModel.amount.amount
+        
         inputs = [priceTF, countTF,nameTF, descriptionTF, categoryTF ]
         handleTextFields()
         
@@ -95,12 +97,14 @@ class BNPLItemsViewController: UIViewController {
 
     @IBAction func payItemsTapped(_ sender: Any) {
         let amount = GDAmount(amount: total, currency: viewModel.amount.currency)
-        GeideaPaymentAPI.payWithGeideaForm(theAmount: amount, showAddress: viewModel.showAddress, showEmail: viewModel.showEmail, showReceipt: viewModel.showReceipt, tokenizationDetails: viewModel.tokenizationDetails, customerDetails: viewModel.customerDetails,config: viewModel.config, paymentIntentId: viewModel.paymentIntentId, qrDetails: viewModel.qrCustomerDetails, bnplItems: items, paymentMethods: viewModel.paymentMethods, viewController: self, completion: { order, error in
+        GeideaPaymentAPI.payWithGeideaForm(theAmount: amount, showAddress: viewModel.showAddress, showEmail: viewModel.showEmail, showReceipt: viewModel.showReceipt, tokenizationDetails: viewModel.tokenizationDetails, customerDetails: viewModel.customerDetails,config: viewModel.config, paymentIntentId: viewModel.paymentIntentId, qrDetails: viewModel.qrCustomerDetails, bnplItems: items, cardPaymentMethods: viewModel.paymentMethods, paymentSelectionMethods: viewModel.paymentSelectionMethods, viewController: self, completion: { order, error in
             DispatchQueue.main.async {
-                self.dismiss(animated: false)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+               
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     self.viewModel.completion(order, error)
                 }
+                
+                self.dismiss(animated: false)
              
             }
            

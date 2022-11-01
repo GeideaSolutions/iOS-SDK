@@ -77,10 +77,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    [GeideaPaymentAPI setEnvironmentWithEnvironment:EnvironmentProd];
     
-     [_environmentSelection setHidden:true];
 //    [_environmentSelection addTarget:self action:@selector(valueChangedEnvironment:) forControlEvents:UIControlEventValueChanged];
 //    [_environmentSelection setSelectedSegmentIndex:0];
 //    [self valueChangedEnvironment:_environmentSelection];
@@ -88,12 +85,15 @@
 //    [_paymentMethodSelection addTarget:self action:@selector(valueChangedPayment:) forControlEvents:UIControlEventValueChanged];
 //    [_paymentMethodSelection setSelectedSegmentIndex:1];
 //    [self valueChangedPayment:_paymentMethodSelection];
+    _paymentMethodSelection.hidden = true;
+    [GeideaPaymentAPI setEnvironmentWithEnvironment:EnvironmentProd];
     
     self.title = @"Payment Sample Objective C";
     
-    
     _scrollView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.paymentOperation = _paymentOperation;
+    
+    
     
 }
 
@@ -265,8 +265,8 @@
 - (void)payWithAmount:(GDAmount *)amount andCardDetails: (GDCardDetails *) cardDetails andTokenizationDetails: (GDTokenizationDetails *) tokenizationDetails  andCustomerDetails: customerDetails {
     UINavigationController *navVC =  (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
     
-    [GeideaPaymentAPI payWithTheAmount:amount withCardDetails:cardDetails config:_merchantConfig showReceipt:true andTokenizationDetails:tokenizationDetails andPaymentIntentId:NULL andCustomerDetails:customerDetails orderId:NULL paymentMethods:NULL dismissAction:NULL navController:navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
-//    [GeideaPaymentAPI payWithTheAmount:amount withCardDetails:cardDetails and3DV2Enabled: true andTokenizationDetails:tokenizationDetails andPaymentIntentId:_eInvoiceIdTF.text andCustomerDetails:customerDetails orderId:NULL paymentMethods:NULL isFromHPP:false dismissAction:NULL navController:navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+    [GeideaPaymentAPI payWithTheAmount:amount withCardDetails:cardDetails initializeResponse:NULL config:_merchantConfig isHPP:false showReceipt:true andTokenizationDetails:tokenizationDetails andPaymentIntentId:NULL andCustomerDetails:customerDetails orderId:NULL paymentMethods:NULL dismissAction:NULL navController:navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+
         
         if (error != NULL) {
             if (!error.errors || !error.errors.count) {
@@ -316,9 +316,9 @@
 - (void)payWithGeideaForm:(GDAmount *)amount showAddress: (bool)addressShown  showEmail: (bool)emailShown andTokenizationDetails: (GDTokenizationDetails *) tokenizationDetails  andCustomerDetails: customerDetails  andApplePayDetails: (GDApplePayDetails *) applePayDetails {
     UINavigationController *navVC =  (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
     
-    [GeideaPaymentAPI payWithGeideaFormWithTheAmount:amount showAddress:addressShown showEmail:emailShown showReceipt:true tokenizationDetails:tokenizationDetails customerDetails:customerDetails applePayDetails:applePayDetails config:_merchantConfig paymentIntentId:NULL qrDetails:NULL bnplItems:NULL paymentMethods:NULL viewController:navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
- 
-//    [GeideaPaymentAPI payWithGeideaFormWithTheAmount:amount showAddress:addressShown showEmail:emailShown showReceipt:true tokenizationDetails:tokenizationDetails customerDetails:customerDetails applePayDetails:applePayDetails config:NULL paymentIntentId:NULL qrDetails:NULL paymentMethods:NULL viewController:self completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+    [GeideaPaymentAPI payWithGeideaFormWithTheAmount:amount showAddress:false showEmail:false showReceipt:true tokenizationDetails:tokenizationDetails customerDetails:customerDetails applePayDetails:applePayDetails config:_merchantConfig paymentIntentId:NULL qrDetails:NULL bnplItems:NULL cardPaymentMethods:NULL paymentSelectionMethods:NULL viewController:navVC completion:^(GDOrderResponse* order, GDErrorResponse* error) {
+        
+
 
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             

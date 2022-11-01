@@ -874,7 +874,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GDOrdersResponse")
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK12GDPICustomer")
 @interface GDPICustomer : NSObject
-- (nonnull instancetype)initWithName:(NSString * _Nullable)name andPhoneNumber:(NSString * _Nullable)phoneNumber andPhoneCountryCode:(NSString * _Nullable)phoneCountryCode andEmail:(NSString * _Nullable)email OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithPhoneNumber:(NSString * _Nullable)phoneNumber andPhoneCountryCode:(NSString * _Nullable)phoneCountryCode andEmail:(NSString * _Nullable)email name:(NSString * _Nullable)name OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -993,6 +993,14 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK23GDPaymentMethodResponse")
 @end
 
 
+SWIFT_CLASS("_TtC16GeideaPaymentSDK24GDPaymentSelectionMetods")
+@interface GDPaymentSelectionMetods : NSObject
+- (nonnull instancetype)initWithLabel:(NSString * _Nonnull)label paymentMethods:(NSArray<NSString *> * _Nonnull)paymentMethods OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC16GeideaPaymentSDK10GDPlatform")
 @interface GDPlatform : NSObject
 @property (nonatomic, copy) NSString * _Nullable integrationType;
@@ -1022,7 +1030,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GDProductMConfig")
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK11GDQRDetails")
 @interface GDQRDetails : NSObject
-- (nonnull instancetype)initWithCustomerDetails:(GDPICustomer * _Nullable)qrCustomerDetails expiryDate:(NSString * _Nullable)expiryDate OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithPhoneNumber:(NSString * _Nullable)phoneNumber email:(NSString * _Nullable)email name:(NSString * _Nullable)name expiryDate:(NSString * _Nullable)expiryDate OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -1145,7 +1153,8 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK29GDShahrySelectPlanInstallment")
 @property (nonatomic) BOOL restrictPaymentMethods;
 @property (nonatomic, copy) NSArray<NSString *> * _Nullable paymentMethods;
 @property (nonatomic, copy) NSArray<GDBNPLItem *> * _Nullable items;
-- (nonnull instancetype)initWithCustomerIdentifier:(NSString * _Nullable)customerIdentifier totalAmount:(double)totalAmount currency:(NSString * _Nullable)currency merchantReferenceId:(NSString * _Nullable)merchantReferenceId callbackUrl:(NSString * _Nullable)callbackUrl billingAddress:(GDAddress * _Nullable)billingAddress shippingAddress:(GDAddress * _Nullable)shippingAddress customerEmail:(NSString * _Nullable)customerEmail restrictPaymentMethods:(BOOL)restrictPaymentMethods paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods items:(NSArray<GDBNPLItem *> * _Nullable)items OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSString * _Nullable orderId;
+- (nonnull instancetype)initWithCustomerIdentifier:(NSString * _Nullable)customerIdentifier totalAmount:(double)totalAmount currency:(NSString * _Nullable)currency merchantReferenceId:(NSString * _Nullable)merchantReferenceId callbackUrl:(NSString * _Nullable)callbackUrl billingAddress:(GDAddress * _Nullable)billingAddress shippingAddress:(GDAddress * _Nullable)shippingAddress customerEmail:(NSString * _Nullable)customerEmail restrictPaymentMethods:(BOOL)restrictPaymentMethods paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods items:(NSArray<GDBNPLItem *> * _Nullable)items orderId:(NSString * _Nullable)orderId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -1238,7 +1247,8 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK33GDSouhoolaInstallmentPlanSelected")
 @property (nonatomic, copy) NSArray<GDBNPLItem *> * _Nullable items;
 @property (nonatomic, strong) GDSouhoolaBNPLDetails * _Nullable bnplDetails;
 @property (nonatomic) BOOL cashOnDelivery;
-- (nonnull instancetype)initWithCustomerIdentifier:(NSString * _Nullable)customerIdentifier customerPIN:(NSString * _Nullable)customerPIN totalAmount:(double)totalAmount currency:(NSString * _Nullable)currency merchantReferenceId:(NSString * _Nullable)merchantReferenceId callbackUrl:(NSString * _Nullable)callbackUrl billingAddress:(GDAddress * _Nullable)billingAddress shippingAddress:(GDAddress * _Nullable)shippingAddress customerEmail:(NSString * _Nullable)customerEmail restrictPaymentMethods:(BOOL)restrictPaymentMethods paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods items:(NSArray<GDBNPLItem *> * _Nullable)items bnplDetails:(GDSouhoolaBNPLDetails * _Nullable)bnplDetails cashOnDelivery:(BOOL)cashOnDelivery OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSString * _Nullable orderId;
+- (nonnull instancetype)initWithCustomerIdentifier:(NSString * _Nullable)customerIdentifier customerPIN:(NSString * _Nullable)customerPIN totalAmount:(double)totalAmount currency:(NSString * _Nullable)currency merchantReferenceId:(NSString * _Nullable)merchantReferenceId callbackUrl:(NSString * _Nullable)callbackUrl billingAddress:(GDAddress * _Nullable)billingAddress shippingAddress:(GDAddress * _Nullable)shippingAddress customerEmail:(NSString * _Nullable)customerEmail restrictPaymentMethods:(BOOL)restrictPaymentMethods paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods items:(NSArray<GDBNPLItem *> * _Nullable)items bnplDetails:(GDSouhoolaBNPLDetails * _Nullable)bnplDetails cashOnDelivery:(BOOL)cashOnDelivery orderId:(NSString * _Nullable)orderId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -1930,7 +1940,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)payWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount showAddress:(BOOL)showAddress showEmail:(BOOL)showEmail showReceipt:(BOOL)showReceipt tokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails customerDetails:(GDCustomerDetails * _Nullable)customerDetails applePayDetails:(GDApplePayDetails * _Nullable)applePayDetails config:(GDConfigResponse * _Nullable)config paymentIntentId:(NSString * _Nullable)paymentIntentId qrDetails:(GDQRDetails * _Nullable)qrDetails bnplItems:(NSArray<GDBNPLItem *> * _Nullable)bnplItems paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)payWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount showAddress:(BOOL)showAddress showEmail:(BOOL)showEmail showReceipt:(BOOL)showReceipt tokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails customerDetails:(GDCustomerDetails * _Nullable)customerDetails applePayDetails:(GDApplePayDetails * _Nullable)applePayDetails config:(GDConfigResponse * _Nullable)config paymentIntentId:(NSString * _Nullable)paymentIntentId qrDetails:(GDQRDetails * _Nullable)qrDetails bnplItems:(NSArray<GDBNPLItem *> * _Nullable)bnplItems cardPaymentMethods:(NSArray<NSString *> * _Nullable)cardPaymentMethods paymentSelectionMethods:(NSArray<GDPaymentSelectionMetods *> * _Nullable)paymentSelectionMethods viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Starting paying QR flow using Geidea Form
 /// <ul>
 ///   <li>
@@ -2042,7 +2052,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)payQRWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nonnull)qrDetails config:(GDConfigResponse * _Nullable)config showReceipt:(BOOL)showReceipt viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)payQRWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nonnull)qrDetails config:(GDConfigResponse * _Nullable)config showReceipt:(BOOL)showReceipt orderId:(NSString * _Nullable)orderId callbackUrl:(NSString * _Nullable)callbackUrl viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Starting paying QR flow
 /// <ul>
 ///   <li>
@@ -2154,7 +2164,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)payQRWithTheAmount:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nullable)qrDetails config:(GDConfigResponse * _Nullable)config showReceipt:(BOOL)showReceipt merchantName:(NSString * _Nullable)merchantName viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)payQRWithTheAmount:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nullable)qrDetails config:(GDConfigResponse * _Nullable)config showReceipt:(BOOL)showReceipt merchantName:(NSString * _Nullable)merchantName orderId:(NSString * _Nullable)orderId callbackUrl:(NSString * _Nullable)callbackUrl viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Starting the pay with token flow cardDetails already tokenized from Pay request
 /// <ul>
 ///   <li>
@@ -2606,7 +2616,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)getQRImageWith:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nonnull)qrDetails merchantName:(NSString * _Nonnull)merchantName orderId:(NSString * _Nullable)orderId completion:(void (^ _Nonnull)(GDQRResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)getQRImageWith:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nullable)qrDetails merchantName:(NSString * _Nonnull)merchantName orderId:(NSString * _Nullable)orderId callbackUrl:(NSString * _Nullable)callbackUrl completion:(void (^ _Nonnull)(GDQRResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (void)requestToPayWithQRCodeMessage:(NSString * _Nonnull)message phoneNumber:(NSString * _Nonnull)phoneNumber orderId:(NSString * _Nullable)orderId completion:(void (^ _Nonnull)(GDRTPQRResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (NSTimer * _Nonnull)checkPaymentIntentStatusWith:(NSString * _Nonnull)paymentIntentId atEverySeconds:(NSInteger)seconds forMinutes:(NSInteger)minutes completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
 + (void)cancelWith:(NSString * _Nonnull)orderId callbackUrl:(NSString * _Nullable)callbackUrl navController:(UIViewController * _Nonnull)navController completion:(void (^ _Nonnull)(GDCancelResponse * _Nullable, GDErrorResponse * _Nullable))completion;
@@ -2988,6 +2998,7 @@ typedef SWIFT_ENUM(NSInteger, PaymentType, open) {
   PaymentTypeValU = 2,
   PaymentTypeShahry = 3,
   PaymentTypeSouhoola = 4,
+  PaymentTypeBNPLGroup = 5,
 };
 
 @class UIColor;
@@ -3029,6 +3040,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 - (void)willMoveToSuperview:(UIView * _Nullable)newSuperview;
 - (void)prepareForInterfaceBuilder;
 @end
+
 
 
 
@@ -3930,7 +3942,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GDOrdersResponse")
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK12GDPICustomer")
 @interface GDPICustomer : NSObject
-- (nonnull instancetype)initWithName:(NSString * _Nullable)name andPhoneNumber:(NSString * _Nullable)phoneNumber andPhoneCountryCode:(NSString * _Nullable)phoneCountryCode andEmail:(NSString * _Nullable)email OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithPhoneNumber:(NSString * _Nullable)phoneNumber andPhoneCountryCode:(NSString * _Nullable)phoneCountryCode andEmail:(NSString * _Nullable)email name:(NSString * _Nullable)name OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -4049,6 +4061,14 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK23GDPaymentMethodResponse")
 @end
 
 
+SWIFT_CLASS("_TtC16GeideaPaymentSDK24GDPaymentSelectionMetods")
+@interface GDPaymentSelectionMetods : NSObject
+- (nonnull instancetype)initWithLabel:(NSString * _Nonnull)label paymentMethods:(NSArray<NSString *> * _Nonnull)paymentMethods OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC16GeideaPaymentSDK10GDPlatform")
 @interface GDPlatform : NSObject
 @property (nonatomic, copy) NSString * _Nullable integrationType;
@@ -4078,7 +4098,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GDProductMConfig")
 
 SWIFT_CLASS("_TtC16GeideaPaymentSDK11GDQRDetails")
 @interface GDQRDetails : NSObject
-- (nonnull instancetype)initWithCustomerDetails:(GDPICustomer * _Nullable)qrCustomerDetails expiryDate:(NSString * _Nullable)expiryDate OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithPhoneNumber:(NSString * _Nullable)phoneNumber email:(NSString * _Nullable)email name:(NSString * _Nullable)name expiryDate:(NSString * _Nullable)expiryDate OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -4201,7 +4221,8 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK29GDShahrySelectPlanInstallment")
 @property (nonatomic) BOOL restrictPaymentMethods;
 @property (nonatomic, copy) NSArray<NSString *> * _Nullable paymentMethods;
 @property (nonatomic, copy) NSArray<GDBNPLItem *> * _Nullable items;
-- (nonnull instancetype)initWithCustomerIdentifier:(NSString * _Nullable)customerIdentifier totalAmount:(double)totalAmount currency:(NSString * _Nullable)currency merchantReferenceId:(NSString * _Nullable)merchantReferenceId callbackUrl:(NSString * _Nullable)callbackUrl billingAddress:(GDAddress * _Nullable)billingAddress shippingAddress:(GDAddress * _Nullable)shippingAddress customerEmail:(NSString * _Nullable)customerEmail restrictPaymentMethods:(BOOL)restrictPaymentMethods paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods items:(NSArray<GDBNPLItem *> * _Nullable)items OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSString * _Nullable orderId;
+- (nonnull instancetype)initWithCustomerIdentifier:(NSString * _Nullable)customerIdentifier totalAmount:(double)totalAmount currency:(NSString * _Nullable)currency merchantReferenceId:(NSString * _Nullable)merchantReferenceId callbackUrl:(NSString * _Nullable)callbackUrl billingAddress:(GDAddress * _Nullable)billingAddress shippingAddress:(GDAddress * _Nullable)shippingAddress customerEmail:(NSString * _Nullable)customerEmail restrictPaymentMethods:(BOOL)restrictPaymentMethods paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods items:(NSArray<GDBNPLItem *> * _Nullable)items orderId:(NSString * _Nullable)orderId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -4294,7 +4315,8 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK33GDSouhoolaInstallmentPlanSelected")
 @property (nonatomic, copy) NSArray<GDBNPLItem *> * _Nullable items;
 @property (nonatomic, strong) GDSouhoolaBNPLDetails * _Nullable bnplDetails;
 @property (nonatomic) BOOL cashOnDelivery;
-- (nonnull instancetype)initWithCustomerIdentifier:(NSString * _Nullable)customerIdentifier customerPIN:(NSString * _Nullable)customerPIN totalAmount:(double)totalAmount currency:(NSString * _Nullable)currency merchantReferenceId:(NSString * _Nullable)merchantReferenceId callbackUrl:(NSString * _Nullable)callbackUrl billingAddress:(GDAddress * _Nullable)billingAddress shippingAddress:(GDAddress * _Nullable)shippingAddress customerEmail:(NSString * _Nullable)customerEmail restrictPaymentMethods:(BOOL)restrictPaymentMethods paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods items:(NSArray<GDBNPLItem *> * _Nullable)items bnplDetails:(GDSouhoolaBNPLDetails * _Nullable)bnplDetails cashOnDelivery:(BOOL)cashOnDelivery OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSString * _Nullable orderId;
+- (nonnull instancetype)initWithCustomerIdentifier:(NSString * _Nullable)customerIdentifier customerPIN:(NSString * _Nullable)customerPIN totalAmount:(double)totalAmount currency:(NSString * _Nullable)currency merchantReferenceId:(NSString * _Nullable)merchantReferenceId callbackUrl:(NSString * _Nullable)callbackUrl billingAddress:(GDAddress * _Nullable)billingAddress shippingAddress:(GDAddress * _Nullable)shippingAddress customerEmail:(NSString * _Nullable)customerEmail restrictPaymentMethods:(BOOL)restrictPaymentMethods paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods items:(NSArray<GDBNPLItem *> * _Nullable)items bnplDetails:(GDSouhoolaBNPLDetails * _Nullable)bnplDetails cashOnDelivery:(BOOL)cashOnDelivery orderId:(NSString * _Nullable)orderId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -4986,7 +5008,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)payWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount showAddress:(BOOL)showAddress showEmail:(BOOL)showEmail showReceipt:(BOOL)showReceipt tokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails customerDetails:(GDCustomerDetails * _Nullable)customerDetails applePayDetails:(GDApplePayDetails * _Nullable)applePayDetails config:(GDConfigResponse * _Nullable)config paymentIntentId:(NSString * _Nullable)paymentIntentId qrDetails:(GDQRDetails * _Nullable)qrDetails bnplItems:(NSArray<GDBNPLItem *> * _Nullable)bnplItems paymentMethods:(NSArray<NSString *> * _Nullable)paymentMethods viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)payWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount showAddress:(BOOL)showAddress showEmail:(BOOL)showEmail showReceipt:(BOOL)showReceipt tokenizationDetails:(GDTokenizationDetails * _Nullable)tokenizationDetails customerDetails:(GDCustomerDetails * _Nullable)customerDetails applePayDetails:(GDApplePayDetails * _Nullable)applePayDetails config:(GDConfigResponse * _Nullable)config paymentIntentId:(NSString * _Nullable)paymentIntentId qrDetails:(GDQRDetails * _Nullable)qrDetails bnplItems:(NSArray<GDBNPLItem *> * _Nullable)bnplItems cardPaymentMethods:(NSArray<NSString *> * _Nullable)cardPaymentMethods paymentSelectionMethods:(NSArray<GDPaymentSelectionMetods *> * _Nullable)paymentSelectionMethods viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Starting paying QR flow using Geidea Form
 /// <ul>
 ///   <li>
@@ -5098,7 +5120,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)payQRWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nonnull)qrDetails config:(GDConfigResponse * _Nullable)config showReceipt:(BOOL)showReceipt viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)payQRWithGeideaFormWithTheAmount:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nonnull)qrDetails config:(GDConfigResponse * _Nullable)config showReceipt:(BOOL)showReceipt orderId:(NSString * _Nullable)orderId callbackUrl:(NSString * _Nullable)callbackUrl viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Starting paying QR flow
 /// <ul>
 ///   <li>
@@ -5210,7 +5232,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)payQRWithTheAmount:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nullable)qrDetails config:(GDConfigResponse * _Nullable)config showReceipt:(BOOL)showReceipt merchantName:(NSString * _Nullable)merchantName viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)payQRWithTheAmount:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nullable)qrDetails config:(GDConfigResponse * _Nullable)config showReceipt:(BOOL)showReceipt merchantName:(NSString * _Nullable)merchantName orderId:(NSString * _Nullable)orderId callbackUrl:(NSString * _Nullable)callbackUrl viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 /// Starting the pay with token flow cardDetails already tokenized from Pay request
 /// <ul>
 ///   <li>
@@ -5662,7 +5684,7 @@ SWIFT_CLASS("_TtC16GeideaPaymentSDK16GeideaPaymentAPI")
 /// 1.0
 /// version:
 /// 1.0
-+ (void)getQRImageWith:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nonnull)qrDetails merchantName:(NSString * _Nonnull)merchantName orderId:(NSString * _Nullable)orderId completion:(void (^ _Nonnull)(GDQRResponse * _Nullable, GDErrorResponse * _Nullable))completion;
++ (void)getQRImageWith:(GDAmount * _Nonnull)amount qrDetails:(GDQRDetails * _Nullable)qrDetails merchantName:(NSString * _Nonnull)merchantName orderId:(NSString * _Nullable)orderId callbackUrl:(NSString * _Nullable)callbackUrl completion:(void (^ _Nonnull)(GDQRResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (void)requestToPayWithQRCodeMessage:(NSString * _Nonnull)message phoneNumber:(NSString * _Nonnull)phoneNumber orderId:(NSString * _Nullable)orderId completion:(void (^ _Nonnull)(GDRTPQRResponse * _Nullable, GDErrorResponse * _Nullable))completion;
 + (NSTimer * _Nonnull)checkPaymentIntentStatusWith:(NSString * _Nonnull)paymentIntentId atEverySeconds:(NSInteger)seconds forMinutes:(NSInteger)minutes completion:(void (^ _Nonnull)(GDOrderResponse * _Nullable, GDErrorResponse * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
 + (void)cancelWith:(NSString * _Nonnull)orderId callbackUrl:(NSString * _Nullable)callbackUrl navController:(UIViewController * _Nonnull)navController completion:(void (^ _Nonnull)(GDCancelResponse * _Nullable, GDErrorResponse * _Nullable))completion;
@@ -6044,6 +6066,7 @@ typedef SWIFT_ENUM(NSInteger, PaymentType, open) {
   PaymentTypeValU = 2,
   PaymentTypeShahry = 3,
   PaymentTypeSouhoola = 4,
+  PaymentTypeBNPLGroup = 5,
 };
 
 @class UIColor;
@@ -6085,6 +6108,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 - (void)willMoveToSuperview:(UIView * _Nullable)newSuperview;
 - (void)prepareForInterfaceBuilder;
 @end
+
 
 
 

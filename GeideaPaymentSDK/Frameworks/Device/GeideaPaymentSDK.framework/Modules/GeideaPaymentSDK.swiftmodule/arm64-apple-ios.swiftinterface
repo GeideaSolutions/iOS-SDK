@@ -351,13 +351,13 @@ public struct ExpiryDateParams : Swift.Codable {
   @objc public static func setCredentials(withMerchantKey merchantKey: Swift.String, andPassword password: Swift.String)
   @objc public static func pay(theAmount amount: GeideaPaymentSDK.GDAmount, withCardDetails cardDetails: GeideaPaymentSDK.GDCardDetails, initializeResponse: GeideaPaymentSDK.GDInitiateAuthenticateResponse? = nil, config: GeideaPaymentSDK.GDConfigResponse?, isHPP: Swift.Bool = false, showReceipt: Swift.Bool, andTokenizationDetails tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails?, andPaymentIntentId paymentIntentId: Swift.String? = nil, andCustomerDetails customerDetails: GeideaPaymentSDK.GDCustomerDetails?, orderId: Swift.String? = nil, paymentMethods: [Swift.String]? = nil, dismissAction: ((GeideaPaymentSDK.GDCancelResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func initiateAuthenticate(theAmount amount: GeideaPaymentSDK.GDAmount, withCardNumber cardNumber: Swift.String?, andTokenizationDetails tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails?, andPaymentIntentId paymentIntentId: Swift.String? = nil, andCustomerDetails customerDetails: GeideaPaymentSDK.GDCustomerDetails?, orderId: Swift.String? = nil, paymentMethods: [Swift.String]? = nil, dismissAction: ((GeideaPaymentSDK.GDCancelResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDInitiateAuthenticateResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
-  @objc public static func payWithGeideaForm(theAmount amount: GeideaPaymentSDK.GDAmount, showAddress: Swift.Bool, showEmail: Swift.Bool, showReceipt: Swift.Bool, tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails? = nil, customerDetails: GeideaPaymentSDK.GDCustomerDetails?, applePayDetails: GeideaPaymentSDK.GDApplePayDetails? = nil, config: GeideaPaymentSDK.GDConfigResponse?, paymentIntentId: Swift.String? = nil, qrDetails: GeideaPaymentSDK.GDQRDetails? = nil, bnplItems: [GeideaPaymentSDK.GDBNPLItem]? = nil, paymentMethods: [Swift.String]? = nil, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
-  @objc public static func payQRWithGeideaForm(theAmount amount: GeideaPaymentSDK.GDAmount, qrDetails: GeideaPaymentSDK.GDQRDetails, config: GeideaPaymentSDK.GDConfigResponse?, showReceipt: Swift.Bool, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
-  @objc public static func payQR(theAmount amount: GeideaPaymentSDK.GDAmount, qrDetails: GeideaPaymentSDK.GDQRDetails?, config: GeideaPaymentSDK.GDConfigResponse?, showReceipt: Swift.Bool, merchantName: Swift.String?, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func payWithGeideaForm(theAmount amount: GeideaPaymentSDK.GDAmount, showAddress: Swift.Bool, showEmail: Swift.Bool, showReceipt: Swift.Bool, tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails? = nil, customerDetails: GeideaPaymentSDK.GDCustomerDetails?, applePayDetails: GeideaPaymentSDK.GDApplePayDetails? = nil, config: GeideaPaymentSDK.GDConfigResponse?, paymentIntentId: Swift.String? = nil, qrDetails: GeideaPaymentSDK.GDQRDetails? = nil, bnplItems: [GeideaPaymentSDK.GDBNPLItem]? = nil, cardPaymentMethods: [Swift.String]? = nil, paymentSelectionMethods: [GeideaPaymentSDK.GDPaymentSelectionMetods]? = nil, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func payQRWithGeideaForm(theAmount amount: GeideaPaymentSDK.GDAmount, qrDetails: GeideaPaymentSDK.GDQRDetails, config: GeideaPaymentSDK.GDConfigResponse?, showReceipt: Swift.Bool, orderId: Swift.String?, callbackUrl: Swift.String?, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func payQR(theAmount amount: GeideaPaymentSDK.GDAmount, qrDetails: GeideaPaymentSDK.GDQRDetails?, config: GeideaPaymentSDK.GDConfigResponse?, showReceipt: Swift.Bool, merchantName: Swift.String?, orderId: Swift.String?, callbackUrl: Swift.String?, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func payWithToken(theAmount amount: GeideaPaymentSDK.GDAmount, withTokenId token: Swift.String, tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails, config: GeideaPaymentSDK.GDConfigResponse?, showReceipt: Swift.Bool, andPaymentIntentId paymentIntentId: Swift.String? = nil, andCustomerDetails customerDetails: GeideaPaymentSDK.GDCustomerDetails?, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func capture(with orderId: Swift.String, callbackUrl: Swift.String? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func refund(with orderId: Swift.String, callbackUrl: Swift.String? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
-  @objc public static func getQRImage(with amount: GeideaPaymentSDK.GDAmount, qrDetails: GeideaPaymentSDK.GDQRDetails, merchantName: Swift.String, orderId: Swift.String?, completion: @escaping (GeideaPaymentSDK.GDQRResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func getQRImage(with amount: GeideaPaymentSDK.GDAmount, qrDetails: GeideaPaymentSDK.GDQRDetails?, merchantName: Swift.String, orderId: Swift.String?, callbackUrl: Swift.String?, completion: @escaping (GeideaPaymentSDK.GDQRResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func requestToPay(withQRCodeMessage message: Swift.String, phoneNumber: Swift.String, orderId: Swift.String? = nil, completion: @escaping (GeideaPaymentSDK.GDRTPQRResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
   @objc public static func checkPaymentIntentStatus(with paymentIntentId: Swift.String, atEverySeconds seconds: Swift.Int, forMinutes minutes: Swift.Int, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void) -> Foundation.Timer
   @objc public static func cancel(with orderId: Swift.String, callbackUrl: Swift.String? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDCancelResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
@@ -437,7 +437,8 @@ public struct CountryConstants {
   @objc public var items: [GeideaPaymentSDK.GDBNPLItem]?
   @objc public var bnplDetails: GeideaPaymentSDK.GDSouhoolaBNPLDetails?
   @objc public var cashOnDelivery: Swift.Bool
-  @objc public init(customerIdentifier: Swift.String?, customerPIN: Swift.String?, totalAmount: Swift.Double, currency: Swift.String?, merchantReferenceId: Swift.String? = nil, callbackUrl: Swift.String? = nil, billingAddress: GeideaPaymentSDK.GDAddress? = nil, shippingAddress: GeideaPaymentSDK.GDAddress? = nil, customerEmail: Swift.String? = nil, restrictPaymentMethods: Swift.Bool, paymentMethods: [Swift.String]?, items: [GeideaPaymentSDK.GDBNPLItem]?, bnplDetails: GeideaPaymentSDK.GDSouhoolaBNPLDetails?, cashOnDelivery: Swift.Bool)
+  @objc public var orderId: Swift.String?
+  @objc public init(customerIdentifier: Swift.String?, customerPIN: Swift.String?, totalAmount: Swift.Double, currency: Swift.String?, merchantReferenceId: Swift.String? = nil, callbackUrl: Swift.String? = nil, billingAddress: GeideaPaymentSDK.GDAddress? = nil, shippingAddress: GeideaPaymentSDK.GDAddress? = nil, customerEmail: Swift.String? = nil, restrictPaymentMethods: Swift.Bool, paymentMethods: [Swift.String]?, items: [GeideaPaymentSDK.GDBNPLItem]?, bnplDetails: GeideaPaymentSDK.GDSouhoolaBNPLDetails?, cashOnDelivery: Swift.Bool, orderId: Swift.String?)
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -559,6 +560,7 @@ extension Foundation.URL {
   public static func getScreenWidth() -> Swift.Int
   public static func javaEnabled() -> Swift.Bool
   public static func javaScriptEnabled() -> Swift.Bool
+  public static func getImageView(with image: UIKit.UIImage, width: Swift.Double, height: Swift.Double = 0) -> UIKit.UIImageView
   @objc deinit
 }
 @objc public class GDAmount : ObjectiveC.NSObject {
@@ -583,7 +585,7 @@ extension Foundation.URL {
   required public init(from decoder: Swift.Decoder) throws
 }
 @objc public enum PaymentType : Swift.Int {
-  case Card, QR, ValU, Shahry, Souhoola
+  case Card, QR, ValU, Shahry, Souhoola, BNPLGroup
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -985,7 +987,8 @@ public struct SecureStore {
   @objc public var restrictPaymentMethods: Swift.Bool
   @objc public var paymentMethods: [Swift.String]?
   @objc public var items: [GeideaPaymentSDK.GDBNPLItem]?
-  @objc public init(customerIdentifier: Swift.String?, totalAmount: Swift.Double, currency: Swift.String?, merchantReferenceId: Swift.String? = nil, callbackUrl: Swift.String? = nil, billingAddress: GeideaPaymentSDK.GDAddress? = nil, shippingAddress: GeideaPaymentSDK.GDAddress? = nil, customerEmail: Swift.String? = nil, restrictPaymentMethods: Swift.Bool, paymentMethods: [Swift.String]?, items: [GeideaPaymentSDK.GDBNPLItem]?)
+  @objc public var orderId: Swift.String?
+  @objc public init(customerIdentifier: Swift.String?, totalAmount: Swift.Double, currency: Swift.String?, merchantReferenceId: Swift.String? = nil, callbackUrl: Swift.String? = nil, billingAddress: GeideaPaymentSDK.GDAddress? = nil, shippingAddress: GeideaPaymentSDK.GDAddress? = nil, customerEmail: Swift.String? = nil, restrictPaymentMethods: Swift.Bool, paymentMethods: [Swift.String]?, items: [GeideaPaymentSDK.GDBNPLItem]?, orderId: Swift.String?)
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -1213,7 +1216,9 @@ public struct SecureStore {
   public var email: Swift.String?
   public var phoneNumber: Swift.String?
   public var phoneCountryCode: Swift.String?
-  @objc public init(withName name: Swift.String? = nil, andPhoneNumber phoneNumber: Swift.String? = nil, andPhoneCountryCode phoneCountryCode: Swift.String? = nil, andEmail email: Swift.String? = nil)
+  public var qrCode: Swift.String?
+  public var paymentIntentId: Swift.String?
+  @objc public init(phoneNumber: Swift.String?, andPhoneCountryCode phoneCountryCode: Swift.String?, andEmail email: Swift.String? = nil, name: Swift.String? = nil)
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -1285,6 +1290,14 @@ public struct PhoneConstants {
   @objc public var xid: Swift.String?
   @objc public var accountAuthenticationValue: Swift.String?
   @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDPaymentSelectionMetods : ObjectiveC.NSObject, Swift.Codable {
+  public var label: Swift.String?
+  public var paymentMethods: [Swift.String]
+  @objc public init(label: Swift.String, paymentMethods: [Swift.String])
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -1434,9 +1447,12 @@ extension UIKit.UITextField {
   required public init(from decoder: Swift.Decoder) throws
 }
 @objc public class GDQRDetails : ObjectiveC.NSObject, Swift.Codable {
-  public var qrCustomerDetails: GeideaPaymentSDK.GDPICustomer?
+  public var name: Swift.String?
+  public var email: Swift.String?
+  public var phoneNumber: Swift.String?
+  public var phoneCountryCode: Swift.String?
   public var qrExpiryDate: Swift.String?
-  @objc public init(withCustomerDetails qrCustomerDetails: GeideaPaymentSDK.GDPICustomer? = nil, expiryDate: Swift.String? = nil)
+  @objc public init(phoneNumber: Swift.String?, email: Swift.String? = nil, name: Swift.String? = nil, expiryDate: Swift.String? = nil)
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws

@@ -24,7 +24,10 @@ class QRPaymentDetailsViewController: UIViewController {
     var email: String?
     var phoneNumber: String?
     var expiryDate: String?
+    var callbackUrl: String?
     var showReceipt: Bool = false
+    
+    private var inputs: [UITextField]!
     
     init() {
         super.init(nibName: "QRPaymentDetailsViewController", bundle: Bundle(for:  QRPaymentDetailsViewController.self))
@@ -57,6 +60,31 @@ class QRPaymentDetailsViewController: UIViewController {
         expiryDateTF.inputView = datePicker
         expiryDateTF.text = expiryDate
         
+        checkInputs()
+    }
+    
+    func checkInputs() {
+        
+        inputs = [amountTF, currencyTF, emailTF, phoneNumberTF, nameTF, expiryDateTF]
+       
+        handleTextFields()
+    }
+    
+    func handleTextFields() {
+        (0..<inputs.count).forEach { index in
+            let textField = inputs[index]
+            textField.tag = index
+            var buttonText = "DONE"
+            textField.addDoneButtonToKeyboard(myAction: #selector(self.keyboardButtonAction(_:)),
+                                              target: self,
+                                              text: buttonText)
+            
+        }
+    }
+    
+    @objc
+    func keyboardButtonAction(_ sender: UIBarButtonItem) {
+            inputs[sender.tag].resignFirstResponder()
     }
     
     @objc func doneButtonPressed(sender: AnyObject) {
@@ -67,16 +95,15 @@ class QRPaymentDetailsViewController: UIViewController {
         self.view.endEditing(true)
         
     }
-
     
     @IBAction func payQRTapped(_ sender: Any) {
         guard let safeAmount = Double(amountTF.text ?? "") else {
             return
         }
         let amount = GDAmount(amount: safeAmount, currency: currencyTF.text ?? "EGP")
-        let customerDetails = GDPICustomer(withName: nameTF.text, andPhoneNumber: phoneNumberTF.text, andEmail: emailTF.text)
-        let qrDetails = GDQRDetails(withCustomerDetails: customerDetails, expiryDate: expiryDate)
-        GeideaPaymentAPI.payQRWithGeideaForm(theAmount: amount, qrDetails: qrDetails, config: nil, showReceipt: showReceipt, viewController: self, completion:{ response, error in
+//        let customerDetails = GDPICustomer(withName: nameTF.text, andPhoneNumber: phoneNumberTF.text, andEmail: emailTF.text)
+        let qrDetails = GDQRDetails(phoneNumber: phoneNumberTF.text, email: emailTF.text, name: nameTF.text, expiryDate: expiryDate)
+        GeideaPaymentAPI.payQRWithGeideaForm(theAmount: amount, qrDetails: qrDetails, config: nil, showReceipt: showReceipt, orderId: nil, callbackUrl:  callbackUrl , viewController: self, completion:{ response, error in
             DispatchQueue.main.async {
                
                 if let err = error {
