@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlternativePMView" customModule="GeideaPaymentSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="alternativeView" destination="fwO-Mo-BFf" id="D0l-VP-FAO"/>
+                <outlet property="cellView" destination="vvc-7k-Ine" id="DUp-yS-svB"/>
+                <outlet property="logoImage" destination="thJ-gS-cHK" id="mWj-Oq-R2K"/>
+                <outlet property="pmLabel" destination="Qgo-z1-PhB" id="8rQ-Sq-Vy3"/>
+                <outlet property="showAllLabel" destination="OKs-uc-aij" id="VRy-AT-d99"/>
+                <outlet property="showAllView" destination="OKs-uc-aij" id="oQJ-Bs-L9F"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="144" height="84"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vvc-7k-Ine">
+                    <rect key="frame" x="0.0" y="0.0" width="144" height="84"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QwN-xY-nz8">
+                            <rect key="frame" x="0.0" y="0.0" width="144" height="84"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwO-Mo-BFf">
+                                    <rect key="frame" x="0.0" y="0.0" width="144" height="84"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A03-GV-3kp">
+                                            <rect key="frame" x="39.999999999999993" y="18.333333333333332" width="64.333333333333314" height="47.333333333333343"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meeza_logo" translatesAutoresizingMaskIntoConstraints="NO" id="thJ-gS-cHK">
+                                                    <rect key="frame" x="12" y="5" width="40" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="Bsl-Ld-P4j"/>
+                                                        <constraint firstAttribute="height" constant="20" id="cuL-cb-eLk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgo-z1-PhB">
+                                                    <rect key="frame" x="10.000000000000004" y="30.000000000000004" width="44.333333333333343" height="12.333333333333332"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                                    <color key="textColor" red="0.15686274509803921" green="0.2196078431372549" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="Qgo-z1-PhB" firstAttribute="centerX" secondItem="A03-GV-3kp" secondAttribute="centerX" id="3MI-nq-Mkm"/>
+                                                <constraint firstItem="thJ-gS-cHK" firstAttribute="centerX" secondItem="A03-GV-3kp" secondAttribute="centerX" id="5HL-GM-wT8"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qgo-z1-PhB" secondAttribute="trailing" constant="10" id="5J6-dM-LCy"/>
+                                                <constraint firstItem="thJ-gS-cHK" firstAttribute="top" secondItem="A03-GV-3kp" secondAttribute="top" constant="5" id="7Br-r2-ecY"/>
+                                                <constraint firstItem="Qgo-z1-PhB" firstAttribute="leading" secondItem="A03-GV-3kp" secondAttribute="leading" constant="10" id="Lb9-xi-MVe"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qgo-z1-PhB" secondAttribute="bottom" constant="5" id="iYm-zU-flz"/>
+                                                <constraint firstItem="Qgo-z1-PhB" firstAttribute="top" secondItem="thJ-gS-cHK" secondAttribute="bottom" constant="5" id="lJ6-8n-uYw"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="A03-GV-3kp" firstAttribute="centerX" secondItem="fwO-Mo-BFf" secondAttribute="centerX" id="cIQ-wS-wve"/>
+                                        <constraint firstItem="A03-GV-3kp" firstAttribute="centerY" secondItem="fwO-Mo-BFf" secondAttribute="centerY" id="wHJ-Dw-gxB"/>
+                                    </constraints>
+                                </view>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show All" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKs-uc-aij">
+                                    <rect key="frame" x="0.0" y="42" width="144" height="0.0"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="OKs-uc-aij" firstAttribute="centerX" secondItem="QwN-xY-nz8" secondAttribute="centerX" id="1eF-06-9o0"/>
+                                <constraint firstItem="fwO-Mo-BFf" firstAttribute="top" secondItem="QwN-xY-nz8" secondAttribute="top" id="E7e-fQ-hAj"/>
+                                <constraint firstAttribute="trailing" secondItem="fwO-Mo-BFf" secondAttribute="trailing" id="EaM-xK-aQr"/>
+                                <constraint firstAttribute="bottom" secondItem="fwO-Mo-BFf" secondAttribute="bottom" id="MHb-r5-vnu"/>
+                                <constraint firstItem="OKs-uc-aij" firstAttribute="centerY" secondItem="QwN-xY-nz8" secondAttribute="centerY" id="QSP-Ug-lkp"/>
+                                <constraint firstItem="fwO-Mo-BFf" firstAttribute="leading" secondItem="QwN-xY-nz8" secondAttribute="leading" id="Ze6-iO-REy"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="QwN-xY-nz8" secondAttribute="bottom" id="NQq-wy-hkn"/>
+                        <constraint firstItem="QwN-xY-nz8" firstAttribute="top" secondItem="vvc-7k-Ine" secondAttribute="top" id="iyi-mT-QcY"/>
+                        <constraint firstAttribute="trailing" secondItem="QwN-xY-nz8" secondAttribute="trailing" id="sSC-F2-X5j"/>
+                        <constraint firstItem="QwN-xY-nz8" firstAttribute="leading" secondItem="vvc-7k-Ine" secondAttribute="leading" id="txI-3p-MN8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vvc-7k-Ine" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4p0-SZ-tt1"/>
+                <constraint firstAttribute="trailing" secondItem="vvc-7k-Ine" secondAttribute="trailing" id="E0I-cg-9r0"/>
+                <constraint firstItem="vvc-7k-Ine" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pFX-z6-Wsb"/>
+                <constraint firstItem="vvc-7k-Ine" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qvf-Ca-ZXt"/>
+                <constraint firstItem="vvc-7k-Ine" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="z50-6g-DDk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-41.53846153846154" y="-302.84360189573459"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="meeza_logo" width="157" height="74.666664123535156"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

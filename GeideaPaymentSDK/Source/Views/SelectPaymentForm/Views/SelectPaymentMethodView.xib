@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectPaymentMethodView" customModule="GeideaPaymentSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="borderView" destination="MHV-e6-hkW" id="g6a-5d-l3M"/>
+                <outlet property="cardSchemeLogos" destination="piM-z6-puu" id="tA6-bm-Lbk"/>
+                <outlet property="circleView" destination="Y6U-Sb-NT2" id="2LP-tY-s32"/>
+                <outlet property="title" destination="E3m-MU-gfu" id="8ot-vC-3o8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHV-e6-hkW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6U-Sb-NT2" customClass="RadialCircleView" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                            <rect key="frame" x="16" y="14" width="20" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="GNX-B9-JVM"/>
+                                <constraint firstAttribute="height" constant="20" id="uWL-ZP-k30"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="enabledColor">
+                                    <color key="value" name="AccentColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
+                                    <color key="value" name="DisabledColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit / Debit card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3m-MU-gfu">
+                            <rect key="frame" x="44" y="14.333333333333334" width="147" height="19.666666666666664"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                            <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="piM-z6-puu">
+                            <rect key="frame" x="211" y="14" width="154" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Fje-dl-GgK"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="piM-z6-puu" firstAttribute="centerY" secondItem="E3m-MU-gfu" secondAttribute="centerY" id="8VI-oS-eOG"/>
+                        <constraint firstAttribute="height" constant="48" id="9ng-2L-xJP"/>
+                        <constraint firstItem="Y6U-Sb-NT2" firstAttribute="centerY" secondItem="MHV-e6-hkW" secondAttribute="centerY" id="Fex-WG-bP7"/>
+                        <constraint firstAttribute="trailing" secondItem="piM-z6-puu" secondAttribute="trailing" constant="10" id="MdU-Pq-PoN"/>
+                        <constraint firstItem="piM-z6-puu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E3m-MU-gfu" secondAttribute="trailing" constant="5" id="OFV-jz-RWX"/>
+                        <constraint firstItem="piM-z6-puu" firstAttribute="leading" secondItem="E3m-MU-gfu" secondAttribute="trailing" constant="20" id="dh7-Ka-VsU"/>
+                        <constraint firstItem="E3m-MU-gfu" firstAttribute="leading" secondItem="Y6U-Sb-NT2" secondAttribute="trailing" constant="8" id="gnB-qo-i5H"/>
+                        <constraint firstItem="Y6U-Sb-NT2" firstAttribute="leading" secondItem="MHV-e6-hkW" secondAttribute="leading" constant="16" id="gyU-Io-PpQ"/>
+                        <constraint firstItem="E3m-MU-gfu" firstAttribute="centerY" secondItem="Y6U-Sb-NT2" secondAttribute="centerY" id="ioX-yp-suV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="MHV-e6-hkW" secondAttribute="trailing" id="1oF-dI-gYs"/>
+                <constraint firstItem="MHV-e6-hkW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3kJ-ZX-xxH"/>
+                <constraint firstItem="MHV-e6-hkW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8AD-SU-CtL"/>
+                <constraint firstAttribute="bottom" secondItem="MHV-e6-hkW" secondAttribute="bottom" id="Wnm-jG-edx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.69230769230768" y="-208.29383886255923"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.20000000298023224" green="0.60000002384185791" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DisabledColor">
+            <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,2429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		F31717E62791672E00ADD77E /* XCFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F31717E92791672E00ADD77E /* Build configuration list for PBXAggregateTarget "XCFramework" */;
+			buildPhases = (
+				F31717EA2791684200ADD77E /* ShellScript */,
+			);
+			dependencies = (
+				F31717EC2791687300ADD77E /* PBXTargetDependency */,
+			);
+			name = XCFramework;
+			productName = XCFramework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		E608509E25C968B400DD2F77 /* CanceParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608509D25C968B400DD2F77 /* CanceParams.swift */; };
+		E60850A225C995DA00DD2F77 /* CancelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60850A125C995DA00DD2F77 /* CancelManager.swift */; };
+		E60850A625C999B700DD2F77 /* GDCancelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60850A525C999B700DD2F77 /* GDCancelResponse.swift */; };
+		E608543725482883009B468F /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608543625482883009B468F /* UIViewController+Extensions.swift */; };
+		E608543B254866BE009B468F /* GDAuthenticationDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608543A254866BE009B468F /* GDAuthenticationDetailsResponse.swift */; };
+		E60854422548708D009B468F /* GDPaymentMethodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60854412548708D009B468F /* GDPaymentMethodResponse.swift */; };
+		E6085446254870F6009B468F /* GDCodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6085445254870F6009B468F /* GDCodesResponse.swift */; };
+		E6085469254C0767009B468F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6085468254C0767009B468F /* Assets.xcassets */; };
+		E60C0D1927030DD800A01F9D /* GDProductMConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C0D1827030DD600A01F9D /* GDProductMConfig.swift */; };
+		E60C0D1B27030E8B00A01F9D /* ProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C0D1A27030E8B00A01F9D /* ProductRouter.swift */; };
+		E60C0D1D270324C500A01F9D /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C0D1C270324C500A01F9D /* ProductManager.swift */; };
+		E60C31F92536EE1F0023133F /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C31F82536EE1F0023133F /* BaseRouter.swift */; };
+		E60C31FD2536EFA50023133F /* GDWSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C31FC2536EFA50023133F /* GDWSConstants.swift */; };
+		E60C32032536F2280023133F /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C32022536F2280023133F /* WebServices.swift */; };
+		E60C32072536F64A0023133F /* GDWSHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C32062536F64A0023133F /* GDWSHTTPMethod.swift */; };
+		E60C320D2536F9D00023133F /* ConfigRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C320C2536F9D00023133F /* ConfigRouter.swift */; };
+		E60C3211253702EF0023133F /* Strings+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C3210253702EF0023133F /* Strings+Extensions.swift */; };
+		E60C32152537033C0023133F /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C32142537033C0023133F /* URL+Extensions.swift */; };
+		E60C321925371FBF0023133F /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C321825371FBF0023133F /* ConfigManager.swift */; };
+		E60C327325383CD00023133F /* SecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C327225383CD00023133F /* SecureStore.swift */; };
+		E60C32822538446A0023133F /* SecureStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C32812538446A0023133F /* SecureStoreQueryable.swift */; };
+		E60C3286253844C20023133F /* SecureStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C3285253844C20023133F /* SecureStoreError.swift */; };
+		E6117B9A25396AB800959D78 /* GeideaPaymentSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117B9925396AB800959D78 /* GeideaPaymentSDKTests.swift */; };
+		E6117B9C25396AB800959D78 /* GeideaPaymentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6224EAF2534DFE80065C23F /* GeideaPaymentSDK.framework */; };
+		E6117BB425398A6000959D78 /* PaymentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117BB325398A6000959D78 /* PaymentRouter.swift */; };
+		E6117BB825398F0E00959D78 /* AuthenticateParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117BB725398F0E00959D78 /* AuthenticateParams.swift */; };
+		E6117BBC25398F1B00959D78 /* PayParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117BBB25398F1B00959D78 /* PayParams.swift */; };
+		E6117BF22539906B00959D78 /* PaymentMethodParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117BF12539906B00959D78 /* PaymentMethodParams.swift */; };
+		E6117BF6253990EC00959D78 /* ExpiryDateParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117BF5253990EC00959D78 /* ExpiryDateParams.swift */; };
+		E6117BFC253991CE00959D78 /* AddressParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117BFB253991CE00959D78 /* AddressParams.swift */; };
+		E6117C002539B99D00959D78 /* AuthenticateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117BFF2539B99D00959D78 /* AuthenticateManager.swift */; };
+		E6117C3E253CD4C700959D78 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117C3D253CD4C700959D78 /* Utils.swift */; };
+		E6117C42253CD92500959D78 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117C41253CD92500959D78 /* Double+Extensions.swift */; };
+		E6117C48253D7A6200959D78 /* JSONSerialiation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117C47253D7A6200959D78 /* JSONSerialiation+Extensions.swift */; };
+		E6117C4C253D9F3C00959D78 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117C4B253D9F3C00959D78 /* AppConfig.swift */; };
+		E6117C50253DAAD000959D78 /* PayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117C4F253DAAD000959D78 /* PayManager.swift */; };
+		E6117C72253EDB7000959D78 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117C70253EDB7000959D78 /* PaymentViewController.swift */; };
+		E6117C73253EDB7000959D78 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6117C71253EDB7000959D78 /* PaymentViewController.xib */; };
+		E6117C77253EF62000959D78 /* AuthenticateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6117C76253EF62000959D78 /* AuthenticateResponse.swift */; };
+		E61FE57026C3F3CC00B64B2B /* PaymentFormCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61FE56F26C3F3CC00B64B2B /* PaymentFormCoordinator.swift */; };
+		E6224EC02534DFE80065C23F /* GeideaPaymentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E6224EB22534DFE80065C23F /* GeideaPaymentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6224F002534E43C0065C23F /* PaymentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6224EFF2534E43C0065C23F /* PaymentCoordinator.swift */; };
+		E6224F052534E4860065C23F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6224F042534E4860065C23F /* Coordinator.swift */; };
+		E6224F0B2534E4D70065C23F /* PaymentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6224F0A2534E4D70065C23F /* PaymentFactory.swift */; };
+		E6224F172534E5C70065C23F /* WebViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6224F142534E5C70065C23F /* WebViewViewModel.swift */; };
+		E6224F182534E5C70065C23F /* WebviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6224F152534E5C70065C23F /* WebviewViewController.xib */; };
+		E6224F192534E5C70065C23F /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6224F162534E5C70065C23F /* WebviewViewController.swift */; };
+		E6342E4826A19CB300AE1E31 /* MeezaPaymentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6342E4726A19CB300AE1E31 /* MeezaPaymentRouter.swift */; };
+		E6342E4A26A19F5400AE1E31 /* QRParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6342E4926A19F5400AE1E31 /* QRParams.swift */; };
+		E6342E4C26A1A23100AE1E31 /* QRMeezaPaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6342E4B26A1A23100AE1E31 /* QRMeezaPaymentManager.swift */; };
+		E6342E4E26A1BB6C00AE1E31 /* GDQRResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6342E4D26A1BB6C00AE1E31 /* GDQRResponse.swift */; };
+		E634460825D53EC4000BC8A0 /* GDConfigApplePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634460725D53EC4000BC8A0 /* GDConfigApplePay.swift */; };
+		E6380A78255A95E70034E556 /* GDErrorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6380A77255A95E70034E556 /* GDErrorCodes.swift */; };
+		E63E456F25ECF7670077251F /* OrderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63E456E25ECF7660077251F /* OrderRouter.swift */; };
+		E63E458225ED157A0077251F /* OrdersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63E458125ED15790077251F /* OrdersManager.swift */; };
+		E63E458D25ED1EA70077251F /* GDOrdersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63E458C25ED1EA70077251F /* GDOrdersResponse.swift */; };
+		E63E459125ED22090077251F /* GDOrdersFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63E459025ED22090077251F /* GDOrdersFilter.swift */; };
+		E641F101269DA93200920959 /* GDPaymentIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E641F100269DA93200920959 /* GDPaymentIntent.swift */; };
+		E64462CC257F93B2001BAA4B /* CaptureParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64462CB257F93B2001BAA4B /* CaptureParams.swift */; };
+		E64462D0257F94FE001BAA4B /* OperationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64462CF257F94FE001BAA4B /* OperationsManager.swift */; };
+		E6456D6625827A4600E6C4C2 /* PayTokenParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6456D6525827A4600E6C4C2 /* PayTokenParams.swift */; };
+		E64D56562583A06D008AB18F /* PayTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64D56552583A06D008AB18F /* PayTokenManager.swift */; };
+		E64D56622586234B008AB18F /* GeideaPaymentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6224ECB2534E01A0065C23F /* GeideaPaymentAPI.swift */; };
+		E65170DC26A02EED00102128 /* QRPaymentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65170DA26A02EED00102128 /* QRPaymentFormViewController.swift */; };
+		E65170DD26A02EED00102128 /* QRPaymentFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E65170DB26A02EED00102128 /* QRPaymentFormViewController.xib */; };
+		E65170DF26A02F0000102128 /* QRpaymentFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65170DE26A02F0000102128 /* QRpaymentFormViewModel.swift */; };
+		E65170E126A04A9E00102128 /* GDPICustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65170E026A04A9E00102128 /* GDPICustomer.swift */; };
+		E65170E326A0500D00102128 /* PayQRCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65170E226A0500D00102128 /* PayQRCoordinator.swift */; };
+		E6567E8D258A1E1B001C11E1 /* OperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6567E8C258A1E1B001C11E1 /* OperationCoordinator.swift */; };
+		E6567E97258A2B0E001C11E1 /* OperationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6567E96258A2B0E001C11E1 /* OperationViewModel.swift */; };
+		E6567E9B258A2B34001C11E1 /* PayTokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6567E9A258A2B34001C11E1 /* PayTokenViewModel.swift */; };
+		E6567E9F258A43F6001C11E1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6567E9E258A43F6001C11E1 /* ViewModel.swift */; };
+		E6567EA5258A5E5C001C11E1 /* PaymentTokenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6567EA4258A5E5C001C11E1 /* PaymentTokenCoordinator.swift */; };
+		E6567EB325A5B21C001C11E1 /* FormCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6567EB225A5B21C001C11E1 /* FormCoordinator.swift */; };
+		E6567EB825A5B371001C11E1 /* CardDetailsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6567EB725A5B371001C11E1 /* CardDetailsFormViewController.swift */; };
+		E6567EBC25A5B396001C11E1 /* CardDetailsFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6567EBB25A5B396001C11E1 /* CardDetailsFormViewModel.swift */; };
+		E6567EC025A5B3D6001C11E1 /* CardDetailsFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6567EBF25A5B3D6001C11E1 /* CardDetailsFormViewController.xib */; };
+		E663E98E26C198E700CEB7FE /* PaymentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E663E98D26C198E700CEB7FE /* PaymentType.swift */; };
+		E676814C26EF6BF100626694 /* GDCardBrandAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676814B26EF6BF100626694 /* GDCardBrandAuthentication.swift */; };
+		E676817C26F0D8E200626694 /* GDPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676817B26F0D8E200626694 /* GDPlatform.swift */; };
+		E676817E26F0DECF00626694 /* GDPostilionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676817D26F0DECF00626694 /* GDPostilionDetails.swift */; };
+		E676818026F0DF1100626694 /* GDTerminalDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676817F26F0DF1100626694 /* GDTerminalDetails.swift */; };
+		E676818226F0EA7900626694 /* GDMeezaDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676818126F0EA7900626694 /* GDMeezaDetails.swift */; };
+		E676818426F0F12E00626694 /* GDStatementDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676818326F0F12E00626694 /* GDStatementDescriptor.swift */; };
+		E676818626F1EF4000626694 /* GDPaymentIntentOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676818526F1EF4000626694 /* GDPaymentIntentOrder.swift */; };
+		E676818A26F32C6800626694 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676818826F32C6800626694 /* ReceiptViewController.swift */; };
+		E676818B26F32C6800626694 /* ReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E676818926F32C6800626694 /* ReceiptViewController.xib */; };
+		E676818D26F36C1000626694 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676818C26F36C1000626694 /* ReceiptViewModel.swift */; };
+		E676819126F378C800626694 /* ReceiptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676818F26F378C800626694 /* ReceiptTableViewCell.swift */; };
+		E676819226F378C800626694 /* ReceiptTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E676819026F378C800626694 /* ReceiptTableViewCell.xib */; };
+		E676819426F4AE2100626694 /* DynamicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676819326F4AE2100626694 /* DynamicTableView.swift */; };
+		E67E4095256D4CE200FAB817 /* ApplePayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4094256D4CE100FAB817 /* ApplePayManager.swift */; };
+		E67E4099256D54CC00FAB817 /* ApplePayParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4098256D54CC00FAB817 /* ApplePayParams.swift */; };
+		E67E409D256D634100FAB817 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E409C256D634100FAB817 /* PaymentMethod.swift */; };
+		E67E5DAD26A980AA00E145D1 /* GDRTPQRResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E5DAC26A980AA00E145D1 /* GDRTPQRResponse.swift */; };
+		E6801E0425B5C81D0074C5BB /* CountriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6801E0325B5C81D0074C5BB /* CountriesDataSource.swift */; };
+		E6801E0A25B5C8930074C5BB /* CountrySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6801E0925B5C8930074C5BB /* CountrySelectionViewController.swift */; };
+		E6801E1425B5C97D0074C5BB /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6801E1225B5C97D0074C5BB /* CountryTableViewCell.swift */; };
+		E6801E1525B5C97D0074C5BB /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6801E1325B5C97D0074C5BB /* CountryTableViewCell.xib */; };
+		E6801E1A25B5CA190074C5BB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6801E1925B5CA190074C5BB /* SearchView.swift */; };
+		E6801E2025B5CCC80074C5BB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6801E1F25B5CCC80074C5BB /* UIView+Extensions.swift */; };
+		E6801E2425B5CD350074C5BB /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6801E2325B5CD350074C5BB /* UITableView+Extensions.swift */; };
+		E6801E4125B6D59F0074C5BB /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6801E4025B6D59F0074C5BB /* SearchView.xib */; };
+		E6905F3625DEB7EE000CA160 /* GDPaymentIntentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6905F3525DEB7EE000CA160 /* GDPaymentIntentDetails.swift */; };
+		E6905F4125DFCC07000CA160 /* GDPaymentIntentDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6905F4025DFCC07000CA160 /* GDPaymentIntentDetailsResponse.swift */; };
+		E6905F4525DFCD84000CA160 /* GDPaymentIntentCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6905F4425DFCD84000CA160 /* GDPaymentIntentCustomer.swift */; };
+		E6905F4925E268D3000CA160 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6905F4825E268D3000CA160 /* Date+Extensions.swift */; };
+		E69FFAC326D62BB200097907 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69FFAC226D62BB200097907 /* BaseViewController.swift */; };
+		E69FFADB26D7C9D100097907 /* SelectPaymentMethodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E69FFAD826D7C9D100097907 /* SelectPaymentMethodViewController.xib */; };
+		E69FFADC26D7C9D100097907 /* SelectPaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69FFAD926D7C9D100097907 /* SelectPaymentMethodViewController.swift */; };
+		E69FFADD26D7C9D100097907 /* SelectPaymentMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69FFADA26D7C9D100097907 /* SelectPaymentMethodViewModel.swift */; };
+		E69FFADF26D8EE1C00097907 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69FFADE26D8EE1C00097907 /* Bundle+Extensions.swift */; };
+		E6A4BAD925C1AB5800DE08BD /* GDTokenizationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A4BAD825C1AB5800DE08BD /* GDTokenizationDetails.swift */; };
+		E6A5E84725416F2B0080BF3D /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5E84625416F2B0080BF3D /* UIScreen+Extensions.swift */; };
+		E6A5E84D25417A4E0080BF3D /* GDCardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5E84C25417A4D0080BF3D /* GDCardDetails.swift */; };
+		E6A5E85125417AC90080BF3D /* ExpiryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5E85025417AC90080BF3D /* ExpiryDate.swift */; };
+		E6A5E8552541807B0080BF3D /* GDAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5E8542541807B0080BF3D /* GDAmount.swift */; };
+		E6A5E866254189800080BF3D /* GDCustomerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5E865254189800080BF3D /* GDCustomerDetails.swift */; };
+		E6A5E86C2542B2B50080BF3D /* GDErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5E86B2542B2B50080BF3D /* GDErrorResponse.swift */; };
+		E6A5E8712542BDBF0080BF3D /* NSError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5E8702542BDBE0080BF3D /* NSError+Extensions.swift */; };
+		E6A5E8752542BE190080BF3D /* ErrorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5E8742542BE190080BF3D /* ErrorCodes.swift */; };
+		E6A5E87D25430DD60080BF3D /* GDAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5E87C25430DD60080BF3D /* GDAddress.swift */; };
+		E6ADAAD12540074D00EC655F /* PayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ADAAD02540074D00EC655F /* PayResponse.swift */; };
+		E6ADAAD5254007B100EC655F /* GDConfigResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ADAAD4254007B100EC655F /* GDConfigResponse.swift */; };
+		E6ADAAD9254022C800EC655F /* GDOrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ADAAD8254022C800EC655F /* GDOrderResponse.swift */; };
+		E6ADAADD254024E800EC655F /* GDTransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ADAADC254024E800EC655F /* GDTransactionResponse.swift */; };
+		E6B067102571115600F9A44F /* GDApplePayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0670F2571115600F9A44F /* GDApplePayResponse.swift */; };
+		E6B067222577E98200F9A44F /* ConfigCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B067212577E98100F9A44F /* ConfigCountries.swift */; };
+		E6B067642578DB0700F9A44F /* ApplePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B067622578DB0700F9A44F /* ApplePayViewController.swift */; };
+		E6B067652578DB0700F9A44F /* ApplePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B067632578DB0700F9A44F /* ApplePayViewController.xib */; };
+		E6B06769257E37B500F9A44F /* PaymentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B06768257E37B400F9A44F /* PaymentOperation.swift */; };
+		E6BCEC5925DD2D3C000CFCE6 /* PaymentIntentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCEC5825DD2D3B000CFCE6 /* PaymentIntentRouter.swift */; };
+		E6BCEC5D25DD311B000CFCE6 /* PaymentIntentParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCEC5C25DD311B000CFCE6 /* PaymentIntentParams.swift */; };
+		E6BCEC6125DD31B2000CFCE6 /* CustomerParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCEC6025DD31B2000CFCE6 /* CustomerParams.swift */; };
+		E6BCEC6825DD3AE6000CFCE6 /* PaymentIntentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCEC6725DD3AE6000CFCE6 /* PaymentIntentManager.swift */; };
+		E6BCEC6E25DD42E4000CFCE6 /* PaymentIntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCEC6C25DD42E4000CFCE6 /* PaymentIntentViewController.swift */; };
+		E6BCEC6F25DD42E4000CFCE6 /* PaymentIntentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6BCEC6D25DD42E4000CFCE6 /* PaymentIntentViewController.xib */; };
+		E6BCEC7A25DE51FC000CFCE6 /* PaymentIntentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCEC7925DE51FC000CFCE6 /* PaymentIntentFactory.swift */; };
+		E6BCEC7E25DE52CC000CFCE6 /* PaymentIntentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCEC7D25DE52CC000CFCE6 /* PaymentIntentViewModel.swift */; };
+		E6CEBF3826D3B88700A7A28B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6CEBF3A26D3B88700A7A28B /* Localizable.strings */; };
+		E6CEBF3D26D3C52E00A7A28B /* BaseLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CEBF3C26D3C52E00A7A28B /* BaseLanguage.swift */; };
+		E6DE952026A6AF04008E9DC7 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE951F26A6AF04008E9DC7 /* UILabel+Extensions.swift */; };
+		E6DE952326A6EDF5008E9DC7 /* RequestToPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE952126A6EDF5008E9DC7 /* RequestToPayViewController.swift */; };
+		E6DE952426A6EDF5008E9DC7 /* RequestToPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6DE952226A6EDF5008E9DC7 /* RequestToPayViewController.xib */; };
+		E6DE952626A6FB1E008E9DC7 /* RequestToPayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE952526A6FB1E008E9DC7 /* RequestToPayViewModel.swift */; };
+		E6DE952826A82368008E9DC7 /* PaymentRequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE952726A82368008E9DC7 /* PaymentRequestParams.swift */; };
+		E6DE952C26A855B7008E9DC7 /* RequestToPayParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE952B26A855B7008E9DC7 /* RequestToPayParams.swift */; };
+		E6DE952E26A858B8008E9DC7 /* MeezaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE952D26A858B8008E9DC7 /* MeezaRouter.swift */; };
+		E6E019C925A7101300AA2DC5 /* GDApplePayDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E019C825A7101300AA2DC5 /* GDApplePayDetails.swift */; };
+		E6E019D425A851E600AA2DC5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E019D325A851E600AA2DC5 /* RoundedButton.swift */; };
+		E6E019DE25A8584800AA2DC5 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E019DD25A8584800AA2DC5 /* RoundedTextField.swift */; };
+		E6E019E825A876A000AA2DC5 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E019E725A876A000AA2DC5 /* UITextField+Extensions.swift */; };
+		E6E01A0225AC82F100AA2DC5 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E01A0125AC82F100AA2DC5 /* CardType.swift */; };
+		E6E01A0625AC883100AA2DC5 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E01A0525AC883100AA2DC5 /* UIImageView+Extensions.swift */; };
+		E6E01A1225ADA38600AA2DC5 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E01A1125ADA38600AA2DC5 /* UIColor+Extensions.swift */; };
+		E6E81820269C207600E010F8 /* GDPaymentIntentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E8181F269C207600E010F8 /* GDPaymentIntentFilter.swift */; };
+		E6E81822269C49FF00E010F8 /* GDPaymentIntentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E81821269C49FF00E010F8 /* GDPaymentIntentResponse.swift */; };
+		E6E81824269C4FA100E010F8 /* GDPaymentIntentsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E81823269C4FA100E010F8 /* GDPaymentIntentsResponse.swift */; };
+		E6E81828269C668F00E010F8 /* PaymentIntentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E81826269C668F00E010F8 /* PaymentIntentTableViewCell.swift */; };
+		E6E81829269C668F00E010F8 /* PaymentIntentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E81827269C668F00E010F8 /* PaymentIntentTableViewCell.xib */; };
+		E6E81830269C7BBD00E010F8 /* PaymentIntentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E8182E269C7BBD00E010F8 /* PaymentIntentsViewController.swift */; };
+		E6E81831269C7BBD00E010F8 /* PaymentIntentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E8182F269C7BBD00E010F8 /* PaymentIntentsViewController.xib */; };
+		E6F1EE712535E59E00253F19 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F1EE6D2535E59E00253F19 /* PaymentViewModel.swift */; };
+		E6F1EE792535E5B600253F19 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F1EE772535E5B600253F19 /* Response.swift */; };
+		E6F1EE7A2535E5B600253F19 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F1EE782535E5B600253F19 /* Request.swift */; };
+		E6F1EE802535E5C800253F19 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F1EE7D2535E5C800253F19 /* JSON.swift */; };
+		E6F1EE812535E5C800253F19 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F1EE7E2535E5C800253F19 /* Log.swift */; };
+		E6F1EE822535E5C800253F19 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F1EE7F2535E5C800253F19 /* Result.swift */; };
+		E6F1EE872535E5E100253F19 /* GDConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F1EE862535E5E100253F19 /* GDConfig.swift */; };
+		E6F653D525B8B43D00C1248C /* CountrySelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F653D425B8B43D00C1248C /* CountrySelectionViewController.xib */; };
+		E6F653DD25B8BEB400C1248C /* Array+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F653DC25B8BEB400C1248C /* Array+Extenstions.swift */; };
+		E6F6540B25B9C36000C1248C /* CVVAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F6540A25B9C36000C1248C /* CVVAlertViewController.xib */; };
+		E6F6540F25B9C38500C1248C /* CVVAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6540E25B9C38500C1248C /* CVVAlertViewController.swift */; };
+		F307578E2726F98200184737 /* GDSDKMerchantConfigResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307578D2726F98200184737 /* GDSDKMerchantConfigResponse.swift */; };
+		F30757902726F9FE00184737 /* GDMerchantDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307578F2726F9FE00184737 /* GDMerchantDataResponse.swift */; };
+		F30757922726FDBD00184737 /* GDCardBrandProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30757912726FDBD00184737 /* GDCardBrandProvider.swift */; };
+		F307619228216AA4004014CC /* GDSouhoolaVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307619128216AA4004014CC /* GDSouhoolaVerifyResponse.swift */; };
+		F30761962821739C004014CC /* SouhoolaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30761952821739C004014CC /* SouhoolaRouter.swift */; };
+		F307619828217866004014CC /* GDSouhoolaInstallmentPlansResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307619728217866004014CC /* GDSouhoolaInstallmentPlansResponse.swift */; };
+		F307619A282178B7004014CC /* GDSouhoolaInstallmentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3076199282178B7004014CC /* GDSouhoolaInstallmentPlan.swift */; };
+		F307619C28290EA1004014CC /* GDSouhoolaReviewTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307619B28290EA1004014CC /* GDSouhoolaReviewTransaction.swift */; };
+		F30A53BE2806EFC600FCF78B /* EInvoiceItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30A53BC2806EFC600FCF78B /* EInvoiceItemTableViewCell.xib */; };
+		F30A53BF2806EFC600FCF78B /* EInvoiceItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A53BD2806EFC600FCF78B /* EInvoiceItemTableViewCell.swift */; };
+		F30C031D273C047E008AC9ED /* PaymentIntentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C031C273C047E008AC9ED /* PaymentIntentCoordinator.swift */; };
+		F30C031F273C07F0008AC9ED /* EInvoiceDetailsParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C031E273C07F0008AC9ED /* EInvoiceDetailsParams.swift */; };
+		F30C0321273C0BB1008AC9ED /* EInvoiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C0320273C0BB1008AC9ED /* EInvoiceItem.swift */; };
+		F30C0323273CF967008AC9ED /* GDEInvoiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C0322273CF967008AC9ED /* GDEInvoiceItem.swift */; };
+		F30C0325273D0892008AC9ED /* GDEInvoiceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C0324273D0892008AC9ED /* GDEInvoiceDetails.swift */; };
+		F30C0328273D4B81008AC9ED /* EInvoiceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C0326273D4B81008AC9ED /* EInvoiceDetailsViewController.swift */; };
+		F30C0329273D4B81008AC9ED /* EInvoiceDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30C0327273D4B81008AC9ED /* EInvoiceDetailsViewController.xib */; };
+		F30C032C273D5EAF008AC9ED /* EInvoiceItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C032A273D5EAF008AC9ED /* EInvoiceItemViewController.swift */; };
+		F30C032D273D5EAF008AC9ED /* EInvoiceItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30C032B273D5EAF008AC9ED /* EInvoiceItemViewController.xib */; };
+		F30D113E28FEEECF00242A59 /* GroupedBNPLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30D113D28FEEECF00242A59 /* GroupedBNPLView.swift */; };
+		F30D114028FEEEE300242A59 /* GroupedBNPLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30D113F28FEEEE300242A59 /* GroupedBNPLView.xib */; };
+		F30D114228FFE3AA00242A59 /* PaymentMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30D114128FFE3AA00242A59 /* PaymentMethodsView.swift */; };
+		F30FF2EA27D6024C00BFB4B1 /* GDVALUInstallmentPlanSelectedDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FF2E927D6024C00BFB4B1 /* GDVALUInstallmentPlanSelectedDetails.swift */; };
+		F30FF2EE27D6531C00BFB4B1 /* GDInstallmentPlanSelectedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FF2ED27D6531C00BFB4B1 /* GDInstallmentPlanSelectedResponse.swift */; };
+		F3144943274F937300B402E0 /* PaymentRouterV4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3144942274F937300B402E0 /* PaymentRouterV4.swift */; };
+		F31871F4290809E70070C991 /* UIActivityIndicatorView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31871F3290809E70070C991 /* UIActivityIndicatorView+Extensions.swift */; };
+		F31F9AA8275E04150052A093 /* GDQRDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31F9AA7275E04150052A093 /* GDQRDetails.swift */; };
+		F324A27F27E21F2C00F14C6F /* ReceiptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F324A27E27E21F2C00F14C6F /* ReceiptManager.swift */; };
+		F324A28127E228BA00F14C6F /* GDReceiptResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F324A28027E228BA00F14C6F /* GDReceiptResponse.swift */; };
+		F324A28427E22B3A00F14C6F /* GDReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F324A28327E22B3A00F14C6F /* GDReceipt.swift */; };
+		F324A28627E22CF200F14C6F /* GDMechant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F324A28527E22CF200F14C6F /* GDMechant.swift */; };
+		F324A28927E3337A00F14C6F /* BlankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F324A28727E3337A00F14C6F /* BlankTableViewCell.swift */; };
+		F324A28A27E3337A00F14C6F /* BlankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F324A28827E3337A00F14C6F /* BlankTableViewCell.xib */; };
+		F324A28D27E3338E00F14C6F /* SeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F324A28B27E3338E00F14C6F /* SeparatorTableViewCell.swift */; };
+		F324A28E27E3338E00F14C6F /* SeparatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F324A28C27E3338E00F14C6F /* SeparatorTableViewCell.xib */; };
+		F324A29327E333ED00F14C6F /* ValuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F324A29127E333ED00F14C6F /* ValuTableView.swift */; };
+		F324A29427E333ED00F14C6F /* ValuTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F324A29227E333ED00F14C6F /* ValuTableView.xib */; };
+		F324A29827E49D6300F14C6F /* RichTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F324A29727E49D6300F14C6F /* RichTextField.swift */; };
+		F32554FD28E2F165002EEFEA /* CancelAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32554FB28E2F165002EEFEA /* CancelAlertViewController.swift */; };
+		F32554FE28E2F165002EEFEA /* CancelAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F32554FC28E2F165002EEFEA /* CancelAlertViewController.xib */; };
+		F325834D285A104100591887 /* GDMultiCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325834C285A104100591887 /* GDMultiCurrency.swift */; };
+		F325834F285A1B7200591887 /* GDCashOnDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325834E285A1B7200591887 /* GDCashOnDelivery.swift */; };
+		F327AF0E2832D2EA00F7A959 /* GDSouhoolaConfirmDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327AF0D2832D2EA00F7A959 /* GDSouhoolaConfirmDetails.swift */; };
+		F333CE1C28D9CDD6000ECAD7 /* PaymentRouterV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F333CE1B28D9CDD6000ECAD7 /* PaymentRouterV3.swift */; };
+		F333CE1E28D9FC97000ECAD7 /* GDInitializeResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F333CE1D28D9FC97000ECAD7 /* GDInitializeResponseObject.swift */; };
+		F334747327C64634004A6236 /* PurchseParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334747227C64634004A6236 /* PurchseParams.swift */; };
+		F334747527C647FD004A6236 /* GDBNPLPurchaseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334747427C647FD004A6236 /* GDBNPLPurchaseDetails.swift */; };
+		F334747727C657C0004A6236 /* GDBNPLPurchaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334747627C657C0004A6236 /* GDBNPLPurchaseResponse.swift */; };
+		F3377B7228648C8F00BBB46B /* GDSouhoolaResendDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3377B7128648C8F00BBB46B /* GDSouhoolaResendDetails.swift */; };
+		F33CF28C27FEE6940065778A /* Numeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CF28B27FEE6940065778A /* Numeric+Extensions.swift */; };
+		F33CF28E27FEE6BF0065778A /* DataProtocol+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CF28D27FEE6BF0065778A /* DataProtocol+Extensions.swift */; };
+		F33CF29027FEE7010065778A /* KeyEncodingContainer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CF28F27FEE7010065778A /* KeyEncodingContainer+Extensions.swift */; };
+		F33CF29427FEE78A0065778A /* KeyedDecodingContainer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CF29327FEE78A0065778A /* KeyedDecodingContainer+Extensions.swift */; };
+		F33CF29627FEEF430065778A /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CF29527FEEF430065778A /* Decimal+Extensions.swift */; };
+		F33CF2AD28006FBB0065778A /* GDShahrySelectPlanInstallment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CF2AC28006FBB0065778A /* GDShahrySelectPlanInstallment.swift */; };
+		F33CF2AF280071030065778A /* GDBNPLItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CF2AE280071030065778A /* GDBNPLItem.swift */; };
+		F34D50E028B359E300068C4F /* RadialCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D50DF28B359E300068C4F /* RadialCircleView.swift */; };
+		F34E064C273EA1E700E87698 /* EInvoiceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E064B273EA1E700E87698 /* EInvoiceDetailsViewModel.swift */; };
+		F34E064E273EACC200E87698 /* GDEInvoiceSentLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E064D273EACC200E87698 /* GDEInvoiceSentLink.swift */; };
+		F350EAC32727FE95008DA0D5 /* GDSDKMerchantConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F350EAC22727FE95008DA0D5 /* GDSDKMerchantConfig.swift */; };
+		F350EAC52729446B008DA0D5 /* GDMerchantConfigResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F350EAC42729446B008DA0D5 /* GDMerchantConfigResponse.swift */; };
+		F379504D2902717B004044C7 /* GDPaymentMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = F379504C2902717B004044C7 /* GDPaymentMethods.swift */; };
+		F37ABB9127E877EC009F04E2 /* BNPLFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37ABB9027E877EC009F04E2 /* BNPLFooter.swift */; };
+		F37ABB9327E87821009F04E2 /* BNPLFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37ABB9227E87820009F04E2 /* BNPLFooter.xib */; };
+		F3842E3D288EA4F1005D8802 /* CVVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3842E3B288EA4F1005D8802 /* CVVViewController.swift */; };
+		F3842E3E288EA4F1005D8802 /* CVVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3842E3C288EA4F1005D8802 /* CVVViewController.xib */; };
+		F3842E40288ECA4F005D8802 /* CVVViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3842E3F288ECA4F005D8802 /* CVVViewModel.swift */; };
+		F3842E42288EE4B9005D8802 /* GDGetTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3842E41288EE4B8005D8802 /* GDGetTokenResponse.swift */; };
+		F3842E44288EE7D7005D8802 /* GDExpiryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3842E43288EE7D7005D8802 /* GDExpiryDate.swift */; };
+		F38CBF4B282946BF00ED5FDB /* SouhoolaReviewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38CBF4A282946BF00ED5FDB /* SouhoolaReviewParams.swift */; };
+		F38D6E5127F1ECD1006A6F43 /* BNPLShahryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38D6E5027F1ECD1006A6F43 /* BNPLShahryViewModel.swift */; };
+		F3961489283CF8EC00E3B1E2 /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3961488283CF8EB00E3B1E2 /* OTPViewModel.swift */; };
+		F39725AE2906B2350035F913 /* SelectMeezaDigitalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39725AD2906B2350035F913 /* SelectMeezaDigitalView.xib */; };
+		F39725B02906B2F20035F913 /* SelectMeezaDigitalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39725AF2906B2F20035F913 /* SelectMeezaDigitalView.swift */; };
+		F398758928EC493800CF4595 /* AlternativePMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398758828EC493800CF4595 /* AlternativePMView.swift */; };
+		F398758B28EC494E00CF4595 /* AlternativePMView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F398758A28EC494E00CF4595 /* AlternativePMView.xib */; };
+		F39FB94B28A661490022D35D /* DeviceIndentificationParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39FB94A28A661490022D35D /* DeviceIndentificationParams.swift */; };
+		F39FB94D28AD0E9D0022D35D /* CurvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39FB94C28AD0E9D0022D35D /* CurvedView.swift */; };
+		F39FB94F28AE1A690022D35D /* GDBrandingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39FB94E28AE1A690022D35D /* GDBrandingResponse.swift */; };
+		F39FB95128AE2A200022D35D /* CurvedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39FB95028AE2A200022D35D /* CurvedImageView.swift */; };
+		F3A1A9AA27F3017200411CD8 /* ShahryPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A9A827F3017200411CD8 /* ShahryPurchaseViewController.swift */; };
+		F3A1A9AB27F3017200411CD8 /* ShahryPurchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3A1A9A927F3017200411CD8 /* ShahryPurchaseViewController.xib */; };
+		F3A6718B2716F4080094BDD2 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6718A2716F4080094BDD2 /* UIFont+Extensions.swift */; };
+		F3A6718E2716F49F0094BDD2 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = F3A6718D2716F49F0094BDD2 /* Montserrat */; };
+		F3A671902716F4C80094BDD2 /* Almarai in Resources */ = {isa = PBXBuildFile; fileRef = F3A6718F2716F4C80094BDD2 /* Almarai */; };
+		F3A67192271D5D6D0094BDD2 /* InitiateAuthenticateParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A67191271D5D6D0094BDD2 /* InitiateAuthenticateParams.swift */; };
+		F3A67194271D856F0094BDD2 /* GDInitiateAuthenticateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A67193271D856F0094BDD2 /* GDInitiateAuthenticateResponse.swift */; };
+		F3A6719C271EE0190094BDD2 /* AuthenticateParamsV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6719B271EE0190094BDD2 /* AuthenticateParamsV3.swift */; };
+		F3A6F249283E36EB008E39B9 /* BNPLFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6F248283E36EB008E39B9 /* BNPLFlowLayout.swift */; };
+		F3A6F24B283FA963008E39B9 /* GeideaBNPLAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6F24A283FA963008E39B9 /* GeideaBNPLAPI.swift */; };
+		F3A7F862280D7BC600704D50 /* ShahryConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7F861280D7BC600704D50 /* ShahryConfirmViewModel.swift */; };
+		F3A7F864280D7BDA00704D50 /* ShahryPurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7F863280D7BDA00704D50 /* ShahryPurchaseViewModel.swift */; };
+		F3A838D2286C6F9000FD35B8 /* GDSouhoolaCancelDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A838D1286C6F9000FD35B8 /* GDSouhoolaCancelDetails.swift */; };
+		F3AA97F828896B0B0096A96F /* GDInitiateAuthenticateTokenParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AA97F728896B0B0096A96F /* GDInitiateAuthenticateTokenParams.swift */; };
+		F3AA97FA288986780096A96F /* AuthenticateTokenParamsV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AA97F9288986780096A96F /* AuthenticateTokenParamsV3.swift */; };
+		F3AA97FE28898CC50096A96F /* GDRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AA97FD28898CC50096A96F /* GDRecurrence.swift */; };
+		F3AA980028898E7F0096A96F /* RecurrenceParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AA97FF28898E7F0096A96F /* RecurrenceParams.swift */; };
+		F3AB539F28FD959E009F3F0D /* SelectPaymentMethodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3AB539E28FD959E009F3F0D /* SelectPaymentMethodView.xib */; };
+		F3AB53A128FD95B8009F3F0D /* SelectPaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AB53A028FD95B8009F3F0D /* SelectPaymentMethodView.swift */; };
+		F3AE8B6C27AAC6C900D84322 /* BNPLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8B6A27AAC6C900D84322 /* BNPLViewController.swift */; };
+		F3AE8B6D27AAC6C900D84322 /* BNPLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3AE8B6B27AAC6C900D84322 /* BNPLViewController.xib */; };
+		F3AE8B7027ABBF3100D84322 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8B6F27ABBF3100D84322 /* StepView.swift */; };
+		F3AE8B7327ABBF5400D84322 /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3AE8B7227ABBF5400D84322 /* StepView.xib */; };
+		F3AE8B7527ABFD6B00D84322 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8B7427ABFD6B00D84322 /* ProgressView.swift */; };
+		F3AE8B7727ABFD8400D84322 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3AE8B7627ABFD8400D84322 /* ProgressView.xib */; };
+		F3AE8B7B27AD68C500D84322 /* PhoneNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3AE8B7927AD68C500D84322 /* PhoneNumberViewController.xib */; };
+		F3AE8B8027B0FB7200D84322 /* InstallmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8B7E27B0FB7200D84322 /* InstallmentViewController.swift */; };
+		F3AE8B8127B0FB7200D84322 /* InstallmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3AE8B7F27B0FB7200D84322 /* InstallmentViewController.xib */; };
+		F3AE8B8327B0FD6100D84322 /* BNPL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AE8B8227B0FD6100D84322 /* BNPL.storyboard */; };
+		F3AE8B8B27B1411E00D84322 /* BNPLVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8B8A27B1411E00D84322 /* BNPLVIewModel.swift */; };
+		F3AE8B8F27B1548500D84322 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8B8E27B1548400D84322 /* RoundedView.swift */; };
+		F3AE8B9127B176E800D84322 /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8B9027B176E800D84322 /* PhoneNumberViewController.swift */; };
+		F3AE8B9327B66E6200D84322 /* InstallmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8B9227B66E6200D84322 /* InstallmentViewModel.swift */; };
+		F3AE8B9827B6746B00D84322 /* GridCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8B9727B6746B00D84322 /* GridCollectionLayout.swift */; };
+		F3AE8B9D27B679F200D84322 /* InstallmentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8B9B27B679F200D84322 /* InstallmentsCollectionViewCell.swift */; };
+		F3AE8B9E27B679F200D84322 /* InstallmentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3AE8B9C27B679F200D84322 /* InstallmentsCollectionViewCell.xib */; };
+		F3AE8BA027B67FA400D84322 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8B9F27B67FA300D84322 /* UIView.swift */; };
+		F3AE8BA227B688C300D84322 /* InstallmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BA127B688C300D84322 /* InstallmentModel.swift */; };
+		F3AE8BAB27BBC6A600D84322 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BA927BBC6A600D84322 /* OTPViewController.swift */; };
+		F3AE8BAC27BBC6A600D84322 /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3AE8BAA27BBC6A600D84322 /* OTPViewController.xib */; };
+		F3AE8BAF27BBF32100D84322 /* PhoneNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BAE27BBF32100D84322 /* PhoneNumberViewModel.swift */; };
+		F3AE8BB227BD209300D84322 /* VerifyCustomerParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BB127BD209300D84322 /* VerifyCustomerParams.swift */; };
+		F3AE8BB427BD215300D84322 /* InstallmentPlanParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BB327BD215300D84322 /* InstallmentPlanParams.swift */; };
+		F3AE8BB627BD220200D84322 /* GenerateOTPParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BB527BD220200D84322 /* GenerateOTPParams.swift */; };
+		F3AE8BB827BD225F00D84322 /* BNPLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BB727BD225F00D84322 /* BNPLManager.swift */; };
+		F3AE8BBA27BD226F00D84322 /* BNPLRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BB927BD226F00D84322 /* BNPLRouter.swift */; };
+		F3AE8BBD27BD327B00D84322 /* GDVerifyCustomerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BBC27BD327B00D84322 /* GDVerifyCustomerDetails.swift */; };
+		F3AE8BBF27BD328F00D84322 /* GDInstallmentPlanDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BBE27BD328F00D84322 /* GDInstallmentPlanDetails.swift */; };
+		F3AE8BC127BD32BD00D84322 /* GDGenerateOTPDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BC027BD32BD00D84322 /* GDGenerateOTPDetails.swift */; };
+		F3AE8BC327BD38EC00D84322 /* GDVerifyCustomerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BC227BD38EC00D84322 /* GDVerifyCustomerResponse.swift */; };
+		F3AE8BC527BE599D00D84322 /* GDInstallmentPlansResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BC427BE599D00D84322 /* GDInstallmentPlansResponse.swift */; };
+		F3AE8BC727BE5A7F00D84322 /* GDInstallmentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BC627BE5A7F00D84322 /* GDInstallmentPlan.swift */; };
+		F3AE8BC927C3780000D84322 /* InstallmentPlanCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BC827C3780000D84322 /* InstallmentPlanCellViewModel.swift */; };
+		F3AE8BCB27C3EB4000D84322 /* GDBNPLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8BCA27C3EB4000D84322 /* GDBNPLResponse.swift */; };
+		F3B8ABCD28080F0E00E8EEE8 /* NSAttributeString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8ABCC28080F0E00E8EEE8 /* NSAttributeString+Extensions.swift */; };
+		F3B8ABCF280816BD00E8EEE8 /* ShahryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8ABCE280816BD00E8EEE8 /* ShahryRouter.swift */; };
+		F3B8ABD22808199F00E8EEE8 /* VALUItemParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8ABD12808199F00E8EEE8 /* VALUItemParams.swift */; };
+		F3B8ABD428081B4800E8EEE8 /* shahryInstallmentPlanSelectedParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8ABD328081B4800E8EEE8 /* shahryInstallmentPlanSelectedParams.swift */; };
+		F3B8ABD62808373700E8EEE8 /* GDShahryConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8ABD52808373700E8EEE8 /* GDShahryConfirm.swift */; };
+		F3C7229B2726B7E6001B0E0C /* SDKMerchantConfigRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7229A2726B7E6001B0E0C /* SDKMerchantConfigRouter.swift */; };
+		F3DBEC5B28A3D0CC00091067 /* PayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DBEC5A28A3D0CC00091067 /* PayViewModel.swift */; };
+		F3DC4D4327F1DDB7001EDE31 /* ShahryConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC4D4127F1DDB7001EDE31 /* ShahryConfirmViewController.swift */; };
+		F3DC4D4427F1DDB7001EDE31 /* ShahryConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3DC4D4227F1DDB7001EDE31 /* ShahryConfirmViewController.xib */; };
+		F3DDF36228101F3C00E2B1B2 /* GDBNPLDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DDF36128101F3C00E2B1B2 /* GDBNPLDetails.swift */; };
+		F3E6624E289D14D900D40B7E /* GDSouhoolaRetreiveInstallmentPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E6624D289D14D900D40B7E /* GDSouhoolaRetreiveInstallmentPlans.swift */; };
+		F3E7418D27DF429B00519A80 /* ReceiptRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7418C27DF429B00519A80 /* ReceiptRouter.swift */; };
+		F3ED4F17282A89D20024E401 /* GSSouhoolaInstallmentPlanResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F16282A89D20024E401 /* GSSouhoolaInstallmentPlanResponse.swift */; };
+		F3ED4F19282A8A950024E401 /* GDSouhoolaReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F18282A8A950024E401 /* GDSouhoolaReviewResponse.swift */; };
+		F3ED4F1D282BAD7D0024E401 /* ReviewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F1B282BAD7D0024E401 /* ReviewTransactionViewController.swift */; };
+		F3ED4F1E282BAD7D0024E401 /* ReviewTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3ED4F1C282BAD7D0024E401 /* ReviewTransactionViewController.xib */; };
+		F3ED4F20282BAEFC0024E401 /* ReviewTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F1F282BAEFC0024E401 /* ReviewTransactionViewModel.swift */; };
+		F3ED4F24282BE6E20024E401 /* SouhoolaItemParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F23282BE6E20024E401 /* SouhoolaItemParams.swift */; };
+		F3ED4F26282D318F0024E401 /* GDSouhoolaInstallmentPlanSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F25282D318F0024E401 /* GDSouhoolaInstallmentPlanSelected.swift */; };
+		F3ED4F28282D33650024E401 /* GDSouhoolaBNPLDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F27282D33650024E401 /* GDSouhoolaBNPLDetails.swift */; };
+		F3ED4F2A282D38AD0024E401 /* GDSouhoolaInstallmentPlanSelectedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F29282D38AD0024E401 /* GDSouhoolaInstallmentPlanSelectedResponse.swift */; };
+		F3ED4F2C282E326E0024E401 /* SouhoolaIPSelectedParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F2B282E326E0024E401 /* SouhoolaIPSelectedParams.swift */; };
+		F3ED4F2E28322B490024E401 /* GDBNPLReceiptResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F2D28322B490024E401 /* GDBNPLReceiptResponse.swift */; };
+		F3ED4F30283281430024E401 /* GDSouhoolaOTPDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F2F283281430024E401 /* GDSouhoolaOTPDetails.swift */; };
+		F3ED4F32283283B00024E401 /* GDSouhoolaBasicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED4F31283283B00024E401 /* GDSouhoolaBasicResponse.swift */; };
+		F3F7390228FEBCEE00ADBFC8 /* SelectGroupedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F7390128FEBCEE00ADBFC8 /* SelectGroupedView.swift */; };
+		F3F7390428FEBD0600ADBFC8 /* SelectGroupedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3F7390328FEBD0600ADBFC8 /* SelectGroupedView.xib */; };
+		F3FFD014276B621B0082B38B /* GDSendLinkMultipleDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FFD013276B621B0082B38B /* GDSendLinkMultipleDetails.swift */; };
+		F3FFD016276B68B00082B38B /* SendLinkMultipleParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FFD015276B68B00082B38B /* SendLinkMultipleParams.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6117B9D25396AB800959D78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6224EA62534DFE80065C23F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6224EAE2534DFE80065C23F;
+			remoteInfo = GeideaPaymentSDK;
+		};
+		F31717EB2791687300ADD77E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6224EA62534DFE80065C23F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6224EAE2534DFE80065C23F;
+			remoteInfo = GeideaPaymentSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E608509D25C968B400DD2F77 /* CanceParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanceParams.swift; sourceTree = "<group>"; };
+		E60850A125C995DA00DD2F77 /* CancelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelManager.swift; sourceTree = "<group>"; };
+		E60850A525C999B700DD2F77 /* GDCancelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCancelResponse.swift; sourceTree = "<group>"; };
+		E608543625482883009B468F /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		E608543A254866BE009B468F /* GDAuthenticationDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAuthenticationDetailsResponse.swift; sourceTree = "<group>"; };
+		E60854412548708D009B468F /* GDPaymentMethodResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPaymentMethodResponse.swift; sourceTree = "<group>"; };
+		E6085445254870F6009B468F /* GDCodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCodesResponse.swift; sourceTree = "<group>"; };
+		E6085468254C0767009B468F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E60C0D1827030DD600A01F9D /* GDProductMConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDProductMConfig.swift; sourceTree = "<group>"; };
+		E60C0D1A27030E8B00A01F9D /* ProductRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRouter.swift; sourceTree = "<group>"; };
+		E60C0D1C270324C500A01F9D /* ProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
+		E60C31F82536EE1F0023133F /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		E60C31FC2536EFA50023133F /* GDWSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWSConstants.swift; sourceTree = "<group>"; };
+		E60C32022536F2280023133F /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		E60C32062536F64A0023133F /* GDWSHTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWSHTTPMethod.swift; sourceTree = "<group>"; };
+		E60C320C2536F9D00023133F /* ConfigRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigRouter.swift; sourceTree = "<group>"; };
+		E60C3210253702EF0023133F /* Strings+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Extensions.swift"; sourceTree = "<group>"; };
+		E60C32142537033C0023133F /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		E60C321825371FBF0023133F /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
+		E60C327225383CD00023133F /* SecureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStore.swift; sourceTree = "<group>"; };
+		E60C32812538446A0023133F /* SecureStoreQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreQueryable.swift; sourceTree = "<group>"; };
+		E60C3285253844C20023133F /* SecureStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreError.swift; sourceTree = "<group>"; };
+		E6117B9725396AB800959D78 /* GeideaPaymentSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeideaPaymentSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6117B9925396AB800959D78 /* GeideaPaymentSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeideaPaymentSDKTests.swift; sourceTree = "<group>"; };
+		E6117B9B25396AB800959D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6117BB325398A6000959D78 /* PaymentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRouter.swift; sourceTree = "<group>"; };
+		E6117BB725398F0E00959D78 /* AuthenticateParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateParams.swift; sourceTree = "<group>"; };
+		E6117BBB25398F1B00959D78 /* PayParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayParams.swift; sourceTree = "<group>"; };
+		E6117BF12539906B00959D78 /* PaymentMethodParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodParams.swift; sourceTree = "<group>"; };
+		E6117BF5253990EC00959D78 /* ExpiryDateParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiryDateParams.swift; sourceTree = "<group>"; };
+		E6117BFB253991CE00959D78 /* AddressParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressParams.swift; sourceTree = "<group>"; };
+		E6117BFF2539B99D00959D78 /* AuthenticateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateManager.swift; sourceTree = "<group>"; };
+		E6117C3D253CD4C700959D78 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		E6117C41253CD92500959D78 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		E6117C47253D7A6200959D78 /* JSONSerialiation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONSerialiation+Extensions.swift"; sourceTree = "<group>"; };
+		E6117C4B253D9F3C00959D78 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		E6117C4F253DAAD000959D78 /* PayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayManager.swift; sourceTree = "<group>"; };
+		E6117C70253EDB7000959D78 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		E6117C71253EDB7000959D78 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
+		E6117C76253EF62000959D78 /* AuthenticateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateResponse.swift; sourceTree = "<group>"; };
+		E61FE56F26C3F3CC00B64B2B /* PaymentFormCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFormCoordinator.swift; sourceTree = "<group>"; };
+		E6224EAF2534DFE80065C23F /* GeideaPaymentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeideaPaymentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6224EB22534DFE80065C23F /* GeideaPaymentSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeideaPaymentSDK.h; sourceTree = "<group>"; };
+		E6224EB32534DFE80065C23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6224ECB2534E01A0065C23F /* GeideaPaymentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeideaPaymentAPI.swift; sourceTree = "<group>"; };
+		E6224EFF2534E43C0065C23F /* PaymentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCoordinator.swift; sourceTree = "<group>"; };
+		E6224F042534E4860065C23F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E6224F0A2534E4D70065C23F /* PaymentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFactory.swift; sourceTree = "<group>"; };
+		E6224F142534E5C70065C23F /* WebViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewViewModel.swift; sourceTree = "<group>"; };
+		E6224F152534E5C70065C23F /* WebviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebviewViewController.xib; sourceTree = "<group>"; };
+		E6224F162534E5C70065C23F /* WebviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
+		E6342E4726A19CB300AE1E31 /* MeezaPaymentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeezaPaymentRouter.swift; sourceTree = "<group>"; };
+		E6342E4926A19F5400AE1E31 /* QRParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRParams.swift; sourceTree = "<group>"; };
+		E6342E4B26A1A23100AE1E31 /* QRMeezaPaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRMeezaPaymentManager.swift; sourceTree = "<group>"; };
+		E6342E4D26A1BB6C00AE1E31 /* GDQRResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDQRResponse.swift; sourceTree = "<group>"; };
+		E634460725D53EC4000BC8A0 /* GDConfigApplePay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDConfigApplePay.swift; sourceTree = "<group>"; };
+		E6380A77255A95E70034E556 /* GDErrorCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDErrorCodes.swift; sourceTree = "<group>"; };
+		E63E456E25ECF7660077251F /* OrderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRouter.swift; sourceTree = "<group>"; };
+		E63E458125ED15790077251F /* OrdersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersManager.swift; sourceTree = "<group>"; };
+		E63E458C25ED1EA70077251F /* GDOrdersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDOrdersResponse.swift; sourceTree = "<group>"; };
+		E63E459025ED22090077251F /* GDOrdersFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDOrdersFilter.swift; sourceTree = "<group>"; };
+		E641F100269DA93200920959 /* GDPaymentIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPaymentIntent.swift; sourceTree = "<group>"; };
+		E64462CB257F93B2001BAA4B /* CaptureParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureParams.swift; sourceTree = "<group>"; };
+		E64462CF257F94FE001BAA4B /* OperationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsManager.swift; sourceTree = "<group>"; };
+		E6456D6525827A4600E6C4C2 /* PayTokenParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTokenParams.swift; sourceTree = "<group>"; };
+		E64D56552583A06D008AB18F /* PayTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTokenManager.swift; sourceTree = "<group>"; };
+		E65170DA26A02EED00102128 /* QRPaymentFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRPaymentFormViewController.swift; sourceTree = "<group>"; };
+		E65170DB26A02EED00102128 /* QRPaymentFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRPaymentFormViewController.xib; sourceTree = "<group>"; };
+		E65170DE26A02F0000102128 /* QRpaymentFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRpaymentFormViewModel.swift; sourceTree = "<group>"; };
+		E65170E026A04A9E00102128 /* GDPICustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPICustomer.swift; sourceTree = "<group>"; };
+		E65170E226A0500D00102128 /* PayQRCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayQRCoordinator.swift; sourceTree = "<group>"; };
+		E6567E8C258A1E1B001C11E1 /* OperationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCoordinator.swift; sourceTree = "<group>"; };
+		E6567E96258A2B0E001C11E1 /* OperationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationViewModel.swift; sourceTree = "<group>"; };
+		E6567E9A258A2B34001C11E1 /* PayTokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTokenViewModel.swift; sourceTree = "<group>"; };
+		E6567E9E258A43F6001C11E1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E6567EA4258A5E5C001C11E1 /* PaymentTokenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTokenCoordinator.swift; sourceTree = "<group>"; };
+		E6567EB225A5B21C001C11E1 /* FormCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCoordinator.swift; sourceTree = "<group>"; };
+		E6567EB725A5B371001C11E1 /* CardDetailsFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsFormViewController.swift; sourceTree = "<group>"; };
+		E6567EBB25A5B396001C11E1 /* CardDetailsFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsFormViewModel.swift; sourceTree = "<group>"; };
+		E6567EBF25A5B3D6001C11E1 /* CardDetailsFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailsFormViewController.xib; sourceTree = "<group>"; };
+		E663E98D26C198E700CEB7FE /* PaymentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentType.swift; sourceTree = "<group>"; };
+		E676814B26EF6BF100626694 /* GDCardBrandAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCardBrandAuthentication.swift; sourceTree = "<group>"; };
+		E676817B26F0D8E200626694 /* GDPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPlatform.swift; sourceTree = "<group>"; };
+		E676817D26F0DECF00626694 /* GDPostilionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPostilionDetails.swift; sourceTree = "<group>"; };
+		E676817F26F0DF1100626694 /* GDTerminalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTerminalDetails.swift; sourceTree = "<group>"; };
+		E676818126F0EA7900626694 /* GDMeezaDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMeezaDetails.swift; sourceTree = "<group>"; };
+		E676818326F0F12E00626694 /* GDStatementDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDStatementDescriptor.swift; sourceTree = "<group>"; };
+		E676818526F1EF4000626694 /* GDPaymentIntentOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPaymentIntentOrder.swift; sourceTree = "<group>"; };
+		E676818826F32C6800626694 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
+		E676818926F32C6800626694 /* ReceiptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptViewController.xib; sourceTree = "<group>"; };
+		E676818C26F36C1000626694 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
+		E676818F26F378C800626694 /* ReceiptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTableViewCell.swift; sourceTree = "<group>"; };
+		E676819026F378C800626694 /* ReceiptTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptTableViewCell.xib; sourceTree = "<group>"; };
+		E676819326F4AE2100626694 /* DynamicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTableView.swift; sourceTree = "<group>"; };
+		E67E4094256D4CE100FAB817 /* ApplePayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayManager.swift; sourceTree = "<group>"; };
+		E67E4098256D54CC00FAB817 /* ApplePayParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayParams.swift; sourceTree = "<group>"; };
+		E67E409C256D634100FAB817 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		E67E5DAC26A980AA00E145D1 /* GDRTPQRResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDRTPQRResponse.swift; sourceTree = "<group>"; };
+		E6801E0325B5C81D0074C5BB /* CountriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesDataSource.swift; sourceTree = "<group>"; };
+		E6801E0925B5C8930074C5BB /* CountrySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectionViewController.swift; sourceTree = "<group>"; };
+		E6801E1225B5C97D0074C5BB /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		E6801E1325B5C97D0074C5BB /* CountryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
+		E6801E1925B5CA190074C5BB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E6801E1F25B5CCC80074C5BB /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		E6801E2325B5CD350074C5BB /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		E6801E4025B6D59F0074C5BB /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		E6905F3525DEB7EE000CA160 /* GDPaymentIntentDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPaymentIntentDetails.swift; sourceTree = "<group>"; };
+		E6905F4025DFCC07000CA160 /* GDPaymentIntentDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPaymentIntentDetailsResponse.swift; sourceTree = "<group>"; };
+		E6905F4425DFCD84000CA160 /* GDPaymentIntentCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPaymentIntentCustomer.swift; sourceTree = "<group>"; };
+		E6905F4825E268D3000CA160 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		E69FFAC226D62BB200097907 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E69FFAD826D7C9D100097907 /* SelectPaymentMethodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SelectPaymentMethodViewController.xib; path = GeideaPaymentSDK/Source/Views/SelectPaymentForm/SelectPaymentMethodViewController.xib; sourceTree = SOURCE_ROOT; };
+		E69FFAD926D7C9D100097907 /* SelectPaymentMethodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectPaymentMethodViewController.swift; path = GeideaPaymentSDK/Source/Views/SelectPaymentForm/SelectPaymentMethodViewController.swift; sourceTree = SOURCE_ROOT; };
+		E69FFADA26D7C9D100097907 /* SelectPaymentMethodViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectPaymentMethodViewModel.swift; path = GeideaPaymentSDK/Source/Views/SelectPaymentForm/SelectPaymentMethodViewModel.swift; sourceTree = SOURCE_ROOT; };
+		E69FFADE26D8EE1C00097907 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		E6A4BAD825C1AB5800DE08BD /* GDTokenizationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTokenizationDetails.swift; sourceTree = "<group>"; };
+		E6A5E84625416F2B0080BF3D /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
+		E6A5E84C25417A4D0080BF3D /* GDCardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCardDetails.swift; sourceTree = "<group>"; };
+		E6A5E85025417AC90080BF3D /* ExpiryDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiryDate.swift; sourceTree = "<group>"; };
+		E6A5E8542541807B0080BF3D /* GDAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAmount.swift; sourceTree = "<group>"; };
+		E6A5E865254189800080BF3D /* GDCustomerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCustomerDetails.swift; sourceTree = "<group>"; };
+		E6A5E86B2542B2B50080BF3D /* GDErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDErrorResponse.swift; sourceTree = "<group>"; };
+		E6A5E8702542BDBE0080BF3D /* NSError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Extensions.swift"; sourceTree = "<group>"; };
+		E6A5E8742542BE190080BF3D /* ErrorCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCodes.swift; sourceTree = "<group>"; };
+		E6A5E87C25430DD60080BF3D /* GDAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAddress.swift; sourceTree = "<group>"; };
+		E6ADAAD02540074D00EC655F /* PayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayResponse.swift; sourceTree = "<group>"; };
+		E6ADAAD4254007B100EC655F /* GDConfigResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDConfigResponse.swift; sourceTree = "<group>"; };
+		E6ADAAD8254022C800EC655F /* GDOrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDOrderResponse.swift; sourceTree = "<group>"; };
+		E6ADAADC254024E800EC655F /* GDTransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTransactionResponse.swift; sourceTree = "<group>"; };
+		E6B0670F2571115600F9A44F /* GDApplePayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDApplePayResponse.swift; sourceTree = "<group>"; };
+		E6B067212577E98100F9A44F /* ConfigCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigCountries.swift; sourceTree = "<group>"; };
+		E6B067622578DB0700F9A44F /* ApplePayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayViewController.swift; sourceTree = "<group>"; };
+		E6B067632578DB0700F9A44F /* ApplePayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplePayViewController.xib; sourceTree = "<group>"; };
+		E6B06768257E37B400F9A44F /* PaymentOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOperation.swift; sourceTree = "<group>"; };
+		E6BCEC5825DD2D3B000CFCE6 /* PaymentIntentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentIntentRouter.swift; sourceTree = "<group>"; };
+		E6BCEC5C25DD311B000CFCE6 /* PaymentIntentParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentIntentParams.swift; sourceTree = "<group>"; };
+		E6BCEC6025DD31B2000CFCE6 /* CustomerParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerParams.swift; sourceTree = "<group>"; };
+		E6BCEC6725DD3AE6000CFCE6 /* PaymentIntentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentIntentManager.swift; sourceTree = "<group>"; };
+		E6BCEC6C25DD42E4000CFCE6 /* PaymentIntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentIntentViewController.swift; sourceTree = "<group>"; };
+		E6BCEC6D25DD42E4000CFCE6 /* PaymentIntentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentIntentViewController.xib; sourceTree = "<group>"; };
+		E6BCEC7925DE51FC000CFCE6 /* PaymentIntentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentIntentFactory.swift; sourceTree = "<group>"; };
+		E6BCEC7D25DE52CC000CFCE6 /* PaymentIntentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentIntentViewModel.swift; sourceTree = "<group>"; };
+		E6CEBF3926D3B88700A7A28B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6CEBF3B26D3B88D00A7A28B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6CEBF3C26D3C52E00A7A28B /* BaseLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLanguage.swift; sourceTree = "<group>"; };
+		E6DE951F26A6AF04008E9DC7 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		E6DE952126A6EDF5008E9DC7 /* RequestToPayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestToPayViewController.swift; sourceTree = "<group>"; };
+		E6DE952226A6EDF5008E9DC7 /* RequestToPayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestToPayViewController.xib; sourceTree = "<group>"; };
+		E6DE952526A6FB1E008E9DC7 /* RequestToPayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestToPayViewModel.swift; sourceTree = "<group>"; };
+		E6DE952726A82368008E9DC7 /* PaymentRequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRequestParams.swift; sourceTree = "<group>"; };
+		E6DE952B26A855B7008E9DC7 /* RequestToPayParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestToPayParams.swift; sourceTree = "<group>"; };
+		E6DE952D26A858B8008E9DC7 /* MeezaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeezaRouter.swift; sourceTree = "<group>"; };
+		E6E019C825A7101300AA2DC5 /* GDApplePayDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDApplePayDetails.swift; sourceTree = "<group>"; };
+		E6E019D325A851E600AA2DC5 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		E6E019DD25A8584800AA2DC5 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		E6E019E725A876A000AA2DC5 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		E6E01A0125AC82F100AA2DC5 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		E6E01A0525AC883100AA2DC5 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		E6E01A1125ADA38600AA2DC5 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		E6E8181F269C207600E010F8 /* GDPaymentIntentFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPaymentIntentFilter.swift; sourceTree = "<group>"; };
+		E6E81821269C49FF00E010F8 /* GDPaymentIntentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDPaymentIntentResponse.swift; sourceTree = "<group>"; };
+		E6E81823269C4FA100E010F8 /* GDPaymentIntentsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPaymentIntentsResponse.swift; sourceTree = "<group>"; };
+		E6E81826269C668F00E010F8 /* PaymentIntentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentIntentTableViewCell.swift; sourceTree = "<group>"; };
+		E6E81827269C668F00E010F8 /* PaymentIntentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentIntentTableViewCell.xib; sourceTree = "<group>"; };
+		E6E8182E269C7BBD00E010F8 /* PaymentIntentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentIntentsViewController.swift; sourceTree = "<group>"; };
+		E6E8182F269C7BBD00E010F8 /* PaymentIntentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentIntentsViewController.xib; sourceTree = "<group>"; };
+		E6F1EE6D2535E59E00253F19 /* PaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		E6F1EE772535E5B600253F19 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		E6F1EE782535E5B600253F19 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		E6F1EE7D2535E5C800253F19 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		E6F1EE7E2535E5C800253F19 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		E6F1EE7F2535E5C800253F19 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		E6F1EE862535E5E100253F19 /* GDConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDConfig.swift; sourceTree = "<group>"; };
+		E6F653D425B8B43D00C1248C /* CountrySelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountrySelectionViewController.xib; sourceTree = "<group>"; };
+		E6F653DC25B8BEB400C1248C /* Array+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extenstions.swift"; sourceTree = "<group>"; };
+		E6F6540A25B9C36000C1248C /* CVVAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVVAlertViewController.xib; sourceTree = "<group>"; };
+		E6F6540E25B9C38500C1248C /* CVVAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVVAlertViewController.swift; sourceTree = "<group>"; };
+		F307578D2726F98200184737 /* GDSDKMerchantConfigResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSDKMerchantConfigResponse.swift; sourceTree = "<group>"; };
+		F307578F2726F9FE00184737 /* GDMerchantDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMerchantDataResponse.swift; sourceTree = "<group>"; };
+		F30757912726FDBD00184737 /* GDCardBrandProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCardBrandProvider.swift; sourceTree = "<group>"; };
+		F307619128216AA4004014CC /* GDSouhoolaVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaVerifyResponse.swift; sourceTree = "<group>"; };
+		F30761952821739C004014CC /* SouhoolaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouhoolaRouter.swift; sourceTree = "<group>"; };
+		F307619728217866004014CC /* GDSouhoolaInstallmentPlansResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaInstallmentPlansResponse.swift; sourceTree = "<group>"; };
+		F3076199282178B7004014CC /* GDSouhoolaInstallmentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaInstallmentPlan.swift; sourceTree = "<group>"; };
+		F307619B28290EA1004014CC /* GDSouhoolaReviewTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaReviewTransaction.swift; sourceTree = "<group>"; };
+		F30A53BC2806EFC600FCF78B /* EInvoiceItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EInvoiceItemTableViewCell.xib; sourceTree = "<group>"; };
+		F30A53BD2806EFC600FCF78B /* EInvoiceItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EInvoiceItemTableViewCell.swift; sourceTree = "<group>"; };
+		F30C031C273C047E008AC9ED /* PaymentIntentCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentIntentCoordinator.swift; sourceTree = "<group>"; };
+		F30C031E273C07F0008AC9ED /* EInvoiceDetailsParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EInvoiceDetailsParams.swift; sourceTree = "<group>"; };
+		F30C0320273C0BB1008AC9ED /* EInvoiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EInvoiceItem.swift; sourceTree = "<group>"; };
+		F30C0322273CF967008AC9ED /* GDEInvoiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDEInvoiceItem.swift; sourceTree = "<group>"; };
+		F30C0324273D0892008AC9ED /* GDEInvoiceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDEInvoiceDetails.swift; sourceTree = "<group>"; };
+		F30C0326273D4B81008AC9ED /* EInvoiceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EInvoiceDetailsViewController.swift; sourceTree = "<group>"; };
+		F30C0327273D4B81008AC9ED /* EInvoiceDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EInvoiceDetailsViewController.xib; sourceTree = "<group>"; };
+		F30C032A273D5EAF008AC9ED /* EInvoiceItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EInvoiceItemViewController.swift; sourceTree = "<group>"; };
+		F30C032B273D5EAF008AC9ED /* EInvoiceItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EInvoiceItemViewController.xib; sourceTree = "<group>"; };
+		F30D113D28FEEECF00242A59 /* GroupedBNPLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedBNPLView.swift; sourceTree = "<group>"; };
+		F30D113F28FEEEE300242A59 /* GroupedBNPLView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupedBNPLView.xib; sourceTree = "<group>"; };
+		F30D114128FFE3AA00242A59 /* PaymentMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsView.swift; sourceTree = "<group>"; };
+		F30FF2E927D6024C00BFB4B1 /* GDVALUInstallmentPlanSelectedDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDVALUInstallmentPlanSelectedDetails.swift; sourceTree = "<group>"; };
+		F30FF2ED27D6531C00BFB4B1 /* GDInstallmentPlanSelectedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDInstallmentPlanSelectedResponse.swift; sourceTree = "<group>"; };
+		F3144942274F937300B402E0 /* PaymentRouterV4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRouterV4.swift; sourceTree = "<group>"; };
+		F31871F3290809E70070C991 /* UIActivityIndicatorView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Extensions.swift"; sourceTree = "<group>"; };
+		F31F9AA7275E04150052A093 /* GDQRDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDQRDetails.swift; sourceTree = "<group>"; };
+		F324A27E27E21F2C00F14C6F /* ReceiptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptManager.swift; sourceTree = "<group>"; };
+		F324A28027E228BA00F14C6F /* GDReceiptResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDReceiptResponse.swift; sourceTree = "<group>"; };
+		F324A28327E22B3A00F14C6F /* GDReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDReceipt.swift; sourceTree = "<group>"; };
+		F324A28527E22CF200F14C6F /* GDMechant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMechant.swift; sourceTree = "<group>"; };
+		F324A28727E3337A00F14C6F /* BlankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankTableViewCell.swift; sourceTree = "<group>"; };
+		F324A28827E3337A00F14C6F /* BlankTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlankTableViewCell.xib; sourceTree = "<group>"; };
+		F324A28B27E3338E00F14C6F /* SeparatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorTableViewCell.swift; sourceTree = "<group>"; };
+		F324A28C27E3338E00F14C6F /* SeparatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeparatorTableViewCell.xib; sourceTree = "<group>"; };
+		F324A29127E333ED00F14C6F /* ValuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuTableView.swift; sourceTree = "<group>"; };
+		F324A29227E333ED00F14C6F /* ValuTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ValuTableView.xib; sourceTree = "<group>"; };
+		F324A29727E49D6300F14C6F /* RichTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextField.swift; sourceTree = "<group>"; };
+		F32554FB28E2F165002EEFEA /* CancelAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAlertViewController.swift; sourceTree = "<group>"; };
+		F32554FC28E2F165002EEFEA /* CancelAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CancelAlertViewController.xib; sourceTree = "<group>"; };
+		F325834C285A104100591887 /* GDMultiCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMultiCurrency.swift; sourceTree = "<group>"; };
+		F325834E285A1B7200591887 /* GDCashOnDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCashOnDelivery.swift; sourceTree = "<group>"; };
+		F327AF0D2832D2EA00F7A959 /* GDSouhoolaConfirmDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaConfirmDetails.swift; sourceTree = "<group>"; };
+		F333CE1B28D9CDD6000ECAD7 /* PaymentRouterV3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRouterV3.swift; sourceTree = "<group>"; };
+		F333CE1D28D9FC97000ECAD7 /* GDInitializeResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDInitializeResponseObject.swift; sourceTree = "<group>"; };
+		F333CE2928DB0C37000ECAD7 /* GeideaPaymentSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GeideaPaymentSDK.xcframework; path = "../../../gitHub repo reload/iOS-SDK/GeideaPaymentSDK/GeideaPaymentSDK.xcframework"; sourceTree = "<group>"; };
+		F334747227C64634004A6236 /* PurchseParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchseParams.swift; sourceTree = "<group>"; };
+		F334747427C647FD004A6236 /* GDBNPLPurchaseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBNPLPurchaseDetails.swift; sourceTree = "<group>"; };
+		F334747627C657C0004A6236 /* GDBNPLPurchaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBNPLPurchaseResponse.swift; sourceTree = "<group>"; };
+		F3377B7128648C8F00BBB46B /* GDSouhoolaResendDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaResendDetails.swift; sourceTree = "<group>"; };
+		F33CF28B27FEE6940065778A /* Numeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extensions.swift"; sourceTree = "<group>"; };
+		F33CF28D27FEE6BF0065778A /* DataProtocol+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataProtocol+Extensions.swift"; sourceTree = "<group>"; };
+		F33CF28F27FEE7010065778A /* KeyEncodingContainer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyEncodingContainer+Extensions.swift"; sourceTree = "<group>"; };
+		F33CF29327FEE78A0065778A /* KeyedDecodingContainer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Extensions.swift"; sourceTree = "<group>"; };
+		F33CF29527FEEF430065778A /* Decimal+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extensions.swift"; sourceTree = "<group>"; };
+		F33CF2AC28006FBB0065778A /* GDShahrySelectPlanInstallment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDShahrySelectPlanInstallment.swift; sourceTree = "<group>"; };
+		F33CF2AE280071030065778A /* GDBNPLItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBNPLItem.swift; sourceTree = "<group>"; };
+		F34D50DF28B359E300068C4F /* RadialCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialCircleView.swift; sourceTree = "<group>"; };
+		F34E064B273EA1E700E87698 /* EInvoiceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EInvoiceDetailsViewModel.swift; sourceTree = "<group>"; };
+		F34E064D273EACC200E87698 /* GDEInvoiceSentLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDEInvoiceSentLink.swift; sourceTree = "<group>"; };
+		F350EAC22727FE95008DA0D5 /* GDSDKMerchantConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSDKMerchantConfig.swift; sourceTree = "<group>"; };
+		F350EAC42729446B008DA0D5 /* GDMerchantConfigResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMerchantConfigResponse.swift; sourceTree = "<group>"; };
+		F379504C2902717B004044C7 /* GDPaymentMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPaymentMethods.swift; sourceTree = "<group>"; };
+		F37ABB9027E877EC009F04E2 /* BNPLFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNPLFooter.swift; sourceTree = "<group>"; };
+		F37ABB9227E87820009F04E2 /* BNPLFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BNPLFooter.xib; sourceTree = "<group>"; };
+		F3842E3B288EA4F1005D8802 /* CVVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVVViewController.swift; sourceTree = "<group>"; };
+		F3842E3C288EA4F1005D8802 /* CVVViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVVViewController.xib; sourceTree = "<group>"; };
+		F3842E3F288ECA4F005D8802 /* CVVViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVVViewModel.swift; sourceTree = "<group>"; };
+		F3842E41288EE4B8005D8802 /* GDGetTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGetTokenResponse.swift; sourceTree = "<group>"; };
+		F3842E43288EE7D7005D8802 /* GDExpiryDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDExpiryDate.swift; sourceTree = "<group>"; };
+		F38CBF4A282946BF00ED5FDB /* SouhoolaReviewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouhoolaReviewParams.swift; sourceTree = "<group>"; };
+		F38D6E5027F1ECD1006A6F43 /* BNPLShahryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNPLShahryViewModel.swift; sourceTree = "<group>"; };
+		F3919C5128C745E5002C21CB /* GeideaPaymentSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GeideaPaymentSDK.xcframework; path = build/GeideaPaymentSDK.xcframework; sourceTree = "<group>"; };
+		F3961488283CF8EB00E3B1E2 /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
+		F39725AD2906B2350035F913 /* SelectMeezaDigitalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMeezaDigitalView.xib; sourceTree = "<group>"; };
+		F39725AF2906B2F20035F913 /* SelectMeezaDigitalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMeezaDigitalView.swift; sourceTree = "<group>"; };
+		F398758828EC493800CF4595 /* AlternativePMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternativePMView.swift; sourceTree = "<group>"; };
+		F398758A28EC494E00CF4595 /* AlternativePMView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlternativePMView.xib; sourceTree = "<group>"; };
+		F39FB94A28A661490022D35D /* DeviceIndentificationParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIndentificationParams.swift; sourceTree = "<group>"; };
+		F39FB94C28AD0E9D0022D35D /* CurvedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedView.swift; sourceTree = "<group>"; };
+		F39FB94E28AE1A690022D35D /* GDBrandingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBrandingResponse.swift; sourceTree = "<group>"; };
+		F39FB95028AE2A200022D35D /* CurvedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedImageView.swift; sourceTree = "<group>"; };
+		F3A1A9A827F3017200411CD8 /* ShahryPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShahryPurchaseViewController.swift; sourceTree = "<group>"; };
+		F3A1A9A927F3017200411CD8 /* ShahryPurchaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShahryPurchaseViewController.xib; sourceTree = "<group>"; };
+		F3A6718A2716F4080094BDD2 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		F3A6718D2716F49F0094BDD2 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
+		F3A6718F2716F4C80094BDD2 /* Almarai */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Almarai; sourceTree = "<group>"; };
+		F3A67191271D5D6D0094BDD2 /* InitiateAuthenticateParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitiateAuthenticateParams.swift; sourceTree = "<group>"; };
+		F3A67193271D856F0094BDD2 /* GDInitiateAuthenticateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDInitiateAuthenticateResponse.swift; sourceTree = "<group>"; };
+		F3A6719B271EE0190094BDD2 /* AuthenticateParamsV3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateParamsV3.swift; sourceTree = "<group>"; };
+		F3A6F248283E36EB008E39B9 /* BNPLFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNPLFlowLayout.swift; sourceTree = "<group>"; };
+		F3A6F24A283FA963008E39B9 /* GeideaBNPLAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeideaBNPLAPI.swift; sourceTree = "<group>"; };
+		F3A7F861280D7BC600704D50 /* ShahryConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShahryConfirmViewModel.swift; sourceTree = "<group>"; };
+		F3A7F863280D7BDA00704D50 /* ShahryPurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShahryPurchaseViewModel.swift; sourceTree = "<group>"; };
+		F3A838D1286C6F9000FD35B8 /* GDSouhoolaCancelDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaCancelDetails.swift; sourceTree = "<group>"; };
+		F3AA97F728896B0B0096A96F /* GDInitiateAuthenticateTokenParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDInitiateAuthenticateTokenParams.swift; sourceTree = "<group>"; };
+		F3AA97F9288986780096A96F /* AuthenticateTokenParamsV3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateTokenParamsV3.swift; sourceTree = "<group>"; };
+		F3AA97FD28898CC50096A96F /* GDRecurrence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDRecurrence.swift; sourceTree = "<group>"; };
+		F3AA97FF28898E7F0096A96F /* RecurrenceParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceParams.swift; sourceTree = "<group>"; };
+		F3AB539E28FD959E009F3F0D /* SelectPaymentMethodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectPaymentMethodView.xib; sourceTree = "<group>"; };
+		F3AB53A028FD95B8009F3F0D /* SelectPaymentMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPaymentMethodView.swift; sourceTree = "<group>"; };
+		F3AE8B6A27AAC6C900D84322 /* BNPLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNPLViewController.swift; sourceTree = "<group>"; };
+		F3AE8B6B27AAC6C900D84322 /* BNPLViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BNPLViewController.xib; sourceTree = "<group>"; };
+		F3AE8B6F27ABBF3100D84322 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
+		F3AE8B7227ABBF5400D84322 /* StepView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepView.xib; sourceTree = "<group>"; };
+		F3AE8B7427ABFD6B00D84322 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		F3AE8B7627ABFD8400D84322 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
+		F3AE8B7927AD68C500D84322 /* PhoneNumberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberViewController.xib; sourceTree = "<group>"; };
+		F3AE8B7E27B0FB7200D84322 /* InstallmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentViewController.swift; sourceTree = "<group>"; };
+		F3AE8B7F27B0FB7200D84322 /* InstallmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstallmentViewController.xib; sourceTree = "<group>"; };
+		F3AE8B8227B0FD6100D84322 /* BNPL.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BNPL.storyboard; sourceTree = "<group>"; };
+		F3AE8B8A27B1411E00D84322 /* BNPLVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNPLVIewModel.swift; sourceTree = "<group>"; };
+		F3AE8B8E27B1548400D84322 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		F3AE8B9027B176E800D84322 /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
+		F3AE8B9227B66E6200D84322 /* InstallmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentViewModel.swift; sourceTree = "<group>"; };
+		F3AE8B9727B6746B00D84322 /* GridCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionLayout.swift; sourceTree = "<group>"; };
+		F3AE8B9B27B679F200D84322 /* InstallmentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F3AE8B9C27B679F200D84322 /* InstallmentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstallmentsCollectionViewCell.xib; sourceTree = "<group>"; };
+		F3AE8B9F27B67FA300D84322 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F3AE8BA127B688C300D84322 /* InstallmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentModel.swift; sourceTree = "<group>"; };
+		F3AE8BA927BBC6A600D84322 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		F3AE8BAA27BBC6A600D84322 /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
+		F3AE8BAE27BBF32100D84322 /* PhoneNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewModel.swift; sourceTree = "<group>"; };
+		F3AE8BB127BD209300D84322 /* VerifyCustomerParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCustomerParams.swift; sourceTree = "<group>"; };
+		F3AE8BB327BD215300D84322 /* InstallmentPlanParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentPlanParams.swift; sourceTree = "<group>"; };
+		F3AE8BB527BD220200D84322 /* GenerateOTPParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateOTPParams.swift; sourceTree = "<group>"; };
+		F3AE8BB727BD225F00D84322 /* BNPLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNPLManager.swift; sourceTree = "<group>"; };
+		F3AE8BB927BD226F00D84322 /* BNPLRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNPLRouter.swift; sourceTree = "<group>"; };
+		F3AE8BBC27BD327B00D84322 /* GDVerifyCustomerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDVerifyCustomerDetails.swift; sourceTree = "<group>"; };
+		F3AE8BBE27BD328F00D84322 /* GDInstallmentPlanDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDInstallmentPlanDetails.swift; sourceTree = "<group>"; };
+		F3AE8BC027BD32BD00D84322 /* GDGenerateOTPDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGenerateOTPDetails.swift; sourceTree = "<group>"; };
+		F3AE8BC227BD38EC00D84322 /* GDVerifyCustomerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDVerifyCustomerResponse.swift; sourceTree = "<group>"; };
+		F3AE8BC427BE599D00D84322 /* GDInstallmentPlansResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDInstallmentPlansResponse.swift; sourceTree = "<group>"; };
+		F3AE8BC627BE5A7F00D84322 /* GDInstallmentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDInstallmentPlan.swift; sourceTree = "<group>"; };
+		F3AE8BC827C3780000D84322 /* InstallmentPlanCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentPlanCellViewModel.swift; sourceTree = "<group>"; };
+		F3AE8BCA27C3EB4000D84322 /* GDBNPLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBNPLResponse.swift; sourceTree = "<group>"; };
+		F3B8ABCC28080F0E00E8EEE8 /* NSAttributeString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributeString+Extensions.swift"; sourceTree = "<group>"; };
+		F3B8ABCE280816BD00E8EEE8 /* ShahryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShahryRouter.swift; sourceTree = "<group>"; };
+		F3B8ABD12808199F00E8EEE8 /* VALUItemParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VALUItemParams.swift; sourceTree = "<group>"; };
+		F3B8ABD328081B4800E8EEE8 /* shahryInstallmentPlanSelectedParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shahryInstallmentPlanSelectedParams.swift; sourceTree = "<group>"; };
+		F3B8ABD52808373700E8EEE8 /* GDShahryConfirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDShahryConfirm.swift; sourceTree = "<group>"; };
+		F3C7229A2726B7E6001B0E0C /* SDKMerchantConfigRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKMerchantConfigRouter.swift; sourceTree = "<group>"; };
+		F3DBEC5A28A3D0CC00091067 /* PayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewModel.swift; sourceTree = "<group>"; };
+		F3DC4D4127F1DDB7001EDE31 /* ShahryConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShahryConfirmViewController.swift; sourceTree = "<group>"; };
+		F3DC4D4227F1DDB7001EDE31 /* ShahryConfirmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShahryConfirmViewController.xib; sourceTree = "<group>"; };
+		F3DDF36128101F3C00E2B1B2 /* GDBNPLDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBNPLDetails.swift; sourceTree = "<group>"; };
+		F3E6624D289D14D900D40B7E /* GDSouhoolaRetreiveInstallmentPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaRetreiveInstallmentPlans.swift; sourceTree = "<group>"; };
+		F3E7418C27DF429B00519A80 /* ReceiptRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptRouter.swift; sourceTree = "<group>"; };
+		F3ED4F16282A89D20024E401 /* GSSouhoolaInstallmentPlanResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSSouhoolaInstallmentPlanResponse.swift; sourceTree = "<group>"; };
+		F3ED4F18282A8A950024E401 /* GDSouhoolaReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaReviewResponse.swift; sourceTree = "<group>"; };
+		F3ED4F1B282BAD7D0024E401 /* ReviewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTransactionViewController.swift; sourceTree = "<group>"; };
+		F3ED4F1C282BAD7D0024E401 /* ReviewTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTransactionViewController.xib; sourceTree = "<group>"; };
+		F3ED4F1F282BAEFC0024E401 /* ReviewTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTransactionViewModel.swift; sourceTree = "<group>"; };
+		F3ED4F23282BE6E20024E401 /* SouhoolaItemParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouhoolaItemParams.swift; sourceTree = "<group>"; };
+		F3ED4F25282D318F0024E401 /* GDSouhoolaInstallmentPlanSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaInstallmentPlanSelected.swift; sourceTree = "<group>"; };
+		F3ED4F27282D33650024E401 /* GDSouhoolaBNPLDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaBNPLDetails.swift; sourceTree = "<group>"; };
+		F3ED4F29282D38AD0024E401 /* GDSouhoolaInstallmentPlanSelectedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaInstallmentPlanSelectedResponse.swift; sourceTree = "<group>"; };
+		F3ED4F2B282E326E0024E401 /* SouhoolaIPSelectedParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouhoolaIPSelectedParams.swift; sourceTree = "<group>"; };
+		F3ED4F2D28322B490024E401 /* GDBNPLReceiptResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBNPLReceiptResponse.swift; sourceTree = "<group>"; };
+		F3ED4F2F283281430024E401 /* GDSouhoolaOTPDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaOTPDetails.swift; sourceTree = "<group>"; };
+		F3ED4F31283283B00024E401 /* GDSouhoolaBasicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSouhoolaBasicResponse.swift; sourceTree = "<group>"; };
+		F3F7390128FEBCEE00ADBFC8 /* SelectGroupedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGroupedView.swift; sourceTree = "<group>"; };
+		F3F7390328FEBD0600ADBFC8 /* SelectGroupedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectGroupedView.xib; sourceTree = "<group>"; };
+		F3FFD013276B621B0082B38B /* GDSendLinkMultipleDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSendLinkMultipleDetails.swift; sourceTree = "<group>"; };
+		F3FFD015276B68B00082B38B /* SendLinkMultipleParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLinkMultipleParams.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6117B9425396AB800959D78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6117B9C25396AB800959D78 /* GeideaPaymentSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6224EAC2534DFE80065C23F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E608543E25486E98009B468F /* PayResponse */ = {
+			isa = PBXGroup;
+			children = (
+				E6ADAAD8254022C800EC655F /* GDOrderResponse.swift */,
+				E6ADAADC254024E800EC655F /* GDTransactionResponse.swift */,
+				E608543A254866BE009B468F /* GDAuthenticationDetailsResponse.swift */,
+				E60854412548708D009B468F /* GDPaymentMethodResponse.swift */,
+				E6085445254870F6009B468F /* GDCodesResponse.swift */,
+				E6B0670F2571115600F9A44F /* GDApplePayResponse.swift */,
+				E676817B26F0D8E200626694 /* GDPlatform.swift */,
+				E676817D26F0DECF00626694 /* GDPostilionDetails.swift */,
+				E676817F26F0DF1100626694 /* GDTerminalDetails.swift */,
+				E676818126F0EA7900626694 /* GDMeezaDetails.swift */,
+				E676818326F0F12E00626694 /* GDStatementDescriptor.swift */,
+				F3DDF36128101F3C00E2B1B2 /* GDBNPLDetails.swift */,
+				F325834C285A104100591887 /* GDMultiCurrency.swift */,
+			);
+			path = PayResponse;
+			sourceTree = "<group>";
+		};
+		E608544B254AE785009B468F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3A6718C2716F4830094BDD2 /* AppFont */,
+				E6085468254C0767009B468F /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E60C31F12536D4840023133F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E60C3210253702EF0023133F /* Strings+Extensions.swift */,
+				E60C32142537033C0023133F /* URL+Extensions.swift */,
+				E6117C41253CD92500959D78 /* Double+Extensions.swift */,
+				E6117C47253D7A6200959D78 /* JSONSerialiation+Extensions.swift */,
+				E6A5E84625416F2B0080BF3D /* UIScreen+Extensions.swift */,
+				E6A5E8702542BDBE0080BF3D /* NSError+Extensions.swift */,
+				E608543625482883009B468F /* UIViewController+Extensions.swift */,
+				E6E019E725A876A000AA2DC5 /* UITextField+Extensions.swift */,
+				E6E01A0525AC883100AA2DC5 /* UIImageView+Extensions.swift */,
+				E6E01A1125ADA38600AA2DC5 /* UIColor+Extensions.swift */,
+				E6801E1F25B5CCC80074C5BB /* UIView+Extensions.swift */,
+				E6801E2325B5CD350074C5BB /* UITableView+Extensions.swift */,
+				E6F653DC25B8BEB400C1248C /* Array+Extenstions.swift */,
+				E6905F4825E268D3000CA160 /* Date+Extensions.swift */,
+				E6DE951F26A6AF04008E9DC7 /* UILabel+Extensions.swift */,
+				E69FFADE26D8EE1C00097907 /* Bundle+Extensions.swift */,
+				F3A6718A2716F4080094BDD2 /* UIFont+Extensions.swift */,
+				F3AE8B9F27B67FA300D84322 /* UIView.swift */,
+				F33CF28B27FEE6940065778A /* Numeric+Extensions.swift */,
+				F33CF28D27FEE6BF0065778A /* DataProtocol+Extensions.swift */,
+				F33CF28F27FEE7010065778A /* KeyEncodingContainer+Extensions.swift */,
+				F33CF29327FEE78A0065778A /* KeyedDecodingContainer+Extensions.swift */,
+				F33CF29527FEEF430065778A /* Decimal+Extensions.swift */,
+				F3B8ABCC28080F0E00E8EEE8 /* NSAttributeString+Extensions.swift */,
+				F31871F3290809E70070C991 /* UIActivityIndicatorView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E60C31F22536D9590023133F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E6F1EE862535E5E100253F19 /* GDConfig.swift */,
+				E60C31F82536EE1F0023133F /* BaseRouter.swift */,
+				E60C31FC2536EFA50023133F /* GDWSConstants.swift */,
+				E60C32022536F2280023133F /* WebServices.swift */,
+				E60C32062536F64A0023133F /* GDWSHTTPMethod.swift */,
+				E6B06768257E37B400F9A44F /* PaymentOperation.swift */,
+				E6CEBF3C26D3C52E00A7A28B /* BaseLanguage.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E60C31F32536EA380023133F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E60C321825371FBF0023133F /* ConfigManager.swift */,
+				E6117BFF2539B99D00959D78 /* AuthenticateManager.swift */,
+				E6117C4F253DAAD000959D78 /* PayManager.swift */,
+				E67E4094256D4CE100FAB817 /* ApplePayManager.swift */,
+				E64462CF257F94FE001BAA4B /* OperationsManager.swift */,
+				E64D56552583A06D008AB18F /* PayTokenManager.swift */,
+				E60850A125C995DA00DD2F77 /* CancelManager.swift */,
+				E6BCEC6725DD3AE6000CFCE6 /* PaymentIntentManager.swift */,
+				E63E458125ED15790077251F /* OrdersManager.swift */,
+				E6342E4B26A1A23100AE1E31 /* QRMeezaPaymentManager.swift */,
+				E60C0D1C270324C500A01F9D /* ProductManager.swift */,
+				F3AE8BB727BD225F00D84322 /* BNPLManager.swift */,
+				F324A27E27E21F2C00F14C6F /* ReceiptManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E60C31F42536EA420023133F /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				E60C320C2536F9D00023133F /* ConfigRouter.swift */,
+				E6117BB325398A6000959D78 /* PaymentRouter.swift */,
+				E6BCEC5825DD2D3B000CFCE6 /* PaymentIntentRouter.swift */,
+				E63E456E25ECF7660077251F /* OrderRouter.swift */,
+				E6342E4726A19CB300AE1E31 /* MeezaPaymentRouter.swift */,
+				E6DE952D26A858B8008E9DC7 /* MeezaRouter.swift */,
+				E60C0D1A27030E8B00A01F9D /* ProductRouter.swift */,
+				F3C7229A2726B7E6001B0E0C /* SDKMerchantConfigRouter.swift */,
+				F3144942274F937300B402E0 /* PaymentRouterV4.swift */,
+				F3AE8BB927BD226F00D84322 /* BNPLRouter.swift */,
+				F3E7418C27DF429B00519A80 /* ReceiptRouter.swift */,
+				F3B8ABCE280816BD00E8EEE8 /* ShahryRouter.swift */,
+				F30761952821739C004014CC /* SouhoolaRouter.swift */,
+				F333CE1B28D9CDD6000ECAD7 /* PaymentRouterV3.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		E60C31F52536EA540023133F /* NetworkParams */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE8BB027BD206800D84322 /* BNPL */,
+				E6117BB725398F0E00959D78 /* AuthenticateParams.swift */,
+				E6117BBB25398F1B00959D78 /* PayParams.swift */,
+				E6117BF12539906B00959D78 /* PaymentMethodParams.swift */,
+				E6117BF5253990EC00959D78 /* ExpiryDateParams.swift */,
+				E6117BFB253991CE00959D78 /* AddressParams.swift */,
+				E67E4098256D54CC00FAB817 /* ApplePayParams.swift */,
+				E67E409C256D634100FAB817 /* PaymentMethod.swift */,
+				E64462CB257F93B2001BAA4B /* CaptureParams.swift */,
+				E6456D6525827A4600E6C4C2 /* PayTokenParams.swift */,
+				E608509D25C968B400DD2F77 /* CanceParams.swift */,
+				E6342E4926A19F5400AE1E31 /* QRParams.swift */,
+				E6BCEC6425DD31F3000CFCE6 /* PaymentIntentParams */,
+				E6DE952726A82368008E9DC7 /* PaymentRequestParams.swift */,
+				E6DE952B26A855B7008E9DC7 /* RequestToPayParams.swift */,
+				F3A67191271D5D6D0094BDD2 /* InitiateAuthenticateParams.swift */,
+				F3A6719B271EE0190094BDD2 /* AuthenticateParamsV3.swift */,
+				F3AA97F728896B0B0096A96F /* GDInitiateAuthenticateTokenParams.swift */,
+				F3AA97F9288986780096A96F /* AuthenticateTokenParamsV3.swift */,
+				F3AA97FF28898E7F0096A96F /* RecurrenceParams.swift */,
+				F39FB94A28A661490022D35D /* DeviceIndentificationParams.swift */,
+			);
+			path = NetworkParams;
+			sourceTree = "<group>";
+		};
+		E60C31F62536EA640023133F /* NetworkResponses */ = {
+			isa = PBXGroup;
+			children = (
+				E6ADAAD02540074D00EC655F /* PayResponse.swift */,
+				E6117C76253EF62000959D78 /* AuthenticateResponse.swift */,
+				E6B067212577E98100F9A44F /* ConfigCountries.swift */,
+				E60850A525C999B700DD2F77 /* GDCancelResponse.swift */,
+				E6342E4D26A1BB6C00AE1E31 /* GDQRResponse.swift */,
+				F39FB94E28AE1A690022D35D /* GDBrandingResponse.swift */,
+			);
+			path = NetworkResponses;
+			sourceTree = "<group>";
+		};
+		E60C326325382E310023133F /* PublicModels */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE8BBB27BD31CB00D84322 /* BNPL */,
+				F307578C2726F95200184737 /* SDKMerchantConfig */,
+				F3A67195271D8A6A0094BDD2 /* 3dsV2 */,
+				E67E5DAB26A9807500E145D1 /* MeezaResponse */,
+				E63E458B25ED1E820077251F /* OrderResponse */,
+				E6905F3925DFBCAC000CA160 /* PaymentIntentResponse */,
+				E64D565B258619F6008AB18F /* ConfigResponse */,
+				E608543E25486E98009B468F /* PayResponse */,
+				E6A5E86B2542B2B50080BF3D /* GDErrorResponse.swift */,
+				E6A5E84C25417A4D0080BF3D /* GDCardDetails.swift */,
+				E6A5E8542541807B0080BF3D /* GDAmount.swift */,
+				E6A5E865254189800080BF3D /* GDCustomerDetails.swift */,
+				E6A5E87C25430DD60080BF3D /* GDAddress.swift */,
+				E6E019C825A7101300AA2DC5 /* GDApplePayDetails.swift */,
+				E6A4BAD825C1AB5800DE08BD /* GDTokenizationDetails.swift */,
+				E6905F3525DEB7EE000CA160 /* GDPaymentIntentDetails.swift */,
+				E63E459025ED22090077251F /* GDOrdersFilter.swift */,
+				E6E8181F269C207600E010F8 /* GDPaymentIntentFilter.swift */,
+				E65170E026A04A9E00102128 /* GDPICustomer.swift */,
+				E60C0D1827030DD600A01F9D /* GDProductMConfig.swift */,
+				F350EAC22727FE95008DA0D5 /* GDSDKMerchantConfig.swift */,
+				F31F9AA7275E04150052A093 /* GDQRDetails.swift */,
+				F3FFD013276B621B0082B38B /* GDSendLinkMultipleDetails.swift */,
+				F333CE1D28D9FC97000ECAD7 /* GDInitializeResponseObject.swift */,
+				F379504C2902717B004044C7 /* GDPaymentMethods.swift */,
+				F324A28227E22B0000F14C6F /* ReceiptResponse */,
+			);
+			path = PublicModels;
+			sourceTree = "<group>";
+		};
+		E6117B9825396AB800959D78 /* GeideaPaymentSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6117B9925396AB800959D78 /* GeideaPaymentSDKTests.swift */,
+				E6117B9B25396AB800959D78 /* Info.plist */,
+			);
+			path = GeideaPaymentSDKTests;
+			sourceTree = "<group>";
+		};
+		E6224EA52534DFE80065C23F = {
+			isa = PBXGroup;
+			children = (
+				E6224EB12534DFE80065C23F /* GeideaPaymentSDK */,
+				E6117B9825396AB800959D78 /* GeideaPaymentSDKTests */,
+				E6224EB02534DFE80065C23F /* Products */,
+				E6A5E80F2540C42D0080BF3D /* Frameworks */,
+				E63E455D25E65D460077251F /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		E6224EB02534DFE80065C23F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6224EAF2534DFE80065C23F /* GeideaPaymentSDK.framework */,
+				E6117B9725396AB800959D78 /* GeideaPaymentSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6224EB12534DFE80065C23F /* GeideaPaymentSDK */ = {
+			isa = PBXGroup;
+			children = (
+				E6224EF32534E35B0065C23F /* Public */,
+				E6224EFA2534E3F60065C23F /* Source */,
+				E6224EB22534DFE80065C23F /* GeideaPaymentSDK.h */,
+				E6224EB32534DFE80065C23F /* Info.plist */,
+				E608544B254AE785009B468F /* Supporting Files */,
+				E6CEBF3A26D3B88700A7A28B /* Localizable.strings */,
+			);
+			path = GeideaPaymentSDK;
+			sourceTree = "<group>";
+		};
+		E6224EF32534E35B0065C23F /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				E6224ECB2534E01A0065C23F /* GeideaPaymentAPI.swift */,
+				E60C326325382E310023133F /* PublicModels */,
+				F3A6F24A283FA963008E39B9 /* GeideaBNPLAPI.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		E6224EFA2534E3F60065C23F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E6224EFD2534E40C0065C23F /* Coordinators */,
+				E6224F122534E5C60065C23F /* Views */,
+				E6A5E860254185E60080BF3D /* Models */,
+				E6224F202534E62C0065C23F /* Network */,
+				E6224F1E2534E62B0065C23F /* Persistence */,
+				E6224F212534E62C0065C23F /* Utils */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		E6224EFD2534E40C0065C23F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E6224F032534E45C0065C23F /* Components */,
+				E6224EFE2534E4210065C23F /* PaymentCoordinator */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		E6224EFE2534E4210065C23F /* PaymentCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F30C031C273C047E008AC9ED /* PaymentIntentCoordinator.swift */,
+				E65170E226A0500D00102128 /* PayQRCoordinator.swift */,
+				E6224EFF2534E43C0065C23F /* PaymentCoordinator.swift */,
+				E6567E8C258A1E1B001C11E1 /* OperationCoordinator.swift */,
+				E6567EA4258A5E5C001C11E1 /* PaymentTokenCoordinator.swift */,
+				E6567EB225A5B21C001C11E1 /* FormCoordinator.swift */,
+				E61FE56F26C3F3CC00B64B2B /* PaymentFormCoordinator.swift */,
+			);
+			path = PaymentCoordinator;
+			sourceTree = "<group>";
+		};
+		E6224F032534E45C0065C23F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E6224F042534E4860065C23F /* Coordinator.swift */,
+				E6224F0A2534E4D70065C23F /* PaymentFactory.swift */,
+				E6BCEC7925DE51FC000CFCE6 /* PaymentIntentFactory.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E6224F122534E5C60065C23F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE8B6E27ABBECB00D84322 /* Views */,
+				F3AE8B6727AAC60D00D84322 /* BNPLScreen */,
+				E676818726F32C0600626694 /* ReceiptScreen */,
+				E663E98126C10CD100CEB7FE /* SelectPaymentForm */,
+				E65170D926A02EBE00102128 /* QRPaymentForm */,
+				E6BCEC6B25DD4193000CFCE6 /* PaymentIntentTest */,
+				E6E019D025A851AD00AA2DC5 /* Components */,
+				E6567EB625A5B33E001C11E1 /* CardDetailsForm */,
+				E6B067252578C19300F9A44F /* ApplePay */,
+				E6F1EE6C2535E59E00253F19 /* Payment */,
+				E6224F132534E5C70065C23F /* WebView */,
+				E69FFAC226D62BB200097907 /* BaseViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E6224F132534E5C70065C23F /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				E6224F142534E5C70065C23F /* WebViewViewModel.swift */,
+				E6224F162534E5C70065C23F /* WebviewViewController.swift */,
+				E6224F152534E5C70065C23F /* WebviewViewController.xib */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		E6224F1E2534E62B0065C23F /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				E60C327225383CD00023133F /* SecureStore.swift */,
+				E60C32812538446A0023133F /* SecureStoreQueryable.swift */,
+				E60C3285253844C20023133F /* SecureStoreError.swift */,
+				E6117C4B253D9F3C00959D78 /* AppConfig.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		E6224F202534E62C0065C23F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E60C31F22536D9590023133F /* Components */,
+				E6F1EE762535E5B600253F19 /* Service */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E6224F212534E62C0065C23F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E60C31F12536D4840023133F /* Extensions */,
+				E6F1EE7D2535E5C800253F19 /* JSON.swift */,
+				E6F1EE7E2535E5C800253F19 /* Log.swift */,
+				E6F1EE7F2535E5C800253F19 /* Result.swift */,
+				E6117C3D253CD4C700959D78 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E63E455D25E65D460077251F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		E63E458B25ED1E820077251F /* OrderResponse */ = {
+			isa = PBXGroup;
+			children = (
+				E63E458C25ED1EA70077251F /* GDOrdersResponse.swift */,
+			);
+			path = OrderResponse;
+			sourceTree = "<group>";
+		};
+		E64D565B258619F6008AB18F /* ConfigResponse */ = {
+			isa = PBXGroup;
+			children = (
+				E6ADAAD4254007B100EC655F /* GDConfigResponse.swift */,
+				E634460725D53EC4000BC8A0 /* GDConfigApplePay.swift */,
+				E676814B26EF6BF100626694 /* GDCardBrandAuthentication.swift */,
+			);
+			path = ConfigResponse;
+			sourceTree = "<group>";
+		};
+		E65170D926A02EBE00102128 /* QRPaymentForm */ = {
+			isa = PBXGroup;
+			children = (
+				E65170DA26A02EED00102128 /* QRPaymentFormViewController.swift */,
+				E65170DB26A02EED00102128 /* QRPaymentFormViewController.xib */,
+				E65170DE26A02F0000102128 /* QRpaymentFormViewModel.swift */,
+				E6DE952126A6EDF5008E9DC7 /* RequestToPayViewController.swift */,
+				E6DE952226A6EDF5008E9DC7 /* RequestToPayViewController.xib */,
+				E6DE952526A6FB1E008E9DC7 /* RequestToPayViewModel.swift */,
+			);
+			path = QRPaymentForm;
+			sourceTree = "<group>";
+		};
+		E6567EB625A5B33E001C11E1 /* CardDetailsForm */ = {
+			isa = PBXGroup;
+			children = (
+				E6F653E025B99ADE00C1248C /* CustomComponents */,
+				E6801E0225B5C7E90074C5BB /* Countries */,
+				E6567EB725A5B371001C11E1 /* CardDetailsFormViewController.swift */,
+				E6567EBB25A5B396001C11E1 /* CardDetailsFormViewModel.swift */,
+				E6567EBF25A5B3D6001C11E1 /* CardDetailsFormViewController.xib */,
+			);
+			path = CardDetailsForm;
+			sourceTree = "<group>";
+		};
+		E663E98126C10CD100CEB7FE /* SelectPaymentForm */ = {
+			isa = PBXGroup;
+			children = (
+				F3AB539D28FD956F009F3F0D /* Views */,
+				E69FFAD926D7C9D100097907 /* SelectPaymentMethodViewController.swift */,
+				E69FFAD826D7C9D100097907 /* SelectPaymentMethodViewController.xib */,
+				E69FFADA26D7C9D100097907 /* SelectPaymentMethodViewModel.swift */,
+			);
+			path = SelectPaymentForm;
+			sourceTree = "<group>";
+		};
+		E676818726F32C0600626694 /* ReceiptScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E676818E26F3788700626694 /* TableViewCell */,
+				E676818826F32C6800626694 /* ReceiptViewController.swift */,
+				E676818926F32C6800626694 /* ReceiptViewController.xib */,
+				E676818C26F36C1000626694 /* ReceiptViewModel.swift */,
+			);
+			path = ReceiptScreen;
+			sourceTree = "<group>";
+		};
+		E676818E26F3788700626694 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E676818F26F378C800626694 /* ReceiptTableViewCell.swift */,
+				E676819026F378C800626694 /* ReceiptTableViewCell.xib */,
+				F324A28727E3337A00F14C6F /* BlankTableViewCell.swift */,
+				F324A28827E3337A00F14C6F /* BlankTableViewCell.xib */,
+				F324A28B27E3338E00F14C6F /* SeparatorTableViewCell.swift */,
+				F324A28C27E3338E00F14C6F /* SeparatorTableViewCell.xib */,
+				F324A29127E333ED00F14C6F /* ValuTableView.swift */,
+				F324A29227E333ED00F14C6F /* ValuTableView.xib */,
+				F37ABB9027E877EC009F04E2 /* BNPLFooter.swift */,
+				F37ABB9227E87820009F04E2 /* BNPLFooter.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		E67E5DAB26A9807500E145D1 /* MeezaResponse */ = {
+			isa = PBXGroup;
+			children = (
+				E67E5DAC26A980AA00E145D1 /* GDRTPQRResponse.swift */,
+			);
+			path = MeezaResponse;
+			sourceTree = "<group>";
+		};
+		E6801E0225B5C7E90074C5BB /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				E6801E1825B5C9FE0074C5BB /* CountriesViews */,
+				E6801E1125B5C97D0074C5BB /* CountryTableViewCell */,
+				E6801E0325B5C81D0074C5BB /* CountriesDataSource.swift */,
+				E6801E0925B5C8930074C5BB /* CountrySelectionViewController.swift */,
+				E6F653D425B8B43D00C1248C /* CountrySelectionViewController.xib */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		E6801E1125B5C97D0074C5BB /* CountryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E6801E1225B5C97D0074C5BB /* CountryTableViewCell.swift */,
+				E6801E1325B5C97D0074C5BB /* CountryTableViewCell.xib */,
+			);
+			path = CountryTableViewCell;
+			sourceTree = "<group>";
+		};
+		E6801E1825B5C9FE0074C5BB /* CountriesViews */ = {
+			isa = PBXGroup;
+			children = (
+				E6801E1925B5CA190074C5BB /* SearchView.swift */,
+				E6801E4025B6D59F0074C5BB /* SearchView.xib */,
+			);
+			path = CountriesViews;
+			sourceTree = "<group>";
+		};
+		E6905F3925DFBCAC000CA160 /* PaymentIntentResponse */ = {
+			isa = PBXGroup;
+			children = (
+				E6E81821269C49FF00E010F8 /* GDPaymentIntentResponse.swift */,
+				E6905F4025DFCC07000CA160 /* GDPaymentIntentDetailsResponse.swift */,
+				E6905F4425DFCD84000CA160 /* GDPaymentIntentCustomer.swift */,
+				E6E81823269C4FA100E010F8 /* GDPaymentIntentsResponse.swift */,
+				E641F100269DA93200920959 /* GDPaymentIntent.swift */,
+				E676818526F1EF4000626694 /* GDPaymentIntentOrder.swift */,
+				F30C0322273CF967008AC9ED /* GDEInvoiceItem.swift */,
+				F30C0324273D0892008AC9ED /* GDEInvoiceDetails.swift */,
+				F34E064D273EACC200E87698 /* GDEInvoiceSentLink.swift */,
+			);
+			path = PaymentIntentResponse;
+			sourceTree = "<group>";
+		};
+		E6A5E80F2540C42D0080BF3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F333CE2928DB0C37000ECAD7 /* GeideaPaymentSDK.xcframework */,
+				F3919C5128C745E5002C21CB /* GeideaPaymentSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6A5E860254185E60080BF3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6A5E85025417AC90080BF3D /* ExpiryDate.swift */,
+				E6380A77255A95E70034E556 /* GDErrorCodes.swift */,
+				E6E01A0125AC82F100AA2DC5 /* CardType.swift */,
+				E663E98D26C198E700CEB7FE /* PaymentType.swift */,
+				F3AE8BA127B688C300D84322 /* InstallmentModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E6B067252578C19300F9A44F /* ApplePay */ = {
+			isa = PBXGroup;
+			children = (
+				E6B067622578DB0700F9A44F /* ApplePayViewController.swift */,
+				E6B067632578DB0700F9A44F /* ApplePayViewController.xib */,
+			);
+			path = ApplePay;
+			sourceTree = "<group>";
+		};
+		E6BCEC6425DD31F3000CFCE6 /* PaymentIntentParams */ = {
+			isa = PBXGroup;
+			children = (
+				E6BCEC5C25DD311B000CFCE6 /* PaymentIntentParams.swift */,
+				E6BCEC6025DD31B2000CFCE6 /* CustomerParams.swift */,
+				F30C031E273C07F0008AC9ED /* EInvoiceDetailsParams.swift */,
+				F30C0320273C0BB1008AC9ED /* EInvoiceItem.swift */,
+				F3FFD015276B68B00082B38B /* SendLinkMultipleParams.swift */,
+			);
+			path = PaymentIntentParams;
+			sourceTree = "<group>";
+		};
+		E6BCEC6B25DD4193000CFCE6 /* PaymentIntentTest */ = {
+			isa = PBXGroup;
+			children = (
+				E6E81825269C665200E010F8 /* TableViewCell */,
+				E6BCEC6C25DD42E4000CFCE6 /* PaymentIntentViewController.swift */,
+				E6BCEC6D25DD42E4000CFCE6 /* PaymentIntentViewController.xib */,
+				E6BCEC7D25DE52CC000CFCE6 /* PaymentIntentViewModel.swift */,
+				E6E8182E269C7BBD00E010F8 /* PaymentIntentsViewController.swift */,
+				E6E8182F269C7BBD00E010F8 /* PaymentIntentsViewController.xib */,
+				F30C0326273D4B81008AC9ED /* EInvoiceDetailsViewController.swift */,
+				F30C0327273D4B81008AC9ED /* EInvoiceDetailsViewController.xib */,
+				F30C032A273D5EAF008AC9ED /* EInvoiceItemViewController.swift */,
+				F30C032B273D5EAF008AC9ED /* EInvoiceItemViewController.xib */,
+				F34E064B273EA1E700E87698 /* EInvoiceDetailsViewModel.swift */,
+			);
+			path = PaymentIntentTest;
+			sourceTree = "<group>";
+		};
+		E6E019D025A851AD00AA2DC5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E6E019D325A851E600AA2DC5 /* RoundedButton.swift */,
+				E6E019DD25A8584800AA2DC5 /* RoundedTextField.swift */,
+				E676819326F4AE2100626694 /* DynamicTableView.swift */,
+				F3AE8B8E27B1548400D84322 /* RoundedView.swift */,
+				F324A29727E49D6300F14C6F /* RichTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E6E81825269C665200E010F8 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E6E81826269C668F00E010F8 /* PaymentIntentTableViewCell.swift */,
+				E6E81827269C668F00E010F8 /* PaymentIntentTableViewCell.xib */,
+				F30A53BD2806EFC600FCF78B /* EInvoiceItemTableViewCell.swift */,
+				F30A53BC2806EFC600FCF78B /* EInvoiceItemTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		E6F1EE6C2535E59E00253F19 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				E6F1EE6D2535E59E00253F19 /* PaymentViewModel.swift */,
+				E6117C70253EDB7000959D78 /* PaymentViewController.swift */,
+				E6117C71253EDB7000959D78 /* PaymentViewController.xib */,
+				E6567E96258A2B0E001C11E1 /* OperationViewModel.swift */,
+				E6567E9A258A2B34001C11E1 /* PayTokenViewModel.swift */,
+				E6567E9E258A43F6001C11E1 /* ViewModel.swift */,
+				F3842E3B288EA4F1005D8802 /* CVVViewController.swift */,
+				F3842E3C288EA4F1005D8802 /* CVVViewController.xib */,
+				F3842E3F288ECA4F005D8802 /* CVVViewModel.swift */,
+				F3DBEC5A28A3D0CC00091067 /* PayViewModel.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		E6F1EE762535E5B600253F19 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E60C31F62536EA640023133F /* NetworkResponses */,
+				E60C31F52536EA540023133F /* NetworkParams */,
+				E60C31F42536EA420023133F /* Routers */,
+				E60C31F32536EA380023133F /* Managers */,
+				E6F1EE772535E5B600253F19 /* Response.swift */,
+				E6F1EE782535E5B600253F19 /* Request.swift */,
+				E6A5E8742542BE190080BF3D /* ErrorCodes.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E6F653E025B99ADE00C1248C /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6540A25B9C36000C1248C /* CVVAlertViewController.xib */,
+				E6F6540E25B9C38500C1248C /* CVVAlertViewController.swift */,
+				F32554FB28E2F165002EEFEA /* CancelAlertViewController.swift */,
+				F32554FC28E2F165002EEFEA /* CancelAlertViewController.xib */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		F307578C2726F95200184737 /* SDKMerchantConfig */ = {
+			isa = PBXGroup;
+			children = (
+				F307578D2726F98200184737 /* GDSDKMerchantConfigResponse.swift */,
+				F307578F2726F9FE00184737 /* GDMerchantDataResponse.swift */,
+				F30757912726FDBD00184737 /* GDCardBrandProvider.swift */,
+				F350EAC42729446B008DA0D5 /* GDMerchantConfigResponse.swift */,
+			);
+			path = SDKMerchantConfig;
+			sourceTree = "<group>";
+		};
+		F307619028216A78004014CC /* Souhoola */ = {
+			isa = PBXGroup;
+			children = (
+				F307619128216AA4004014CC /* GDSouhoolaVerifyResponse.swift */,
+				F307619728217866004014CC /* GDSouhoolaInstallmentPlansResponse.swift */,
+				F3076199282178B7004014CC /* GDSouhoolaInstallmentPlan.swift */,
+				F307619B28290EA1004014CC /* GDSouhoolaReviewTransaction.swift */,
+				F3ED4F16282A89D20024E401 /* GSSouhoolaInstallmentPlanResponse.swift */,
+				F3ED4F18282A8A950024E401 /* GDSouhoolaReviewResponse.swift */,
+				F3ED4F25282D318F0024E401 /* GDSouhoolaInstallmentPlanSelected.swift */,
+				F3ED4F27282D33650024E401 /* GDSouhoolaBNPLDetails.swift */,
+				F3ED4F29282D38AD0024E401 /* GDSouhoolaInstallmentPlanSelectedResponse.swift */,
+				F3ED4F2F283281430024E401 /* GDSouhoolaOTPDetails.swift */,
+				F3ED4F31283283B00024E401 /* GDSouhoolaBasicResponse.swift */,
+				F327AF0D2832D2EA00F7A959 /* GDSouhoolaConfirmDetails.swift */,
+				F3377B7128648C8F00BBB46B /* GDSouhoolaResendDetails.swift */,
+				F3A838D1286C6F9000FD35B8 /* GDSouhoolaCancelDetails.swift */,
+				F3E6624D289D14D900D40B7E /* GDSouhoolaRetreiveInstallmentPlans.swift */,
+			);
+			path = Souhoola;
+			sourceTree = "<group>";
+		};
+		F324A28227E22B0000F14C6F /* ReceiptResponse */ = {
+			isa = PBXGroup;
+			children = (
+				F324A28027E228BA00F14C6F /* GDReceiptResponse.swift */,
+				F324A28327E22B3A00F14C6F /* GDReceipt.swift */,
+				F324A28527E22CF200F14C6F /* GDMechant.swift */,
+			);
+			path = ReceiptResponse;
+			sourceTree = "<group>";
+		};
+		F33CF2AA28006F020065778A /* Shahry */ = {
+			isa = PBXGroup;
+			children = (
+				F33CF2AC28006FBB0065778A /* GDShahrySelectPlanInstallment.swift */,
+				F3B8ABD52808373700E8EEE8 /* GDShahryConfirm.swift */,
+				F325834E285A1B7200591887 /* GDCashOnDelivery.swift */,
+			);
+			path = Shahry;
+			sourceTree = "<group>";
+		};
+		F33CF2AB28006F1F0065778A /* ValU */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE8BBC27BD327B00D84322 /* GDVerifyCustomerDetails.swift */,
+				F3AE8BBE27BD328F00D84322 /* GDInstallmentPlanDetails.swift */,
+				F3AE8BC027BD32BD00D84322 /* GDGenerateOTPDetails.swift */,
+				F3AE8BC227BD38EC00D84322 /* GDVerifyCustomerResponse.swift */,
+				F3AE8BC427BE599D00D84322 /* GDInstallmentPlansResponse.swift */,
+				F3AE8BC627BE5A7F00D84322 /* GDInstallmentPlan.swift */,
+				F3AE8BCA27C3EB4000D84322 /* GDBNPLResponse.swift */,
+				F334747427C647FD004A6236 /* GDBNPLPurchaseDetails.swift */,
+				F334747627C657C0004A6236 /* GDBNPLPurchaseResponse.swift */,
+				F30FF2E927D6024C00BFB4B1 /* GDVALUInstallmentPlanSelectedDetails.swift */,
+				F30FF2ED27D6531C00BFB4B1 /* GDInstallmentPlanSelectedResponse.swift */,
+			);
+			path = ValU;
+			sourceTree = "<group>";
+		};
+		F38CBF492829469200ED5FDB /* SouHoola */ = {
+			isa = PBXGroup;
+			children = (
+				F38CBF4A282946BF00ED5FDB /* SouhoolaReviewParams.swift */,
+				F3ED4F23282BE6E20024E401 /* SouhoolaItemParams.swift */,
+				F3ED4F2B282E326E0024E401 /* SouhoolaIPSelectedParams.swift */,
+			);
+			path = SouHoola;
+			sourceTree = "<group>";
+		};
+		F398758728EC489C00CF4595 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F398758828EC493800CF4595 /* AlternativePMView.swift */,
+				F398758A28EC494E00CF4595 /* AlternativePMView.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		F3A6718C2716F4830094BDD2 /* AppFont */ = {
+			isa = PBXGroup;
+			children = (
+				F3A6718F2716F4C80094BDD2 /* Almarai */,
+				F3A6718D2716F49F0094BDD2 /* Montserrat */,
+			);
+			path = AppFont;
+			sourceTree = "<group>";
+		};
+		F3A67195271D8A6A0094BDD2 /* 3dsV2 */ = {
+			isa = PBXGroup;
+			children = (
+				F3A67193271D856F0094BDD2 /* GDInitiateAuthenticateResponse.swift */,
+				F3AA97FD28898CC50096A96F /* GDRecurrence.swift */,
+				F3842E41288EE4B8005D8802 /* GDGetTokenResponse.swift */,
+				F3842E43288EE7D7005D8802 /* GDExpiryDate.swift */,
+			);
+			path = 3dsV2;
+			sourceTree = "<group>";
+		};
+		F3AB539D28FD956F009F3F0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3AB539E28FD959E009F3F0D /* SelectPaymentMethodView.xib */,
+				F3AB53A028FD95B8009F3F0D /* SelectPaymentMethodView.swift */,
+				F3F7390128FEBCEE00ADBFC8 /* SelectGroupedView.swift */,
+				F3F7390328FEBD0600ADBFC8 /* SelectGroupedView.xib */,
+				F30D113D28FEEECF00242A59 /* GroupedBNPLView.swift */,
+				F30D113F28FEEEE300242A59 /* GroupedBNPLView.xib */,
+				F30D114128FFE3AA00242A59 /* PaymentMethodsView.swift */,
+				F39725AD2906B2350035F913 /* SelectMeezaDigitalView.xib */,
+				F39725AF2906B2F20035F913 /* SelectMeezaDigitalView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3AE8B6727AAC60D00D84322 /* BNPLScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F3961488283CF8EB00E3B1E2 /* OTPViewModel.swift */,
+				F3ED4F1A282BAD5A0024E401 /* Souhoola */,
+				F3DC4D3C27F1D62E001EDE31 /* Shahry */,
+				F3DC4D3B27F1D60C001EDE31 /* Valu */,
+				F3AE8B9427B6734500D84322 /* CollectionView */,
+			);
+			path = BNPLScreen;
+			sourceTree = "<group>";
+		};
+		F3AE8B6E27ABBECB00D84322 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F398758728EC489C00CF4595 /* CustomViews */,
+				F3AE8B7127ABBF3A00D84322 /* StepView */,
+				F3A6F248283E36EB008E39B9 /* BNPLFlowLayout.swift */,
+				F39FB94C28AD0E9D0022D35D /* CurvedView.swift */,
+				F39FB95028AE2A200022D35D /* CurvedImageView.swift */,
+				F34D50DF28B359E300068C4F /* RadialCircleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3AE8B7127ABBF3A00D84322 /* StepView */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE8B6F27ABBF3100D84322 /* StepView.swift */,
+				F3AE8B7227ABBF5400D84322 /* StepView.xib */,
+				F3AE8B7427ABFD6B00D84322 /* ProgressView.swift */,
+				F3AE8B7627ABFD8400D84322 /* ProgressView.xib */,
+			);
+			path = StepView;
+			sourceTree = "<group>";
+		};
+		F3AE8B9427B6734500D84322 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE8B9727B6746B00D84322 /* GridCollectionLayout.swift */,
+				F3AE8B9B27B679F200D84322 /* InstallmentsCollectionViewCell.swift */,
+				F3AE8B9C27B679F200D84322 /* InstallmentsCollectionViewCell.xib */,
+				F3AE8BC827C3780000D84322 /* InstallmentPlanCellViewModel.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		F3AE8BB027BD206800D84322 /* BNPL */ = {
+			isa = PBXGroup;
+			children = (
+				F38CBF492829469200ED5FDB /* SouHoola */,
+				F3B8ABD02808197F00E8EEE8 /* Shahry */,
+				F3AE8BB127BD209300D84322 /* VerifyCustomerParams.swift */,
+				F3AE8BB327BD215300D84322 /* InstallmentPlanParams.swift */,
+				F3AE8BB527BD220200D84322 /* GenerateOTPParams.swift */,
+				F334747227C64634004A6236 /* PurchseParams.swift */,
+			);
+			path = BNPL;
+			sourceTree = "<group>";
+		};
+		F3AE8BBB27BD31CB00D84322 /* BNPL */ = {
+			isa = PBXGroup;
+			children = (
+				F33CF2AE280071030065778A /* GDBNPLItem.swift */,
+				F307619028216A78004014CC /* Souhoola */,
+				F33CF2AB28006F1F0065778A /* ValU */,
+				F33CF2AA28006F020065778A /* Shahry */,
+				F3ED4F2D28322B490024E401 /* GDBNPLReceiptResponse.swift */,
+			);
+			path = BNPL;
+			sourceTree = "<group>";
+		};
+		F3B8ABD02808197F00E8EEE8 /* Shahry */ = {
+			isa = PBXGroup;
+			children = (
+				F3B8ABD12808199F00E8EEE8 /* VALUItemParams.swift */,
+				F3B8ABD328081B4800E8EEE8 /* shahryInstallmentPlanSelectedParams.swift */,
+			);
+			path = Shahry;
+			sourceTree = "<group>";
+		};
+		F3DC4D3B27F1D60C001EDE31 /* Valu */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE8B6A27AAC6C900D84322 /* BNPLViewController.swift */,
+				F3AE8B6B27AAC6C900D84322 /* BNPLViewController.xib */,
+				F3AE8B9027B176E800D84322 /* PhoneNumberViewController.swift */,
+				F3AE8B7927AD68C500D84322 /* PhoneNumberViewController.xib */,
+				F3AE8B7E27B0FB7200D84322 /* InstallmentViewController.swift */,
+				F3AE8B7F27B0FB7200D84322 /* InstallmentViewController.xib */,
+				F3AE8B8227B0FD6100D84322 /* BNPL.storyboard */,
+				F3AE8B8A27B1411E00D84322 /* BNPLVIewModel.swift */,
+				F3AE8B9227B66E6200D84322 /* InstallmentViewModel.swift */,
+				F3AE8BA927BBC6A600D84322 /* OTPViewController.swift */,
+				F3AE8BAA27BBC6A600D84322 /* OTPViewController.xib */,
+				F3AE8BAE27BBF32100D84322 /* PhoneNumberViewModel.swift */,
+			);
+			path = Valu;
+			sourceTree = "<group>";
+		};
+		F3DC4D3C27F1D62E001EDE31 /* Shahry */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC4D4127F1DDB7001EDE31 /* ShahryConfirmViewController.swift */,
+				F3DC4D4227F1DDB7001EDE31 /* ShahryConfirmViewController.xib */,
+				F3A7F861280D7BC600704D50 /* ShahryConfirmViewModel.swift */,
+				F38D6E5027F1ECD1006A6F43 /* BNPLShahryViewModel.swift */,
+				F3A1A9A827F3017200411CD8 /* ShahryPurchaseViewController.swift */,
+				F3A1A9A927F3017200411CD8 /* ShahryPurchaseViewController.xib */,
+				F3A7F863280D7BDA00704D50 /* ShahryPurchaseViewModel.swift */,
+			);
+			path = Shahry;
+			sourceTree = "<group>";
+		};
+		F3ED4F1A282BAD5A0024E401 /* Souhoola */ = {
+			isa = PBXGroup;
+			children = (
+				F3ED4F1B282BAD7D0024E401 /* ReviewTransactionViewController.swift */,
+				F3ED4F1C282BAD7D0024E401 /* ReviewTransactionViewController.xib */,
+				F3ED4F1F282BAEFC0024E401 /* ReviewTransactionViewModel.swift */,
+			);
+			path = Souhoola;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E6224EAA2534DFE80065C23F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6224EC02534DFE80065C23F /* GeideaPaymentSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E6117B9625396AB800959D78 /* GeideaPaymentSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6117B9F25396AB800959D78 /* Build configuration list for PBXNativeTarget "GeideaPaymentSDKTests" */;
+			buildPhases = (
+				E6117B9325396AB800959D78 /* Sources */,
+				E6117B9425396AB800959D78 /* Frameworks */,
+				E6117B9525396AB800959D78 /* Resources */,
+				E6117BAA2539805C00959D78 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6117B9E25396AB800959D78 /* PBXTargetDependency */,
+			);
+			name = GeideaPaymentSDKTests;
+			productName = GeideaPaymentSDKTests;
+			productReference = E6117B9725396AB800959D78 /* GeideaPaymentSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6224EAE2534DFE80065C23F /* GeideaPaymentSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6224EC32534DFE80065C23F /* Build configuration list for PBXNativeTarget "GeideaPaymentSDK" */;
+			buildPhases = (
+				E6224EAA2534DFE80065C23F /* Headers */,
+				E6224EAB2534DFE80065C23F /* Sources */,
+				E6224EAC2534DFE80065C23F /* Frameworks */,
+				E6224EAD2534DFE80065C23F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeideaPaymentSDK;
+			productName = GeideaPaymentSDK;
+			productReference = E6224EAF2534DFE80065C23F /* GeideaPaymentSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6224EA62534DFE80065C23F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					E6117B9625396AB800959D78 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = E6117AB02538971700959D78;
+					};
+					E6224EAE2534DFE80065C23F = {
+						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
+					};
+					F31717E62791672E00ADD77E = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = E6224EA92534DFE80065C23F /* Build configuration list for PBXProject "GeideaPaymentSDK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+			);
+			mainGroup = E6224EA52534DFE80065C23F;
+			productRefGroup = E6224EB02534DFE80065C23F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6224EAE2534DFE80065C23F /* GeideaPaymentSDK */,
+				E6117B9625396AB800959D78 /* GeideaPaymentSDKTests */,
+				F31717E62791672E00ADD77E /* XCFramework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6117B9525396AB800959D78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6224EAD2534DFE80065C23F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30D114028FEEEE300242A59 /* GroupedBNPLView.xib in Resources */,
+				F3AE8B8127B0FB7200D84322 /* InstallmentViewController.xib in Resources */,
+				F3AE8B6D27AAC6C900D84322 /* BNPLViewController.xib in Resources */,
+				F30C0329273D4B81008AC9ED /* EInvoiceDetailsViewController.xib in Resources */,
+				E6B067652578DB0700F9A44F /* ApplePayViewController.xib in Resources */,
+				E6DE952426A6EDF5008E9DC7 /* RequestToPayViewController.xib in Resources */,
+				F3AE8B7327ABBF5400D84322 /* StepView.xib in Resources */,
+				F3F7390428FEBD0600ADBFC8 /* SelectGroupedView.xib in Resources */,
+				F3DC4D4427F1DDB7001EDE31 /* ShahryConfirmViewController.xib in Resources */,
+				E65170DD26A02EED00102128 /* QRPaymentFormViewController.xib in Resources */,
+				E6F6540B25B9C36000C1248C /* CVVAlertViewController.xib in Resources */,
+				F3AB539F28FD959E009F3F0D /* SelectPaymentMethodView.xib in Resources */,
+				F30A53BE2806EFC600FCF78B /* EInvoiceItemTableViewCell.xib in Resources */,
+				E6567EC025A5B3D6001C11E1 /* CardDetailsFormViewController.xib in Resources */,
+				F3AE8BAC27BBC6A600D84322 /* OTPViewController.xib in Resources */,
+				F324A28E27E3338E00F14C6F /* SeparatorTableViewCell.xib in Resources */,
+				F3AE8B8327B0FD6100D84322 /* BNPL.storyboard in Resources */,
+				F30C032D273D5EAF008AC9ED /* EInvoiceItemViewController.xib in Resources */,
+				F39725AE2906B2350035F913 /* SelectMeezaDigitalView.xib in Resources */,
+				F324A28A27E3337A00F14C6F /* BlankTableViewCell.xib in Resources */,
+				F3A671902716F4C80094BDD2 /* Almarai in Resources */,
+				E6224F182534E5C70065C23F /* WebviewViewController.xib in Resources */,
+				F3AE8B7727ABFD8400D84322 /* ProgressView.xib in Resources */,
+				E6085469254C0767009B468F /* Assets.xcassets in Resources */,
+				E6E81831269C7BBD00E010F8 /* PaymentIntentsViewController.xib in Resources */,
+				E6BCEC6F25DD42E4000CFCE6 /* PaymentIntentViewController.xib in Resources */,
+				E6117C73253EDB7000959D78 /* PaymentViewController.xib in Resources */,
+				E69FFADB26D7C9D100097907 /* SelectPaymentMethodViewController.xib in Resources */,
+				E6801E4125B6D59F0074C5BB /* SearchView.xib in Resources */,
+				F3AE8B9E27B679F200D84322 /* InstallmentsCollectionViewCell.xib in Resources */,
+				E6F653D525B8B43D00C1248C /* CountrySelectionViewController.xib in Resources */,
+				F37ABB9327E87821009F04E2 /* BNPLFooter.xib in Resources */,
+				F3842E3E288EA4F1005D8802 /* CVVViewController.xib in Resources */,
+				E6801E1525B5C97D0074C5BB /* CountryTableViewCell.xib in Resources */,
+				E676819226F378C800626694 /* ReceiptTableViewCell.xib in Resources */,
+				F32554FE28E2F165002EEFEA /* CancelAlertViewController.xib in Resources */,
+				E676818B26F32C6800626694 /* ReceiptViewController.xib in Resources */,
+				E6E81829269C668F00E010F8 /* PaymentIntentTableViewCell.xib in Resources */,
+				F398758B28EC494E00CF4595 /* AlternativePMView.xib in Resources */,
+				E6CEBF3826D3B88700A7A28B /* Localizable.strings in Resources */,
+				F3A6718E2716F49F0094BDD2 /* Montserrat in Resources */,
+				F3A1A9AB27F3017200411CD8 /* ShahryPurchaseViewController.xib in Resources */,
+				F3AE8B7B27AD68C500D84322 /* PhoneNumberViewController.xib in Resources */,
+				F3ED4F1E282BAD7D0024E401 /* ReviewTransactionViewController.xib in Resources */,
+				F324A29427E333ED00F14C6F /* ValuTableView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E6117BAA2539805C00959D78 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "codesign --verify --force --sign \"$CODE_SIGN_IDENTITY\" \"$CODESIGNING_FOLDER_PATH\"\n";
+		};
+		F31717EA2791684200ADD77E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# make the xcframework from the simulator and iOS packages\nxcodebuild -create-xcframework -framework \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/GeideaPaymentSDK.framework\" -framework \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/GeideaPaymentSDK.framework\" -output \"${BUILD_DIR}/GeideaPaymentSDK.xcframework\" \n\n# open the project's directory in Finder so you can copy your xcframework\n\nopen \"${BUILD_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6117B9325396AB800959D78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6117B9A25396AB800959D78 /* GeideaPaymentSDKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6224EAB2534DFE80065C23F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30D113E28FEEECF00242A59 /* GroupedBNPLView.swift in Sources */,
+				F31871F4290809E70070C991 /* UIActivityIndicatorView+Extensions.swift in Sources */,
+				E641F101269DA93200920959 /* GDPaymentIntent.swift in Sources */,
+				E6117BB825398F0E00959D78 /* AuthenticateParams.swift in Sources */,
+				F3ED4F30283281430024E401 /* GDSouhoolaOTPDetails.swift in Sources */,
+				F3AA97FE28898CC50096A96F /* GDRecurrence.swift in Sources */,
+				F3AE8BC327BD38EC00D84322 /* GDVerifyCustomerResponse.swift in Sources */,
+				E6117C72253EDB7000959D78 /* PaymentViewController.swift in Sources */,
+				F3AE8B8027B0FB7200D84322 /* InstallmentViewController.swift in Sources */,
+				F333CE1C28D9CDD6000ECAD7 /* PaymentRouterV3.swift in Sources */,
+				E67E409D256D634100FAB817 /* PaymentMethod.swift in Sources */,
+				E676817E26F0DECF00626694 /* GDPostilionDetails.swift in Sources */,
+				E60C3211253702EF0023133F /* Strings+Extensions.swift in Sources */,
+				F3ED4F2E28322B490024E401 /* GDBNPLReceiptResponse.swift in Sources */,
+				F3842E3D288EA4F1005D8802 /* CVVViewController.swift in Sources */,
+				F3AE8BA227B688C300D84322 /* InstallmentModel.swift in Sources */,
+				F3AE8BCB27C3EB4000D84322 /* GDBNPLResponse.swift in Sources */,
+				E69FFAC326D62BB200097907 /* BaseViewController.swift in Sources */,
+				F334747327C64634004A6236 /* PurchseParams.swift in Sources */,
+				E6117BB425398A6000959D78 /* PaymentRouter.swift in Sources */,
+				F33CF28C27FEE6940065778A /* Numeric+Extensions.swift in Sources */,
+				E6567E9B258A2B34001C11E1 /* PayTokenViewModel.swift in Sources */,
+				F3B8ABCF280816BD00E8EEE8 /* ShahryRouter.swift in Sources */,
+				F3A7F862280D7BC600704D50 /* ShahryConfirmViewModel.swift in Sources */,
+				F3144943274F937300B402E0 /* PaymentRouterV4.swift in Sources */,
+				F324A29827E49D6300F14C6F /* RichTextField.swift in Sources */,
+				E60C32822538446A0023133F /* SecureStoreQueryable.swift in Sources */,
+				E6117C42253CD92500959D78 /* Double+Extensions.swift in Sources */,
+				F3ED4F17282A89D20024E401 /* GSSouhoolaInstallmentPlanResponse.swift in Sources */,
+				F3A6F249283E36EB008E39B9 /* BNPLFlowLayout.swift in Sources */,
+				F3B8ABCD28080F0E00E8EEE8 /* NSAttributeString+Extensions.swift in Sources */,
+				E6E019C925A7101300AA2DC5 /* GDApplePayDetails.swift in Sources */,
+				E6A5E87D25430DD60080BF3D /* GDAddress.swift in Sources */,
+				E63E458D25ED1EA70077251F /* GDOrdersResponse.swift in Sources */,
+				E6ADAAD9254022C800EC655F /* GDOrderResponse.swift in Sources */,
+				F3842E42288EE4B9005D8802 /* GDGetTokenResponse.swift in Sources */,
+				F3AE8B7527ABFD6B00D84322 /* ProgressView.swift in Sources */,
+				E6380A78255A95E70034E556 /* GDErrorCodes.swift in Sources */,
+				E60C321925371FBF0023133F /* ConfigManager.swift in Sources */,
+				E6567E8D258A1E1B001C11E1 /* OperationCoordinator.swift in Sources */,
+				F3B8ABD22808199F00E8EEE8 /* VALUItemParams.swift in Sources */,
+				F307578E2726F98200184737 /* GDSDKMerchantConfigResponse.swift in Sources */,
+				E634460825D53EC4000BC8A0 /* GDConfigApplePay.swift in Sources */,
+				E676818626F1EF4000626694 /* GDPaymentIntentOrder.swift in Sources */,
+				E6117BF6253990EC00959D78 /* ExpiryDateParams.swift in Sources */,
+				E6BCEC6E25DD42E4000CFCE6 /* PaymentIntentViewController.swift in Sources */,
+				F3AE8BC527BE599D00D84322 /* GDInstallmentPlansResponse.swift in Sources */,
+				E60C0D1D270324C500A01F9D /* ProductManager.swift in Sources */,
+				E64D56622586234B008AB18F /* GeideaPaymentAPI.swift in Sources */,
+				E6905F4525DFCD84000CA160 /* GDPaymentIntentCustomer.swift in Sources */,
+				F350EAC52729446B008DA0D5 /* GDMerchantConfigResponse.swift in Sources */,
+				E676818A26F32C6800626694 /* ReceiptViewController.swift in Sources */,
+				F3AE8BB627BD220200D84322 /* GenerateOTPParams.swift in Sources */,
+				E6567EB825A5B371001C11E1 /* CardDetailsFormViewController.swift in Sources */,
+				E60854422548708D009B468F /* GDPaymentMethodResponse.swift in Sources */,
+				F3ED4F26282D318F0024E401 /* GDSouhoolaInstallmentPlanSelected.swift in Sources */,
+				E6342E4E26A1BB6C00AE1E31 /* GDQRResponse.swift in Sources */,
+				E6117C4C253D9F3C00959D78 /* AppConfig.swift in Sources */,
+				E60C32152537033C0023133F /* URL+Extensions.swift in Sources */,
+				F34E064E273EACC200E87698 /* GDEInvoiceSentLink.swift in Sources */,
+				E6A4BAD925C1AB5800DE08BD /* GDTokenizationDetails.swift in Sources */,
+				E6ADAAD5254007B100EC655F /* GDConfigResponse.swift in Sources */,
+				E676817C26F0D8E200626694 /* GDPlatform.swift in Sources */,
+				F39FB94B28A661490022D35D /* DeviceIndentificationParams.swift in Sources */,
+				E6A5E8712542BDBF0080BF3D /* NSError+Extensions.swift in Sources */,
+				E60C31FD2536EFA50023133F /* GDWSConstants.swift in Sources */,
+				F3A6719C271EE0190094BDD2 /* AuthenticateParamsV3.swift in Sources */,
+				E6E81820269C207600E010F8 /* GDPaymentIntentFilter.swift in Sources */,
+				E6224F172534E5C70065C23F /* WebViewViewModel.swift in Sources */,
+				F3AE8BBA27BD226F00D84322 /* BNPLRouter.swift in Sources */,
+				F33CF2AF280071030065778A /* GDBNPLItem.swift in Sources */,
+				E6117BF22539906B00959D78 /* PaymentMethodParams.swift in Sources */,
+				E6342E4C26A1A23100AE1E31 /* QRMeezaPaymentManager.swift in Sources */,
+				E6E81830269C7BBD00E010F8 /* PaymentIntentsViewController.swift in Sources */,
+				F3FFD016276B68B00082B38B /* SendLinkMultipleParams.swift in Sources */,
+				E6117C3E253CD4C700959D78 /* Utils.swift in Sources */,
+				E6A5E8552541807B0080BF3D /* GDAmount.swift in Sources */,
+				F3AE8B6C27AAC6C900D84322 /* BNPLViewController.swift in Sources */,
+				F324A29327E333ED00F14C6F /* ValuTableView.swift in Sources */,
+				F33CF29027FEE7010065778A /* KeyEncodingContainer+Extensions.swift in Sources */,
+				F30C0323273CF967008AC9ED /* GDEInvoiceItem.swift in Sources */,
+				E663E98E26C198E700CEB7FE /* PaymentType.swift in Sources */,
+				E6567EB325A5B21C001C11E1 /* FormCoordinator.swift in Sources */,
+				E60850A225C995DA00DD2F77 /* CancelManager.swift in Sources */,
+				E6DE952C26A855B7008E9DC7 /* RequestToPayParams.swift in Sources */,
+				E6117C50253DAAD000959D78 /* PayManager.swift in Sources */,
+				F3ED4F2A282D38AD0024E401 /* GDSouhoolaInstallmentPlanSelectedResponse.swift in Sources */,
+				F3B8ABD428081B4800E8EEE8 /* shahryInstallmentPlanSelectedParams.swift in Sources */,
+				F324A28127E228BA00F14C6F /* GDReceiptResponse.swift in Sources */,
+				F32554FD28E2F165002EEFEA /* CancelAlertViewController.swift in Sources */,
+				F3AE8B9327B66E6200D84322 /* InstallmentViewModel.swift in Sources */,
+				F33CF29427FEE78A0065778A /* KeyedDecodingContainer+Extensions.swift in Sources */,
+				E6F1EE822535E5C800253F19 /* Result.swift in Sources */,
+				E65170DF26A02F0000102128 /* QRpaymentFormViewModel.swift in Sources */,
+				E676818D26F36C1000626694 /* ReceiptViewModel.swift in Sources */,
+				F3A67194271D856F0094BDD2 /* GDInitiateAuthenticateResponse.swift in Sources */,
+				F3B8ABD62808373700E8EEE8 /* GDShahryConfirm.swift in Sources */,
+				F3377B7228648C8F00BBB46B /* GDSouhoolaResendDetails.swift in Sources */,
+				F3A67192271D5D6D0094BDD2 /* InitiateAuthenticateParams.swift in Sources */,
+				E6E01A0625AC883100AA2DC5 /* UIImageView+Extensions.swift in Sources */,
+				E6F1EE802535E5C800253F19 /* JSON.swift in Sources */,
+				F3AE8B8B27B1411E00D84322 /* BNPLVIewModel.swift in Sources */,
+				E60C32032536F2280023133F /* WebServices.swift in Sources */,
+				E676819126F378C800626694 /* ReceiptTableViewCell.swift in Sources */,
+				E6801E0425B5C81D0074C5BB /* CountriesDataSource.swift in Sources */,
+				E6F1EE812535E5C800253F19 /* Log.swift in Sources */,
+				F30C0328273D4B81008AC9ED /* EInvoiceDetailsViewController.swift in Sources */,
+				F3AE8B8F27B1548500D84322 /* RoundedView.swift in Sources */,
+				E6B067222577E98200F9A44F /* ConfigCountries.swift in Sources */,
+				E676814C26EF6BF100626694 /* GDCardBrandAuthentication.swift in Sources */,
+				F3E6624E289D14D900D40B7E /* GDSouhoolaRetreiveInstallmentPlans.swift in Sources */,
+				E6DE952026A6AF04008E9DC7 /* UILabel+Extensions.swift in Sources */,
+				E6342E4826A19CB300AE1E31 /* MeezaPaymentRouter.swift in Sources */,
+				F34E064C273EA1E700E87698 /* EInvoiceDetailsViewModel.swift in Sources */,
+				E6BCEC6125DD31B2000CFCE6 /* CustomerParams.swift in Sources */,
+				F30C0325273D0892008AC9ED /* GDEInvoiceDetails.swift in Sources */,
+				E63E458225ED157A0077251F /* OrdersManager.swift in Sources */,
+				F3AE8BAB27BBC6A600D84322 /* OTPViewController.swift in Sources */,
+				E65170E326A0500D00102128 /* PayQRCoordinator.swift in Sources */,
+				F3AE8BB227BD209300D84322 /* VerifyCustomerParams.swift in Sources */,
+				E6BCEC6825DD3AE6000CFCE6 /* PaymentIntentManager.swift in Sources */,
+				F38CBF4B282946BF00ED5FDB /* SouhoolaReviewParams.swift in Sources */,
+				F324A28D27E3338E00F14C6F /* SeparatorTableViewCell.swift in Sources */,
+				F3AE8B9D27B679F200D84322 /* InstallmentsCollectionViewCell.swift in Sources */,
+				E6B067642578DB0700F9A44F /* ApplePayViewController.swift in Sources */,
+				F307619C28290EA1004014CC /* GDSouhoolaReviewTransaction.swift in Sources */,
+				E61FE57026C3F3CC00B64B2B /* PaymentFormCoordinator.swift in Sources */,
+				E6085446254870F6009B468F /* GDCodesResponse.swift in Sources */,
+				E6A5E866254189800080BF3D /* GDCustomerDetails.swift in Sources */,
+				F3ED4F32283283B00024E401 /* GDSouhoolaBasicResponse.swift in Sources */,
+				F39FB94F28AE1A690022D35D /* GDBrandingResponse.swift in Sources */,
+				E69FFADD26D7C9D100097907 /* SelectPaymentMethodViewModel.swift in Sources */,
+				E6ADAAD12540074D00EC655F /* PayResponse.swift in Sources */,
+				E6117C48253D7A6200959D78 /* JSONSerialiation+Extensions.swift in Sources */,
+				F30761962821739C004014CC /* SouhoolaRouter.swift in Sources */,
+				E6E019D425A851E600AA2DC5 /* RoundedButton.swift in Sources */,
+				F3DC4D4327F1DDB7001EDE31 /* ShahryConfirmViewController.swift in Sources */,
+				E6BCEC7A25DE51FC000CFCE6 /* PaymentIntentFactory.swift in Sources */,
+				F30D114228FFE3AA00242A59 /* PaymentMethodsView.swift in Sources */,
+				E6E81822269C49FF00E010F8 /* GDPaymentIntentResponse.swift in Sources */,
+				F3AE8BC727BE5A7F00D84322 /* GDInstallmentPlan.swift in Sources */,
+				F3AA980028898E7F0096A96F /* RecurrenceParams.swift in Sources */,
+				E6A5E84D25417A4E0080BF3D /* GDCardDetails.swift in Sources */,
+				F398758928EC493800CF4595 /* AlternativePMView.swift in Sources */,
+				F3842E44288EE7D7005D8802 /* GDExpiryDate.swift in Sources */,
+				E608543725482883009B468F /* UIViewController+Extensions.swift in Sources */,
+				F3AE8BAF27BBF32100D84322 /* PhoneNumberViewModel.swift in Sources */,
+				E6117BBC25398F1B00959D78 /* PayParams.swift in Sources */,
+				E6456D6625827A4600E6C4C2 /* PayTokenParams.swift in Sources */,
+				E6905F3625DEB7EE000CA160 /* GDPaymentIntentDetails.swift in Sources */,
+				F3A6F24B283FA963008E39B9 /* GeideaBNPLAPI.swift in Sources */,
+				F3ED4F28282D33650024E401 /* GDSouhoolaBNPLDetails.swift in Sources */,
+				F327AF0E2832D2EA00F7A959 /* GDSouhoolaConfirmDetails.swift in Sources */,
+				E6E81828269C668F00E010F8 /* PaymentIntentTableViewCell.swift in Sources */,
+				F3F7390228FEBCEE00ADBFC8 /* SelectGroupedView.swift in Sources */,
+				F3DDF36228101F3C00E2B1B2 /* GDBNPLDetails.swift in Sources */,
+				F3AE8BC927C3780000D84322 /* InstallmentPlanCellViewModel.swift in Sources */,
+				F324A28427E22B3A00F14C6F /* GDReceipt.swift in Sources */,
+				E6224F052534E4860065C23F /* Coordinator.swift in Sources */,
+				E6BCEC5D25DD311B000CFCE6 /* PaymentIntentParams.swift in Sources */,
+				F39FB95128AE2A200022D35D /* CurvedImageView.swift in Sources */,
+				F30C032C273D5EAF008AC9ED /* EInvoiceItemViewController.swift in Sources */,
+				E6224F0B2534E4D70065C23F /* PaymentFactory.swift in Sources */,
+				E64462CC257F93B2001BAA4B /* CaptureParams.swift in Sources */,
+				E60C31F92536EE1F0023133F /* BaseRouter.swift in Sources */,
+				E6905F4125DFCC07000CA160 /* GDPaymentIntentDetailsResponse.swift in Sources */,
+				F3ED4F1D282BAD7D0024E401 /* ReviewTransactionViewController.swift in Sources */,
+				E6801E2425B5CD350074C5BB /* UITableView+Extensions.swift in Sources */,
+				E6E81824269C4FA100E010F8 /* GDPaymentIntentsResponse.swift in Sources */,
+				E60C327325383CD00023133F /* SecureStore.swift in Sources */,
+				E6117C77253EF62000959D78 /* AuthenticateResponse.swift in Sources */,
+				F324A28627E22CF200F14C6F /* GDMechant.swift in Sources */,
+				E608509E25C968B400DD2F77 /* CanceParams.swift in Sources */,
+				E6905F4925E268D3000CA160 /* Date+Extensions.swift in Sources */,
+				F307619A282178B7004014CC /* GDSouhoolaInstallmentPlan.swift in Sources */,
+				E6F1EE792535E5B600253F19 /* Response.swift in Sources */,
+				F3961489283CF8EC00E3B1E2 /* OTPViewModel.swift in Sources */,
+				E6801E2025B5CCC80074C5BB /* UIView+Extensions.swift in Sources */,
+				F33CF2AD28006FBB0065778A /* GDShahrySelectPlanInstallment.swift in Sources */,
+				E65170DC26A02EED00102128 /* QRPaymentFormViewController.swift in Sources */,
+				E6B067102571115600F9A44F /* GDApplePayResponse.swift in Sources */,
+				E6ADAADD254024E800EC655F /* GDTransactionResponse.swift in Sources */,
+				E6E01A0225AC82F100AA2DC5 /* CardType.swift in Sources */,
+				E6224F192534E5C70065C23F /* WebviewViewController.swift in Sources */,
+				E6F1EE872535E5E100253F19 /* GDConfig.swift in Sources */,
+				F33CF29627FEEF430065778A /* Decimal+Extensions.swift in Sources */,
+				E676818426F0F12E00626694 /* GDStatementDescriptor.swift in Sources */,
+				F3DBEC5B28A3D0CC00091067 /* PayViewModel.swift in Sources */,
+				E6DE952626A6FB1E008E9DC7 /* RequestToPayViewModel.swift in Sources */,
+				E6E019DE25A8584800AA2DC5 /* RoundedTextField.swift in Sources */,
+				F3AE8BB427BD215300D84322 /* InstallmentPlanParams.swift in Sources */,
+				F3A838D2286C6F9000FD35B8 /* GDSouhoolaCancelDetails.swift in Sources */,
+				F3AB53A128FD95B8009F3F0D /* SelectPaymentMethodView.swift in Sources */,
+				F30FF2EA27D6024C00BFB4B1 /* GDVALUInstallmentPlanSelectedDetails.swift in Sources */,
+				F30C0321273C0BB1008AC9ED /* EInvoiceItem.swift in Sources */,
+				F39FB94D28AD0E9D0022D35D /* CurvedView.swift in Sources */,
+				E6117C002539B99D00959D78 /* AuthenticateManager.swift in Sources */,
+				E676819426F4AE2100626694 /* DynamicTableView.swift in Sources */,
+				E6BCEC5925DD2D3C000CFCE6 /* PaymentIntentRouter.swift in Sources */,
+				E6801E1A25B5CA190074C5BB /* SearchView.swift in Sources */,
+				F307619228216AA4004014CC /* GDSouhoolaVerifyResponse.swift in Sources */,
+				F3AE8BBF27BD328F00D84322 /* GDInstallmentPlanDetails.swift in Sources */,
+				F3AE8B9827B6746B00D84322 /* GridCollectionLayout.swift in Sources */,
+				F350EAC32727FE95008DA0D5 /* GDSDKMerchantConfig.swift in Sources */,
+				E6567EBC25A5B396001C11E1 /* CardDetailsFormViewModel.swift in Sources */,
+				E6BCEC7E25DE52CC000CFCE6 /* PaymentIntentViewModel.swift in Sources */,
+				E6A5E84725416F2B0080BF3D /* UIScreen+Extensions.swift in Sources */,
+				F3ED4F20282BAEFC0024E401 /* ReviewTransactionViewModel.swift in Sources */,
+				E67E4095256D4CE200FAB817 /* ApplePayManager.swift in Sources */,
+				E69FFADC26D7C9D100097907 /* SelectPaymentMethodViewController.swift in Sources */,
+				E6567E9F258A43F6001C11E1 /* ViewModel.swift in Sources */,
+				F30FF2EE27D6531C00BFB4B1 /* GDInstallmentPlanSelectedResponse.swift in Sources */,
+				F3AE8BC127BD32BD00D84322 /* GDGenerateOTPDetails.swift in Sources */,
+				F334747727C657C0004A6236 /* GDBNPLPurchaseResponse.swift in Sources */,
+				F39725B02906B2F20035F913 /* SelectMeezaDigitalView.swift in Sources */,
+				F324A27F27E21F2C00F14C6F /* ReceiptManager.swift in Sources */,
+				F333CE1E28D9FC97000ECAD7 /* GDInitializeResponseObject.swift in Sources */,
+				E6B06769257E37B500F9A44F /* PaymentOperation.swift in Sources */,
+				E676818226F0EA7900626694 /* GDMeezaDetails.swift in Sources */,
+				F30C031F273C07F0008AC9ED /* EInvoiceDetailsParams.swift in Sources */,
+				E65170E126A04A9E00102128 /* GDPICustomer.swift in Sources */,
+				F325834D285A104100591887 /* GDMultiCurrency.swift in Sources */,
+				E6DE952E26A858B8008E9DC7 /* MeezaRouter.swift in Sources */,
+				F3E7418D27DF429B00519A80 /* ReceiptRouter.swift in Sources */,
+				F3C7229B2726B7E6001B0E0C /* SDKMerchantConfigRouter.swift in Sources */,
+				E6DE952826A82368008E9DC7 /* PaymentRequestParams.swift in Sources */,
+				E6342E4A26A19F5400AE1E31 /* QRParams.swift in Sources */,
+				E63E459125ED22090077251F /* GDOrdersFilter.swift in Sources */,
+				E69FFADF26D8EE1C00097907 /* Bundle+Extensions.swift in Sources */,
+				E6DE952326A6EDF5008E9DC7 /* RequestToPayViewController.swift in Sources */,
+				F3FFD014276B621B0082B38B /* GDSendLinkMultipleDetails.swift in Sources */,
+				E60C32072536F64A0023133F /* GDWSHTTPMethod.swift in Sources */,
+				F34D50E028B359E300068C4F /* RadialCircleView.swift in Sources */,
+				E67E5DAD26A980AA00E145D1 /* GDRTPQRResponse.swift in Sources */,
+				E6F1EE7A2535E5B600253F19 /* Request.swift in Sources */,
+				E6801E1425B5C97D0074C5BB /* CountryTableViewCell.swift in Sources */,
+				F3AE8BBD27BD327B00D84322 /* GDVerifyCustomerDetails.swift in Sources */,
+				E60C0D1B27030E8B00A01F9D /* ProductRouter.swift in Sources */,
+				F3AE8BB827BD225F00D84322 /* BNPLManager.swift in Sources */,
+				E6CEBF3D26D3C52E00A7A28B /* BaseLanguage.swift in Sources */,
+				E6567E97258A2B0E001C11E1 /* OperationViewModel.swift in Sources */,
+				E608543B254866BE009B468F /* GDAuthenticationDetailsResponse.swift in Sources */,
+				F33CF28E27FEE6BF0065778A /* DataProtocol+Extensions.swift in Sources */,
+				F3AE8B9127B176E800D84322 /* PhoneNumberViewController.swift in Sources */,
+				F379504D2902717B004044C7 /* GDPaymentMethods.swift in Sources */,
+				E60850A625C999B700DD2F77 /* GDCancelResponse.swift in Sources */,
+				E6F1EE712535E59E00253F19 /* PaymentViewModel.swift in Sources */,
+				E60C3286253844C20023133F /* SecureStoreError.swift in Sources */,
+				E6117BFC253991CE00959D78 /* AddressParams.swift in Sources */,
+				E60C320D2536F9D00023133F /* ConfigRouter.swift in Sources */,
+				F30A53BF2806EFC600FCF78B /* EInvoiceItemTableViewCell.swift in Sources */,
+				F37ABB9127E877EC009F04E2 /* BNPLFooter.swift in Sources */,
+				E6801E0A25B5C8930074C5BB /* CountrySelectionViewController.swift in Sources */,
+				E6A5E86C2542B2B50080BF3D /* GDErrorResponse.swift in Sources */,
+				F334747527C647FD004A6236 /* GDBNPLPurchaseDetails.swift in Sources */,
+				F307619828217866004014CC /* GDSouhoolaInstallmentPlansResponse.swift in Sources */,
+				E6F6540F25B9C38500C1248C /* CVVAlertViewController.swift in Sources */,
+				F38D6E5127F1ECD1006A6F43 /* BNPLShahryViewModel.swift in Sources */,
+				F3AA97FA288986780096A96F /* AuthenticateTokenParamsV3.swift in Sources */,
+				F3AE8BA027B67FA400D84322 /* UIView.swift in Sources */,
+				F3ED4F24282BE6E20024E401 /* SouhoolaItemParams.swift in Sources */,
+				E6A5E8752542BE190080BF3D /* ErrorCodes.swift in Sources */,
+				E64D56562583A06D008AB18F /* PayTokenManager.swift in Sources */,
+				E6567EA5258A5E5C001C11E1 /* PaymentTokenCoordinator.swift in Sources */,
+				F3842E40288ECA4F005D8802 /* CVVViewModel.swift in Sources */,
+				F3AA97F828896B0B0096A96F /* GDInitiateAuthenticateTokenParams.swift in Sources */,
+				F30C031D273C047E008AC9ED /* PaymentIntentCoordinator.swift in Sources */,
+				E6A5E85125417AC90080BF3D /* ExpiryDate.swift in Sources */,
+				E6224F002534E43C0065C23F /* PaymentCoordinator.swift in Sources */,
+				F3A7F864280D7BDA00704D50 /* ShahryPurchaseViewModel.swift in Sources */,
+				E63E456F25ECF7670077251F /* OrderRouter.swift in Sources */,
+				E60C0D1927030DD800A01F9D /* GDProductMConfig.swift in Sources */,
+				F325834F285A1B7200591887 /* GDCashOnDelivery.swift in Sources */,
+				E6E019E825A876A000AA2DC5 /* UITextField+Extensions.swift in Sources */,
+				E6F653DD25B8BEB400C1248C /* Array+Extenstions.swift in Sources */,
+				E6E01A1225ADA38600AA2DC5 /* UIColor+Extensions.swift in Sources */,
+				F30757902726F9FE00184737 /* GDMerchantDataResponse.swift in Sources */,
+				E67E4099256D54CC00FAB817 /* ApplePayParams.swift in Sources */,
+				E64462D0257F94FE001BAA4B /* OperationsManager.swift in Sources */,
+				F31F9AA8275E04150052A093 /* GDQRDetails.swift in Sources */,
+				F3ED4F19282A8A950024E401 /* GDSouhoolaReviewResponse.swift in Sources */,
+				F3ED4F2C282E326E0024E401 /* SouhoolaIPSelectedParams.swift in Sources */,
+				F30757922726FDBD00184737 /* GDCardBrandProvider.swift in Sources */,
+				F3A6718B2716F4080094BDD2 /* UIFont+Extensions.swift in Sources */,
+				E676818026F0DF1100626694 /* GDTerminalDetails.swift in Sources */,
+				F324A28927E3337A00F14C6F /* BlankTableViewCell.swift in Sources */,
+				F3A1A9AA27F3017200411CD8 /* ShahryPurchaseViewController.swift in Sources */,
+				F3AE8B7027ABBF3100D84322 /* StepView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6117B9E25396AB800959D78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6224EAE2534DFE80065C23F /* GeideaPaymentSDK */;
+			targetProxy = E6117B9D25396AB800959D78 /* PBXContainerItemProxy */;
+		};
+		F31717EC2791687300ADD77E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6224EAE2534DFE80065C23F /* GeideaPaymentSDK */;
+			targetProxy = F31717EB2791687300ADD77E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6CEBF3A26D3B88700A7A28B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6CEBF3926D3B88700A7A28B /* en */,
+				E6CEBF3B26D3B88D00A7A28B /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6117BA025396AB800959D78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D44KCG5D83;
+				INFOPLIST_FILE = GeideaPaymentSDKTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.geidea.GeideaPaymentSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeideaPaymentSDKSwiftSample.app/GeideaPaymentSDKSwiftSample";
+			};
+			name = Debug;
+		};
+		E6117BA125396AB800959D78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D44KCG5D83;
+				INFOPLIST_FILE = GeideaPaymentSDKTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.geidea.GeideaPaymentSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeideaPaymentSDKSwiftSample.app/GeideaPaymentSDKSwiftSample";
+			};
+			name = Release;
+		};
+		E6224EC12534DFE80065C23F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E6224EC22534DFE80065C23F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E6224EC42534DFE80065C23F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GeideaPaymentSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				NEW_SETTING = "";
+				OTHER_SWIFT_FLAGS = "-DDEBUG $(inherited) -D COCOAPODS -D DEV_ENV";
+				PRODUCT_BUNDLE_IDENTIFIER = net.geidea.GeideaPaymentSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6224EC52534DFE80065C23F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GeideaPaymentSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				NEW_SETTING = "";
+				OTHER_SWIFT_FLAGS = "-DRELEASE $(inherited) -D COCOAPODS -D PROD_ENV";
+				PRODUCT_BUNDLE_IDENTIFIER = net.geidea.GeideaPaymentSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F31717E72791672E00ADD77E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94HU76XWXB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F31717E82791672E00ADD77E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94HU76XWXB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6117B9F25396AB800959D78 /* Build configuration list for PBXNativeTarget "GeideaPaymentSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6117BA025396AB800959D78 /* Debug */,
+				E6117BA125396AB800959D78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6224EA92534DFE80065C23F /* Build configuration list for PBXProject "GeideaPaymentSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6224EC12534DFE80065C23F /* Debug */,
+				E6224EC22534DFE80065C23F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6224EC32534DFE80065C23F /* Build configuration list for PBXNativeTarget "GeideaPaymentSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6224EC42534DFE80065C23F /* Debug */,
+				E6224EC52534DFE80065C23F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F31717E92791672E00ADD77E /* Build configuration list for PBXAggregateTarget "XCFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F31717E72791672E00ADD77E /* Debug */,
+				F31717E82791672E00ADD77E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6224EA62534DFE80065C23F /* Project object */;
+}

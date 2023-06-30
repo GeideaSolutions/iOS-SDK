@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PT_Sans-Web-Regular.ttf">
+            <string>PTSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchView" customModule="GeideaPaymentSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="searchImage" destination="BFB-k4-Tme" id="6bM-TS-X38"/>
+                <outlet property="searchTextField" destination="3Fg-jm-nXg" id="r7F-Ub-mZT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="51"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icSearch" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFB-k4-Tme">
+                    <rect key="frame" x="20" y="13" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="0zO-Ti-L5l"/>
+                        <constraint firstAttribute="height" constant="25" id="AJX-yc-Dlh"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country search" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Fg-jm-nXg">
+                    <rect key="frame" x="55" y="15.5" width="368" height="20.5"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BFB-k4-Tme" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1Zg-hX-pKU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3Fg-jm-nXg" secondAttribute="trailing" constant="30" id="5no-5P-hQA"/>
+                <constraint firstItem="3Fg-jm-nXg" firstAttribute="leading" secondItem="BFB-k4-Tme" secondAttribute="trailing" constant="10" id="M9w-KW-RUk"/>
+                <constraint firstItem="3Fg-jm-nXg" firstAttribute="centerY" secondItem="BFB-k4-Tme" secondAttribute="centerY" id="Phe-jh-OjF"/>
+                <constraint firstItem="BFB-k4-Tme" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="fbw-tl-Qpm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="170.40000000000001" y="-76.011994002998506"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icSearch" width="20" height="20"/>
+    </resources>
+</document>

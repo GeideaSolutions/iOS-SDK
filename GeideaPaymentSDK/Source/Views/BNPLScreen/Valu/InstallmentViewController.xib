@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstallmentViewController" customModule="GeideaPaymentSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="ToULabel" destination="y6d-hl-vR6" id="bd9-4k-Jko"/>
+                <outlet property="cancelBtn" destination="dUU-5C-53y" id="408-NE-muL"/>
+                <outlet property="cardSelectedBtn" destination="BOh-3R-PKn" id="Kcd-Rs-tjL"/>
+                <outlet property="cardSelectedLabel" destination="Hh4-bp-7i8" id="Z6d-Yp-PVi"/>
+                <outlet property="cashBackLabel" destination="SKh-RX-gZd" id="hAd-Ca-Vb3"/>
+                <outlet property="cashBackTF" destination="doB-bO-wBb" id="rMy-E1-IbO"/>
+                <outlet property="cashLabel" destination="cZw-uO-ne6" id="cN4-bN-lbt"/>
+                <outlet property="cashSelectedBtn" destination="dT7-gF-gwe" id="Ebi-Su-pZu"/>
+                <outlet property="cashSelectedLabel" destination="keQ-bE-Aa7" id="NSF-Di-qh4"/>
+                <outlet property="cashView" destination="yCW-f7-kWi" id="PU0-Dc-xU6"/>
+                <outlet property="cashbackErrorLabel" destination="d8C-sL-ea8" id="VKd-lL-BHw"/>
+                <outlet property="cashbackSV" destination="Nva-Ja-pbb" id="5Gh-vh-4fD"/>
+                <outlet property="collectionViewHeight" destination="Xel-kI-3gu" id="IGX-Rj-T4o"/>
+                <outlet property="contentView" destination="X1H-Sa-2Bu" id="XJd-3J-oE5"/>
+                <outlet property="downPaymentErrorLabel" destination="1bf-dk-O1e" id="dYD-OQ-wBM"/>
+                <outlet property="downPaymentLabel" destination="Kby-4p-nS7" id="ymg-rw-leq"/>
+                <outlet property="downPaymentSV" destination="zkr-Qp-lR4" id="2NM-iV-bGm"/>
+                <outlet property="downPaymentTF" destination="b4Q-lF-8gd" id="OAN-ks-DiB"/>
+                <outlet property="downPaymentTitle" destination="Fcx-dU-Hnc" id="ag0-MF-8uJ"/>
+                <outlet property="downPaymentValue" destination="Xb8-vn-PwR" id="TLm-oq-49l"/>
+                <outlet property="downPaymentView" destination="LLX-xk-uOj" id="C32-Wf-eQm"/>
+                <outlet property="errorLabel" destination="fzj-Cy-O2r" id="DTj-eX-8aC"/>
+                <outlet property="feeLabel" destination="Xb8-vn-PwR" id="s5O-7p-NJP"/>
+                <outlet property="financedCurrencyLabel" destination="Hp1-Vo-Awt" id="l0s-K5-MdI"/>
+                <outlet property="financedLabel" destination="PZi-tf-sTb" id="0ze-PO-CFs"/>
+                <outlet property="financedValue" destination="K3r-Mw-SkH" id="pPh-JZ-DEK"/>
+                <outlet property="financedViewValu" destination="uPt-kE-xGi" id="Et1-8A-6Z4"/>
+                <outlet property="installmentPlanLabel" destination="EYf-QP-paM" id="rFL-cI-zFl"/>
+                <outlet property="installmentVC" destination="ib0-yn-cVD" id="VuL-hl-zN4"/>
+                <outlet property="installmentView" destination="KnT-sU-K5e" id="SJ4-sM-70N"/>
+                <outlet property="logoIV" destination="OpD-SN-oS5" id="NrM-Ex-R5e"/>
+                <outlet property="mainView" destination="i5M-Pr-FkT" id="cn3-ef-S4U"/>
+                <outlet property="nextBtn" destination="izh-P9-iMx" id="gxD-N8-ARO"/>
+                <outlet property="payUpFrontLabel" destination="nzr-RK-jeT" id="qRt-Mb-3is"/>
+                <outlet property="payUpFrontView" destination="6Yh-UA-Hf3" id="wS1-nc-8bi"/>
+                <outlet property="purchaseFeeLabel" destination="gjB-6H-C3X" id="8I5-gP-Hka"/>
+                <outlet property="purchaseFeeValue" destination="2Ru-bA-zeh" id="guT-57-7C3"/>
+                <outlet property="scrollView" destination="ehA-TA-XDf" id="xsI-w6-9Yi"/>
+                <outlet property="souHoolaFinancedLabel" destination="f9U-0C-OtB" id="pnu-7D-c3B"/>
+                <outlet property="souhollaDPSV" destination="iEi-WG-cio" id="N5V-wj-B70"/>
+                <outlet property="souhoolaAproxLabel" destination="yiG-3J-00i" id="1h1-aW-l4e"/>
+                <outlet property="souhoolaDPError" destination="Ioj-Ur-VmD" id="88V-ma-UM9"/>
+                <outlet property="souhoolaDPLabel" destination="FEZ-yv-7c6" id="HGr-1d-Mbh"/>
+                <outlet property="souhoolaDPTF" destination="RaK-4j-fSd" id="aC6-mC-NtU"/>
+                <outlet property="souhoolaFinancedCurrency" destination="2Eo-TB-Yuc" id="rST-L9-wiT"/>
+                <outlet property="souhoolaFinancedValue" destination="WZe-oU-tXx" id="vAQ-Cz-VWI"/>
+                <outlet property="souhoolaFinancedView" destination="BkP-Bg-DMh" id="S5F-jX-4PK"/>
+                <outlet property="souhoolaRangeLabel" destination="3T4-as-9ZO" id="aDL-Bx-UDx"/>
+                <outlet property="toUErrorLabel" destination="sHa-Wx-F48" id="lCL-2Z-oaE"/>
+                <outlet property="toUPaymentSV" destination="3aK-qm-jXx" id="Nkf-Cu-fcE"/>
+                <outlet property="toUTF" destination="ok4-er-N68" id="gle-f0-fAK"/>
+                <outlet property="totalAmountLabel" destination="2aJ-yh-kRp" id="d7b-kn-7pJ"/>
+                <outlet property="totalAmountPaid" destination="K5R-zX-QzW" id="QmZ-J6-OiM"/>
+                <outlet property="totalAmountPaidValue" destination="vEn-qE-mkZ" id="4OU-KV-yWR"/>
+                <outlet property="totalAmountValue" destination="rKl-cF-ART" id="nVU-ly-hhj"/>
+                <outlet property="totalCurrencyLabel" destination="Pov-bh-BuS" id="E6u-xQ-qYy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehA-TA-XDf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1H-Sa-2Bu" userLabel="ContentView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1722.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfc-Sr-gC3" userLabel="PaymentView">
+                                    <rect key="frame" x="24" y="0.0" width="366" height="136"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lvt-B6-XBJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="136"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foD-Mg-OkE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="60"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Total Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aJ-yh-kRp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="109.5" height="60"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                            <color key="textColor" red="0.31372549019607843" green="0.37647058823529411" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gJN-l0-gGL">
+                                                            <rect key="frame" x="311.5" y="20" width="54.5" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKl-cF-ART">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pov-bh-BuS">
+                                                                    <rect key="frame" x="20" y="0.0" width="34.5" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="2aJ-yh-kRp" firstAttribute="top" secondItem="foD-Mg-OkE" secondAttribute="top" id="GtS-Fe-jv5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="2aJ-yh-kRp" secondAttribute="bottom" id="M7H-KS-FLb"/>
+                                                        <constraint firstItem="2aJ-yh-kRp" firstAttribute="leading" secondItem="foD-Mg-OkE" secondAttribute="leading" id="hXh-Hv-Cex"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gJN-l0-gGL" secondAttribute="trailing" id="m7T-O1-aPk"/>
+                                                        <constraint firstItem="gJN-l0-gGL" firstAttribute="centerY" secondItem="2aJ-yh-kRp" secondAttribute="centerY" id="vca-nj-F8f"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPt-kE-xGi">
+                                                    <rect key="frame" x="0.0" y="76" width="366" height="60"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Financed Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZi-tf-sTb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="60"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                            <color key="textColor" red="0.31372549020000001" green="0.37647058820000001" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jbM-M0-jP0">
+                                                            <rect key="frame" x="315.5" y="20" width="50.5" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3r-Mw-SkH">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="11" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp1-Vo-Awt">
+                                                                    <rect key="frame" x="16" y="0.0" width="34.5" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="jbM-M0-jP0" firstAttribute="centerY" secondItem="PZi-tf-sTb" secondAttribute="centerY" id="IdR-Ou-iEb"/>
+                                                        <constraint firstItem="PZi-tf-sTb" firstAttribute="leading" secondItem="uPt-kE-xGi" secondAttribute="leading" id="OVu-j7-gKk"/>
+                                                        <constraint firstItem="PZi-tf-sTb" firstAttribute="top" secondItem="uPt-kE-xGi" secondAttribute="top" id="ZmA-xW-9by"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PZi-tf-sTb" secondAttribute="bottom" id="o2i-NU-ehK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jbM-M0-jP0" secondAttribute="trailing" id="qo3-Te-haN"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="foD-Mg-OkE" firstAttribute="leading" secondItem="lvt-B6-XBJ" secondAttribute="leading" id="7CY-ZC-Pvu"/>
+                                                <constraint firstAttribute="trailing" secondItem="foD-Mg-OkE" secondAttribute="trailing" id="jBL-Rd-FBs"/>
+                                                <constraint firstAttribute="trailing" secondItem="uPt-kE-xGi" secondAttribute="trailing" id="jlP-Tj-Adk"/>
+                                                <constraint firstItem="uPt-kE-xGi" firstAttribute="leading" secondItem="lvt-B6-XBJ" secondAttribute="leading" id="rqh-Aq-7Cx"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="lvt-B6-XBJ" firstAttribute="top" secondItem="Lfc-Sr-gC3" secondAttribute="top" id="Wne-0e-o2p"/>
+                                        <constraint firstAttribute="trailing" secondItem="lvt-B6-XBJ" secondAttribute="trailing" id="g2S-eQ-cqy"/>
+                                        <constraint firstItem="lvt-B6-XBJ" firstAttribute="leading" secondItem="Lfc-Sr-gC3" secondAttribute="leading" id="gVS-yh-AHs"/>
+                                        <constraint firstAttribute="bottom" secondItem="lvt-B6-XBJ" secondAttribute="bottom" id="p5I-Fn-cTR"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="aSW-2r-fMy">
+                                    <rect key="frame" x="24" y="166" width="366" height="1250.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zkr-Qp-lR4">
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="179"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="c6h-WP-ykY" userLabel="Down Payment SV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="49"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LLX-xk-uOj" userLabel="Down Payment View" customClass="RoundedView" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="49"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Down Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcx-dU-Hnc">
+                                                                    <rect key="frame" x="24" y="6" width="94" height="12"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                                    <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qb-ys-2td">
+                                                                    <rect key="frame" x="24" y="24" width="318" height="25"/>
+                                                                    <subviews>
+                                                                        <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b4Q-lF-8gd">
+                                                                            <rect key="frame" x="0.0" y="6" width="298" height="13"/>
+                                                                            <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="b4Q-lF-8gd" firstAttribute="top" secondItem="2qb-ys-2td" secondAttribute="top" constant="6" id="1vL-Qg-C05"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="b4Q-lF-8gd" secondAttribute="trailing" constant="20" id="DpV-ax-DYM"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="b4Q-lF-8gd" secondAttribute="bottom" constant="6" id="Fjn-9G-6Af"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="gOP-lf-8bQ"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="b4Q-lF-8gd" firstAttribute="leading" secondItem="Fcx-dU-Hnc" secondAttribute="leading" id="Icb-bT-11i"/>
+                                                                <constraint firstAttribute="height" constant="49" id="Mvo-48-ZdV"/>
+                                                                <constraint firstAttribute="trailing" secondItem="2qb-ys-2td" secondAttribute="trailing" constant="24" id="NHh-VK-unM"/>
+                                                                <constraint firstItem="Fcx-dU-Hnc" firstAttribute="top" secondItem="LLX-xk-uOj" secondAttribute="top" constant="6" id="XRV-Ps-Fvb"/>
+                                                                <constraint firstItem="2qb-ys-2td" firstAttribute="leading" secondItem="Fcx-dU-Hnc" secondAttribute="leading" id="dUP-zR-qet"/>
+                                                                <constraint firstAttribute="bottom" secondItem="2qb-ys-2td" secondAttribute="bottom" id="jHU-jS-REI"/>
+                                                                <constraint firstItem="2qb-ys-2td" firstAttribute="top" secondItem="Fcx-dU-Hnc" secondAttribute="bottom" constant="6" id="kIG-L8-kZ8"/>
+                                                                <constraint firstItem="Fcx-dU-Hnc" firstAttribute="leading" secondItem="LLX-xk-uOj" secondAttribute="leading" constant="24" id="wwx-0a-ugf"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bf-dk-O1e">
+                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <color key="textColor" red="0.93725490199999995" green="0.2901960784" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3aK-qm-jXx">
+                                                    <rect key="frame" x="0.0" y="65" width="366" height="49"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCz-4a-WfN" userLabel="To-U Payment View" customClass="RoundedView" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="49"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To-U Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6d-hl-vR6">
+                                                                    <rect key="frame" x="24" y="6" width="80" height="12"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                                    <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUv-ql-Rti">
+                                                                    <rect key="frame" x="24" y="24" width="318" height="25"/>
+                                                                    <subviews>
+                                                                        <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ok4-er-N68">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="298" height="19"/>
+                                                                            <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="ok4-er-N68" secondAttribute="bottom" constant="6" id="88p-kC-KAH"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="ok4-er-N68" secondAttribute="trailing" constant="20" id="BbX-WX-NF5"/>
+                                                                        <constraint firstItem="ok4-er-N68" firstAttribute="top" secondItem="cUv-ql-Rti" secondAttribute="top" id="dFE-wH-rBF"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="r24-PD-LB0"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="y6d-hl-vR6" firstAttribute="top" secondItem="xCz-4a-WfN" secondAttribute="top" constant="6" id="1AX-Pc-Xhv"/>
+                                                                <constraint firstAttribute="bottom" secondItem="cUv-ql-Rti" secondAttribute="bottom" id="3NZ-IJ-dTu"/>
+                                                                <constraint firstItem="ok4-er-N68" firstAttribute="leading" secondItem="y6d-hl-vR6" secondAttribute="leading" id="V6S-Od-R9p"/>
+                                                                <constraint firstItem="cUv-ql-Rti" firstAttribute="leading" secondItem="y6d-hl-vR6" secondAttribute="leading" id="bsz-8b-fB7"/>
+                                                                <constraint firstItem="cUv-ql-Rti" firstAttribute="top" secondItem="y6d-hl-vR6" secondAttribute="bottom" constant="6" id="llp-IP-MnY"/>
+                                                                <constraint firstAttribute="height" constant="49" id="rte-iW-aTG"/>
+                                                                <constraint firstAttribute="trailing" secondItem="cUv-ql-Rti" secondAttribute="trailing" constant="24" id="tJ3-9u-mZk"/>
+                                                                <constraint firstItem="y6d-hl-vR6" firstAttribute="leading" secondItem="xCz-4a-WfN" secondAttribute="leading" constant="24" id="wzq-fl-mUd"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHa-Wx-F48">
+                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <color key="textColor" red="0.93725490199999995" green="0.2901960784" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nva-Ja-pbb">
+                                                    <rect key="frame" x="0.0" y="130" width="366" height="49"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SX3-zS-dIU" userLabel="CachbackPayment View" customClass="RoundedView" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="49"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cashback Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKh-RX-gZd">
+                                                                    <rect key="frame" x="24" y="6" width="112" height="12"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                                    <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrZ-CS-rmw">
+                                                                    <rect key="frame" x="24" y="24" width="322" height="25"/>
+                                                                    <subviews>
+                                                                        <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="doB-bO-wBb">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="302" height="25"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="25" id="lBx-Ns-9Uv"/>
+                                                                            </constraints>
+                                                                            <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="doB-bO-wBb" secondAttribute="bottom" id="M7m-nc-FHU"/>
+                                                                        <constraint firstItem="doB-bO-wBb" firstAttribute="top" secondItem="rrZ-CS-rmw" secondAttribute="top" id="fvP-3R-IqW"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="doB-bO-wBb" secondAttribute="trailing" constant="20" id="xfo-2h-21o"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <viewLayoutGuide key="safeArea" id="DWc-Uc-dkl"/>
+                                                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="rrZ-CS-rmw" secondAttribute="bottom" id="1mj-BQ-gfR"/>
+                                                                <constraint firstAttribute="height" constant="49" id="BFg-64-7XI"/>
+                                                                <constraint firstItem="SKh-RX-gZd" firstAttribute="leading" secondItem="SX3-zS-dIU" secondAttribute="leading" constant="24" id="FLX-Jn-Ldc"/>
+                                                                <constraint firstItem="rrZ-CS-rmw" firstAttribute="bottom" secondItem="DWc-Uc-dkl" secondAttribute="bottom" id="JVa-Wo-1Ia"/>
+                                                                <constraint firstItem="rrZ-CS-rmw" firstAttribute="top" secondItem="SKh-RX-gZd" secondAttribute="bottom" constant="6" id="RZp-cf-czD"/>
+                                                                <constraint firstItem="DWc-Uc-dkl" firstAttribute="trailing" secondItem="rrZ-CS-rmw" secondAttribute="trailing" constant="20" id="Y5X-5V-xAb"/>
+                                                                <constraint firstItem="doB-bO-wBb" firstAttribute="leading" secondItem="SKh-RX-gZd" secondAttribute="leading" id="auy-yL-y0j"/>
+                                                                <constraint firstItem="SKh-RX-gZd" firstAttribute="top" secondItem="SX3-zS-dIU" secondAttribute="top" constant="6" id="rQS-TA-4qS"/>
+                                                                <constraint firstItem="rrZ-CS-rmw" firstAttribute="leading" secondItem="SKh-RX-gZd" secondAttribute="leading" id="xad-7U-0Fx"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8C-sL-ea8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <color key="textColor" red="0.93725490199999995" green="0.2901960784" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pj6-9t-og1">
+                                            <rect key="frame" x="0.0" y="195" width="366" height="20"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Installment Plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-QP-paM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                                    <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzj-Cy-O2r">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                    <color key="textColor" red="0.93725490196078431" green="0.29019607843137252" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EYf-QP-paM" firstAttribute="top" secondItem="pj6-9t-og1" secondAttribute="top" id="m0e-BP-c3a"/>
+                                            </constraints>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnT-sU-K5e" userLabel="InstallmentView">
+                                            <rect key="frame" x="0.0" y="231" width="366" height="787.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="iui-SS-XvK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="787.5"/>
+                                                    <subviews>
+                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ib0-yn-cVD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="10"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="10" id="Xel-kI-3gu"/>
+                                                            </constraints>
+                                                            <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4EV-G6-gYC">
+                                                                <size key="itemSize" width="0.0" height="0.0"/>
+                                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                            </collectionViewFlowLayout>
+                                                        </collectionView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Yh-UA-Hf3">
+                                                            <rect key="frame" x="0.0" y="42" width="366" height="479.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay upfront" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzr-RK-jeT">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="351.5"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Purchase fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjB-6H-C3X">
+                                                                    <rect key="frame" x="0.0" y="367.5" width="104" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.31372549020000001" green="0.37647058820000001" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ru-bA-zeh">
+                                                                    <rect key="frame" x="316.5" y="367.5" width="49.5" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Down Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kby-4p-nS7">
+                                                                    <rect key="frame" x="0.0" y="403.5" width="125.5" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.31372549020000001" green="0.37647058820000001" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb8-vn-PwR">
+                                                                    <rect key="frame" x="316.5" y="367.5" width="49.5" height="92"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Total amount to be paid upfront" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5R-zX-QzW">
+                                                                    <rect key="frame" x="0.0" y="439.5" width="366" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.31372549020000001" green="0.37647058820000001" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEn-qE-mkZ">
+                                                                    <rect key="frame" x="316.5" y="419.5" width="49.5" height="60"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="K5R-zX-QzW" secondAttribute="bottom" constant="20" id="2nG-Cc-iOI"/>
+                                                                <constraint firstItem="vEn-qE-mkZ" firstAttribute="trailing" secondItem="K5R-zX-QzW" secondAttribute="trailing" id="3zz-Lv-2vM"/>
+                                                                <constraint firstItem="gjB-6H-C3X" firstAttribute="leading" secondItem="nzr-RK-jeT" secondAttribute="leading" id="4IC-4B-F7z"/>
+                                                                <constraint firstItem="2Ru-bA-zeh" firstAttribute="centerY" secondItem="gjB-6H-C3X" secondAttribute="centerY" id="APe-ZZ-nTa"/>
+                                                                <constraint firstItem="K5R-zX-QzW" firstAttribute="leading" secondItem="Kby-4p-nS7" secondAttribute="leading" id="ARS-XR-i4e"/>
+                                                                <constraint firstItem="vEn-qE-mkZ" firstAttribute="trailing" secondItem="Xb8-vn-PwR" secondAttribute="trailing" id="GaZ-D1-1KA"/>
+                                                                <constraint firstAttribute="trailing" secondItem="2Ru-bA-zeh" secondAttribute="trailing" id="LPf-fT-piw"/>
+                                                                <constraint firstItem="vEn-qE-mkZ" firstAttribute="centerY" secondItem="K5R-zX-QzW" secondAttribute="centerY" id="TDJ-Vh-0Mb"/>
+                                                                <constraint firstItem="Kby-4p-nS7" firstAttribute="leading" secondItem="gjB-6H-C3X" secondAttribute="leading" id="WCs-ub-b7G"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Xb8-vn-PwR" secondAttribute="bottom" constant="20" id="WvW-5q-506"/>
+                                                                <constraint firstItem="nzr-RK-jeT" firstAttribute="leading" secondItem="6Yh-UA-Hf3" secondAttribute="leading" id="X2K-TU-shJ"/>
+                                                                <constraint firstItem="nzr-RK-jeT" firstAttribute="top" secondItem="6Yh-UA-Hf3" secondAttribute="top" id="avp-s3-Whb"/>
+                                                                <constraint firstItem="gjB-6H-C3X" firstAttribute="top" secondItem="nzr-RK-jeT" secondAttribute="bottom" constant="16" id="c8N-PA-ti0"/>
+                                                                <constraint firstItem="Xb8-vn-PwR" firstAttribute="trailing" secondItem="2Ru-bA-zeh" secondAttribute="trailing" id="esd-Gn-egi"/>
+                                                                <constraint firstItem="K5R-zX-QzW" firstAttribute="top" secondItem="Kby-4p-nS7" secondAttribute="bottom" constant="16" id="flp-co-XH9"/>
+                                                                <constraint firstItem="Xb8-vn-PwR" firstAttribute="centerY" secondItem="Kby-4p-nS7" secondAttribute="centerY" id="hqp-YJ-LyR"/>
+                                                                <constraint firstAttribute="bottom" secondItem="vEn-qE-mkZ" secondAttribute="bottom" id="wSH-RC-2qj"/>
+                                                                <constraint firstItem="Kby-4p-nS7" firstAttribute="top" secondItem="gjB-6H-C3X" secondAttribute="bottom" constant="16" id="yyX-yH-41b"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCW-f7-kWi">
+                                                            <rect key="frame" x="0.0" y="553.5" width="366" height="234"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZw-uO-ne6">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="150"/>
+                                                                    <string key="text">Choose how you want to pay for the
+down payment</string>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeB-ET-NOx">
+                                                                    <rect key="frame" x="0.0" y="170" width="366" height="24"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOh-3R-PKn" customClass="RadialCircleView" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="24" id="PL7-ut-G4q"/>
+                                                                                <constraint firstAttribute="height" constant="24" id="r0c-ao-DFG"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hh4-bp-7i8">
+                                                                            <rect key="frame" x="32" y="0.0" width="334" height="24"/>
+                                                                            <string key="text">Pay 100 EGP now, through a
+different payment method (e.g. card)</string>
+                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                            <color key="textColor" red="0.31372549020000001" green="0.37647058820000001" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="BOh-3R-PKn" firstAttribute="top" secondItem="BeB-ET-NOx" secondAttribute="top" id="1QX-9M-GTY"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="Hh4-bp-7i8" secondAttribute="bottom" id="MRo-ZJ-oXq"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="Hh4-bp-7i8" secondAttribute="trailing" id="Pum-rX-kH5"/>
+                                                                        <constraint firstItem="Hh4-bp-7i8" firstAttribute="leading" secondItem="BOh-3R-PKn" secondAttribute="trailing" constant="8" id="QoG-kG-FiB"/>
+                                                                        <constraint firstItem="Hh4-bp-7i8" firstAttribute="top" secondItem="BeB-ET-NOx" secondAttribute="top" id="hiV-97-cbS"/>
+                                                                        <constraint firstItem="BOh-3R-PKn" firstAttribute="leading" secondItem="BeB-ET-NOx" secondAttribute="leading" id="oCF-FC-7fk"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="BOh-3R-PKn" secondAttribute="bottom" id="tcM-ld-eCo"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDj-cj-jjk">
+                                                                    <rect key="frame" x="0.0" y="210" width="366" height="24"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dT7-gF-gwe" customClass="RadialCircleView" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="24" id="rEU-CR-S69"/>
+                                                                                <constraint firstAttribute="height" constant="24" id="tcy-Rx-Xy3"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Pay 100 EGP in cash at delivery" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-bE-Aa7">
+                                                                            <rect key="frame" x="32" y="0.0" width="334" height="24"/>
+                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                            <color key="textColor" red="0.31372549020000001" green="0.37647058820000001" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="keQ-bE-Aa7" secondAttribute="bottom" id="63a-if-PyP"/>
+                                                                        <constraint firstItem="keQ-bE-Aa7" firstAttribute="top" secondItem="VDj-cj-jjk" secondAttribute="top" id="F8v-Ra-KFi"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="keQ-bE-Aa7" secondAttribute="trailing" id="Gon-7j-IXA"/>
+                                                                        <constraint firstItem="dT7-gF-gwe" firstAttribute="leading" secondItem="VDj-cj-jjk" secondAttribute="leading" id="S8o-px-k6H"/>
+                                                                        <constraint firstItem="keQ-bE-Aa7" firstAttribute="leading" secondItem="dT7-gF-gwe" secondAttribute="trailing" constant="8" id="Vo3-lt-O4D"/>
+                                                                        <constraint firstItem="dT7-gF-gwe" firstAttribute="top" secondItem="VDj-cj-jjk" secondAttribute="top" id="Yog-es-eFN"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="dT7-gF-gwe" secondAttribute="bottom" id="lL9-ze-HXf"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="cZw-uO-ne6" secondAttribute="trailing" id="3hM-3B-lHr"/>
+                                                                <constraint firstItem="VDj-cj-jjk" firstAttribute="top" secondItem="BeB-ET-NOx" secondAttribute="bottom" constant="16" id="8cg-EH-gPR"/>
+                                                                <constraint firstItem="cZw-uO-ne6" firstAttribute="leading" secondItem="yCW-f7-kWi" secondAttribute="leading" id="AKX-qH-lU3"/>
+                                                                <constraint firstItem="VDj-cj-jjk" firstAttribute="leading" secondItem="yCW-f7-kWi" secondAttribute="leading" id="IHl-Mf-NEf"/>
+                                                                <constraint firstAttribute="bottom" secondItem="VDj-cj-jjk" secondAttribute="bottom" id="Pwu-Hl-JpG"/>
+                                                                <constraint firstItem="BeB-ET-NOx" firstAttribute="leading" secondItem="yCW-f7-kWi" secondAttribute="leading" id="UaT-lN-s9Y"/>
+                                                                <constraint firstAttribute="trailing" secondItem="BeB-ET-NOx" secondAttribute="trailing" id="Wl4-Zh-Vda"/>
+                                                                <constraint firstItem="cZw-uO-ne6" firstAttribute="top" secondItem="yCW-f7-kWi" secondAttribute="top" id="hh7-tx-eQB"/>
+                                                                <constraint firstAttribute="trailing" secondItem="VDj-cj-jjk" secondAttribute="trailing" id="qhY-tB-tAv"/>
+                                                                <constraint firstItem="BeB-ET-NOx" firstAttribute="top" secondItem="cZw-uO-ne6" secondAttribute="bottom" constant="20" id="waF-2U-KFs"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="iui-SS-XvK" firstAttribute="top" secondItem="KnT-sU-K5e" secondAttribute="top" id="GWs-Bb-zb0"/>
+                                                <constraint firstAttribute="bottom" secondItem="iui-SS-XvK" secondAttribute="bottom" id="KbR-it-m1i"/>
+                                                <constraint firstItem="iui-SS-XvK" firstAttribute="leading" secondItem="KnT-sU-K5e" secondAttribute="leading" id="UqG-ey-qi0"/>
+                                                <constraint firstAttribute="trailing" secondItem="iui-SS-XvK" secondAttribute="trailing" id="vuz-hX-0he"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iEi-WG-cio" userLabel="Down Payment SV">
+                                            <rect key="frame" x="0.0" y="1034.5" width="366" height="216"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* The installment amount is approximate;  the actual amount will be shown in the review transaction screen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiG-3J-00i">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="44"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                    <color key="textColor" red="0.31372549019607843" green="0.4392156862745098" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jyf-np-jo6" userLabel="Down Payment View" customClass="RoundedView" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="60" width="366" height="49"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Down Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEZ-yv-7c6">
+                                                            <rect key="frame" x="24" y="6" width="94" height="12"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                            <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLv-DN-4bZ">
+                                                            <rect key="frame" x="24" y="24" width="318" height="25"/>
+                                                            <subviews>
+                                                                <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RaK-4j-fSd">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="298" height="25"/>
+                                                                    <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="RaK-4j-fSd" secondAttribute="bottom" id="amm-D7-9mi"/>
+                                                                <constraint firstAttribute="trailing" secondItem="RaK-4j-fSd" secondAttribute="trailing" constant="20" id="hZe-wu-cW4"/>
+                                                                <constraint firstAttribute="height" constant="25" id="jwt-RH-ibV"/>
+                                                                <constraint firstItem="RaK-4j-fSd" firstAttribute="top" secondItem="aLv-DN-4bZ" secondAttribute="top" id="xjh-uS-oGU"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="FEZ-yv-7c6" firstAttribute="top" secondItem="Jyf-np-jo6" secondAttribute="top" constant="6" id="0c3-JC-FFd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="aLv-DN-4bZ" secondAttribute="trailing" constant="24" id="1X4-Cy-sgG"/>
+                                                        <constraint firstItem="aLv-DN-4bZ" firstAttribute="top" secondItem="FEZ-yv-7c6" secondAttribute="bottom" constant="6" id="BVw-RO-lqB"/>
+                                                        <constraint firstItem="RaK-4j-fSd" firstAttribute="leading" secondItem="FEZ-yv-7c6" secondAttribute="leading" id="Dh3-7T-pfN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="aLv-DN-4bZ" secondAttribute="bottom" id="FtH-rK-5mg"/>
+                                                        <constraint firstAttribute="height" constant="49" id="SJK-GZ-232"/>
+                                                        <constraint firstItem="aLv-DN-4bZ" firstAttribute="leading" secondItem="FEZ-yv-7c6" secondAttribute="leading" id="qcW-Z2-wjV"/>
+                                                        <constraint firstItem="FEZ-yv-7c6" firstAttribute="leading" secondItem="Jyf-np-jo6" secondAttribute="leading" constant="24" id="rP1-SJ-Ldl"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ioj-Ur-VmD">
+                                                    <rect key="frame" x="0.0" y="117" width="366" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                    <color key="textColor" red="0.93725490199999995" green="0.2901960784" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Down payment needs to be between 0 EGP and 1000 EGP" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3T4-as-9ZO">
+                                                    <rect key="frame" x="0.0" y="125" width="366" height="15"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                    <color key="textColor" red="0.31372549019607843" green="0.37647058823529411" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BkP-Bg-DMh">
+                                                    <rect key="frame" x="0.0" y="156" width="366" height="60"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Financed Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-0C-OtB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="60"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                            <color key="textColor" red="0.31372549020000001" green="0.37647058820000001" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WVX-bo-zCC">
+                                                            <rect key="frame" x="315.5" y="20" width="50.5" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZe-oU-tXx">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="11" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Eo-TB-Yuc">
+                                                                    <rect key="frame" x="16" y="0.0" width="34.5" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                    <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="WVX-bo-zCC" firstAttribute="centerY" secondItem="f9U-0C-OtB" secondAttribute="centerY" id="545-fC-ZcS"/>
+                                                        <constraint firstAttribute="trailing" secondItem="WVX-bo-zCC" secondAttribute="trailing" id="8cE-uK-yE1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="f9U-0C-OtB" secondAttribute="bottom" id="GA1-7c-V7g"/>
+                                                        <constraint firstItem="f9U-0C-OtB" firstAttribute="leading" secondItem="BkP-Bg-DMh" secondAttribute="leading" id="HaU-z2-k26"/>
+                                                        <constraint firstItem="f9U-0C-OtB" firstAttribute="top" secondItem="BkP-Bg-DMh" secondAttribute="top" id="TEz-sP-w6s"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izh-P9-iMx" customClass="RoundedButton" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="1456.5" width="366" height="48"/>
+                                    <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="qCr-H9-rnX"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                    <state key="normal" title="Next">
+                                        <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="nextBtnTapped:" destination="-1" eventType="touchUpInside" id="hc9-0I-2mh"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUU-5C-53y" customClass="RoundedButton" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="1524.5" width="366" height="48"/>
+                                    <color key="backgroundColor" red="0.96470588239999999" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="dgv-Y1-t4U"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                    <state key="normal" title="Cancel"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="cancelTapped:" destination="-1" eventType="touchUpInside" id="vF0-bw-DFP"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="valU_logo" translatesAutoresizingMaskIntoConstraints="NO" id="OpD-SN-oS5">
+                                    <rect key="frame" x="161" y="1612.5" width="92" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="29" id="Z2O-Gp-8t5"/>
+                                        <constraint firstAttribute="width" constant="92" id="jr1-gQ-Qj7"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="geideaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="q2y-gs-Tga">
+                                    <rect key="frame" x="176" y="1681.5" width="62" height="21"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="aSW-2r-fMy" firstAttribute="leading" secondItem="Lfc-Sr-gC3" secondAttribute="leading" id="1vn-Jo-XZV"/>
+                                <constraint firstItem="aSW-2r-fMy" firstAttribute="trailing" secondItem="Lfc-Sr-gC3" secondAttribute="trailing" id="Dzh-aM-9FK"/>
+                                <constraint firstItem="izh-P9-iMx" firstAttribute="trailing" secondItem="aSW-2r-fMy" secondAttribute="trailing" id="FCX-R5-9DA"/>
+                                <constraint firstItem="aSW-2r-fMy" firstAttribute="top" secondItem="Lfc-Sr-gC3" secondAttribute="bottom" constant="30" id="FWB-WN-9l1"/>
+                                <constraint firstItem="OpD-SN-oS5" firstAttribute="centerX" secondItem="X1H-Sa-2Bu" secondAttribute="centerX" id="GNB-r0-Or7"/>
+                                <constraint firstItem="dUU-5C-53y" firstAttribute="top" secondItem="izh-P9-iMx" secondAttribute="bottom" constant="20" id="LRK-dL-5hZ"/>
+                                <constraint firstItem="OpD-SN-oS5" firstAttribute="top" secondItem="dUU-5C-53y" secondAttribute="bottom" constant="40" id="MfB-Hf-yx2"/>
+                                <constraint firstItem="izh-P9-iMx" firstAttribute="top" secondItem="aSW-2r-fMy" secondAttribute="bottom" constant="40" id="OEo-eD-yJU"/>
+                                <constraint firstItem="q2y-gs-Tga" firstAttribute="centerX" secondItem="X1H-Sa-2Bu" secondAttribute="centerX" id="TgL-SY-c3s"/>
+                                <constraint firstItem="q2y-gs-Tga" firstAttribute="top" secondItem="OpD-SN-oS5" secondAttribute="bottom" constant="40" id="Tq7-uL-Daf"/>
+                                <constraint firstItem="izh-P9-iMx" firstAttribute="leading" secondItem="aSW-2r-fMy" secondAttribute="leading" id="boH-YK-LVf"/>
+                                <constraint firstItem="Lfc-Sr-gC3" firstAttribute="top" secondItem="X1H-Sa-2Bu" secondAttribute="top" id="hJr-zW-GAu"/>
+                                <constraint firstItem="Lfc-Sr-gC3" firstAttribute="leading" secondItem="X1H-Sa-2Bu" secondAttribute="leading" constant="24" id="kNH-M7-1DU"/>
+                                <constraint firstItem="dUU-5C-53y" firstAttribute="trailing" secondItem="izh-P9-iMx" secondAttribute="trailing" id="pL4-V2-l00"/>
+                                <constraint firstAttribute="trailing" secondItem="Lfc-Sr-gC3" secondAttribute="trailing" constant="24" id="qqk-la-ryb"/>
+                                <constraint firstItem="dUU-5C-53y" firstAttribute="leading" secondItem="izh-P9-iMx" secondAttribute="leading" id="uzx-oJ-rvO"/>
+                                <constraint firstAttribute="bottom" secondItem="q2y-gs-Tga" secondAttribute="bottom" constant="20" id="zZ7-Ue-maX"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="X1H-Sa-2Bu" secondAttribute="bottom" id="1nE-hK-JoS"/>
+                        <constraint firstItem="X1H-Sa-2Bu" firstAttribute="top" secondItem="ehA-TA-XDf" secondAttribute="top" id="KVa-W3-fQa"/>
+                        <constraint firstItem="X1H-Sa-2Bu" firstAttribute="height" secondItem="ehA-TA-XDf" secondAttribute="height" priority="250" id="NcI-LS-zzL"/>
+                        <constraint firstItem="X1H-Sa-2Bu" firstAttribute="leading" secondItem="ehA-TA-XDf" secondAttribute="leading" id="Pfl-LT-JZT"/>
+                        <constraint firstItem="X1H-Sa-2Bu" firstAttribute="centerX" secondItem="ehA-TA-XDf" secondAttribute="centerX" id="T34-g6-aev"/>
+                        <constraint firstAttribute="trailing" secondItem="X1H-Sa-2Bu" secondAttribute="trailing" id="YvK-Rv-q1h"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ehA-TA-XDf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2zL-f9-ZIk"/>
+                <constraint firstAttribute="trailing" secondItem="ehA-TA-XDf" secondAttribute="trailing" id="ILU-T5-X0I"/>
+                <constraint firstItem="ehA-TA-XDf" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" priority="500" id="Kz4-F4-o5H"/>
+                <constraint firstItem="ehA-TA-XDf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rIK-zJ-Dhn"/>
+            </constraints>
+            <point key="canvasLocation" x="115.94202898550725" y="-205.58035714285714"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="dUU-5C-53y">
+            <size key="intrinsicContentSize" width="57" height="32"/>
+        </designable>
+        <designable name="izh-P9-iMx">
+            <size key="intrinsicContentSize" width="39" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="geideaLogo" width="62" height="21"/>
+        <image name="valU_logo" width="60" height="19"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

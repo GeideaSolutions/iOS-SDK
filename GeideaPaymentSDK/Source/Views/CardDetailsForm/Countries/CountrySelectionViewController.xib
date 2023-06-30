@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountrySelectionViewController" customModule="GeideaPaymentSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelBtn" destination="bAe-XD-Pr8" id="F0P-vX-j4T"/>
+                <outlet property="noResultsFound" destination="gjG-7Z-DWW" id="Vva-bt-fsD"/>
+                <outlet property="searchView" destination="d9q-H1-wsH" id="d6S-0k-lxu"/>
+                <outlet property="tableView" destination="SNX-Wk-6aL" id="YuF-17-OmJ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="aBj-cS-0mf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" horizontalHuggingPriority="259" translatesAutoresizingMaskIntoConstraints="NO" id="d9q-H1-wsH" customClass="SearchView" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="64" width="336" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="350" id="VNF-K0-ttg"/>
+                        <constraint firstAttribute="height" constant="50" id="Zmp-CK-BoV"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAe-XD-Pr8">
+                    <rect key="frame" x="346" y="64" width="48" height="50"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelTapped:" destination="-1" eventType="touchUpInside" id="y9C-qo-JYT"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="62" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SNX-Wk-6aL">
+                    <rect key="frame" x="0.0" y="134" width="414" height="708"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SNX-Wk-6aL" secondAttribute="bottom" constant="20" id="2Iy-q5-e0G"/>
+                <constraint firstItem="SNX-Wk-6aL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KzA-Pk-Ui0"/>
+                <constraint firstItem="bAe-XD-Pr8" firstAttribute="leading" secondItem="d9q-H1-wsH" secondAttribute="trailing" constant="10" id="V0r-lr-6ux"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bAe-XD-Pr8" secondAttribute="trailing" constant="20" id="ZD8-Yy-0Eo"/>
+                <constraint firstItem="SNX-Wk-6aL" firstAttribute="top" secondItem="d9q-H1-wsH" secondAttribute="bottom" constant="20" id="c0M-Z9-Q0F"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SNX-Wk-6aL" secondAttribute="trailing" id="eg8-ct-fA5"/>
+                <constraint firstItem="d9q-H1-wsH" firstAttribute="centerY" secondItem="bAe-XD-Pr8" secondAttribute="centerY" id="gGJ-A9-o2j"/>
+                <constraint firstItem="d9q-H1-wsH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="lGu-iP-szj"/>
+                <constraint firstItem="d9q-H1-wsH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qlk-7f-0sm"/>
+                <constraint firstItem="bAe-XD-Pr8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="tCR-Lp-drt"/>
+            </constraints>
+            <point key="canvasLocation" x="93" y="48"/>
+        </view>
+        <view contentMode="scaleToFill" id="gjG-7Z-DWW">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IP-1h-Ocs">
+                    <rect key="frame" x="144.5" y="437.5" width="125.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ff6-WW-haY"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9IP-1h-Ocs" firstAttribute="centerY" secondItem="gjG-7Z-DWW" secondAttribute="centerY" id="mXX-7O-uT1"/>
+                <constraint firstItem="9IP-1h-Ocs" firstAttribute="centerX" secondItem="gjG-7Z-DWW" secondAttribute="centerX" id="u8i-Sy-3A8"/>
+            </constraints>
+            <point key="canvasLocation" x="-1579" y="-30"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,241 @@
+/*
+  Localizable.strings
+  GeideaPaymentSDK
+
+  Created by euvid on 29/10/2020.
+  
+*/
+
+"CAPTURE_SCREEN_TITLE" = "Processing payment capture..";
+"REFUND_SCREEN_TITLE" = "Processing payment refund..";
+"PAYMENT_SCREEN_TITLE" = "Processing payment..";
+"WEBVIEW_SCREEN_TITLE" = "3D SECURE";
+"EInvoice_SCREEN_TITLE" = "EInvoice sample";
+"CARD_DETAILS_TITLE" = "Card details";
+"PAY_CARD_TITLE" = "Pay with credit card";
+"CARD_NAME_EMPTY" = " ⃰ Please enter name on card";
+"CARD_NAME_INVALID" = " ⃰ Wrong card name";
+"CARD_NUMBER_INVALID" = " ⃰ Wrong card number";
+"CARD_NUMBER_INVALID_LENGTH" = " ⃰ Wrong card number length";
+"CARD_NUMBER_INCOMPLETE" = " ⃰ Your card number is incomplete";
+"CARD_NUMBER_UNSUPPORTED" = " ⃰ Unsupported card brand";
+"DATE_EXPIRED" = " ⃰ The card has expired";
+"DATE_INVALID" = " ⃰ Wrong expiry date";
+"EMAIL_INVALID" = " ⃰ Wrong email";
+"CVV_INVALID_LENTH" = " ⃰ Wrong CVV length";
+"CVV_INVALID" = " ⃰ CVV Invalid";
+"CVV_EMPTY" = " ⃰ Please enter the CVV";
+"STREET_INVALID_LENGTH" = " ⃰ Wrong street name and number length";
+"CITY_INVALID_LENGTH" = " ⃰ Wrong city length";
+"POSTCODE_INVALID_LENGTH" = " ⃰ Wrong postcode length";
+"CVV_HINT" = "Turn your card over and look at the signature box. This 3-code is your CVV number / Card Security Code";
+"OK_BUTTON" = "OK";
+"CANCEL_BUTTON" = "CANCEL";
+"CANCEL_PAYMENT" = "Are you sure you want to cancel the payment?";
+"PAY_BUTTON" = "Pay %@ %@";
+"CARD_NUMBER_TITLE" = "Card Number";
+"CARD_NAME_TITLE" = "Name on card";
+"EXPIRY_DATE_TITLE" = "Expiry date";
+"CVV_TITLE" = "CVV";
+"DONE_BUTTON" = "Done";
+"NEXT_BUTTON" = "Next";
+"PAYMENT_TIMEOUT" = "Your payment has timed out";
+"PAYMENT_CANCELLED" = "Cancelled by user";
+"PAYMENT_UNSUCCESSFUL" = "Your payment was not successful";
+"OR_PAY_CC" = "Or pay with credit card";
+
+"EMAIL" = "Email";
+"COUNTRY" = "Country";
+"CITY" = "City";
+"STREET_NAME" = "Street name and number";
+"POSTCODE" = "Postcode";
+
+"BILLING_ADDRESS" = "Billing Address";
+"SHIPPING_ADDRESS" = "Shipping Address";
+
+"SAME_BILLING_SHIPPING" = "Shipping address is same as Billing address";
+
+
+/*
+  QR Functionality
+*/
+
+"QR_EXPIRY_DATE_TITLE" = "Expiry date";
+"QR_SCAN_PAY_TITLE" = "Scan and Pay";
+"QR_MERCHANT_NAME_TITLE" = "Merchant name";
+"QR_REQUEST_PAY_TITLE" = "Can't scan QR code?";
+"QR_REQUEST_PAY_DESCRIPTION" = "Send payment request to customer's mobile number";
+"QR_PAYMENT_BUTTON" = "Request payment";
+"RQ_REQUEST_ALERT_TITLE" = "Enter MeezaDigital ID / Mobile number";
+"QR_REQUEST_TEXT_PLACEHOLDER" = "MeezaDigital ID / Mobile number";
+"QR_REQUEST_PAYMENT_BUTTON" = "Send";
+"QR_MOBILE_WALLET_TITLE" = "Mobile Wallet Payment";
+"QR_WAITING_TITLE" = "We are waiting for you";
+"QR_OPEN_NOTIF_TITLE" = "Open the notification from your wallet application and follow the instructions in order to finalize the payment";
+"QR_REFRESH_TITLE" = "Do not refresh or close this page";
+"QR_NO_NOTIF_TITLE" = "Didn't receive a notification?";
+"QR_SCAN_TITLE" = "Scan the QR code using your wallet application to initiate the payment.";
+"QR_FAILED_TITLE" = "Your payment was not successful";
+
+
+/*
+  Payment selection Functionality
+*/
+
+"PAYMENT_SELECTION_TITLE" = "Let’s find out your payment method";
+"PAYMENT_SELECTION_OR" = "Or select one of these payment methods";
+"PAYMENT_SELECTION_QR_CODE" = "Mobile Wallet";
+"PAYMENT_SELECTION_CARD" = "Credit / Debit card";
+"PAYMENT_SELECTION_BNPL" = "Buy Now Pay Later";
+"PAYMENT_SELECTION_SHOW_ALL" = "Show all";
+
+
+/*
+  Receipt screen Functionality
+*/
+
+"RECEIPT_DATE" = "Date / Time";
+"RECEIPT_OPERATION" = "Operation";
+"RECEIPT_ORDER_ID" = "Geidea order ID";
+"RECEIPT_MREF_ID" = "Merchant Reference ID";
+"RECEIPT_MOBILE" = "Mobile No/ Merchant ID";
+"RECEIPT_USERNAME" = "Username";
+"RECEIPT_MEEZA_ID" = "Meeza Transaction ID";
+"RECEIPT_FAILURE_REASON" = "Failure Reason";
+"RECEIPT_BACK_TO" = "Go To Merchant App";
+"RECEIPT_APPROVED" = "Transaction approved";
+"RECEIPT_FAILED" = "Transaction failed";
+"RECEIPT_TOTAL" = "TOTAL";
+"RECEIPT_REDIRECT" = "You will be redirected automatically to merchant app after 15 sec";
+
+/*
+  Installment screen Functionality
+*/
+
+"PAYMENT_SELECTION_SOUHOOLA" = "Souhoola Installments";
+"PAYMENT_SELECTION_SHAHRY" = "Shahry Installments";
+"PAYMENT_SELECTION_VAL_U" = "ValU Installments";
+"INSTALLMENT_STEP_PHONE_TITLE" = "Confirm your phone number";
+"INSTALLMENT_STEP_INSTALLMENT_TITLE" = "Choose your preffered instalment plan";
+"INSTALLMENT_STEP_PAYMENT_TITLE" = "Process Down Payment";
+"INSTALLMENT_STEP_OTP_TITLE" = "Fill in the One-time Password";
+"INSTALLMENT_DOWN_PAYMENT_TITLE" = "Down Payment";
+"INSTALLMENT_TOU_BALANCE_TITLE" = "To-U Balance";
+"INSTALLMENT_DOWN_CASHBACK_TITLE" = "Cashback Amount";
+
+"INSTALLMENT_INSTALLMENT_PLANS" = "Installment Plans";
+"INSTALLMENT_PAY_UPFRONT" = "Pay upfront";
+"INSTALLMENT_PURCHASE_FEES" = "Purchase Fees";
+"INSTALLMENT_TOTAL_AMOUNT_UPFRONT" = "Total amount to be paid upfront";
+
+
+"INSTALLMENT_AMOUNT_VALUE" =  "%@ %@/month (may slightly vary)";
+"PHONE_NUMBER_LABEL" = "Phone number";
+"CUSTOMER_ID_INVALID" =  "Only alphanumeric values allowed, maximum 255 characters";
+"VALU_FOOTER_CALL" = "Please call 16671 for any inquiries. Thank you for using valU";
+
+"CASH_PAYMWENT_OPTION" = "Pay %@ %@ in cash at delivery";
+"CARD_PAYMWENT_OPTION" = "Pay %@ %@ now, online";
+"CHOOSE_HOW_PAY" = "Choose how you want to pay for the down payment and purchase fees";
+
+/*
+  Receipt screen Functionality
+*/
+
+"SOUHOOLA_TITLE" = "Your purchase with Souhoola
+has been confirmed";
+"VALU_TITLE" = "Your purchase with valU
+has been confirmed";
+"SHAHRY_TITLE" = "Your purchase with Shahry
+has been confirmed";
+"TOTAL_AMOUNT" = "Total Amount";
+"FINANCED_AMOUNT" = "Financed Amount";
+"INSTALLMENT_AMOUNT" = "Installment Amount";
+"DOWN_PAYMENT" = "Down Payment";
+"TO_U_BALANCE" = "To U Balance ";
+"CASHBACK_AMOUNT" = "Cashback Amount";
+"PURCHASE_FEES" = "Purchase Fees";
+"REFERENCE_NUMBER" = "Reference Number";
+"TENURE" = "Tenure";
+"MONTHS" = "months";
+"MONTH" = "month";
+"INSTALLMENT_AMOUNT_VALUE" =  "%@ %@/month (may slightly vary)";
+"SHAHRY_REFERENCE_ID" =  "Shahry order ID";
+"INSTALLMENT_MONTH" = "Total amount needs to be at least %@ %@ in order to pay with ValU in installment";
+
+/*
+  Shahry screen Functionality
+*/
+
+"INSTALLMENT_STEP_CONFIRM_SHAHRY_TITLE" = "Confirm your Shahry ID";
+"INSTALLMENT_STEP_SHAHRY_PURCHASE_TITLE" = "Confirm purchase with Shahry";
+"INSTALLMENT_STEP_PAYMENT_TITLE" = "Process Down Payment";
+
+"INSTALLMENT_CONFIRM_FINAL" = "Finalize purchase";
+"INSTALLMENT_AMOUNT_VALUE" =  "%@ %@/month (may slightly vary)";
+"PHONE_NUMBER_LABEL" = "Phone number";
+"CUSTOMER_ID_INVALID" =  "Only alphanumeric values allowed, maximum 255 characters";
+"PHONE_NUMBER_INVALID" =  "* Phone number is invalid";
+"PIN_INVALID" =  "Please enter a valid passcode";
+"SHAHRY_ID" =  "Shahry ID";
+"SHAHRY_WHERE_TO_FIND" = "Where can I find my Shahry ID?";
+"SHAHRY_LEARN_MORE" = "Learn more about Shahry";
+"SHAHRY_CONFIRM_TERMS" =  "By clicking “Confirm” I hereby accept the installment plan terms of this purchase and the refund policy provided by %@";
+"SHAHRY_CONFIRM_BTN" =  "Confirm";
+"SHAHRY_PROCEED_BTN" =  "Proceed to Down Payment";
+"SHAHRY_PROCEED_CASH_BTN" =  "Proceed";
+"SHAHRY_ORDER_TOKEN" = "Order Token";
+"SHAHRY_OPEN_TITLE" = "Open your";
+"SHAHRY_APP_TITLE" = "Shahry APP";
+"SHAHRY_TO_COMPLETE" = "to complete your last step by choosing an installment plan then paste/write your order taken here to complete your purchase.";
+"SHAHRY_NEED_HELP" = "Need help?";
+"SHAHRY_INVALID_ORDER_TOKEN" = "Invalid Shahry Order Token";
+
+/*
+  Select payment
+*/
+
+"VALUE_INSTALLMENT_AMOUNT" = "Total amount needs to be at least %@ %@ in order to pay with valU in installment";
+"SOUHOOLA_INSTALLMENT_AMOUNT" = "Total amount needs to be at least %@ %@ in order to pay with Souhoola in installment";
+"INSTALLMENT_STEP_CONFIRM_SOUHOOLA_TITLE" = "Confirm your phone number and PIN";
+
+/*
+  Souhoola
+*/
+
+"INSTALLMENT_SOUHOOLA_RANGE" = "* Down payment needs to be between %@ and %@";
+"REVIEW_SOUHOOLA_SCREEN_TITLE" = "Review Purchase Summary";
+"SOUHOOLA_ORDER_ID" = "Souhoola Order Id";
+"SOUHOOLA_AVAILABLE_LIMIT_ERROR" = "Your available purchase limit needs to be at least 1000 EGP in order to purchase with Souhoola in installments";
+"INSTALLMENT_SOUHOOLA_RANGE" = "* Down payment needs to be between %@ and %@";
+"REVIEW_SOUHOOLA_SCREEN_TITLE" = "Review Purchase Summary";
+"SOUHOOLA_ORDER_ID" = "Souhoola Order Id";
+"SOUHOOLA_PIN_TITLE" = "PIN";
+"REGISTER_HERE_TITLE" = "Register here";
+"ACCOUNT_TITLE" = "Don't have an account?";
+"PURCHASE_DETAILS" = "Purchase details";
+"TOTAL_ITEMS_CART" = "Total Items in Cart";
+"FIRST_INSTALLMENT_DATE" = "First Installment Date";
+"DOWNPAYMENT_LIMITS_VIOLATED" = "Down payment limits violated";
+"APROX_INSTALLMENT" = "The installment amount is approximate ; the actual amount will be shown in the review transaction screen";
+"FINANCED_AMOUNT_ERROR" = "Financed amount needs to be at least %@ %@ in order to purchase with Souhoola in installments";
+
+/*
+  OTP Screen
+*/
+
+"INSTALLMENT_OTP_DESCRIPTION" = "Your One Time Password has been sent to the registered phone number. Please enter the number below and tap on Finalize purchase button.";
+"INSTALLMENT_OTP_RESEND_TITLE" = "Didn’t get the OTP?";
+"INSTALLMENT_OTP_RESEND_BUTTON" = "Resend Code";
+"INSTALLMENT_OTP_REMAINING" = "Time Remaining:";
+"INSTALLMENT_OTP_ATTEMPTS" = "Attempts Left:";
+"INSTALLMENT_OTP_SECONDS" = "seconds";
+
+/*
+  CVV
+*/
+
+"CVV_ENTER" = "Enter your CVV code below";
+"CVV_SCREEN_TITLE" = "Please enter your card verification code";
+"CVV_CARD_EXPIRE" = "Expires %@ %@";
+"MASKED_CARD" = " %@ ... %@";

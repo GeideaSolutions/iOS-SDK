@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceiptTableViewCell" id="KGk-i7-Jjw" customClass="ReceiptTableViewCell" customModule="GeideaPaymentSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VKd-if-CHW">
+                        <rect key="frame" x="10" y="0.0" width="300" height="103"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhD-nM-17U">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="103"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" red="0.31372549019607843" green="0.37647058823529411" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxQ-Xh-xsn">
+                                <rect key="frame" x="150" y="10" width="140" height="83"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" red="0.31372549019607843" green="0.37647058823529411" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BhD-nM-17U" secondAttribute="bottom" id="490-HC-5VO"/>
+                            <constraint firstAttribute="trailing" secondItem="hxQ-Xh-xsn" secondAttribute="trailing" constant="10" id="9Xc-SC-sBK"/>
+                            <constraint firstItem="BhD-nM-17U" firstAttribute="top" secondItem="VKd-if-CHW" secondAttribute="top" id="Kzn-eK-sqB"/>
+                            <constraint firstItem="hxQ-Xh-xsn" firstAttribute="top" secondItem="VKd-if-CHW" secondAttribute="top" constant="10" id="V7w-t5-Xo9"/>
+                            <constraint firstItem="BhD-nM-17U" firstAttribute="leading" secondItem="VKd-if-CHW" secondAttribute="leading" id="ZNK-62-djQ"/>
+                            <constraint firstAttribute="bottom" secondItem="hxQ-Xh-xsn" secondAttribute="bottom" constant="10" id="l9g-G6-zFR"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VKd-if-CHW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5Hs-Jl-EQX"/>
+                    <constraint firstItem="VKd-if-CHW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="CI5-cJ-Lgd"/>
+                    <constraint firstItem="VKd-if-CHW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Egn-KM-KMw"/>
+                    <constraint firstAttribute="bottom" secondItem="VKd-if-CHW" secondAttribute="bottom" id="L9A-F6-pGY"/>
+                    <constraint firstAttribute="trailing" secondItem="VKd-if-CHW" secondAttribute="trailing" constant="10" id="zYb-XQ-0tC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="label" destination="BhD-nM-17U" id="tiq-OX-r0A"/>
+                <outlet property="value" destination="hxQ-Xh-xsn" id="jeB-Gq-lSz"/>
+            </connections>
+            <point key="canvasLocation" x="-13.043478260869566" y="57.924107142857139"/>
+        </tableViewCell>
+    </objects>
+</document>

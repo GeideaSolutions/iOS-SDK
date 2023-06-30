@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GeideaPaymentSDKSwiftSample.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>55</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>DACD935A0F5E31E455F51C58DAF73317452BEF36</string>
+				<key>dateExpires</key>
+				<string>15.11.2022</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>2</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>DACD935A0F5E31E455F51C58DAF73317452BEF36</string>
+						<key>dateExpires</key>
+						<string>15.11.2022</string>
+						<key>type</key>
+						<string>Apple Development</string>
+					</dict>
+					<key>name</key>
+					<string>GeideaPaymentSDK.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>4RU97UZLFK</string>
+						<key>name</key>
+						<string>Geidea Technology Company</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>2.0</string>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>4RU97UZLFK.net.geidea.GeideaPaymentSDK.VSwift1</string>
+				<key>com.apple.developer.in-app-payments</key>
+				<array>
+					<string>merchant.geidea.test.applepay</string>
+				</array>
+				<key>com.apple.developer.team-identifier</key>
+				<string>4RU97UZLFK</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>GeideaPaymentSDKSwiftSample.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>9f99adab-f6fc-4bee-8a58-0fe97e8637b4</string>
+				<key>dateExpires</key>
+				<string>03.03.2023</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: net.geidea.GeideaPaymentSDK.VSwift1</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>4RU97UZLFK</string>
+				<key>name</key>
+				<string>Geidea Technology Company</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>20</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPViewController" customModule="GeideaPaymentSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="OTP6View" destination="PiV-oB-kyU" id="0GV-ah-Xev"/>
+                <outlet property="attemptsLabel" destination="c1u-V3-U7A" id="Ni9-9g-pI2"/>
+                <outlet property="attemptsValue" destination="ZLD-IK-p96" id="MRq-Hn-GSR"/>
+                <outlet property="attemptsView" destination="aLP-Yn-jlK" id="Jmf-LO-87d"/>
+                <outlet property="bnplLogo" destination="zPT-g9-uhe" id="tI0-Qh-tcU"/>
+                <outlet property="errorLabel" destination="XTW-DE-umT" id="VZy-E8-vGo"/>
+                <outlet property="finalizebutton" destination="Img-lu-iBw" id="oHc-R8-Kya"/>
+                <outlet property="mainView" destination="i5M-Pr-FkT" id="chP-uN-66i"/>
+                <outlet property="otp1" destination="iMQ-r5-afR" id="C3l-bz-esy"/>
+                <outlet property="otp2" destination="rCX-zw-hs7" id="14a-fl-JBx"/>
+                <outlet property="otp3" destination="9x7-iF-6x4" id="eTf-7g-4T7"/>
+                <outlet property="otp4" destination="UCq-01-q9R" id="NSA-8u-xLv"/>
+                <outlet property="otp5" destination="bQA-YJ-uPr" id="SnL-LH-cF3"/>
+                <outlet property="otp6" destination="eLc-KS-vgv" id="a63-lC-HeP"/>
+                <outlet property="otpDescriptionLabel" destination="ikq-mw-3kc" id="ekL-Yf-QVa"/>
+                <outlet property="otpResendTitle" destination="aOp-NZ-mbn" id="b6Q-eS-lwV"/>
+                <outlet property="otpView" destination="mMJ-Ar-MHX" id="mVG-Se-DTk"/>
+                <outlet property="resendBtn" destination="Qu8-Im-5Ij" id="MEN-Sx-Xvp"/>
+                <outlet property="trValue" destination="KvZ-fE-3jc" id="HN1-cP-daz"/>
+                <outlet property="trView" destination="FGH-hI-lVn" id="PiV-JB-gu9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikq-mw-3kc">
+                    <rect key="frame" x="24" y="44" width="366" height="78.5"/>
+                    <string key="text">Your One Time Password has been sent to the registered phone number. Please enter the number below and tap on Finalize purchase button.</string>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                    <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KsW-EQ-ePc">
+                    <rect key="frame" x="38" y="162.5" width="338" height="48"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mMJ-Ar-MHX">
+                            <rect key="frame" x="0.0" y="0.0" width="338" height="48"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPr-BN-Ljt">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iMQ-r5-afR" customClass="RichTextField" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="10" width="28" height="28"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="iMQ-r5-afR" secondAttribute="trailing" constant="10" id="8l0-te-vFv"/>
+                                        <constraint firstItem="iMQ-r5-afR" firstAttribute="leading" secondItem="iPr-BN-Ljt" secondAttribute="leading" constant="10" id="e9c-yV-Yns"/>
+                                        <constraint firstAttribute="bottom" secondItem="iMQ-r5-afR" secondAttribute="bottom" constant="10" id="hNK-3S-C9i"/>
+                                        <constraint firstAttribute="height" constant="48" id="hzN-dp-hGW"/>
+                                        <constraint firstAttribute="width" constant="48" id="scW-9f-sOq"/>
+                                        <constraint firstItem="iMQ-r5-afR" firstAttribute="top" secondItem="iPr-BN-Ljt" secondAttribute="top" constant="10" id="t5j-Bd-Ijy"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WzT-Rv-0NM">
+                                    <rect key="frame" x="58" y="0.0" width="48" height="48"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rCX-zw-hs7" customClass="RichTextField" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="10" width="28" height="28"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="rCX-zw-hs7" firstAttribute="leading" secondItem="WzT-Rv-0NM" secondAttribute="leading" constant="10" id="0GZ-kb-6Pe"/>
+                                        <constraint firstAttribute="width" constant="48" id="IlC-FO-69o"/>
+                                        <constraint firstAttribute="bottom" secondItem="rCX-zw-hs7" secondAttribute="bottom" constant="10" id="YJs-Ai-twm"/>
+                                        <constraint firstItem="rCX-zw-hs7" firstAttribute="top" secondItem="WzT-Rv-0NM" secondAttribute="top" constant="10" id="ZF0-KO-dnH"/>
+                                        <constraint firstAttribute="trailing" secondItem="rCX-zw-hs7" secondAttribute="trailing" constant="10" id="aWb-nF-yNS"/>
+                                        <constraint firstAttribute="height" constant="48" id="oyJ-3T-4w1"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxL-ku-cQ6">
+                                    <rect key="frame" x="116" y="0.0" width="48" height="48"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9x7-iF-6x4" customClass="RichTextField" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="10" width="28" height="28"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="Ehp-yZ-c6H"/>
+                                        <constraint firstAttribute="bottom" secondItem="9x7-iF-6x4" secondAttribute="bottom" constant="10" id="KNX-Tw-Upl"/>
+                                        <constraint firstItem="9x7-iF-6x4" firstAttribute="top" secondItem="TxL-ku-cQ6" secondAttribute="top" constant="10" id="KQN-Yf-spu"/>
+                                        <constraint firstItem="9x7-iF-6x4" firstAttribute="leading" secondItem="TxL-ku-cQ6" secondAttribute="leading" constant="10" id="dk6-qt-mZf"/>
+                                        <constraint firstAttribute="trailing" secondItem="9x7-iF-6x4" secondAttribute="trailing" constant="10" id="lD5-3K-tZU"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ai-oG-KoC">
+                                    <rect key="frame" x="174" y="0.0" width="48" height="48"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCq-01-q9R" customClass="RichTextField" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="10" width="28" height="28"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="UCq-01-q9R" secondAttribute="trailing" constant="10" id="AYZ-Of-Lip"/>
+                                        <constraint firstAttribute="bottom" secondItem="UCq-01-q9R" secondAttribute="bottom" constant="10" id="PsP-Ng-gNu"/>
+                                        <constraint firstAttribute="width" constant="48" id="ZPn-DF-RCQ"/>
+                                        <constraint firstItem="UCq-01-q9R" firstAttribute="leading" secondItem="1Ai-oG-KoC" secondAttribute="leading" constant="10" id="gf2-Ga-Cf5"/>
+                                        <constraint firstAttribute="height" constant="48" id="kfb-9J-WUx"/>
+                                        <constraint firstItem="UCq-01-q9R" firstAttribute="top" secondItem="1Ai-oG-KoC" secondAttribute="top" constant="10" id="ngt-D3-UE7"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4Z-PO-Rcg">
+                                    <rect key="frame" x="232" y="0.0" width="48" height="48"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-YJ-uPr" customClass="RichTextField" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="10" width="28" height="28"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="Gzc-zN-pw3"/>
+                                        <constraint firstAttribute="trailing" secondItem="bQA-YJ-uPr" secondAttribute="trailing" constant="10" id="fW6-Cb-iz3"/>
+                                        <constraint firstAttribute="bottom" secondItem="bQA-YJ-uPr" secondAttribute="bottom" constant="10" id="mbc-SL-tKp"/>
+                                        <constraint firstAttribute="height" constant="48" id="mck-Qg-PhL"/>
+                                        <constraint firstItem="bQA-YJ-uPr" firstAttribute="leading" secondItem="o4Z-PO-Rcg" secondAttribute="leading" constant="10" id="vbf-qt-kAX"/>
+                                        <constraint firstItem="bQA-YJ-uPr" firstAttribute="top" secondItem="o4Z-PO-Rcg" secondAttribute="top" constant="10" id="xbg-bn-gs2"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiV-oB-kyU">
+                                    <rect key="frame" x="290" y="0.0" width="48" height="48"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLc-KS-vgv" customClass="RichTextField" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="10" width="28" height="28"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="eLc-KS-vgv" firstAttribute="leading" secondItem="PiV-oB-kyU" secondAttribute="leading" constant="10" id="9r0-5S-7vg"/>
+                                        <constraint firstAttribute="width" constant="48" id="SrL-ge-7lV"/>
+                                        <constraint firstAttribute="trailing" secondItem="eLc-KS-vgv" secondAttribute="trailing" constant="10" id="TJe-85-ExI"/>
+                                        <constraint firstAttribute="height" constant="48" id="TSe-hw-CfC"/>
+                                        <constraint firstItem="eLc-KS-vgv" firstAttribute="top" secondItem="PiV-oB-kyU" secondAttribute="top" constant="10" id="efD-SQ-fiJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="eLc-KS-vgv" secondAttribute="bottom" constant="10" id="rXx-F7-9hK"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XTW-DE-umT">
+                            <rect key="frame" x="0.0" y="48" width="338" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                            <color key="textColor" red="0.93725490199999995" green="0.2901960784" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="mMJ-Ar-MHX" firstAttribute="centerX" secondItem="KsW-EQ-ePc" secondAttribute="centerX" id="cVR-CS-WHc"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2wW-DV-1JA" userLabel="OTP resend">
+                    <rect key="frame" x="125.5" y="242.5" width="163.5" height="138"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOp-NZ-mbn">
+                            <rect key="frame" x="0.0" y="0.0" width="163.5" height="20"/>
+                            <string key="text">Didn’t get the OTP?
+Resend Code</string>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                            <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FGH-hI-lVn">
+                            <rect key="frame" x="60.5" y="36" width="42.5" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvZ-fE-3jc">
+                                    <rect key="frame" x="0.0" y="0.0" width="42.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                    <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qu8-Im-5Ij" customClass="RoundedButton" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                            <rect key="frame" x="35.5" y="72" width="92" height="30"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Resend Code"/>
+                            <connections>
+                                <action selector="resendCodeTapped:" destination="-1" eventType="touchUpInside" id="4fy-jJ-BVK"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aLP-Yn-jlK">
+                            <rect key="frame" x="17" y="118" width="129" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Attempts Left:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1u-V3-U7A">
+                                    <rect key="frame" x="0.0" y="0.0" width="114.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                    <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLD-IK-p96">
+                                    <rect key="frame" x="119.5" y="0.0" width="9.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                    <color key="textColor" systemColor="linkColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Qu8-Im-5Ij" firstAttribute="centerX" secondItem="2wW-DV-1JA" secondAttribute="centerX" id="03j-mV-wbI"/>
+                    </constraints>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="valU_logo" translatesAutoresizingMaskIntoConstraints="NO" id="zPT-g9-uhe">
+                    <rect key="frame" x="161" y="492.5" width="92" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="92" id="AQe-xi-8S2"/>
+                        <constraint firstAttribute="height" constant="29" id="zlQ-n0-7Lq"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="geideaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="sQQ-hn-Nnz">
+                    <rect key="frame" x="176" y="821" width="62" height="21"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Img-lu-iBw" customClass="RoundedButton" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                    <rect key="frame" x="24" y="412.5" width="366" height="48"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Znd-Ye-lKV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                    <state key="normal" title="Finalize purchase">
+                        <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="finalizePurchaseTapped:" destination="-1" eventType="touchUpInside" id="XnQ-cy-OOl"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sQQ-hn-Nnz" secondAttribute="bottom" constant="20" id="0KD-YX-ttY"/>
+                <constraint firstItem="ikq-mw-3kc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="7ZU-gr-3t5"/>
+                <constraint firstItem="KsW-EQ-ePc" firstAttribute="top" secondItem="ikq-mw-3kc" secondAttribute="bottom" constant="40" id="A43-sj-8t7"/>
+                <constraint firstItem="2wW-DV-1JA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KJ3-iL-MRm"/>
+                <constraint firstAttribute="trailing" secondItem="ikq-mw-3kc" secondAttribute="trailing" constant="24" id="P5k-ok-u4T"/>
+                <constraint firstItem="zPT-g9-uhe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SPJ-7Q-oFA"/>
+                <constraint firstItem="zPT-g9-uhe" firstAttribute="top" secondItem="Img-lu-iBw" secondAttribute="bottom" constant="32" id="YJM-pa-p3M"/>
+                <constraint firstItem="sQQ-hn-Nnz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dD9-WQ-m5m"/>
+                <constraint firstItem="KsW-EQ-ePc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dH5-Ya-KDL"/>
+                <constraint firstItem="ikq-mw-3kc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="edf-tA-6bj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Img-lu-iBw" secondAttribute="trailing" constant="24" id="fGy-zl-lFe"/>
+                <constraint firstItem="2wW-DV-1JA" firstAttribute="top" secondItem="KsW-EQ-ePc" secondAttribute="bottom" constant="32" id="nOI-Vn-CZE"/>
+                <constraint firstItem="Img-lu-iBw" firstAttribute="top" secondItem="2wW-DV-1JA" secondAttribute="bottom" constant="32" id="yYa-OB-wpf"/>
+                <constraint firstItem="Img-lu-iBw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="zLq-Wq-mVh"/>
+            </constraints>
+            <point key="canvasLocation" x="142.02898550724638" y="24.776785714285712"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="9x7-iF-6x4">
+            <size key="intrinsicContentSize" width="5" height="23.5"/>
+        </designable>
+        <designable name="Img-lu-iBw">
+            <size key="intrinsicContentSize" width="144" height="32"/>
+        </designable>
+        <designable name="Qu8-Im-5Ij">
+            <size key="intrinsicContentSize" width="92" height="30"/>
+        </designable>
+        <designable name="UCq-01-q9R">
+            <size key="intrinsicContentSize" width="5" height="23.5"/>
+        </designable>
+        <designable name="bQA-YJ-uPr">
+            <size key="intrinsicContentSize" width="5" height="23.5"/>
+        </designable>
+        <designable name="eLc-KS-vgv">
+            <size key="intrinsicContentSize" width="5" height="23.5"/>
+        </designable>
+        <designable name="iMQ-r5-afR">
+            <size key="intrinsicContentSize" width="5" height="23.5"/>
+        </designable>
+        <designable name="rCX-zw-hs7">
+            <size key="intrinsicContentSize" width="5" height="23.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="geideaLogo" width="62" height="21"/>
+        <image name="valU_logo" width="60" height="19"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CVVAlertViewController" customModule="GeideaPaymentSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="alertVCView" destination="iR1-xg-aaY" id="47w-ry-qkO"/>
+                <outlet property="headerIV" destination="R0G-1d-eQN" id="OAa-0c-n3P"/>
+                <outlet property="headerView" destination="xU8-CD-s9S" id="EUK-lv-ZJJ"/>
+                <outlet property="messageLabel" destination="gTI-AP-V1O" id="6zc-af-PZE"/>
+                <outlet property="okBtn" destination="lpm-7b-yTp" id="gIX-9D-eg5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zv4-9P-qgJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iR1-xg-aaY">
+                    <rect key="frame" x="40" y="349" width="334" height="198"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn your card over and look at the signature box. This 3-code is your CVV number / Card Security Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTI-AP-V1O">
+                            <rect key="frame" x="20" y="50" width="294" height="47"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2Q-8v-pyd">
+                            <rect key="frame" x="0.0" y="117" width="334" height="1"/>
+                            <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Hkw-jQ-6Vb"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpm-7b-yTp" userLabel="OK" customClass="RoundedButton" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                            <rect key="frame" x="40" y="134" width="254" height="48"/>
+                            <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="d61-yf-PVH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                            <state key="normal" title="Next">
+                                <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="OKTapped:" destination="-1" eventType="touchUpInside" id="QcE-vC-SxV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="lpm-7b-yTp" secondAttribute="trailing" constant="40" id="2Bj-KL-jjF"/>
+                        <constraint firstAttribute="bottom" secondItem="lpm-7b-yTp" secondAttribute="bottom" constant="16" id="CTQ-4k-a9o"/>
+                        <constraint firstAttribute="trailing" secondItem="A2Q-8v-pyd" secondAttribute="trailing" id="GqP-rm-0gP"/>
+                        <constraint firstItem="A2Q-8v-pyd" firstAttribute="leading" secondItem="iR1-xg-aaY" secondAttribute="leading" id="O60-aI-y8Y"/>
+                        <constraint firstAttribute="trailing" secondItem="gTI-AP-V1O" secondAttribute="trailing" constant="20" id="SUV-ie-AXN"/>
+                        <constraint firstItem="gTI-AP-V1O" firstAttribute="top" secondItem="iR1-xg-aaY" secondAttribute="top" constant="50" id="XkH-5e-2aY"/>
+                        <constraint firstItem="gTI-AP-V1O" firstAttribute="leading" secondItem="iR1-xg-aaY" secondAttribute="leading" constant="20" id="gJk-Pb-EBV"/>
+                        <constraint firstItem="lpm-7b-yTp" firstAttribute="leading" secondItem="iR1-xg-aaY" secondAttribute="leading" constant="40" id="hwp-DZ-jvD"/>
+                        <constraint firstItem="A2Q-8v-pyd" firstAttribute="top" secondItem="gTI-AP-V1O" secondAttribute="bottom" constant="20" id="nla-ZQ-rIl"/>
+                        <constraint firstItem="lpm-7b-yTp" firstAttribute="top" secondItem="A2Q-8v-pyd" secondAttribute="bottom" constant="16" id="vkR-eI-Mus"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xU8-CD-s9S">
+                    <rect key="frame" x="172" y="314" width="70" height="70"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cvvAlert" translatesAutoresizingMaskIntoConstraints="NO" id="R0G-1d-eQN">
+                            <rect key="frame" x="17" y="22.5" width="36" height="25"/>
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="FjQ-9h-FwC"/>
+                                <constraint firstAttribute="width" constant="36" id="xfo-UY-yIY"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="BpD-Ps-cso"/>
+                        <constraint firstItem="R0G-1d-eQN" firstAttribute="centerX" secondItem="xU8-CD-s9S" secondAttribute="centerX" id="ErI-8f-JVF"/>
+                        <constraint firstAttribute="width" constant="70" id="d2j-QU-8Id"/>
+                        <constraint firstItem="R0G-1d-eQN" firstAttribute="centerY" secondItem="xU8-CD-s9S" secondAttribute="centerY" id="hU4-Lq-igo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.15686274509803921" green="0.23137254901960785" blue="0.32941176470588235" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="xU8-CD-s9S" firstAttribute="top" secondItem="iR1-xg-aaY" secondAttribute="top" constant="-35" id="0er-Rh-ZNp"/>
+                <constraint firstItem="iR1-xg-aaY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="FZP-m3-G56"/>
+                <constraint firstItem="iR1-xg-aaY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FsU-Gc-sbk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iR1-xg-aaY" secondAttribute="trailing" constant="40" id="hSF-N9-kZj"/>
+                <constraint firstItem="iR1-xg-aaY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mkp-30-wSn"/>
+                <constraint firstItem="xU8-CD-s9S" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zKN-2a-A5t"/>
+            </constraints>
+            <point key="canvasLocation" x="-252.17391304347828" y="-22.098214285714285"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="lpm-7b-yTp">
+            <size key="intrinsicContentSize" width="39" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="cvvAlert" width="41" height="41"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

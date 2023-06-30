@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CancelAlertViewController" customModule="GeideaPaymentSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="alertMessage" destination="7wp-vq-8xq" id="XuC-1k-UBz"/>
+                <outlet property="alertView" destination="pib-vW-UX7" id="4mv-qJ-Fvk"/>
+                <outlet property="cancelBtn" destination="Vdu-8N-n6J" id="H9W-UH-55D"/>
+                <outlet property="okBtn" destination="FKl-Pj-WiQ" id="ObZ-V6-jDg"/>
+                <outlet property="view" destination="xty-O4-MMX" id="MMD-L3-31C"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFill" id="xty-O4-MMX">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pib-vW-UX7">
+                    <rect key="frame" x="40" y="339" width="310" height="166.33333333333337"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to cancel the payment?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wp-vq-8xq">
+                            <rect key="frame" x="20" y="20.000000000000004" width="270" height="38.333333333333343"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBt-uJ-cSV">
+                            <rect key="frame" x="0.0" y="78.333333333333314" width="310" height="1"/>
+                            <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="OLo-R7-vxd"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uRE-Rq-YUf">
+                            <rect key="frame" x="20" y="98.333333333333314" width="270" height="48"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdu-8N-n6J" customClass="RoundedButton" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="48"/>
+                                    <color key="backgroundColor" red="0.96470588239999999" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="7zI-GO-ImP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                    <state key="normal" title="Cancel"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="cancelBtnTapped:" destination="-1" eventType="touchUpInside" id="c8i-LM-tOK"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKl-Pj-WiQ" customClass="RoundedButton" customModule="GeideaPaymentSDK" customModuleProvider="target">
+                                    <rect key="frame" x="145" y="0.0" width="125" height="48"/>
+                                    <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.99607843139999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="Bjc-2D-hUn"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                    <state key="normal" title="OK">
+                                        <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="okBtnTapped:" destination="-1" eventType="touchUpInside" id="VtR-OB-UN0"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="uRE-Rq-YUf" secondAttribute="bottom" constant="20" id="6HN-q0-4wE"/>
+                        <constraint firstAttribute="trailing" secondItem="uRE-Rq-YUf" secondAttribute="trailing" constant="20" id="7A6-L2-aK2"/>
+                        <constraint firstItem="uRE-Rq-YUf" firstAttribute="top" secondItem="SBt-uJ-cSV" secondAttribute="top" constant="20" id="Cwa-Cx-iEz"/>
+                        <constraint firstItem="7wp-vq-8xq" firstAttribute="top" secondItem="pib-vW-UX7" secondAttribute="top" constant="20" id="IWe-mG-cGY"/>
+                        <constraint firstItem="SBt-uJ-cSV" firstAttribute="top" secondItem="7wp-vq-8xq" secondAttribute="bottom" constant="20" id="QjB-Sv-XFc"/>
+                        <constraint firstAttribute="trailing" secondItem="SBt-uJ-cSV" secondAttribute="trailing" id="VhQ-4h-zWa"/>
+                        <constraint firstAttribute="trailing" secondItem="7wp-vq-8xq" secondAttribute="trailing" constant="20" id="bSS-7h-uj6"/>
+                        <constraint firstItem="7wp-vq-8xq" firstAttribute="leading" secondItem="pib-vW-UX7" secondAttribute="leading" constant="20" id="lt8-l5-dCr"/>
+                        <constraint firstItem="uRE-Rq-YUf" firstAttribute="leading" secondItem="pib-vW-UX7" secondAttribute="leading" constant="20" id="mv8-Gc-K2r"/>
+                        <constraint firstItem="SBt-uJ-cSV" firstAttribute="leading" secondItem="pib-vW-UX7" secondAttribute="leading" id="wNG-Pf-mkz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="OWs-ql-MFB"/>
+            <color key="backgroundColor" red="0.15686274510000001" green="0.23137254900000001" blue="0.3294117647" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="OWs-ql-MFB" firstAttribute="trailing" secondItem="pib-vW-UX7" secondAttribute="trailing" constant="40" id="cWh-AD-YCD"/>
+                <constraint firstItem="pib-vW-UX7" firstAttribute="centerX" secondItem="xty-O4-MMX" secondAttribute="centerX" id="oQB-01-8b2"/>
+                <constraint firstItem="pib-vW-UX7" firstAttribute="leading" secondItem="OWs-ql-MFB" secondAttribute="leading" constant="40" id="rm2-6h-2d4"/>
+                <constraint firstItem="pib-vW-UX7" firstAttribute="centerY" secondItem="xty-O4-MMX" secondAttribute="centerY" id="uoY-m7-SYL"/>
+            </constraints>
+            <point key="canvasLocation" x="-252.17391304347828" y="-22.098214285714285"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="FKl-Pj-WiQ">
+            <size key="intrinsicContentSize" width="30" height="32"/>
+        </designable>
+        <designable name="Vdu-8N-n6J">
+            <size key="intrinsicContentSize" width="57" height="32"/>
+        </designable>
+    </designables>
+</document>

@@ -1,0 +1,1539 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 effective-4.1.50 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name GeideaPaymentSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Contacts
+import Foundation
+@_exported import GeideaPaymentSDK
+import JavaScriptCore
+import PassKit
+import Security
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDPaymentIntent : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var id: Swift.String?
+  @objc public var type: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDSouhoolaOTPDetails : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var customerIdentifier: Swift.String?
+  @objc public var customerPin: Swift.String?
+  @objc public var orderId: Swift.String?
+  @objc public var souhoolaTransactionId: Swift.String?
+  @objc public init(customerIdentifier: Swift.String?, customerPin: Swift.String?, orderId: Swift.String?, souhoolaTransactionId: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDRecurrence : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var amount: Swift.Double
+  public var currency: Swift.Double?
+  @objc public var cycleInterval: Swift.String?
+  @objc public var frequency: Swift.Int
+  @objc public var startDate: Swift.String?
+  @objc public var endDate: Swift.String?
+  @objc public var numberOfPayments: Swift.Int
+  @objc public var minimumDaysBetweenPayments: Swift.Int
+  @objc public var recurrenceDescription: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDValuVerifyResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var language: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public struct PaymentMehodParams : Swift.Codable {
+  public var month: Swift.Int
+  public var year: Swift.Int
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDPostilionDetails : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var stan: Swift.Int
+  @objc public var switchKey: Swift.String?
+  @objc public var originalKey: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension Swift.String {
+  public var asURL: Foundation.URL? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDBNPLReceiptResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var provider: Swift.String?
+  @objc public var bnplOrderId: Swift.String?
+  @objc public var providerTransactionId: Swift.String?
+  public var tenure: Swift.Int?
+  @objc public var currency: Swift.String?
+  public var totalAmount: Swift.Double?
+  public var financedAmount: Swift.Double?
+  public var downPayment: Swift.Double?
+  public var giftCardAmount: Swift.Double?
+  public var campaignAmount: Swift.Double?
+  public var installmentAmount: Swift.Double?
+  public var adminFees: Swift.Double?
+  @objc public var loanNumber: Swift.String?
+  public var interestTotalAmount: Swift.Double?
+  @objc public var firstInstallmentDate: Swift.String?
+  @objc public var lastinstallmentDate: Swift.String?
+  @objc public var providerResponseCode: Swift.String?
+  @objc public var providerResponseDescription: Swift.String?
+  @objc public var bnplDetailId: Swift.String?
+  public var monthlyInterestRate: Swift.Double?
+  public var otherFees: Swift.Double?
+  public var amountToCollect: Swift.Double?
+  public var annualInterestRate: Swift.Double?
+  @objc public var applicationId: Swift.String?
+  @objc public var applicationCreated: Swift.String?
+  @objc public var borrowerName: Swift.String?
+  @objc public var borrowerNationalId: Swift.String?
+  @objc public var borrowerAddress: Swift.String?
+  @objc public var orderCreated: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDBNPLResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var bnplOrderId: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDSouhoolaInstallmentPlanResponse : ObjectiveC.NSObject, Swift.Codable {
+  public var kstNo: Swift.Double?
+  public var kstAmt: Swift.Double?
+  public var kstInt: Swift.Double?
+  public var kstBal: Swift.Double?
+  @objc public var kstDate: Swift.String?
+  public var oldDebtBal: Swift.Double?
+  public var newDebtBal: Swift.Double?
+  @objc public var debtNo: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDApplePayDetails : ObjectiveC.NSObject {
+  @objc public init(in hostViewController: UIKit.UIViewController? = nil, andButtonIn buttonView: UIKit.UIView? = nil, forMerchantIdentifier merchantIdentifier: Swift.String, andMerchantDisplayName merchantDisplayName: Swift.String? = nil, requiredBillingContactFields: Swift.Set<PassKit.PKContactField>? = nil, requiredShippingContactFields: Swift.Set<PassKit.PKContactField>? = nil, paymentMethods: [Swift.String]?, withCallbackUrl callBackUrl: Swift.String?, andReferenceId merchantRefId: Swift.String?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class GDAddress : ObjectiveC.NSObject, Swift.Codable {
+  @objc override dynamic public init()
+  @objc public init(withCountryCode countryCode: Swift.String?, andCity city: Swift.String?, andStreet street: Swift.String?, andPostCode postCode: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDOrdersResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var orders: [GeideaPaymentSDK.GDOrderResponse]?
+  @objc public var totalCount: Swift.Int
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDOrderResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var createdDate: Swift.String?
+  @objc public var createdBy: Swift.String?
+  @objc public var updatedDate: Swift.String?
+  @objc public var updatedBy: Swift.String?
+  @objc public var orderId: Swift.String?
+  @objc public var amount: Swift.Double
+  @objc public var currency: Swift.String?
+  @objc public var language: Swift.String?
+  @objc public var detailedStatus: Swift.String?
+  @objc public var status: Swift.String?
+  @objc public var threeDSecureId: Swift.String?
+  @objc public var merchantId: Swift.String?
+  @objc public var merchantPublicKey: Swift.String?
+  @objc public var merchantName: Swift.String?
+  @objc public var parentOrderId: Swift.String?
+  @objc public var multiCurrency: GeideaPaymentSDK.GDMultiCurrency?
+  @objc public var merchantReferenceId: Swift.String?
+  @objc public var callbackUrl: Swift.String?
+  @objc public var customerEmail: Swift.String?
+  @objc public var billingAddress: GeideaPaymentSDK.GDAddress?
+  @objc public var shippingAddress: GeideaPaymentSDK.GDAddress?
+  @objc public var returnUrl: Swift.String?
+  @objc public var cardOnFile: Swift.Bool
+  @objc public var tokenId: Swift.String?
+  @objc public var initiatedBy: Swift.String?
+  @objc public var agreementId: Swift.String?
+  @objc public var agreementType: Swift.String?
+  @objc public var paymentOperation: Swift.String?
+  @objc public var custom: Swift.String?
+  @objc public var paymentMethod: GeideaPaymentSDK.GDPaymentMethodResponse?
+  @objc public var tipAmount: Swift.Double
+  @objc public var totalAmount: Swift.Double
+  @objc public var settleAmount: Swift.Double
+  @objc public var totalAuthorizedAmount: Swift.Double
+  @objc public var totalCapturedAmount: Swift.Double
+  @objc public var totalRefundedAmount: Swift.Double
+  @objc public var paymentIntent: GeideaPaymentSDK.GDPaymentIntent?
+  @objc public var isTokenPayment: Swift.Bool
+  @objc public var restrictPaymentMethods: Swift.Bool
+  @objc public var platform: GeideaPaymentSDK.GDPlatform?
+  @objc public var transactions: [GeideaPaymentSDK.GDTransactionResponse]?
+  @objc public var statementDescriptor: GeideaPaymentSDK.GDStatementDescriptor?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDGetTokenResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public enum KDCircularProgressGlowMode : Swift.Int {
+  case forward, reverse, constant, noGlow
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @objcMembers @_Concurrency.MainActor(unsafe) public class ProgressView : UIKit.UIView, QuartzCore.CAAnimationDelegate {
+  @objc @_Concurrency.MainActor(unsafe) public var progress: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var angle: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var startAngle: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var clockwise: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var roundedCorners: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var lerpColorMode: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var gradientRotateSpeed: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var glowAmount: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var glowMode: GeideaPaymentSDK.KDCircularProgressGlowMode {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var progressThickness: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var trackThickness: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var trackColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var progressInsideFillColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var progressColors: [UIKit.UIColor] {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) convenience public init(frame: CoreFoundation.CGRect, colors: UIKit.UIColor...)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public func refresh()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public class var layerClass: Swift.AnyClass {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func set(colors: UIKit.UIColor...)
+  @objc @_Concurrency.MainActor(unsafe) public func fillAsView()
+  @objc @_Concurrency.MainActor(unsafe) public func animate(fromAngle: Swift.Double, toAngle: Swift.Double, duration: Foundation.TimeInterval, relativeDuration: Swift.Bool = true, completion: ((Swift.Bool) -> Swift.Void)?)
+  @objc @_Concurrency.MainActor(unsafe) public func animate(toAngle: Swift.Double, duration: Foundation.TimeInterval, relativeDuration: Swift.Bool = true, completion: ((Swift.Bool) -> Swift.Void)?)
+  @objc @_Concurrency.MainActor(unsafe) public func pauseAnimation()
+  @objc @_Concurrency.MainActor(unsafe) public func stopAnimation()
+  @objc @_Concurrency.MainActor(unsafe) public func isAnimating() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc public func animationDidStop(_ anim: QuartzCore.CAAnimation, finished flag: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToWindow()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func willMove(toSuperview newSuperview: UIKit.UIView?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func prepareForInterfaceBuilder()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDSDKMerchantConfigResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var merchantId: Swift.String?
+  @objc public var storeId: Swift.String?
+  @objc public var data: GeideaPaymentSDK.GDMerchantDataResponse?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class GDConfigApplePay : ObjectiveC.NSObject, Swift.Codable {
+  public var paymentProcessingCertificateExpiryDate: Swift.String?
+  public var isApplePayMobileCertificateAvailable: Swift.Bool
+  public var isApplePayWebEnabled: Swift.Bool
+  public var isApplePayMobileEnabled: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDPaymentIntentOrder : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var paymentIntentId: Swift.String?
+  @objc public var createdDate: Swift.String?
+  @objc public var orderId: Swift.String?
+  @objc public var orderStatus: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public struct ExpiryDateParams : Swift.Codable {
+  public var month: Swift.Int
+  public var year: Swift.Int
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDInstallmentPlansResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var language: Swift.String?
+  @objc public var currency: Swift.String?
+  @objc public var bnplOrderId: Swift.String?
+  @objc public var minimumDownPayment: Swift.Double
+  @objc public var totalAmount: Swift.Double
+  @objc public var financedAmount: Swift.Double
+  @objc public var giftCardAmount: Swift.Double
+  @objc public var campaignAmount: Swift.Double
+  @objc public var installmentPlans: [GeideaPaymentSDK.GDInstallmentPlan]?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class GeideaPaymentAPI : ObjectiveC.NSObject {
+  @objc public static func isCredentialsAvailable() -> Swift.Bool
+  @objc public static func setCredentials(withMerchantKey merchantKey: Swift.String, andPassword password: Swift.String)
+  @objc public static func pay(theAmount amount: GeideaPaymentSDK.GDAmount, withCardDetails cardDetails: GeideaPaymentSDK.GDCardDetails, initializeResponse: GeideaPaymentSDK.GDInitiateAuthenticateResponse? = nil, config: GeideaPaymentSDK.GDConfigResponse?, isHPP: Swift.Bool = false, showReceipt: Swift.Bool, andTokenizationDetails tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails?, andPaymentIntentId paymentIntentId: Swift.String? = nil, andCustomerDetails customerDetails: GeideaPaymentSDK.GDCustomerDetails?, orderId: Swift.String? = nil, paymentMethods: [Swift.String]? = nil, dismissAction: ((GeideaPaymentSDK.GDCancelResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func initiateAuthenticate(theAmount amount: GeideaPaymentSDK.GDAmount, withCardNumber cardNumber: Swift.String?, andTokenizationDetails tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails?, andPaymentIntentId paymentIntentId: Swift.String? = nil, andCustomerDetails customerDetails: GeideaPaymentSDK.GDCustomerDetails?, orderId: Swift.String? = nil, paymentMethods: [Swift.String]? = nil, dismissAction: ((GeideaPaymentSDK.GDCancelResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDInitiateAuthenticateResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func payWithGeideaForm(theAmount amount: GeideaPaymentSDK.GDAmount, showAddress: Swift.Bool, showEmail: Swift.Bool, showReceipt: Swift.Bool, tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails? = nil, customerDetails: GeideaPaymentSDK.GDCustomerDetails?, applePayDetails: GeideaPaymentSDK.GDApplePayDetails? = nil, config: GeideaPaymentSDK.GDConfigResponse?, paymentIntentId: Swift.String? = nil, qrDetails: GeideaPaymentSDK.GDQRDetails? = nil, bnplItems: [GeideaPaymentSDK.GDBNPLItem]? = nil, cardPaymentMethods: [Swift.String]? = nil, paymentSelectionMethods: [GeideaPaymentSDK.GDPaymentSelectionMetods]? = nil, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func payQRWithGeideaForm(theAmount amount: GeideaPaymentSDK.GDAmount, qrDetails: GeideaPaymentSDK.GDQRDetails, config: GeideaPaymentSDK.GDConfigResponse?, showReceipt: Swift.Bool, orderId: Swift.String?, callbackUrl: Swift.String?, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func payQR(theAmount amount: GeideaPaymentSDK.GDAmount, qrDetails: GeideaPaymentSDK.GDQRDetails?, config: GeideaPaymentSDK.GDConfigResponse?, showReceipt: Swift.Bool, merchantName: Swift.String?, orderId: Swift.String?, callbackUrl: Swift.String?, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func payWithToken(theAmount amount: GeideaPaymentSDK.GDAmount, withTokenId token: Swift.String, tokenizationDetails: GeideaPaymentSDK.GDTokenizationDetails, config: GeideaPaymentSDK.GDConfigResponse?, showReceipt: Swift.Bool, andPaymentIntentId paymentIntentId: Swift.String? = nil, andCustomerDetails customerDetails: GeideaPaymentSDK.GDCustomerDetails?, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func capture(with orderId: Swift.String, callbackUrl: Swift.String? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func refund(with orderId: Swift.String, callbackUrl: Swift.String? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func getQRImage(with amount: GeideaPaymentSDK.GDAmount, qrDetails: GeideaPaymentSDK.GDQRDetails?, merchantName: Swift.String, orderId: Swift.String?, callbackUrl: Swift.String?, completion: @escaping (GeideaPaymentSDK.GDQRResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func requestToPay(withQRCodeMessage message: Swift.String, phoneNumber: Swift.String, orderId: Swift.String? = nil, completion: @escaping (GeideaPaymentSDK.GDRTPQRResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func checkPaymentIntentStatus(with paymentIntentId: Swift.String, atEverySeconds seconds: Swift.Int, forMinutes minutes: Swift.Int, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void) -> Foundation.Timer
+  @objc public static func cancel(with orderId: Swift.String, callbackUrl: Swift.String? = nil, navController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDCancelResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func setupApplePay(forApplePayDetails applePayDetails: GeideaPaymentSDK.GDApplePayDetails, with amount: GeideaPaymentSDK.GDAmount, config: GeideaPaymentSDK.GDConfigResponse?, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func getCardSchemeLogo(withCardType cardType: GeideaPaymentSDK.CardType) -> UIKit.UIImage?
+  @objc public static func getCardSchemeLogo(withCardNumber cardNumber: Swift.String?) -> UIKit.UIImage?
+  @objc public static func createPaymentIntent(with paymentIntentParams: GeideaPaymentSDK.GDPaymentIntentDetails, completion: @escaping (GeideaPaymentSDK.GDPaymentIntentResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func sendLinkBySMS(with paymentIntentId: Swift.String, completion: @escaping (GeideaPaymentSDK.GDPaymentIntentResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func sendLinkByEmail(with paymentIntentId: Swift.String, completion: @escaping (GeideaPaymentSDK.GDPaymentIntentResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func sendLinkByMultiple(with sendLinkMultipleDetails: GeideaPaymentSDK.GDSendLinkMultipleDetails, completion: @escaping (GeideaPaymentSDK.GDPaymentIntentResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func updatePaymentIntent(with paymentIntentParams: GeideaPaymentSDK.GDPaymentIntentDetails, completion: @escaping (GeideaPaymentSDK.GDPaymentIntentResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func getPaymentIntents(with paymentIntentsParams: GeideaPaymentSDK.GDPaymentIntentFilter, completion: @escaping (GeideaPaymentSDK.GDPaymentIntentsResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func getPaymentIntent(with paymentIntentId: Swift.String, completion: @escaping (GeideaPaymentSDK.GDPaymentIntentResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func deletePaymentIntent(with paymentIntentId: Swift.String, completion: @escaping (GeideaPaymentSDK.GDPaymentIntentResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func getOrders(with orderParams: GeideaPaymentSDK.GDOrdersFilter?, completion: @escaping (GeideaPaymentSDK.GDOrdersResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func getOrder(with orderId: Swift.String, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func getMerchantConfig(completion: @escaping (GeideaPaymentSDK.GDConfigResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func getMerchantConfig(with productConfig: GeideaPaymentSDK.GDSDKMerchantConfig? = nil, completion: @escaping ([GeideaPaymentSDK.GDSDKMerchantConfigResponse]?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func setEnvironment(environment: GeideaPaymentSDK.Environment)
+  @objc public static func setlanguage(language: GeideaPaymentSDK.Language)
+  @objc public static func removeCredentials()
+  @objc public static func updateCredentials(withMerchantKey merchantKey: Swift.String, andPassword password: Swift.String)
+  @objc public static func startPaymentIntent(withPaymentIntentID paymentIntentId: Swift.String?, status: Swift.String?, type: Swift.String, currency: Swift.String?, viewController: UIKit.UIViewController, completion: @escaping (GeideaPaymentSDK.GDPaymentIntentResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func payWithApplePay(withPKPayment pkPayment: PassKit.PKPayment, callbackUrl: Swift.String? = nil, merchentRefId: Swift.String? = nil, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func getModelString(order: GeideaPaymentSDK.GDOrderResponse) -> Swift.String?
+  @objc public static func getQRPaymentString(order: GeideaPaymentSDK.GDRTPQRResponse) -> Swift.String?
+  @objc public static func getConfigString(config: GeideaPaymentSDK.GDConfigResponse) -> Swift.String?
+  @objc public static func getMMSConfig(order: GeideaPaymentSDK.GDPaymentIntentResponse) -> Swift.String?
+  @objc public static func getPaymentIntentString(order: GeideaPaymentSDK.GDPaymentIntentResponse) -> Swift.String?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDPaymentIntentCustomer : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var email: Swift.String?
+  @objc public var phone: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var customerId: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDMerchantConfigResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public struct CountryConstants {
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDPaymentMethodResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var type: Swift.String?
+  @objc public var brand: Swift.String?
+  @objc public var cardholderName: Swift.String?
+  @objc public var maskedCardNumber: Swift.String?
+  @objc public var wallet: Swift.String?
+  public var expiryDate: GeideaPaymentSDK.ExpiryDateParams?
+  @objc public var meezaTransactionId: Swift.String?
+  @objc public var meezaSenderId: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDSouhoolaInstallmentPlanSelected : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var customerIdentifier: Swift.String?
+  @objc public var customerPIN: Swift.String?
+  @objc public var totalAmount: Swift.Double
+  @objc public var currency: Swift.String?
+  @objc public var merchantReferenceId: Swift.String?
+  @objc public var callbackUrl: Swift.String?
+  @objc public var billingAddress: GeideaPaymentSDK.GDAddress?
+  @objc public var shippingAddress: GeideaPaymentSDK.GDAddress?
+  @objc public var customerEmail: Swift.String?
+  @objc public var returnUrl: Swift.String?
+  @objc public var restrictPaymentMethods: Swift.Bool
+  @objc public var paymentMethods: [Swift.String]?
+  @objc public var source: Swift.String
+  @objc public var items: [GeideaPaymentSDK.GDBNPLItem]?
+  @objc public var bnplDetails: GeideaPaymentSDK.GDSouhoolaBNPLDetails?
+  @objc public var cashOnDelivery: Swift.Bool
+  @objc public var orderId: Swift.String?
+  @objc public init(customerIdentifier: Swift.String?, customerPIN: Swift.String?, totalAmount: Swift.Double, currency: Swift.String?, merchantReferenceId: Swift.String? = nil, callbackUrl: Swift.String? = nil, billingAddress: GeideaPaymentSDK.GDAddress? = nil, shippingAddress: GeideaPaymentSDK.GDAddress? = nil, customerEmail: Swift.String? = nil, restrictPaymentMethods: Swift.Bool, paymentMethods: [Swift.String]?, items: [GeideaPaymentSDK.GDBNPLItem]?, bnplDetails: GeideaPaymentSDK.GDSouhoolaBNPLDetails?, cashOnDelivery: Swift.Bool, orderId: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDQRResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var paymentIntentId: Swift.String?
+  @objc public var message: Swift.String?
+  @objc public var image: Swift.String?
+  @objc public var type: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension Foundation.URL {
+  public var queryItems: [Swift.String : Swift.String] {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDEInvoiceSentLink : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var sentDate: Swift.String?
+  @objc public var channel: Swift.String?
+  @objc public var recipient: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDTokenizationDetails : ObjectiveC.NSObject {
+  public var cardOnFile: Swift.Bool
+  public var initiatedBy: Swift.String?
+  public var agreementId: Swift.String?
+  public var agreementType: Swift.String?
+  public var subscriptionId: Swift.String?
+  @objc public init(withCardOnFile isCardOnFile: Swift.Bool = false, initiatedBy: Swift.String? = nil, agreementId: Swift.String? = nil, agreementType: Swift.String? = nil, subscriptionId: Swift.String? = nil)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDConfigResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var hppDefaultTimeout: Swift.Int
+  @objc public var countries: [GeideaPaymentSDK.ConfigCountriesResponse]?
+  public var is3dsV2Enabled: Swift.Bool?
+  @objc public var isTokenizationEnabled: Swift.Bool
+  @objc public var isCallbackEnabled: Swift.Bool
+  @objc public var isPaymentMethodSelectionEnabled: Swift.Bool
+  @objc public var isTransactionReceiptEnabled: Swift.Bool
+  @objc public var isValuBnplEnabled: Swift.Bool
+  public var valUMinimumAmount: Swift.Int?
+  public var isOfflineShahryBnplEnabled: Swift.Bool?
+  @objc public var isShahryCnpBnplEnabled: Swift.Bool
+  @objc public var isShahryCpBnplEnabled: Swift.Bool
+  @objc public var isSouhoolaCnpBnplEnabled: Swift.Bool
+  public var souhoolaMinimumAmount: Swift.Int?
+  @objc public var isMeezaQrEnabled: Swift.Bool
+  @objc public var useMpgsApiV60: Swift.Bool
+  @objc public var merchantNotificationEmail: Swift.String?
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var language: Swift.String?
+  @objc public var merchantName: Swift.String?
+  @objc public var merchantNameAr: Swift.String?
+  @objc public var merchantLogoUrl: Swift.String?
+  @objc public var merchantCountryTwoLetterCode: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var applePay: GeideaPaymentSDK.GDConfigApplePay?
+  @objc public var paymentMethods: [Swift.String]?
+  @objc public var currencies: [Swift.String]?
+  @objc public var allowedInitiatedByValues: [Swift.String]?
+  @objc public var cardBrandAuthentications: [GeideaPaymentSDK.GDCardBrandAuthentication]?
+  @objc public var allowCashOnDeliveryShahry: Swift.Bool
+  @objc public var allowCashOnDeliverySouhoola: Swift.Bool
+  @objc public var allowCashOnDeliveryValu: Swift.Bool
+  @objc public var is3dsRequiredForTokenPayments: Swift.Bool
+  @objc public var isCvvRequiredForTokenPayments: Swift.Bool
+  @objc public var branding: GeideaPaymentSDK.GDBrandingResponse?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDPlatform : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var integrationType: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var version: Swift.String?
+  @objc public var pluginVersion: Swift.String?
+  @objc public var partnerId: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDPaymentIntentFilter : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var fromDate: Swift.String?
+  @objc public var toDate: Swift.String?
+  @objc public var take: Swift.Int
+  @objc public init(from fromDate: Swift.String? = nil, to toDate: Swift.String? = nil, take: Swift.Int = 20)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDBNPLItem : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var merchantItemId: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var itemDescription: Swift.String?
+  @objc public var categories: [Swift.String]?
+  @objc public var count: Swift.Int
+  @objc public var price: Swift.Double
+  @objc public var currency: Swift.String?
+  @objc public init(merchantItemId: Swift.String?, name: Swift.String?, itemDescription: Swift.String?, categories: [Swift.String]?, count: Swift.Int, price: Swift.Double, currency: Swift.String? = "EGP")
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class Utils {
+  public static func getPublicIPAddress() -> Swift.String
+  public static func getBrowser() -> Swift.String
+  public static func getColorDepth() -> Swift.Int
+  public static func getTimezoneOffset() -> Swift.Int
+  public static func getScreenHeight() -> Swift.Int
+  public static func getScreenWidth() -> Swift.Int
+  public static func javaEnabled() -> Swift.Bool
+  public static func javaScriptEnabled() -> Swift.Bool
+  public static func getImageView(with image: UIKit.UIImage, width: Swift.Double, height: Swift.Double = 0) -> UIKit.UIImageView
+  @objc deinit
+}
+@objc public class GDAmount : ObjectiveC.NSObject {
+  public var amount: Swift.Double
+  public var currency: Swift.String
+  @objc public init(amount: Swift.Double, currency: Swift.String)
+  @objc deinit
+}
+@objc @objcMembers public class GDEInvoiceItem : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var total: Swift.Double
+  @objc public var tax: Swift.Double
+  @objc public var taxType: Swift.String?
+  @objc public var price: Swift.Double
+  @objc public var quantity: Swift.Int
+  @objc public var itemDiscount: Swift.Double
+  @objc public var itemDiscountType: Swift.String?
+  @objc public var itemDescription: Swift.String?
+  @objc public var sku: Swift.String?
+  @objc public init(total: Swift.Double, tax: Swift.Double, taxType: Swift.String?, price: Swift.Double, quantity: Swift.Int, itemDiscount: Swift.Double, itemDiscountType: Swift.String?, description: Swift.String?, sku: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public enum PaymentType : Swift.Int {
+  case Card, QR, ValU, Shahry, Souhoola, BNPLGroup
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDSouhoolaInstallmentPlanSelectedResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var responseCode: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var language: Swift.String?
+  @objc public var souhoolaTransactionId: Swift.String?
+  @objc public var nextStep: Swift.String?
+  @objc public var orderId: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDReceiptResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var responseMessage: Swift.String?
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var language: Swift.String?
+  @objc public var receipt: GeideaPaymentSDK.GDReceipt?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDInitiateAuthenticateResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDShahryConfirm : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var orderId: Swift.String?
+  @objc public var orderToken: Swift.String?
+  @objc public init(orderId: Swift.String?, orderToken: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDSouhoolaResendOTPDetails : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var customerIdentifier: Swift.String?
+  @objc public var customerPin: Swift.String?
+  @objc public init(customerIdentifier: Swift.String?, customerPin: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class ConfigCountriesResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var key3: Swift.String?
+  @objc public var nameEn: Swift.String?
+  @objc public var nameAr: Swift.String?
+  @objc public var key2: Swift.String?
+  @objc public var isSupported: Swift.Bool
+  public var numericCode: Swift.Int?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class GDCardBrandAuthentication : ObjectiveC.NSObject, Swift.Codable {
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDSouhoolaRetreiveInstallmentPlans : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var customerIdentifier: Swift.String?
+  @objc public var customerPin: Swift.String?
+  @objc public var totalAmount: Swift.Double
+  @objc public var currency: Swift.String?
+  @objc public var downPayment: Swift.Double
+  @objc public init(customerIdentifier: Swift.String?, customerPin: Swift.String?, totalAmount: Swift.Double, currency: Swift.String?, adminFees: Swift.Double, downPayment: Swift.Double)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDEInvoiceDetails : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var collectCustomersBillingShippingAddress: Swift.Bool
+  @objc public var preAuthorizeAmount: Swift.Bool
+  @objc public var subtotal: Swift.Double
+  @objc public var grandTotal: Swift.Double
+  @objc public var extraCharges: Swift.Double
+  @objc public var extraChargesType: Swift.String?
+  @objc public var chargeDescription: Swift.String?
+  @objc public var paymentIntentReference: Swift.String?
+  @objc public var invoiceDiscount: Swift.Double
+  @objc public var invoiceDiscountType: Swift.String?
+  @objc public var merchantReferenceId: Swift.String?
+  @objc public var eInvoiceItems: [GeideaPaymentSDK.GDEInvoiceItem]?
+  @objc public init(collectCustomersBillingShippingAddress: Swift.Bool, preAuthorizeAmount: Swift.Bool, subTotal: Swift.Double, grandTotal: Swift.Double, extraCharges: Swift.Double, extraChargesType: Swift.String?, chargeDescription: Swift.String?, paymentIntentReference: Swift.String?, invoiceDiscount: Swift.Double, invoiceDiscountType: Swift.String?, eInvoiceItems: [GeideaPaymentSDK.GDEInvoiceItem]?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDSouhoolaReviewTransaction : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var customerIdentifier: Swift.String?
+  @objc public var customerPin: Swift.String?
+  @objc public var totalAmount: Swift.Double
+  @objc public var currency: Swift.String?
+  @objc public var downPayment: Swift.Double
+  @objc public var tenure: Swift.Int
+  @objc public var minimumDownPaymentTenure: Swift.Double
+  @objc public var promoCode: Swift.String?
+  @objc public var approvedLimit: Swift.Double
+  @objc public var outstanding: Swift.Double
+  @objc public var availableLimit: Swift.Double
+  @objc public var minLoanAmount: Swift.Double
+  @objc public var items: [GeideaPaymentSDK.GDBNPLItem]?
+  @objc public init(customerIdentifier: Swift.String?, customerPin: Swift.String?, totalAmount: Swift.Double, currency: Swift.String?, tenure: Swift.Int, downPayment: Swift.Double, minimumDownPaymentTenure: Swift.Double, promoCode: Swift.String?, approvedLimit: Swift.Double, outstanding: Swift.Double, availableLimit: Swift.Double, minLoanAmount: Swift.Double, items: [GeideaPaymentSDK.GDBNPLItem]?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objcMembers public class GDCodesResponse : Swift.Codable {
+  @objc public var acquirerCode: Swift.String?
+  @objc public var acquirerMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class GDCustomerDetails : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc public init(withEmail email: Swift.String?, andCallbackUrl callbackUrl: Swift.String? = nil, merchantReferenceId: Swift.String? = nil, shippingAddress: GeideaPaymentSDK.GDAddress? = nil, billingAddress: GeideaPaymentSDK.GDAddress? = nil, paymentOperation: GeideaPaymentSDK.PaymentOperation = .NONE)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDSouhoolaBasicResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var responseCode: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var language: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDBrandingResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PayResponse : ObjectiveC.NSObject, Swift.Codable {
+  public var responseCode: Swift.String?
+  public var responseMessage: Swift.String?
+  public var detailedResponseMessage: Swift.String?
+  public var detailedResponseCode: Swift.String?
+  public var language: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension Foundation.JSONSerialization {
+  open class func decimalData(withJSONObject obj: Any, options opt: Foundation.JSONSerialization.WritingOptions = [.fragmentsAllowed]) throws -> Foundation.Data
+  open class func writeDecimalJSONObject(_ obj: Any, to stream: Foundation.OutputStream, options opt: Foundation.JSONSerialization.WritingOptions = [.prettyPrinted], error: Foundation.NSErrorPointer) -> Swift.Int
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDPaymentIntentResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var paymentIntent: GeideaPaymentSDK.GDPaymentIntentDetailsResponse?
+  @objc public var responseMessage: Swift.String?
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var language: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDInstallmentPlan : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var tenorMonth: Swift.Int
+  @objc public var installmentAmount: Swift.Double
+  @objc public var adminFees: Swift.Double
+  @objc public var downPayment: Swift.Double
+  public var minDownPayment: Swift.Double?
+  @objc public var rate: Swift.String?
+  @objc public var promoCode: Swift.String?
+  public var downPaymentPromo: Swift.Bool?
+  public var adminFeesPromo: Swift.Bool?
+  public var interestPromo: Swift.Bool?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDCardDetails : ObjectiveC.NSObject {
+  @objc public init(withCardholderName cardholderName: Swift.String, andCardNumber cardNumber: Swift.String, andCVV cvv: Swift.String, andExpiryMonth expiryMonth: Swift.Int, andExpiryYear expiryYear: Swift.Int)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDExpiryDate : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var month: Swift.Int
+  @objc public var year: Swift.Int
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDPaymentIntentDetails : ObjectiveC.NSObject {
+  @objc public init(withAmount amount: GeideaPaymentSDK.GDAmount, andExpiryDate expiryDate: Foundation.Date? = nil, andActivationDate activationDate: Foundation.Date? = nil, andCustomer customer: GeideaPaymentSDK.GDPICustomer, andEInvoiceDetails eInvoiceDetails: GeideaPaymentSDK.GDEInvoiceDetails? = nil, paymentIntentId: Swift.String? = nil, status: Swift.String? = nil, type: Swift.String? = nil)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class GeideaBNPLAPI : ObjectiveC.NSObject {
+  @objc public static func VALUVeriFyCustomer(with phoneNumber: Swift.String?, completion: @escaping (GeideaPaymentSDK.GDValuVerifyResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func VALUGetInstallmentPlan(with installmentPlanDetails: GeideaPaymentSDK.GDInstallmentPlanDetails?, completion: @escaping (GeideaPaymentSDK.GDInstallmentPlansResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func VALUInstallmentPlanSelected(with installmentPlanDetails: GeideaPaymentSDK.GDVALUInstallmentPlanSelectedDetails?, completion: @escaping (GeideaPaymentSDK.GDInstallmentPlanSelectedResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func VALUGenerateOTP(with customerIdentier: Swift.String, BNPLOrderId: Swift.String, completion: @escaping (GeideaPaymentSDK.GDBNPLResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func VALUPurchase(with purchaseParams: GeideaPaymentSDK.GDBNPLPurchaseDetails?, completion: @escaping (GeideaPaymentSDK.GDBNPLPurchaseResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func sharyInstallmentPlanSelected(with installmentPlanDetails: GeideaPaymentSDK.GDShahrySelectPlanInstallment?, completion: @escaping (GeideaPaymentSDK.GDInstallmentPlanSelectedResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func shahryConfirm(with confirmDetails: GeideaPaymentSDK.GDShahryConfirm, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func shahryCashOnDelivery(with details: GeideaPaymentSDK.GDCashOnDelivery, completion: @escaping (GeideaPaymentSDK.GDOrderResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func souhoolaVeriFyCustomer(with phoneNumber: Swift.String?, pin: Swift.String?, completion: @escaping (GeideaPaymentSDK.GDSouhoolaVerifyResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func souhoolaGetInstallmentPlan(with installmentPlanDetails: GeideaPaymentSDK.GDSouhoolaRetreiveInstallmentPlans, completion: @escaping (GeideaPaymentSDK.GDSouhoolaInstallmentPlansResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func souhoolaReviewTransaction(with details: GeideaPaymentSDK.GDSouhoolaReviewTransaction, completion: @escaping (GeideaPaymentSDK.GDSouhoolaReviewResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func souhoolaInstallmentPlanSelected(with details: GeideaPaymentSDK.GDSouhoolaInstallmentPlanSelected, completion: @escaping (GeideaPaymentSDK.GDSouhoolaInstallmentPlanSelectedResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func souhoolaGenerateOTP(with details: GeideaPaymentSDK.GDSouhoolaOTPDetails, completion: @escaping (GeideaPaymentSDK.GDSouhoolaBasicResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func souhoolaResendOTP(with details: GeideaPaymentSDK.GDSouhoolaResendOTPDetails, completion: @escaping (GeideaPaymentSDK.GDSouhoolaBasicResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func souhoolaCancel(with details: GeideaPaymentSDK.GDSouhoolaCancelDetails, completion: @escaping (GeideaPaymentSDK.GDSouhoolaBasicResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc public static func souhoolaConfirm(with details: GeideaPaymentSDK.GDSouhoolaConfirmDetails, completion: @escaping (GeideaPaymentSDK.GDSouhoolaBasicResponse?, GeideaPaymentSDK.GDErrorResponse?) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @objcMembers public class GDSouhoolaBNPLDetails : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var souhoolaTransactionId: Swift.String?
+  public var totalInvoicePrice: Swift.Double?
+  public var downPayment: Swift.Double?
+  public var loanAmount: Swift.Double?
+  public var netAdminFees: Swift.Double?
+  public var mainAdminFees: Swift.Double?
+  public var tenure: Swift.Int?
+  public var annualRate: Swift.Double?
+  @objc public var firstInstallmentDate: Swift.String?
+  @objc public var lastInstallmentDate: Swift.String?
+  public var installmentAmount: Swift.Double?
+  @objc public init(souhoolaTransactionId: Swift.String?, totalInvoicePrice: Swift.Double, downPayment: Swift.Double, loanAmount: Swift.Double, netAdminFees: Swift.Double, mainAdminFees: Swift.Double, tenure: Swift.Int, annualRate: Swift.Double, firstInstallmentDate: Swift.String?, lastInstallmentDate: Swift.String?, installmentAmount: Swift.Double = 0)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDSouhoolaConfirmDetails : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var customerIdentifier: Swift.String?
+  @objc public var customerPin: Swift.String?
+  @objc public var orderId: Swift.String?
+  @objc public var souhoolaTransactionId: Swift.String?
+  @objc public var otp: Swift.String?
+  @objc public init(customerIdentifier: Swift.String?, customerPin: Swift.String?, orderId: Swift.String?, souhoolaTransactionId: Swift.String?, otp: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDBNPLDetails : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var transactionId: Swift.String?
+  @objc public var bnplDetailId: Swift.String?
+  @objc public var updatedDate: Swift.String?
+  @objc public var createdDate: Swift.String?
+  @objc public var createdBy: Swift.String?
+  @objc public var updatedBy: Swift.String?
+  @objc public var provider: Swift.String?
+  @objc public var bnplOrderId: Swift.String?
+  @objc public var providerTransactionId: Swift.String?
+  @objc public var loanNumber: Swift.String?
+  public var tenure: Swift.Int?
+  @objc public var currency: Swift.String?
+  public var totalAmount: Swift.Double?
+  public var financedAmount: Swift.Double?
+  public var downPayment: Swift.Double?
+  public var installmentAmount: Swift.Double?
+  public var giftCardAmount: Swift.Double?
+  public var campaignAmount: Swift.Double?
+  public var adminFees: Swift.Double?
+  public var interestTotalAmount: Swift.Double?
+  @objc public var firstInstallmentDate: Swift.String?
+  @objc public var lastInstallmentDate: Swift.String?
+  @objc public var providerResponseCode: Swift.String?
+  @objc public var providerResponseDescription: Swift.String?
+  public var monthlyInterestRate: Swift.Double?
+  public var otherFees: Swift.Double?
+  public var amountToCollect: Swift.Double?
+  @objc public var token: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDReceipt : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var orderId: Swift.String?
+  @objc public var paymentDate: Swift.String?
+  @objc public var amount: Swift.Double
+  @objc public var currency: Swift.String?
+  @objc public var customerEmail: Swift.String?
+  @objc public var paymentIntentType: Swift.String?
+  @objc public var paymentIntentNumber: Swift.String?
+  @objc public var paymentOperation: Swift.String?
+  @objc public var paymentMethod: GeideaPaymentSDK.GDPaymentMethodResponse?
+  @objc public var merchant: GeideaPaymentSDK.GDMerchant?
+  @objc public var eInvoiceCustomer: GeideaPaymentSDK.GDPICustomer?
+  @objc public var eInvoice: GeideaPaymentSDK.GDEInvoiceDetails?
+  @objc public var bnplDetails: GeideaPaymentSDK.GDBNPLReceiptResponse?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public enum Environment : Swift.Int {
+  case dev
+  case test
+  case preprod
+  case prod
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @objcMembers public class GDPaymentIntentDetailsResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var customer: GeideaPaymentSDK.GDPaymentIntentCustomer?
+  @objc public var link: Swift.String?
+  @objc public var merchantId: Swift.String?
+  public var amount: Swift.Double?
+  @objc public var createdDate: Swift.String?
+  @objc public var updatedDate: Swift.String?
+  @objc public var type: Swift.String?
+  @objc public var expiryDate: Swift.String?
+  @objc public var activationDate: Swift.String?
+  @objc public var createdBy: Swift.String?
+  @objc public var merchantName: Swift.String?
+  @objc public var orders: [GeideaPaymentSDK.GDPaymentIntentOrder]?
+  @objc public var isPending: Swift.Bool
+  @objc public var number: Swift.String?
+  @objc public var eInvoiceDetails: GeideaPaymentSDK.GDEInvoiceDetails?
+  @objc public var eInvoiceSentLinks: [GeideaPaymentSDK.GDEInvoiceSentLink]?
+  @objc public var updatedBy: Swift.String?
+  @objc public var paymentIntentId: Swift.String?
+  @objc public var currency: Swift.String?
+  @objc public var status: Swift.String?
+  @objc public var merchantPublicKey: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDPaymentIntentsResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var paymentIntents: [GeideaPaymentSDK.GDPaymentIntentDetailsResponse]?
+  @objc public var responseMessage: Swift.String?
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var language: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public struct SecureStore {
+  public func setValue(_ value: Swift.String, for userAccount: Swift.String) throws
+  public func getValue(for userAccount: Swift.String) throws -> Swift.String?
+  public func removeValue(for userAccount: Swift.String) throws
+  public func removeAllValues() throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDMerchant : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var referenceId: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var nameAr: Swift.String?
+  @objc public var vatNumber: Swift.String?
+  @objc public var vatNumberAr: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDSouhoolaInstallmentPlan : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var tenorMonth: Swift.Int
+  @objc public var installmentAmount: Swift.Double
+  public var adminFees: Swift.Double?
+  public var downPayment: Swift.Double?
+  public var minDownPayment: Swift.Double?
+  @objc public var rate: Swift.String?
+  @objc public var promoCode: Swift.String?
+  @objc public var downPaymentPromo: Swift.Bool
+  @objc public var adminFeesPromo: Swift.Bool
+  @objc public var interestPromo: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDShahrySelectPlanInstallment : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var customerIdentifier: Swift.String?
+  @objc public var totalAmount: Swift.Double
+  @objc public var currency: Swift.String?
+  @objc public var merchantReferenceId: Swift.String?
+  @objc public var callbackUrl: Swift.String?
+  @objc public var billingAddress: GeideaPaymentSDK.GDAddress?
+  @objc public var shippingAddress: GeideaPaymentSDK.GDAddress?
+  @objc public var customerEmail: Swift.String?
+  @objc public var returnUrl: Swift.String?
+  @objc public var restrictPaymentMethods: Swift.Bool
+  @objc public var paymentMethods: [Swift.String]?
+  @objc public var items: [GeideaPaymentSDK.GDBNPLItem]?
+  @objc public var orderId: Swift.String?
+  @objc public init(customerIdentifier: Swift.String?, totalAmount: Swift.Double, currency: Swift.String?, merchantReferenceId: Swift.String? = nil, callbackUrl: Swift.String? = nil, billingAddress: GeideaPaymentSDK.GDAddress? = nil, shippingAddress: GeideaPaymentSDK.GDAddress? = nil, customerEmail: Swift.String? = nil, restrictPaymentMethods: Swift.Bool, paymentMethods: [Swift.String]?, items: [GeideaPaymentSDK.GDBNPLItem]?, orderId: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDApplePayResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var responseCode: Swift.String
+  @objc public var responseMessage: Swift.String
+  @objc public var detailedResponseCode: Swift.String
+  @objc public var detailedResponseMessage: Swift.String
+  @objc public var orderId: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDTransactionResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var authenticationDetails: GeideaPaymentSDK.GDAuthenticationDetailsResponse?
+  @objc public var amount: Swift.Double
+  @objc public var createdDate: Swift.String?
+  @objc public var createdBy: Swift.String?
+  @objc public var updatedDate: Swift.String?
+  @objc public var updatedBy: Swift.String?
+  @objc public var transactionId: Swift.String?
+  @objc public var type: Swift.String?
+  @objc public var status: Swift.String?
+  @objc public var currency: Swift.String?
+  @objc public var source: Swift.String?
+  @objc public var authorizationCode: Swift.String?
+  @objc public var rrn: Swift.String?
+  @objc public var paymentMethod: GeideaPaymentSDK.GDPaymentMethodResponse?
+  public var codes: GeideaPaymentSDK.GDCodesResponse?
+  @objc public var postilionDetails: GeideaPaymentSDK.GDPostilionDetails?
+  @objc public var terminalDetails: GeideaPaymentSDK.GDTerminalDetails?
+  @objc public var meezaDetails: GeideaPaymentSDK.GDMeezaDetails?
+  @objc public var bnplDetails: GeideaPaymentSDK.GDBNPLDetails?
+  @objc public var correlationId: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public enum CardType : Swift.Int {
+  case Amex, Visa, MasterCard, Mada, Meeza
+  public var regex: Swift.String {
+    get
+  }
+  public func matchesRegex(regex: Swift.String!, text: Swift.String!) -> Swift.Bool
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum LogLevel : Swift.Int {
+  case none = 0
+  case error = 1
+  case info = 2
+  case debug = 3
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @objcMembers public class GDStatementDescriptor : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var name: Swift.Int
+  @objc public var phone: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDSouhoolaCancelDetails : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var customerIdentifier: Swift.String?
+  @objc public var customerPin: Swift.String?
+  @objc public var souhoolaTransactionId: Swift.String?
+  @objc public init(customerIdentifier: Swift.String?, customerPin: Swift.String?, souhoolaTransactionId: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDVALUInstallmentPlanSelectedDetails : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var customerIdentifier: Swift.String?
+  @objc public var adminFees: Swift.Double
+  @objc public var totalAmount: Swift.Double
+  @objc public var currency: Swift.String?
+  @objc public var downPayment: Swift.Double
+  @objc public var giftCardAmount: Swift.Double
+  @objc public var campaignAmount: Swift.Double
+  @objc public var tenure: Swift.Int
+  @objc public var merchantReferenceId: Swift.String?
+  @objc public var callbackUrl: Swift.String?
+  @objc public var billingAddress: GeideaPaymentSDK.GDAddress?
+  @objc public var shippingAddress: GeideaPaymentSDK.GDAddress?
+  @objc public var customerEmail: Swift.String?
+  @objc public var orderId: Swift.String?
+  @objc public var bnplOrderId: Swift.String?
+  @objc public var restrictPaymentMethods: Swift.Bool
+  @objc public var paymentMethods: [Swift.String]?
+  @objc public var cashOnDelivery: Swift.Bool
+  @objc public var source: Swift.String
+  @objc public var language: Swift.String
+  @objc public init(customerIdentifier: Swift.String?, totalAmount: Swift.Double, currency: Swift.String?, adminFees: Swift.Double, downPayment: Swift.Double, giftCardAmount: Swift.Double, campaignAmount: Swift.Double, tenure: Swift.Int, merchantReferenceId: Swift.String? = nil, callbackUrl: Swift.String? = nil, billingAddress: GeideaPaymentSDK.GDAddress? = nil, shippingAddress: GeideaPaymentSDK.GDAddress? = nil, customerEmail: Swift.String? = nil, orderId: Swift.String?, bnplOrderId: Swift.String?, cashOnDelivery: Swift.Bool, restrictPaymentMethods: Swift.Bool, paymentMethods: [Swift.String]?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDSouhoolaVerifyResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var language: Swift.String?
+  public var approvedLimit: Swift.Double?
+  public var outstanding: Swift.Double?
+  public var availableLimit: Swift.Double?
+  public var minLoanAmount: Swift.Double?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDInstallmentPlanDetails : ObjectiveC.NSObject {
+  public var customerIdentifier: Swift.String?
+  public var totalAmount: Swift.Double
+  public var adminFees: Swift.Double
+  public var currency: Swift.String?
+  public var downPayment: Swift.Double
+  public var giftCardAmount: Swift.Double
+  public var campaignAmount: Swift.Double
+  @objc public init(customerIdentifier: Swift.String?, totalAmount: Swift.Double, currency: Swift.String?, downPayment: Swift.Double, giftCardAmount: Swift.Double, campaignAmount: Swift.Double, adminFees: Swift.Double)
+  @objc deinit
+}
+@objc public class GDSDKMerchantConfig : ObjectiveC.NSObject, Swift.Codable {
+  public var token: Swift.String?
+  public var countryHeader: Swift.String?
+  public var params: GeideaPaymentSDK.GDProductMConfig?
+  @objc public init(withToken token: Swift.String? = nil, andCountryHeader countryHeader: Swift.String? = nil, params: GeideaPaymentSDK.GDProductMConfig?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDInstallmentPlanSelectedResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var orderId: Swift.String?
+  @objc public var nextStep: Swift.String?
+  @objc public var language: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDBNPLPurchaseResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var language: Swift.String?
+  @objc public var bnplOrderId: Swift.String?
+  @objc public var providerTransactionId: Swift.String?
+  @objc public var orderId: Swift.String?
+  @objc public var loanNumber: Swift.String?
+  public var financedAmount: Swift.Double?
+  public var downPayment: Swift.Double?
+  public var giftCardAmount: Swift.Double?
+  public var campaignAmount: Swift.Double?
+  public var tenure: Swift.Int?
+  public var installmentAmount: Swift.Double?
+  @objc public var firstInstallmentDate: Swift.String?
+  @objc public var lastinstallmentDate: Swift.String?
+  public var adminFees: Swift.Double?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDInitializeReponseObject : ObjectiveC.NSObject, Swift.Codable {
+  public var gatewayDecision: Swift.String?
+  public var threedSecureId: Swift.String?
+  @objc public init(withGatewayDecision gatewayDecision: Swift.String, threedSecureId: Swift.String)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public enum PaymentOperation : Swift.Int, Swift.Codable {
+  case pay
+  case preAuthorize
+  case authorizeCapture
+  case NONE
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDMeezaDetails : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var transactionId: Swift.String?
+  @objc public var meezaTransactionId: Swift.String?
+  @objc public var type: Swift.String?
+  @objc public var transactionTimeStamp: Swift.String?
+  @objc public var adviceId: Swift.String?
+  @objc public var senderId: Swift.String?
+  @objc public var senderName: Swift.String?
+  @objc public var senderAddress: Swift.String?
+  @objc public var receiverId: Swift.String?
+  @objc public var receiverName: Swift.String?
+  @objc public var receiverAddress: Swift.String?
+  @objc public var amount: Swift.Double
+  @objc public var currency: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var responseDescription: Swift.String?
+  @objc public var interchange: Swift.Double
+  @objc public var interchangeAction: Swift.String?
+  @objc public var reference1: Swift.String?
+  @objc public var reference2: Swift.String?
+  @objc public var tips: Swift.Double
+  @objc public var convenienceFee: Swift.Double
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDPICustomer : ObjectiveC.NSObject, Swift.Codable {
+  public var customerId: Swift.String?
+  public var name: Swift.String?
+  public var email: Swift.String?
+  public var phoneNumber: Swift.String?
+  public var phoneCountryCode: Swift.String?
+  public var qrCode: Swift.String?
+  public var paymentIntentId: Swift.String?
+  @objc public init(phoneNumber: Swift.String?, andPhoneCountryCode phoneCountryCode: Swift.String?, andEmail email: Swift.String? = nil, name: Swift.String? = nil)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDMultiCurrency : ObjectiveC.NSObject, Swift.Codable {
+  public var settleAmount: Swift.Double?
+  @objc public var authCurrency: Swift.String?
+  @objc public var settleCurrency: Swift.String?
+  public var authAmount: Swift.Double?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public enum SDKMerchantConfigRouter {
+  case getMerchantConfig(params: GeideaPaymentSDK.GDProductMConfig)
+}
+@objc @objcMembers public class GDOrdersFilter : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var DetailedStatuses: [Swift.String]?
+  @objc public var Status: Swift.String?
+  @objc public var UpdatedDate: Swift.String?
+  @objc public var FromDate: Swift.String?
+  @objc public var ToDate: Swift.String?
+  @objc public var Skip: Swift.Int
+  @objc public var Take: Swift.Int
+  @objc public init(withStatus status: Swift.String? = nil, andDetailedStatuses detailedStatuses: [Swift.String]? = nil, andUpdatedDate updatedDate: Swift.String? = nil, from fromDate: Swift.String? = nil, to toDate: Swift.String? = nil, skip: Swift.Int = 0, take: Swift.Int = 20)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public struct PhoneConstants {
+}
+@objc public class GDSendLinkMultipleDetails : ObjectiveC.NSObject, Swift.Codable {
+  public var paymentIntentIds: [Swift.String]?
+  public var sendingChannels: [Swift.String]?
+  @objc public init(withPaymentIntentId paymentIntentIds: [Swift.String]? = nil, sendingChannels: [Swift.String]? = nil)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDRTPQRResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var responseDescription: Swift.String?
+  @objc public var receiverName: Swift.String?
+  @objc public var receiverAddress: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDVerifyCustomerDetails : ObjectiveC.NSObject {
+  public var customerIdentifier: Swift.String?
+  @objc public init(customerIdentifier: Swift.String?)
+  @objc deinit
+}
+@objc public enum Language : Swift.Int {
+  case english
+  case arabic
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDAuthenticationDetailsResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var acsEci: Swift.String?
+  @objc public var paResStatus: Swift.String?
+  @objc public var proofXml: Swift.String?
+  @objc public var veResEnrolled: Swift.String?
+  @objc public var authenticationToken: Swift.String?
+  @objc public var xid: Swift.String?
+  @objc public var accountAuthenticationValue: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDPaymentSelectionMetods : ObjectiveC.NSObject, Swift.Codable {
+  public var label: Swift.String?
+  public var paymentMethods: [Swift.String]
+  @objc public init(label: Swift.String, paymentMethods: [Swift.String])
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDCancelResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var orderId: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public struct SecureStoreErrorConstants {
+}
+public enum SecureStoreError : Swift.Error {
+  case string2DataConversionError
+  case data2StringConversionError
+  case unhandledError(message: Swift.String)
+}
+extension GeideaPaymentSDK.SecureStoreError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum ConfigRouter {
+  case getMerchantConfig(merchantKey: Swift.String)
+}
+public struct SDKErrorConstants {
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDErrorResponse : ObjectiveC.NSObject {
+  @objc public var errors: [Swift.String : [Swift.String]]
+  @objc public var status: Swift.Int
+  @objc public var title: Swift.String
+  @objc public var traceId: Swift.String
+  @objc public var type: Swift.String
+  @objc public var responseCode: Swift.String
+  @objc public var responseMessage: Swift.String
+  @objc public var detailedResponseCode: Swift.String
+  @objc public var detailedResponseMessage: Swift.String
+  @objc public var responseDescription: Swift.String
+  @objc public var orderId: Swift.String
+  @objc public var correlationId: Swift.String
+  @objc deinit
+}
+@objc public class GDBNPLPurchaseDetails : ObjectiveC.NSObject, Swift.Codable {
+  public var orderId: Swift.String?
+  public var bnplOrderId: Swift.String?
+  public var otp: Swift.String?
+  public var customerIdentifier: Swift.String?
+  public var totalAmount: Swift.Double?
+  public var currency: Swift.String?
+  public var downPayment: Swift.Double?
+  public var giftCardAmount: Swift.Double?
+  public var campaignAmount: Swift.Double?
+  public var tenure: Swift.Int?
+  public var adminFees: Swift.Double?
+  @objc public init(customerIdentifier: Swift.String?, orderId: Swift.String?, bnplOrderId: Swift.String?, otp: Swift.String?, totalAmount: Swift.Double, currency: Swift.String?, downPayment: Swift.Double, giftCardAmount: Swift.Double, campaignAmount: Swift.Double, tenure: Swift.Int, adminFees: Swift.Double)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDSouhoolaInstallmentPlansResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc public var language: Swift.String?
+  @objc public var currency: Swift.String?
+  @objc public var installmentPlans: [GeideaPaymentSDK.GDInstallmentPlan]?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDProductMConfig : ObjectiveC.NSObject, Swift.Codable {
+  public var StoreId: Swift.String?
+  public var MerchantId: Swift.String?
+  public var IsTest: Swift.Bool
+  @objc public init(withMerchantId merchantId: Swift.String? = nil, andStoreId storeId: Swift.String? = nil, isTest: Swift.Bool = true)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @objcMembers public class GDCashOnDelivery : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var orderId: Swift.String?
+  @objc public init(orderId: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension UIKit.UITextField {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDMerchantDataResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var merchantDomain: Swift.String?
+  @objc public var merchantLogoUrl: Swift.String?
+  @objc public var isTest: Swift.Bool
+  @objc public var applePaymentProcessingCertificateExpiryDateNew: Swift.String?
+  @objc public var applePaymentProcessingCertificate: Swift.String?
+  @objc public var merchantName: Swift.String?
+  @objc public var isApplePayMobileEnabled: Swift.Bool
+  @objc public var merchantNotificationEmail: Swift.String?
+  @objc public var merchantGatewayKey: Swift.String?
+  @objc public var cyberSourceSharedSecretKey: Swift.String?
+  @objc public var gsdkMid: Swift.String?
+  @objc public var applePaymentProcessingCertificateNew: Swift.String?
+  @objc public var applePartnerInternalMerchantIdentifier: Swift.String?
+  @objc public var cyberSourceMerchantId: Swift.String?
+  @objc public var appleDeveloperId: Swift.String?
+  @objc public var applePaymentProcessingCertificateExpiryDate: Swift.String?
+  @objc public var cyberSourceApiIdentifier: Swift.String?
+  @objc public var appleCertificatePrivateKey: Swift.String?
+  @objc public var merchantCountry: Swift.String?
+  @objc public var cyberSourceOrgUnitId: Swift.String?
+  @objc public var mpgsMsoProvider: Swift.String?
+  @objc public var gsdkSecretKey: Swift.String?
+  @objc public var mpgsMerchantId: Swift.String?
+  @objc public var customerNotificationFromEmail: Swift.String?
+  @objc public var isTokenizationEnabled: Swift.Bool
+  @objc public var defaultPaymentOperation: Swift.String?
+  @objc public var allowedInitiatedByValues: [Swift.String]?
+  @objc public var isApplePayWebEnabled: Swift.Bool
+  @objc public var cardBrandProviders: [GeideaPaymentSDK.GDCardBrandProvider]?
+  @objc public var isCallbackEnabled: Swift.Bool
+  @objc public var customerPaymentNotification: Swift.Bool
+  @objc public var isApplePayMobileCertificateAvailable: Swift.Bool
+  @objc public var merchantNameAr: Swift.String?
+  @objc public var appleCsr: Swift.String?
+  @objc public var cyberSourceMerchantKeyId: Swift.String?
+  @objc public var isPaymentMethodSelectionEnabled: Swift.Bool
+  @objc public var apiPassword: Swift.String?
+  @objc public var appleCertificatePrivateKeyNew: Swift.String?
+  @objc public var currencies: [Swift.String]?
+  @objc public var mpgsApiKey: Swift.String?
+  @objc public var isTransactionReceiptEnabled: Swift.Bool
+  @objc public var merchantWebsite: Swift.String?
+  @objc public var gsdkTid: Swift.String?
+  @objc public var cyberSourceApiKey: Swift.String?
+  @objc public var callbackUrl: Swift.String?
+  @objc public var isMeezaDigitalEnabled: Swift.Bool
+  @objc public var useMpgsApiV60: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class GDQRDetails : ObjectiveC.NSObject, Swift.Codable {
+  public var name: Swift.String?
+  public var email: Swift.String?
+  public var phoneNumber: Swift.String?
+  public var phoneCountryCode: Swift.String?
+  public var qrExpiryDate: Swift.String?
+  @objc public init(phoneNumber: Swift.String?, email: Swift.String? = nil, name: Swift.String? = nil, expiryDate: Swift.String? = nil)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GDSouhoolaReviewResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var responseCode: Swift.String?
+  @objc public var detailedResponseCode: Swift.String?
+  @objc public var responseMessage: Swift.String?
+  @objc public var detailedResponseMessage: Swift.String?
+  @objc public var language: Swift.String?
+  @objc public var souhoolaTransactionId: Swift.String?
+  @objc public var installments: [GeideaPaymentSDK.GDSouhoolaInstallmentPlanResponse]?
+  public var totalInvoicePrice: Swift.Double?
+  public var loanAmount: Swift.Double?
+  public var downPayment: Swift.Double?
+  @objc public var administrativeFees: Swift.String?
+  public var netAdministrativeFees: Swift.Double?
+  @objc public var merchantName: Swift.String?
+  public var cartCount: Swift.Double?
+  @objc public var promoCode: Swift.String?
+  public var mainAdministrativeFees: Swift.Double?
+  @objc public var annualRate: Swift.Double
+  @objc public var firstInstallmentDate: Swift.String?
+  @objc public var lastInstallmentDate: Swift.String?
+  @objc public var installmentAmount: Swift.Double
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class GDCardBrandProvider : ObjectiveC.NSObject, Swift.Codable {
+  public var acquiringProvider: Swift.String?
+  public var cardBrand: Swift.String?
+  public var threeDSecureProvider: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension UIKit.UIFont {
+  public static func GDRegisterFont(withFilenameString filenameString: Swift.String, bundle: Foundation.Bundle)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class GDTerminalDetails : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var tid: Swift.String?
+  @objc public var mid: Swift.String?
+  @objc public var transactionNumber: Swift.String?
+  @objc public var transactionCreateDateTime: Swift.String?
+  @objc public var merchantReferenceId: Swift.String?
+  @objc public var transactionType: Swift.String?
+  @objc public var transactionOutcome: Swift.String?
+  @objc public var providerGateId: Swift.String?
+  @objc public var paymentWay: Swift.String?
+  @objc public var reconciliationKey: Swift.String?
+  @objc public var transactionReceiveDateTime: Swift.String?
+  @objc public var transactionSentDateTime: Swift.String?
+  @objc public var status: Swift.String?
+  @objc public var message: Swift.String?
+  @objc public var approvalCode: Swift.String?
+  @objc public var responseCode: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension GeideaPaymentSDK.KDCircularProgressGlowMode : Swift.Equatable {}
+extension GeideaPaymentSDK.KDCircularProgressGlowMode : Swift.Hashable {}
+extension GeideaPaymentSDK.KDCircularProgressGlowMode : Swift.RawRepresentable {}
+extension GeideaPaymentSDK.PaymentType : Swift.Equatable {}
+extension GeideaPaymentSDK.PaymentType : Swift.Hashable {}
+extension GeideaPaymentSDK.PaymentType : Swift.RawRepresentable {}
+extension GeideaPaymentSDK.Environment : Swift.Equatable {}
+extension GeideaPaymentSDK.Environment : Swift.Hashable {}
+extension GeideaPaymentSDK.Environment : Swift.RawRepresentable {}
+extension GeideaPaymentSDK.CardType : Swift.Equatable {}
+extension GeideaPaymentSDK.CardType : Swift.Hashable {}
+extension GeideaPaymentSDK.CardType : Swift.RawRepresentable {}
+extension GeideaPaymentSDK.LogLevel : Swift.Equatable {}
+extension GeideaPaymentSDK.LogLevel : Swift.Hashable {}
+extension GeideaPaymentSDK.LogLevel : Swift.RawRepresentable {}
+extension GeideaPaymentSDK.PaymentOperation : Swift.Equatable {}
+extension GeideaPaymentSDK.PaymentOperation : Swift.Hashable {}
+extension GeideaPaymentSDK.PaymentOperation : Swift.RawRepresentable {}
+extension GeideaPaymentSDK.Language : Swift.Equatable {}
+extension GeideaPaymentSDK.Language : Swift.Hashable {}
+extension GeideaPaymentSDK.Language : Swift.RawRepresentable {}

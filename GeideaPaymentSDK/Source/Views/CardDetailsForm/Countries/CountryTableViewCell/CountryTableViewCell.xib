@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="center" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryTableViewCell" rowHeight="73" id="2tt-Si-HNk" customClass="CountryTableViewCell" customModule="GeideaPaymentSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="2tt-Si-HNk" id="3ha-Qw-DoH">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romania " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="cYW-k4-Mqy">
+                        <rect key="frame" x="70" y="44" width="324" height="19"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egU-Ro-hWu">
+                        <rect key="frame" x="20" y="40.5" width="30" height="26.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="a2l-rN-Ho0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cYW-k4-Mqy" firstAttribute="centerY" secondItem="3ha-Qw-DoH" secondAttribute="centerY" id="Dm0-X7-2dy"/>
+                    <constraint firstItem="cYW-k4-Mqy" firstAttribute="leading" secondItem="egU-Ro-hWu" secondAttribute="trailing" constant="20" id="Pvp-r4-EOM"/>
+                    <constraint firstAttribute="trailing" secondItem="cYW-k4-Mqy" secondAttribute="trailing" constant="20" id="UDF-8N-qkV"/>
+                    <constraint firstItem="egU-Ro-hWu" firstAttribute="centerY" secondItem="3ha-Qw-DoH" secondAttribute="centerY" id="Ye0-x8-OtH"/>
+                    <constraint firstItem="egU-Ro-hWu" firstAttribute="leading" secondItem="3ha-Qw-DoH" secondAttribute="leading" constant="20" id="ao1-Hg-Z90"/>
+                    <constraint firstItem="cYW-k4-Mqy" firstAttribute="centerY" secondItem="egU-Ro-hWu" secondAttribute="centerY" id="bqs-z4-UzJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="EY3-ZB-t7s"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="countryNameLabel" destination="cYW-k4-Mqy" id="q91-Jb-v0Z"/>
+                <outlet property="flagLabel" destination="egU-Ro-hWu" id="Kic-WI-T4o"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="509.26339285714283"/>
+        </tableViewCell>
+    </objects>
+</document>

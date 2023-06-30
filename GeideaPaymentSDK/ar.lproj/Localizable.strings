@@ -1,0 +1,236 @@
+/*
+  Localizable.strings
+  GeideaPaymentSDK
+
+  Created by euvid on 29/10/2020.
+  
+*/
+
+"CAPTURE_SCREEN_TITLE" = "تسجيل عملية الدفع قيد الإجراء..";
+"REFUND_SCREEN_TITLE" = "استعادة الدفع قيد الإجراء..";
+"PAYMENT_SCREEN_TITLE" = "عملية الدفع قيد الإجراء..";
+"WEBVIEW_SCREEN_TITLE" = "3D SECURE";
+"EInvoice_SCREEN_TITLE" = "مثال إيصال الكتروني";
+"CARD_DETAILS_TITLE" = "معلومات البطاقة";
+"PAY_CARD_TITLE" = "الدفع عبر بطاقة الائتمان";
+"CARD_NAME_INVALID" = "الرجاء إدخال الإسم الصحيح";
+"CARD_NAME_INVALID" = "الرجاء إدخال الإسم الصحيح";
+"CARD_NAME_EMPTY" = "الرجاء إدخال الاسم على البطاقة";
+"CARD_NUMBER_INVALID" = " ⃰ رقم البطاقة غير صحيح";
+"CARD_NUMBER_INVALID_LENGTH" = " ⃰ عدد أرقام البطاقة غير صحيح";
+"CARD_NUMBER_INCOMPLETE" = "رقم بطاقتك غير مكتمل";
+"CARD_NUMBER_UNSUPPORTED" = " ⃰ نوع بطاقة غير معتمد";
+"DATE_EXPIRED" = " ⃰ انتهت صلاحية البطاقة";
+"DATE_INVALID" = " ⃰ تاريخ الصلاحية غير صحيح";
+"EMAIL_INVALID" = " ⃰ بريد الكتروني غير صحيح";
+"CVV_INVALID_LENTH" = " ⃰ رقم الأمان غير صحيح";
+"CVV_INVALID" = "رقم الأمان غير صحيح";
+"CVV_EMPTY" = "الرجاء إدخال رقم الأمان";
+"STREET_INVALID_LENGTH" = " ⃰ طول العنوان ورقم الشارع غير صحيح";
+"CITY_INVALID_LENGTH" = " ⃰ عدد أحرف اسم المدينة غير صحيح";
+"POSTCODE_INVALID_LENGTH" = " ⃰ عدد أرقام الرمز البريدي غير صحيح";
+
+"CVV_HINT" = "اقلب بطاقتك للجهة الأخرى وأنظر على الخانة قرب التوقيع، الرمز المكون من ثلاثة أرقام هو رمز أمان البطاقة";
+"OK_BUTTON" = "الموافقة";
+"CANCEL_BUTTON" = "إلغاء";
+"CANCEL_PAYMENT" = "هل أنت متأكد أنك تريد إلغاء الدفع؟";
+"PAY_BUTTON" = "الدفع %@ %@";
+"CARD_NUMBER_TITLE" = "رقم البطاقة";
+"CARD_NAME_TITLE" = "الاسم على البطاقة";
+"EXPIRY_DATE_TITLE" = "تاريخ انتهاء الصلاحية";
+"CVV_TITLE" = "رقم الأمان";
+"DONE_BUTTON" = "تم";
+"NEXT_BUTTON" = "التالي";
+"PAYMENT_TIMEOUT" = "انقضى الوقت المخصص لهذه العملية";
+"PAYMENT_CANCELLED" = "تم إلالغاء من المستخدم";
+"PAYMENT_UNSUCCESSFUL" = "فشلت عملية الدفع";
+"OR_PAY_CC" = "أو الدفع عبر بطاقة الائتمان";
+
+"EMAIL" = "البريد الالكتروني";
+"COUNTRY" = "البلد";
+"CITY" = "المدينة";
+"STREET_NAME" = "اسم ورقم الشارع";
+"POSTCODE" = "الرمز البريدي";
+
+"BILLING_ADDRESS" = "عنوان الفوترة";
+"SHIPPING_ADDRESS" = "عنوان التوصيل";
+
+"SAME_BILLING_SHIPPING" = "عنوان الفوترة هو نفس عنوان التوصيل";
+
+
+/*
+  QR Functionality
+*/
+
+"QR_EXPIRY_DATE_TITLE" = "تاريخ انتهاء الصلاحية";
+"QR_SCAN_PAY_TITLE" = "المسح والدفع";
+"QR_MERCHANT_NAME_TITLE" = "اسم التاجر";
+"QR_REQUEST_PAY_TITLE" = "لا تستطيع مسح الرمز الشريطي؟";
+"QR_REQUEST_PAY_DESCRIPTION" = "ارسل طلب الدفع لجوال العميل";
+"QR_PAYMENT_BUTTON" = "اطلب الدفع";
+"RQ_REQUEST_ALERT_TITLE" = "قم بإدخال هوية ميزة \ رقم الجوال";
+"QR_REQUEST_TEXT_PLACEHOLDER" = "هوية ميزة \ رقم الجوال";
+"QR_REQUEST_PAYMENT_BUTTON" = "إرسال";
+"QR_MOBILE_WALLET_TITLE" = "الدفع بمحفظة الهاتف المحمول";
+"QR_WAITING_TITLE" = "نحن في انتظارك";
+"QR_OPEN_NOTIF_TITLE" = "افتح الإشعار من تطبيق محفظتك واتبع التعليمات لإنهاء عملية الدفع ";
+"QR_REFRESH_TITLE" = "ا تحدّث هذه الصفحة أو تغلقها";
+"QR_NO_NOTIF_TITLE" = "ألم تتلقَ إشعاراً؟";
+"QR_SCAN_TITLE" = "امسح رمز الاستجابة السريعة QR باستخدام تطبيق محفظتك لبدء عملية الدفع.";
+"QR_FAILED_TITLE" = "خطأ في عملية الدفع";
+
+/*
+  Payment selection Functionality
+*/
+
+"PAYMENT_SELECTION_TITLE" = "دعنا نتعرف على  طريقة الدفع الخاصه بك";
+"PAYMENT_SELECTION_OR" = "أو الاختيار من بين طرق الدفع التالية";
+"PAYMENT_SELECTION_QR_CODE" = "محفظة الجوّال";
+"PAYMENT_SELECTION_CARD" = "البطاقة";
+"PAYMENT_SELECTION_BNPL" = "اشترى الآن و ادفع لاحقاً";
+"PAYMENT_SELECTION_SHOW_ALL" = "عرض الكل";
+
+
+/*
+  Receipt screen Functionality
+*/
+
+"RECEIPT_DATE" = "التاريخ \ الوقت";
+"RECEIPT_OPERATION" = "العملية";
+"RECEIPT_ORDER_ID" = "رقم طلب جيديا";
+"RECEIPT_MREF_ID" = "الرقم المرجعي للتاجر";
+"RECEIPT_MOBILE" = "رقم الجوال \ هوية التاجر";
+"RECEIPT_USERNAME" = "اسم المستخدم";
+"RECEIPT_MEEZA_ID" = "رقم العملية من ميزة";
+"RECEIPT_FAILURE_REASON" = "سبب الفشل";
+"RECEIPT_BACK_TO" = "زياة تطبيق التاجر";
+"RECEIPT_APPROVED" = "الموافقة على العملية";
+"RECEIPT_FAILED" = "فشلت العملية";
+"RECEIPT_TOTAL" = "المجموع";
+"RECEIPT_REDIRECT" = "سيتم تحويلك لتطبيق التاجر خلال 15 ثانية";
+
+/*
+  Installment screen Functionality
+*/
+
+"PAYMENT_SELECTION_VAL_U" = "أقساطأقساط ValU";
+
+/*
+  Installment screen Functionality
+*/
+"PAYMENT_SELECTION_SOUHOOLA" = "أقساط سهولة";
+"PAYMENT_SELECTION_SHAHRY" = "أقساط شهري";
+"PAYMENT_SELECTION_VAL_U" = "أقساط ValU";
+"INSTALLMENT_STEP_PHONE_TITLE" = "تأكيد رقم الهاتف";
+"INSTALLMENT_STEP_INSTALLMENT_TITLE" = "اختر خطة التقسيط المفضلة";
+"INSTALLMENT_STEP_PAYMENT_TITLE" = "عملية دفع المقدم";
+"INSTALLMENT_STEP_OTP_TITLE" = "أدخل رمز OTP";
+
+"INSTALLMENT_INSTALLMENT_PLANS" = "خطط التقسيط";
+"INSTALLMENT_PAY_UPFRONT" = "الدفع مقدما";
+"INSTALLMENT_PURCHASE_FEES" = "رسوم الشراء";
+"INSTALLMENT_TOTAL_AMOUNT_UPFRONT" = "إجمالي المبلغ المطلوب دفعه مقدماً";
+
+"INSTALLMENT_CONFIRM_FINAL" = "إتمام الشراء";
+"INSTALLMENT_AMOUNT_VALUE" =  "شهر، (شهور،)/%@ %@";
+"PHONE_NUMBER_LABEL" = "رقم الهاتف";
+"CUSTOMER_ID_INVALID" =  "Only alphanumeric values allowed, maximum 255 characters";
+"PHONE_NUMBER_INVALID" =  "* رقم الهاتف غير صحيح";
+"VALU_FOOTER_CALL" = "يرجى الاتصال برقم 16671 لأية استفسارات. شكراً على استخدام valU";
+
+"CASH_PAYMWENT_OPTION" = "ادفع %@ %@ نقداً عند التوصيل";
+"CARD_PAYMWENT_OPTION" = "ادفع %@ %@ الآن عبر الإنترنت";
+"CHOOSE_HOW_PAY" = "اختر الطريقة التي توّد الدفع عبرها للدفعة الأولى ورسوم الشراء";
+/*
+  Receipt screen Functionality
+*/
+
+"SOUHOOLA_TITLE" = "تم تأكيد عملية شرائك مع سهولة";
+"VALU_TITLE" = "الشراء مع ValU
+تم التاكيد
+";
+"SHAHRY_TITLE" = "تم تأكيد طلبك مع شهري بنجاح";
+"TOTAL_AMOUNT" = "المبلغ الإجمالي";
+"FINANCED_AMOUNT" = "المبلغ الممول";
+"INSTALLMENT_AMOUNT" = "مبلغ القسط";
+"DOWN_PAYMENT" = "المقدم / مبلغ تحت الحساب";
+"TO_U_BALANCE" = "رصيد To-U";
+"CASHBACK_AMOUNT" = "مبلغ الاسترداد النقدي";
+"PURCHASE_FEES" = "Purchase Fees";
+"REFERENCE_NUMBER" = "Reference Number";
+"TENURE" = "فترة،";
+"MONTHS" = "شهور،";
+"MONTH" = "شهر،";
+"SHAHRY_REFERENCE_ID" =  "رقم الطلب من شهري";
+
+
+
+/*
+  Shahry screen Functionality
+*/
+
+"INSTALLMENT_STEP_CONFIRM_SHAHRY_TITLE" = "تأكيد رقم حسابك مع شهري";
+"INSTALLMENT_STEP_SHAHRY_PURCHASE_TITLE" = "تأكيد عملية الشراء مع شهري";
+
+"CUSTOMER_ID_INVALID" =  "يسمح فقط بالقيم الأبجدية الرقمية ، بحد أقصى 255 حرفًا";
+"SHAHRY_ID" = "رقم حساب شهري";
+"SHAHRY_WHERE_TO_FIND" = "كيف يمكنني معرفة رقم حسابي مع شهري؟";
+"SHAHRY_LEARN_MORE" = "اعرف المزيد عن شهري";
+"SHAHRY_CONFIRM_TERMS" = "عبر الضغط على \”الموافقة\” أنت تقبل بشروط خطة التقسيط لهذا الطلب وبسياسة الإرجاع المزوّدة من قبل %@";
+"SHAHRY_CONFIRM_BTN" = "تأكيد";
+"SHAHRY_PROCEED_BTN" = "عملية دفع المقدم";
+"SHAHRY_PROCEED_CASH_BTN" = "الإكمال";
+"SHAHRY_ORDER_TOKEN" = "اطلب رمز";
+"SHAHRY_OPEN_TITLE" = "افتح";
+"SHAHRY_APP_TITLE" = "تطبيق شهري";
+"SHAHRY_TO_COMPLETE" = "لإكمال الخطوة الأخيرة باختيار خطة تقسيط ثم قم بنسخ ولصق طلبك من هنا لإكمال عملية الشراء.";
+"SHAHRY_NEED_HELP" = "تحتاج لمساعدة؟";
+"SHAHRY_INVALID_ORDER_TOKEN" = "رمز الطلب من شهري غير صالح";
+
+/*
+  Select payment
+*/
+
+"VALUE_INSTALLMENT_AMOUNT" = "يجب ألا يقل المبلغ الإجمالي عن 500 جنيه مصري للدفع بالتقسيط بواسطة valU.";
+"SOUHOOLA_INSTALLMENT_AMOUNT" = "يجب ألا يقل المبلغ الإجمالي عن 1000 جنيه مصري للدفع بالتقسيط بواسطة سهولة.";
+"INSTALLMENT_STEP_CONFIRM_SOUHOOLA_TITLE" = "مبلغ القسط تقريبى , المبلغ المؤكد سيعرض فى شاشة مراجعة المعامله";
+
+/*
+  Souhoola
+*/
+
+"INSTALLMENT_SOUHOOLA_RANGE" = "* الدفعة الأولى يجب أن تكون بين %@ جنيه و%@ جنيه";
+"REVIEW_SOUHOOLA_SCREEN_TITLE" = "مراجعة ملّخص الشراء";
+"SOUHOOLA_ORDER_ID" = "رقم الطلب من سهولة";
+"SOUHOOLA_AVAILABLE_LIMIT_ERROR" = "Your available purchase limit needs to be at least 1000 EGP in order to purchase with Souhoola in installments";
+"SOUHOOLA_PIN_TITLE" = "الرمز السري";
+"REGISTER_HERE_TITLE" = "سجل هنا";
+"ACCOUNT_TITLE" = "ليس لديك حساب؟";
+"PURCHASE_DETAILS" = "معلومات الشراء";
+"TOTAL_ITEMS_CART" = "مجموع الأغراض في العربة";
+"FIRST_INSTALLMENT_DATE" = "تاريخ القسط الأوّل";
+"DOWNPAYMENT_LIMITS_VIOLATED" = "لم يتم العثور على حساب التاجر";
+"APROX_INSTALLMENT" = "مبلغ القسط تقريبى , المبلغ المؤكد سيعرض فى شاشة مراجعة المعامله";
+"FINANCED_AMOUNT_ERROR" = "يجب ان يكون المبلغ الممول على الاقل %@ %@ لطلب الشراء بأقساط سهولة";
+
+
+/*
+  OTP Screen
+*/
+
+"INSTALLMENT_OTP_DESCRIPTION" = "تم إرسال رمز OTP إلى رقم الهاتف المسجل لدينا. يرجى إدخال كلمة السر أدناه والضغط على زر إتمام الشراء";
+"INSTALLMENT_OTP_RESEND_TITLE" = "لم تستلم رمز OTP؟";
+"INSTALLMENT_OTP_RESEND_BUTTON" = "إعادة إرسال الرمز";
+"INSTALLMENT_OTP_REMAINING" = "Time Remaining:";
+"INSTALLMENT_OTP_ATTEMPTS" = "المحاولات الباقية:";
+"INSTALLMENT_OTP_SECONDS" = "ثواني";
+
+
+/*
+  CVV
+*/
+
+"CVV_ENTER" = "قم بإدخال رمز الأمان أدناه";
+"CVV_SCREEN_TITLE" = "لرجاء إدخال رقم التحقق من البطاقة";
+"CVV_CARD_EXPIRE" = "تنتهي الصلاحية في %@ %@";
+"MASKED_CARD" = " %@ ... %@";
