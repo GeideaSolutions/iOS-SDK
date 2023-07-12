@@ -1,3 +1,4 @@
+# geidea-sdk-ios
 # Geidea Payment Framework for iOS
 ## Change Log
 - Separated framework to independent project.
@@ -53,4 +54,10 @@ GeideaPaymentAPI.pay(theAmount amount: GeideaPaymentSDK.GDAmount,
 
                     })
    ```
+``` Create a workspace for sdk 
+In order to create a workspace you need to open Xcode and click on File -> New -> Workspace (Control + Cmd + N)
+Give a name to your workspace and click Create. You should have something like this in your root directory.
 
+Create your iOS Framework
+In order to create an iOS Framework you need to click on File -> New -> Project (Shift + Cmd + N) -> Framework (under iOS tab, Framework & Library section).
+Give a name to your framework (select Include Unit Tests — optional), click Next and you should set your workspace as you add to and group options. Then click Create.

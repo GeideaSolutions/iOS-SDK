@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "DCEB23E6-1A99-45BC-9DCF-40B1D23C9197"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C7E9B68-6DA6-45E8-B173-6B7CAA77BD5C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDK/Public/GeideaPaymentAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "isCredentialsAvailable()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9C7E9B68-6DA6-45E8-B173-6B7CAA77BD5C - 4408055da15f5e28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static GeideaPaymentSDK.GeideaPaymentAPI.isCredentialsAvailable() -&gt; Swift.Bool"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nagarajutadisetti/Documents/iOS/geidea-sdk-ios-main/GeideaPaymentSDK/GeideaPaymentSDK/Public/GeideaPaymentAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "9C7E9B68-6DA6-45E8-B173-6B7CAA77BD5C - 4408055da15f5e28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static GeideaPaymentSDK.GeideaPaymentAPI.isCredentialsAvailable() -&gt; Swift.Bool"
+                  moduleName = "GeideaPaymentSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nagarajutadisetti/Documents/iOS/geidea-sdk-ios-main/GeideaPaymentSDK/GeideaPaymentSDK/Public/GeideaPaymentAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "035CF807-D25B-497C-9FA2-10F48497A92F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDKSwiftSample/SamplePayment/Card Payment/CardPaymentViewController+Actions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "payButtonClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB37EB9B-140B-497C-92D0-949705217ABB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDKSwiftSample/SamplePayment/Card Payment/CardPaymentViewController+Actions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "payButtonClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B070AB5-6B9A-43BC-A015-CF6B5CE4E6D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDKSwiftSample/SamplePayment/Card Payment/CardPaymentViewController+Actions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "pay(amount:cardDetails:tokenizationDetails:paymentIntentId:customerDetails:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7B070AB5-6B9A-43BC-A015-CF6B5CE4E6D9 - feaad59d1b9da78c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeideaPaymentSDKSwiftSample.CardPaymentViewController.pay(amount: GeideaPaymentSDK.GDAmount, cardDetails: GeideaPaymentSDK.GDCardDetails, tokenizationDetails: Swift.Optional&lt;GeideaPaymentSDK.GDTokenizationDetails&gt;, paymentIntentId: Swift.Optional&lt;Swift.String&gt;, customerDetails: Swift.Optional&lt;GeideaPaymentSDK.GDCustomerDetails&gt;) -&gt; ()"
+                  moduleName = "GeideaPaymentSDKSwiftSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nagarajutadisetti/Documents/iOS/geidea-sdk-ios-main/GeideaPaymentSDK/GeideaPaymentSDKSwiftSample/SamplePayment/Card%20Payment/CardPaymentViewController+Actions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "7B070AB5-6B9A-43BC-A015-CF6B5CE4E6D9 - 70aaedfeadb3b2cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;GeideaPaymentSDK.GDOrderResponse&gt;, Swift.Optional&lt;GeideaPaymentSDK.GDErrorResponse&gt;) -&gt; () in GeideaPaymentSDKSwiftSample.CardPaymentViewController.pay(amount: GeideaPaymentSDK.GDAmount, cardDetails: GeideaPaymentSDK.GDCardDetails, tokenizationDetails: Swift.Optional&lt;GeideaPaymentSDK.GDTokenizationDetails&gt;, paymentIntentId: Swift.Optional&lt;Swift.String&gt;, customerDetails: Swift.Optional&lt;GeideaPaymentSDK.GDCustomerDetails&gt;) -&gt; ()"
+                  moduleName = "GeideaPaymentSDKSwiftSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nagarajutadisetti/Documents/iOS/geidea-sdk-ios-main/GeideaPaymentSDK/GeideaPaymentSDKSwiftSample/SamplePayment/Card%20Payment/CardPaymentViewController+Actions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0ACF28F0-40BF-4639-8B0F-87AF91008647"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDKSwiftSample/SamplePayment/Card Payment/CardPaymentViewController+Actions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "pay(amount:cardDetails:tokenizationDetails:paymentIntentId:customerDetails:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "435626A9-FBA3-4CF2-A51D-FFD0E47A046D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDKSwiftSample/SamplePayment/Card Payment/CardPaymentViewController+Actions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "payWithSDk()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FC82C28-4EA2-4B6F-80DD-FB25C60E60DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeideaPaymentSDKSwiftSample/SamplePayment/Card Payment/CardPaymentViewController+Actions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "payWithSDk()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

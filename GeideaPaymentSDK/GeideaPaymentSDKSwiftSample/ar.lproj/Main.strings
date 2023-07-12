@@ -1,0 +1,216 @@
+
+/* Class = "UILabel"; text = "Customer Details (Optional)"; ObjectID = "011-nu-XcT"; */
+"011-nu-XcT.text" = "Customer Details (Optional)";
+
+/* Class = "UIButton"; normalTitle = "Pay QR"; ObjectID = "0DX-wX-YMw"; */
+"0DX-wX-YMw.normalTitle" = "Pay QR";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "0dL-49-yh9"; */
+"0dL-49-yh9.text" = "Amount";
+
+/* Class = "UITextField"; text = "66463f06-eecf-46ed-bd2f-b67467c1884f"; ObjectID = "3Zn-ga-qvj"; */
+"3Zn-ga-qvj.text" = "fe76bd52-2e6a-4572-9290-6593a66c1ec3";
+
+/* Class = "UILabel"; text = "Public Key"; ObjectID = "3gL-A9-Q2M"; */
+"3gL-A9-Q2M.text" = "Public Key";
+
+/* Class = "UILabel"; text = "Country code (3 digits)"; ObjectID = "58k-Gh-4pb"; */
+"58k-Gh-4pb.text" = "Country code (3 digits)";
+
+/* Class = "UILabel"; text = "Billing address (Optional)"; ObjectID = "7zI-lK-6yA"; */
+"7zI-lK-6yA.text" = "Billing address (Optional)";
+
+/* Class = "UITextField"; text = "GBR"; ObjectID = "8kj-28-G5B"; */
+"8kj-28-G5B.text" = "GBR";
+
+/* Class = "UILabel"; text = "Currency"; ObjectID = "8rG-x8-6nZ"; */
+"8rG-x8-6nZ.text" = "Currency";
+
+/* Class = "UIButton"; normalTitle = "Setup Payment Intent"; ObjectID = "8xb-w5-HVS"; */
+"8xb-w5-HVS.normalTitle" = "Setup Payment Intent";
+
+/* Class = "UILabel"; text = "Callback Url"; ObjectID = "9hR-KN-ZCJ"; */
+"9hR-KN-ZCJ.text" = "Callback Url";
+
+/* Class = "UITextField"; text = "Stoyan Atanasov"; ObjectID = "9i0-qj-sZC"; */
+"9i0-qj-sZC.text" = "Stoyan Atanasov";
+
+/* Class = "UITextField"; text = "TEST_1234567890"; ObjectID = "9vx-Tf-Ns7"; */
+"9vx-Tf-Ns7.text" = "61873558-5194-4948-8eb8-6210711a469f";
+
+/* Class = "UIButton"; normalTitle = "CONFIG"; ObjectID = "D0Z-QU-5Bh"; */
+"D0Z-QU-5Bh.normalTitle" = "CONFIG";
+
+/* Class = "UILabel"; text = "Shipping address (Optional)"; ObjectID = "DgM-OM-Gzu"; */
+"DgM-OM-Gzu.text" = "Shipping address (Optional)";
+
+/* Class = "UISegmentedControl"; E0h-bs-CEC.segmentTitles[0] = "DEV"; ObjectID = "E0h-bs-CEC"; */
+"E0h-bs-CEC.segmentTitles[0]" = "DEV";
+
+/* Class = "UISegmentedControl"; E0h-bs-CEC.segmentTitles[1] = "TEST"; ObjectID = "E0h-bs-CEC"; */
+"E0h-bs-CEC.segmentTitles[1]" = "TEST";
+
+/* Class = "UISegmentedControl"; E0h-bs-CEC.segmentTitles[2] = "PPD"; ObjectID = "E0h-bs-CEC"; */
+"E0h-bs-CEC.segmentTitles[2]" = "PPD";
+
+/* Class = "UISegmentedControl"; E0h-bs-CEC.segmentTitles[3] = "PROD"; ObjectID = "E0h-bs-CEC"; */
+"E0h-bs-CEC.segmentTitles[3]" = "PROD";
+
+/* Class = "UILabel"; text = "Expiry Month (2 digits)"; ObjectID = "GCd-BK-pIn"; */
+"GCd-BK-pIn.text" = "Expiry Month (2 digits)";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "GDa-5P-h44"; */
+"GDa-5P-h44.text" = "City";
+
+/* Class = "UILabel"; text = "Payment Operation :"; ObjectID = "HCA-tL-7UY"; */
+"HCA-tL-7UY.text" = "Payment Operation :";
+
+/* Class = "UILabel"; text = "Show email"; ObjectID = "JoD-3D-aZE"; */
+"JoD-3D-aZE.text" = "Show email";
+
+/* Class = "UILabel"; text = "Postal code"; ObjectID = "Lsn-wd-tkV"; */
+"Lsn-wd-tkV.text" = "Postal code";
+
+/* Class = "UITextField"; text = "London 1, address"; ObjectID = "MoE-eW-sPt"; */
+"MoE-eW-sPt.text" = "London 1, address";
+
+/* Class = "UITextField"; text = "23"; ObjectID = "NCc-Cv-xLg"; */
+"NCc-Cv-xLg.text" = "23";
+
+/* Class = "UIButton"; normalTitle = "Geidea Go"; ObjectID = "NWX-mW-SP3"; */
+"NWX-mW-SP3.normalTitle" = "Geidea Go";
+
+/* Class = "UILabel"; text = "Save card"; ObjectID = "NXF-lh-6bM"; */
+"NXF-lh-6bM.text" = "Save card";
+
+/* Class = "UISegmentedControl"; Nho-9h-4dJ.segmentTitles[0] = "SDK"; ObjectID = "Nho-9h-4dJ"; */
+"Nho-9h-4dJ.segmentTitles[0]" = "SDK";
+
+/* Class = "UISegmentedControl"; Nho-9h-4dJ.segmentTitles[1] = "MERCHANT"; ObjectID = "Nho-9h-4dJ"; */
+"Nho-9h-4dJ.segmentTitles[1]" = "MERCHANT";
+
+/* Class = "UITextField"; text = "https://api-test.gd-azure-dev.net/external-services/api/v1/callback/test123"; ObjectID = "QTf-f2-ZII"; */
+"QTf-f2-ZII.text" = "https://api-test.gd-azure-dev.net/external-services/api/v1/callback/test123";
+
+/* Class = "UITextField"; text = "12"; ObjectID = "Qio-zo-qL7"; */
+"Qio-zo-qL7.text" = "12";
+
+/* Class = "UITextField"; text = "4508750015741019"; ObjectID = "Rbp-C5-5h9"; */
+"Rbp-C5-5h9.text" = "4508750015741019";
+
+/* Class = "UIButton"; normalTitle = "Capture"; ObjectID = "Sp6-TF-VPz"; */
+"Sp6-TF-VPz.normalTitle" = "Capture";
+
+/* Class = "UITextField"; text = "1234"; ObjectID = "TM9-Y6-PGe"; */
+"TM9-Y6-PGe.text" = "1234";
+
+/* Class = "UITextField"; text = "123456"; ObjectID = "Te5-yX-2nW"; */
+"Te5-yX-2nW.text" = "123456";
+
+/* Class = "UIButton"; normalTitle = "NONE"; ObjectID = "U9k-qM-vxb"; */
+"U9k-qM-vxb.normalTitle" = "NONE";
+
+/* Class = "UITextField"; text = "London"; ObjectID = "W1E-Ah-Bek"; */
+"W1E-Ah-Bek.text" = "London";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "WOf-PY-zWq"; */
+"WOf-PY-zWq.text" = "City";
+
+/* Class = "UILabel"; text = "Expiry Year (2 digits)"; ObjectID = "Xaw-Ta-bEd"; */
+"Xaw-Ta-bEd.text" = "Expiry Year (2 digits)";
+
+/* Class = "UILabel"; text = "Payment Intent ID:"; ObjectID = "YDY-xG-MeW"; */
+"YDY-xG-MeW.text" = "Payment Intent ID:";
+
+/* Class = "UITextField"; text = "111"; ObjectID = "YXw-12-lJT"; */
+"YXw-12-lJT.text" = "111";
+
+/* Class = "UILabel"; text = "Card Number"; ObjectID = "Zbe-Bq-ACP"; */
+"Zbe-Bq-ACP.text" = "Card Number";
+
+/* Class = "UILabel"; text = "Card Holder Name"; ObjectID = "a3u-xU-O3h"; */
+"a3u-xU-O3h.text" = "Card Holder Name";
+
+/* Class = "UILabel"; text = "Show Address"; ObjectID = "baY-0F-2ap"; */
+"baY-0F-2ap.text" = "Show Address";
+
+/* Class = "UILabel"; text = "Payment Method Provided By:"; ObjectID = "bmr-8M-Ime"; */
+"bmr-8M-Ime.text" = "Payment Method Provided By:";
+
+/* Class = "UIButton"; normalTitle = "Pay"; ObjectID = "cuy-Eb-rQ3"; */
+"cuy-Eb-rQ3.normalTitle" = "Pay";
+
+/* Class = "UILabel"; text = "Country code (3 digits)"; ObjectID = "dsJ-mO-xql"; */
+"dsJ-mO-xql.text" = "Country code (3 digits)";
+
+/* Class = "UILabel"; text = "Agreement Id"; ObjectID = "e5x-sQ-q7W"; */
+"e5x-sQ-q7W.text" = "Agreement Id";
+
+/* Class = "UITextField"; text = "Riadh"; ObjectID = "eGW-PJ-IVj"; */
+"eGW-PJ-IVj.text" = "Riadh";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "fEm-kx-Y4U"; */
+"fEm-kx-Y4U.text" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Pay token"; ObjectID = "g7e-kd-fxR"; */
+"g7e-kd-fxR.normalTitle" = "Pay token";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "gt8-0F-RAf"; */
+"gt8-0F-RAf.normalTitle" = "LOGIN";
+
+/* Class = "UILabel"; text = "Postal code"; ObjectID = "h2h-QJ-J9N"; */
+"h2h-QJ-J9N.text" = "Postal code";
+
+/* Class = "UILabel"; text = "Login enable"; ObjectID = "hVz-SH-KCs"; */
+"hVz-SH-KCs.text" = "Login enable";
+
+/* Class = "UILabel"; text = "InitiatedBy"; ObjectID = "ijs-u1-xbY"; */
+"ijs-u1-xbY.text" = "InitiatedBy";
+
+/* Class = "UILabel"; text = "Amount "; ObjectID = "jQ3-GK-iX9"; */
+"jQ3-GK-iX9.text" = "Amount ";
+
+/* Class = "UITextField"; text = "EGP"; ObjectID = "kbG-eE-VNg"; */
+"kbG-eE-VNg.text" = "EGP";
+
+/* Class = "UILabel"; text = "Merchant Ref ID"; ObjectID = "oLL-My-spS"; */
+"oLL-My-spS.text" = "Merchant Ref ID";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "obS-Hz-moe"; */
+"obS-Hz-moe.text" = "Email";
+
+/* Class = "UILabel"; text = "Capture: "; ObjectID = "pyB-ch-El5"; */
+"pyB-ch-El5.text" = "Capture: ";
+
+/* Class = "UITextField"; text = "Riadh 1, address "; ObjectID = "qDE-bY-cvx"; */
+"qDE-bY-cvx.text" = "Riadh 1, address ";
+
+/* Class = "UITextField"; text = "SAU"; ObjectID = "qXV-Ll-K6w"; */
+"qXV-Ll-K6w.text" = "SAU";
+
+/* Class = "UIButton"; normalTitle = "Internet"; ObjectID = "tAf-an-OUb"; */
+"tAf-an-OUb.normalTitle" = "Internet";
+
+/* Class = "UITextField"; text = "somemail@end.com"; ObjectID = "tTD-jn-R4V"; */
+"tTD-jn-R4V.text" = "somemail@end.com";
+
+/* Class = "UILabel"; text = "street"; ObjectID = "uKh-DV-Uho"; */
+"uKh-DV-Uho.text" = "street";
+
+/* Class = "UITextField"; text = "12345"; ObjectID = "vRF-uI-rxF"; */
+"vRF-uI-rxF.text" = "12345";
+
+/* Class = "UILabel"; text = "CVV (3 digits)"; ObjectID = "vm1-jo-e82"; */
+"vm1-jo-e82.text" = "CVV (3 digits)";
+
+/* Class = "UILabel"; text = "street"; ObjectID = "wvw-gg-dIq"; */
+"wvw-gg-dIq.text" = "street";
+
+/* Class = "UILabel"; text = "Payment Methods"; ObjectID = "xZ6-J3-fQ8"; */
+"xZ6-J3-fQ8.text" = "Payment Methods";
+
+/* Class = "UILabel"; text = "Agreement Type"; ObjectID = "y3d-CY-AFX"; */
+"y3d-CY-AFX.text" = "Agreement Type";
+
+/* Class = "UITextField"; text = "2.45"; ObjectID = "ysU-ut-8jm"; */
+"ysU-ut-8jm.text" = "1100";
