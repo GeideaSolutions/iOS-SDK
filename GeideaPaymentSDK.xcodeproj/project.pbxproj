@@ -22,6 +22,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0D9DC9232BB54490007F395F /* SessionRouterV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DC9222BB54490007F395F /* SessionRouterV2.swift */; };
+		0D9DC9252BB544C9007F395F /* PaymentRouterV6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DC9242BB544C9007F395F /* PaymentRouterV6.swift */; };
+		0D9DC9272BB5474C007F395F /* SessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DC9262BB5474C007F395F /* SessionResponse.swift */; };
+		0D9DC9292BB5476B007F395F /* SessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DC9282BB5476B007F395F /* SessionRequest.swift */; };
 		E608509E25C968B400DD2F77 /* CanceParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608509D25C968B400DD2F77 /* CanceParams.swift */; };
 		E60850A225C995DA00DD2F77 /* CancelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60850A125C995DA00DD2F77 /* CancelManager.swift */; };
 		E60850A625C999B700DD2F77 /* GDCancelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60850A525C999B700DD2F77 /* GDCancelResponse.swift */; };
@@ -378,6 +382,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D9DC9222BB54490007F395F /* SessionRouterV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRouterV2.swift; sourceTree = "<group>"; };
+		0D9DC9242BB544C9007F395F /* PaymentRouterV6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRouterV6.swift; sourceTree = "<group>"; };
+		0D9DC9262BB5474C007F395F /* SessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResponse.swift; sourceTree = "<group>"; };
+		0D9DC9282BB5476B007F395F /* SessionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRequest.swift; sourceTree = "<group>"; };
 		E608509D25C968B400DD2F77 /* CanceParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanceParams.swift; sourceTree = "<group>"; };
 		E60850A125C995DA00DD2F77 /* CancelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelManager.swift; sourceTree = "<group>"; };
 		E60850A525C999B700DD2F77 /* GDCancelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCancelResponse.swift; sourceTree = "<group>"; };
@@ -848,11 +856,13 @@
 				E60C0D1A27030E8B00A01F9D /* ProductRouter.swift */,
 				F3C7229A2726B7E6001B0E0C /* SDKMerchantConfigRouter.swift */,
 				F3144942274F937300B402E0 /* PaymentRouterV4.swift */,
+				0D9DC9242BB544C9007F395F /* PaymentRouterV6.swift */,
 				F3AE8BB927BD226F00D84322 /* BNPLRouter.swift */,
 				F3E7418C27DF429B00519A80 /* ReceiptRouter.swift */,
 				F3B8ABCE280816BD00E8EEE8 /* ShahryRouter.swift */,
 				F30761952821739C004014CC /* SouhoolaRouter.swift */,
 				F333CE1B28D9CDD6000ECAD7 /* PaymentRouterV3.swift */,
+				0D9DC9222BB54490007F395F /* SessionRouterV2.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -881,6 +891,7 @@
 				F3AA97F9288986780096A96F /* AuthenticateTokenParamsV3.swift */,
 				F3AA97FF28898E7F0096A96F /* RecurrenceParams.swift */,
 				F39FB94A28A661490022D35D /* DeviceIndentificationParams.swift */,
+				0D9DC9282BB5476B007F395F /* SessionRequest.swift */,
 			);
 			path = NetworkParams;
 			sourceTree = "<group>";
@@ -894,6 +905,7 @@
 				E60850A525C999B700DD2F77 /* GDCancelResponse.swift */,
 				E6342E4D26A1BB6C00AE1E31 /* GDQRResponse.swift */,
 				F39FB94E28AE1A690022D35D /* GDBrandingResponse.swift */,
+				0D9DC9262BB5474C007F395F /* SessionResponse.swift */,
 			);
 			path = NetworkResponses;
 			sourceTree = "<group>";
@@ -1815,6 +1827,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F30D113E28FEEECF00242A59 /* GroupedBNPLView.swift in Sources */,
+				0D9DC9252BB544C9007F395F /* PaymentRouterV6.swift in Sources */,
 				F31871F4290809E70070C991 /* UIActivityIndicatorView+Extensions.swift in Sources */,
 				E641F101269DA93200920959 /* GDPaymentIntent.swift in Sources */,
 				E6117BB825398F0E00959D78 /* AuthenticateParams.swift in Sources */,
@@ -1869,6 +1882,7 @@
 				F3AE8BB627BD220200D84322 /* GenerateOTPParams.swift in Sources */,
 				E6567EB825A5B371001C11E1 /* CardDetailsFormViewController.swift in Sources */,
 				E60854422548708D009B468F /* GDPaymentMethodResponse.swift in Sources */,
+				0D9DC9292BB5476B007F395F /* SessionRequest.swift in Sources */,
 				F3ED4F26282D318F0024E401 /* GDSouhoolaInstallmentPlanSelected.swift in Sources */,
 				E6342E4E26A1BB6C00AE1E31 /* GDQRResponse.swift in Sources */,
 				E6117C4C253D9F3C00959D78 /* AppConfig.swift in Sources */,
@@ -1992,6 +2006,7 @@
 				E6F1EE792535E5B600253F19 /* Response.swift in Sources */,
 				F3961489283CF8EC00E3B1E2 /* OTPViewModel.swift in Sources */,
 				E6801E2025B5CCC80074C5BB /* UIView+Extensions.swift in Sources */,
+				0D9DC9272BB5474C007F395F /* SessionResponse.swift in Sources */,
 				F33CF2AD28006FBB0065778A /* GDShahrySelectPlanInstallment.swift in Sources */,
 				E65170DC26A02EED00102128 /* QRPaymentFormViewController.swift in Sources */,
 				E6B067102571115600F9A44F /* GDApplePayResponse.swift in Sources */,
@@ -2094,6 +2109,7 @@
 				E67E4099256D54CC00FAB817 /* ApplePayParams.swift in Sources */,
 				E64462D0257F94FE001BAA4B /* OperationsManager.swift in Sources */,
 				F31F9AA8275E04150052A093 /* GDQRDetails.swift in Sources */,
+				0D9DC9232BB54490007F395F /* SessionRouterV2.swift in Sources */,
 				F3ED4F19282A8A950024E401 /* GDSouhoolaReviewResponse.swift in Sources */,
 				F3ED4F2C282E326E0024E401 /* SouhoolaIPSelectedParams.swift in Sources */,
 				F30757922726FDBD00184737 /* GDCardBrandProvider.swift in Sources */,
@@ -2213,6 +2229,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = 5.0.0;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2280,6 +2297,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = 5.0.0;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
