@@ -22,6 +22,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0D17B0A92C1AFEC60010267E /* HppWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D17B0A72C1AFEC50010267E /* HppWebViewController.swift */; };
+		0D17B0AA2C1AFEC60010267E /* HppWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D17B0A82C1AFEC60010267E /* HppWebViewController.xib */; };
+		0D17B0AC2C1AFF230010267E /* HppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D17B0AB2C1AFF230010267E /* HppCoordinator.swift */; };
+		0D17B0AE2C1AFFE20010267E /* HppPaymentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D17B0AD2C1AFFE20010267E /* HppPaymentRouter.swift */; };
 		0D9DC9232BB54490007F395F /* SessionRouterV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DC9222BB54490007F395F /* SessionRouterV2.swift */; };
 		0D9DC9252BB544C9007F395F /* PaymentRouterV6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DC9242BB544C9007F395F /* PaymentRouterV6.swift */; };
 		0D9DC9272BB5474C007F395F /* SessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DC9262BB5474C007F395F /* SessionResponse.swift */; };
@@ -382,6 +386,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D17B0A72C1AFEC50010267E /* HppWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HppWebViewController.swift; sourceTree = "<group>"; };
+		0D17B0A82C1AFEC60010267E /* HppWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HppWebViewController.xib; sourceTree = "<group>"; };
+		0D17B0AB2C1AFF230010267E /* HppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HppCoordinator.swift; sourceTree = "<group>"; };
+		0D17B0AD2C1AFFE20010267E /* HppPaymentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HppPaymentRouter.swift; sourceTree = "<group>"; };
 		0D9DC9222BB54490007F395F /* SessionRouterV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRouterV2.swift; sourceTree = "<group>"; };
 		0D9DC9242BB544C9007F395F /* PaymentRouterV6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRouterV6.swift; sourceTree = "<group>"; };
 		0D9DC9262BB5474C007F395F /* SessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResponse.swift; sourceTree = "<group>"; };
@@ -749,6 +757,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D17B0A62C1AFEAF0010267E /* hpp */ = {
+			isa = PBXGroup;
+			children = (
+				0D17B0A72C1AFEC50010267E /* HppWebViewController.swift */,
+				0D17B0A82C1AFEC60010267E /* HppWebViewController.xib */,
+			);
+			path = hpp;
+			sourceTree = "<group>";
+		};
 		E608543E25486E98009B468F /* PayResponse */ = {
 			isa = PBXGroup;
 			children = (
@@ -863,6 +880,7 @@
 				F30761952821739C004014CC /* SouhoolaRouter.swift */,
 				F333CE1B28D9CDD6000ECAD7 /* PaymentRouterV3.swift */,
 				0D9DC9222BB54490007F395F /* SessionRouterV2.swift */,
+				0D17B0AD2C1AFFE20010267E /* HppPaymentRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -1027,6 +1045,7 @@
 				E6567EA4258A5E5C001C11E1 /* PaymentTokenCoordinator.swift */,
 				E6567EB225A5B21C001C11E1 /* FormCoordinator.swift */,
 				E61FE56F26C3F3CC00B64B2B /* PaymentFormCoordinator.swift */,
+				0D17B0AB2C1AFF230010267E /* HppCoordinator.swift */,
 			);
 			path = PaymentCoordinator;
 			sourceTree = "<group>";
@@ -1044,6 +1063,7 @@
 		E6224F122534E5C60065C23F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0D17B0A62C1AFEAF0010267E /* hpp */,
 				F3AE8B6E27ABBECB00D84322 /* Views */,
 				F3AE8B6727AAC60D00D84322 /* BNPLScreen */,
 				E676818726F32C0600626694 /* ReceiptScreen */,
@@ -1756,6 +1776,7 @@
 				E69FFADB26D7C9D100097907 /* SelectPaymentMethodViewController.xib in Resources */,
 				E6801E4125B6D59F0074C5BB /* SearchView.xib in Resources */,
 				F3AE8B9E27B679F200D84322 /* InstallmentsCollectionViewCell.xib in Resources */,
+				0D17B0AA2C1AFEC60010267E /* HppWebViewController.xib in Resources */,
 				E6F653D525B8B43D00C1248C /* CountrySelectionViewController.xib in Resources */,
 				F37ABB9327E87821009F04E2 /* BNPLFooter.xib in Resources */,
 				F3842E3E288EA4F1005D8802 /* CVVViewController.xib in Resources */,
@@ -1839,6 +1860,7 @@
 				F333CE1C28D9CDD6000ECAD7 /* PaymentRouterV3.swift in Sources */,
 				E67E409D256D634100FAB817 /* PaymentMethod.swift in Sources */,
 				E676817E26F0DECF00626694 /* GDPostilionDetails.swift in Sources */,
+				0D17B0AE2C1AFFE20010267E /* HppPaymentRouter.swift in Sources */,
 				E60C3211253702EF0023133F /* Strings+Extensions.swift in Sources */,
 				F3ED4F2E28322B490024E401 /* GDBNPLReceiptResponse.swift in Sources */,
 				F3842E3D288EA4F1005D8802 /* CVVViewController.swift in Sources */,
@@ -1932,6 +1954,7 @@
 				F3AE8B8B27B1411E00D84322 /* BNPLVIewModel.swift in Sources */,
 				E60C32032536F2280023133F /* WebServices.swift in Sources */,
 				E676819126F378C800626694 /* ReceiptTableViewCell.swift in Sources */,
+				0D17B0A92C1AFEC60010267E /* HppWebViewController.swift in Sources */,
 				E6801E0425B5C81D0074C5BB /* CountriesDataSource.swift in Sources */,
 				E6F1EE812535E5C800253F19 /* Log.swift in Sources */,
 				F30C0328273D4B81008AC9ED /* EInvoiceDetailsViewController.swift in Sources */,
@@ -2116,6 +2139,7 @@
 				F3A6718B2716F4080094BDD2 /* UIFont+Extensions.swift in Sources */,
 				E676818026F0DF1100626694 /* GDTerminalDetails.swift in Sources */,
 				F324A28927E3337A00F14C6F /* BlankTableViewCell.swift in Sources */,
+				0D17B0AC2C1AFF230010267E /* HppCoordinator.swift in Sources */,
 				F3A1A9AA27F3017200411CD8 /* ShahryPurchaseViewController.swift in Sources */,
 				F3AE8B7027ABBF3100D84322 /* StepView.swift in Sources */,
 			);
@@ -2225,11 +2249,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5.1.0;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_VERSION = 5.0.0;
+				FRAMEWORK_VERSION = 5.1.0;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2244,7 +2268,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 5.1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
@@ -2293,11 +2318,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5.1.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = 5.0.0;
+				FRAMEWORK_VERSION = 5.1.0;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -2306,7 +2331,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 5.1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -2325,12 +2351,13 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5.1.0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = 5.1.0;
 				INFOPLIST_FILE = GeideaPaymentSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2338,7 +2365,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 5.1.0;
 				NEW_SETTING = "";
 				OTHER_SWIFT_FLAGS = "-DDEBUG $(inherited) -D COCOAPODS -D DEV_ENV";
 				PRODUCT_BUNDLE_IDENTIFIER = net.geidea.GeideaPaymentSDK;
@@ -2358,12 +2385,13 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5.1.0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = 5.1.0;
 				INFOPLIST_FILE = GeideaPaymentSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2371,7 +2399,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 5.1.0;
 				NEW_SETTING = "";
 				OTHER_SWIFT_FLAGS = "-DRELEASE $(inherited) -D COCOAPODS -D PROD_ENV";
 				PRODUCT_BUNDLE_IDENTIFIER = net.geidea.GeideaPaymentSDK;
@@ -2388,6 +2416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5.0.0;
 				DEVELOPMENT_TEAM = 94HU76XWXB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2397,6 +2426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5.0.0;
 				DEVELOPMENT_TEAM = 94HU76XWXB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

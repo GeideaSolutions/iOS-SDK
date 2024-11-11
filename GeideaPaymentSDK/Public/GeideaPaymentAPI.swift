@@ -443,6 +443,12 @@ import PassKit
         
     }
     
+    @objc public static func payWithGeideaHpp(theAmount amount: GDAmount, showAddress: Bool, showEmail: Bool, showReceipt: Bool, tokenizationDetails: GDTokenizationDetails? = nil, customerDetails: GDCustomerDetails?, applePayDetails: GDApplePayDetails? = nil, config: GDConfigResponse?, paymentIntentId: String? = nil, qrDetails: GDQRDetails? = nil, bnplItems:[GDBNPLItem]? = nil, cardPaymentMethods: [String]? = nil, paymentSelectionMethods: [GDPaymentSelectionMetods]? = nil , viewController: UIViewController, completion: @escaping (PaymentResponse?, GDErrorResponse?) -> Void) {
+        var initiateAuthentication = InitiateAuthenticateParams(amount: amount, cardNumber: nil, tokenizationDetails: tokenizationDetails, paymentIntentId: paymentIntentId, customerDetails: customerDetails, orderId: nil, paymentMethods: cardPaymentMethods, sessionId: nil)
+        initiateAuthentication.returnUrl = Constants.sdkReturnURL
+        HppCoordinator(viewController: viewController, authParams: initiateAuthentication, completion: completion).start()
+    }
+    
     /**
      Starting paying QR flow using Geidea Form
      
@@ -1861,7 +1867,7 @@ import PassKit
         let genericPwdQueryable = GenericPasswordQueryable(service: SecureStoreConstants.SERVICE)
         let secureStoreWithGenericPwd = SecureStore(secureStoreQueryable: genericPwdQueryable)
         do {
-            let password = try secureStoreWithGenericPwd.getValue(for: SecureStoreConstants.PASSWORD)
+            let password = try secureStoreWithGenericPwd.getValue(for: SecureStoreConstants.MERCHANT_CREDENTIAL_SECRET)
             let merchant = try secureStoreWithGenericPwd.getValue(for: SecureStoreConstants.MERCHANT_KEY)
             return ((merchant, password) as? (String, String))
         } catch {
@@ -1876,7 +1882,7 @@ import PassKit
         let genericPwdQueryable = GenericPasswordQueryable(service: SecureStoreConstants.SERVICE)
         let secureStoreWithGenericPwd = SecureStore(secureStoreQueryable: genericPwdQueryable)
         do {
-            try secureStoreWithGenericPwd.setValue(password, for: SecureStoreConstants.PASSWORD)
+            try secureStoreWithGenericPwd.setValue(password, for: SecureStoreConstants.MERCHANT_CREDENTIAL_SECRET)
             try secureStoreWithGenericPwd.setValue(merchantKey, for: SecureStoreConstants.MERCHANT_KEY)
         } catch {
             GeideaPaymentAPI.shared.returnAction(nil, GDErrorResponse().withError(error: SDKErrorConstants.CREDENTIALS_RETREIVE_ERROR))

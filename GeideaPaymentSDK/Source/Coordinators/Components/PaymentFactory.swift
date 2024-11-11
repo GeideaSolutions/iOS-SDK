@@ -12,6 +12,12 @@ class PaymentFactory: NSObject {
     static func makeWebViewViewController() -> WebviewViewController {
         return WebviewViewController(nibName: String(describing: WebviewViewController.self), bundle:  Bundle(for: WebviewViewController.self))
     }
+    
+    static func makeHppViewController(authParams: InitiateAuthenticateParams) -> HppWebViewController {
+        let controller = HppWebViewController(nibName: String(describing: HppWebViewController.self), bundle:  Bundle(for: HppWebViewController.self))
+        controller.authParams = authParams;
+        return controller;
+    }
 
     static func makeWebViewModel(authenticateParams: AuthenticateParams, authenticateResponse: AuthenticateResponse) -> WebViewViewModel {
         return WebViewViewModel(authenticateParams: authenticateParams, authenticateResponse: authenticateResponse)

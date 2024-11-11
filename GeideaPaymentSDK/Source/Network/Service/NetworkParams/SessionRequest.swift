@@ -15,11 +15,13 @@ func decodeJSONString<T: Decodable>(_ jsonData: Data, as type: T.Type) -> T? {
 struct SessionRequest: Codable {
     let amount: Double
     let currency, timestamp, merchantReferenceID, signature: String
+    let returnUrl: String?
     
     enum CodingKeys: String, CodingKey {
         case amount, currency, timestamp
         case merchantReferenceID = "merchantReferenceId"
         case signature
+        case returnUrl
     }
     func toJson() -> [String: Any] {
         let encoder = JSONEncoder()

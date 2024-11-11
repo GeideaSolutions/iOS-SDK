@@ -9,14 +9,14 @@ import Foundation
 
 @objc public enum Environment:Int {
     case egy_production
-//    case eg_preproduction
+    case eg_preproduction
     
     case uae_production
-//    case uae_preproduction
+    case uae_preproduction
     
     
     case ksa_production
-//    case ksa_preproduction
+    case ksa_preproduction
     
     
     
@@ -24,16 +24,16 @@ import Foundation
         switch self {
         case .egy_production:
             return "https://api.merchant.geidea.net/"
-//        case .eg_preproduction:
-//            return "https://api-merchant.staging.geidea.net/"
+        case .eg_preproduction:
+            return "https://api.gd-pprod-infra.net"
         case .uae_production:
             return "https://api.merchant.geidea.ae/"
-//        case .uae_preproduction:
-//            return "https://api-merchant.staging.geidea.ae/"
+        case .uae_preproduction:
+            return "https://api.staging.geidea.ae"
         case .ksa_production:
             return "https://api.ksamerchant.geidea.net/"
-//        case .ksa_preproduction:
-//            return "https://api-ksamerchant.staging.geidea.net"
+        case .ksa_preproduction:
+            return "https://api.gd-pprod-infra.net"
         }
     }
     
@@ -41,27 +41,44 @@ import Foundation
         switch self {
         case .egy_production:
             return "EGY-PROD"
-//        case .eg_preproduction:
-//            return "EGY-PREPROD"
+        case .eg_preproduction:
+            return "EGY-PREPROD"
         case .uae_production:
             return "UAE-PROD"
-//        case .uae_preproduction:
-//            return "UAE-PREPROD"
+        case .uae_preproduction:
+            return "UAE-PREPROD"
         case .ksa_production:
             return "KSA PROD"
-//        case .ksa_preproduction:
-//            return "KSA-PREPROD"
+        case .ksa_preproduction:
+            return "KSA-PREPROD"
         }
     }
     
     public static let allCases: [Environment] =
     [
-//        .eg_preproduction,
+        .eg_preproduction,
         .egy_production,
-//        .ksa_preproduction,
+        .ksa_preproduction,
         .ksa_production,
-//        .uae_preproduction,
+        .uae_preproduction,
         .uae_production,]
+    
+    var hccBaseUrlString: String {
+        switch self {
+        case .egy_production:
+            return "https://www.merchant.geidea.net/"
+        case .eg_preproduction:
+            return "https://www.gd-pprod-infra.net/"
+        case .uae_production:
+            return "https://payments.geidea.ae/"
+        case .uae_preproduction:
+            return "https://www.staging.geidea.ae/"
+        case .ksa_production:
+            return "https://www.ksamerchant.geidea.net/"
+        case .ksa_preproduction:
+            return "https://www.gd-pprod-infra.net/"
+        }
+    }
     
 }
 

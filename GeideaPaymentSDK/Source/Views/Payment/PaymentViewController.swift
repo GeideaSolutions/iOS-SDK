@@ -91,6 +91,8 @@ class PaymentViewController: BaseViewController, UITextFieldDelegate {
     
     private func loadHiddenWebView() {
         let configuration = WKWebViewConfiguration()
+        //Javasxcript is disabled in the webview
+        configuration.preferences.javaScriptEnabled = false
         let webV  = WKWebView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), configuration: configuration)
         
         if let vm = viewModel as? PaymentViewModel {

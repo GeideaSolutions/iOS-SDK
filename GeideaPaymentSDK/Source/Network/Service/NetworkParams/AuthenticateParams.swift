@@ -8,7 +8,7 @@
 import Foundation
 
 struct Constants {
-    static let sdkReturnURL = "https://geideapaymentsdk"
+    static let sdkReturnURL = "https://geideapaymentsdk.com"
     static let source = "MobileApp"
 }
 

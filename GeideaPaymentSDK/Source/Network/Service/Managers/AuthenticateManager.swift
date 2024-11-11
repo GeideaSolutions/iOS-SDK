@@ -70,7 +70,7 @@ class AuthenticateManager {
         
         let signature = generateSignature(publicKey: authenticateParams.merchantKey!, orderAmount: authenticateParams.amount, orderCurrency: authenticateParams.currency, merchantRefId: authenticateParams.merchantReferenceId, apiPass: authenticateParams.merchantPass!, timestamp: timeStamp)
         
-        let requestModel = SessionRequest(amount: authenticateParams.amount, currency: authenticateParams.currency, timestamp: timeStamp, merchantReferenceID: authenticateParams.merchantReferenceId ?? "", signature: signature);
+        let requestModel = SessionRequest(amount: authenticateParams.amount, currency: authenticateParams.currency, timestamp: timeStamp, merchantReferenceID: authenticateParams.merchantReferenceId ?? "", signature: signature, returnUrl: authenticateParams.returnUrl);
         
         let request = Request(router: SessionRouterV2.session(sessionParams: requestModel))
         

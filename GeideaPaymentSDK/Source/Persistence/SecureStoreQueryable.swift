@@ -10,7 +10,7 @@ import Foundation
 struct SecureStoreConstants {
     static let SERVICE = "GeideaPaymentAPI"
     static let MERCHANT_KEY = "GDMerchantKey"
-    static let PASSWORD = "GDPassword"
+    static let MERCHANT_CREDENTIAL_SECRET = "GDPassword"
 }
 
 protocol SecureStoreQueryable {

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HppWebViewController" customModule="GeideaPaymentSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="xNa-aU-IGQ" id="M2v-2H-xhi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="GmS-SG-rMJ" id="dyP-e8-GTh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GmS-SG-rMJ">
+                    <rect key="frame" x="0.0" y="123" width="393" height="729"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOI-Ro-por" userLabel="HeaderView">
+                    <rect key="frame" x="0.0" y="59" width="393" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNa-aU-IGQ">
+                            <rect key="frame" x="20" y="21" width="16.666666666666671" height="22"/>
+                            <state key="normal" image="gdBack">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelTapped:" destination="-1" eventType="touchUpInside" id="Ms2-hT-Eb6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="xNa-aU-IGQ" firstAttribute="leading" secondItem="qOI-Ro-por" secondAttribute="leading" constant="20" id="5XB-6G-iOX"/>
+                        <constraint firstAttribute="height" constant="64" id="6pC-ME-L6p"/>
+                        <constraint firstItem="xNa-aU-IGQ" firstAttribute="centerY" secondItem="qOI-Ro-por" secondAttribute="centerY" id="hLp-DC-hgX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qOI-Ro-por" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3WT-CT-GbR"/>
+                <constraint firstItem="qOI-Ro-por" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IH2-Ll-k3Q"/>
+                <constraint firstItem="GmS-SG-rMJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="N9h-Ks-u8F"/>
+                <constraint firstItem="GmS-SG-rMJ" firstAttribute="top" secondItem="qOI-Ro-por" secondAttribute="bottom" id="QcR-eB-fpI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GmS-SG-rMJ" secondAttribute="trailing" id="XgW-jg-Juu"/>
+                <constraint firstAttribute="bottom" secondItem="GmS-SG-rMJ" secondAttribute="bottom" id="hu2-FM-wS6"/>
+                <constraint firstAttribute="trailing" secondItem="qOI-Ro-por" secondAttribute="trailing" id="pOl-KS-Ug8"/>
+            </constraints>
+            <point key="canvasLocation" x="-43.511450381679388" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gdBack" width="16.666666030883789" height="16.666666030883789"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

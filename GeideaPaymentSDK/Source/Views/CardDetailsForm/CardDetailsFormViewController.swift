@@ -1202,6 +1202,8 @@ class CardDetailsFormViewController: BaseViewController {
     
     func loadHiddenWebView(with redirectHTML: String) {
         let configuration = WKWebViewConfiguration()
+        //Javasxcript is disabled in the webview
+        configuration.preferences.javaScriptEnabled  = false
         let webV    = WKWebView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), configuration: configuration)
         webV.loadHTMLString(redirectHTML, baseURL: nil)
         
